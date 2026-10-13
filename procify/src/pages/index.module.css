@@ -1,0 +1,373 @@
+/* ---------- Procify Design Tokens ---------- */
+
+.heroBanner,
+.section {
+  --p-red: #e61e25;
+  --p-red-hover: #a1151a;
+  --p-ink: #141111;
+  --p-ink-2: #524d4d;
+  --p-ink-3: #6e6868;
+  --p-line: #dcdad8;
+  --p-surface: #ffffff;
+  --p-alt: #f8f7f6;
+  --p-accent: #e61e25;
+}
+
+[data-theme='dark'] .heroBanner,
+[data-theme='dark'] .section {
+  --p-ink: #ffffff;
+  --p-ink-2: #ffffffc7;
+  --p-ink-3: #ffffffa6;
+  --p-line: #3a3636;
+  --p-surface: #141111;
+  --p-alt: #1c1919;
+  --p-accent: #ee6266;
+}
+
+/* ---------- Shared Container ---------- */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* ---------- Homepage Hero ---------- */
+
+.heroBanner {
+  min-height: 460px;
+  padding: 80px 0 72px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  color: var(--p-ink);
+}
+
+[data-theme='dark'] .heroBanner {
+  background-color: #141111;
+  color: #ffffff;
+}
+
+.eyebrow {
+  color: var(--p-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  color: var(--p-ink);
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+  max-width: 18ch;
+}
+
+.heroLead {
+  color: var(--p-ink-2);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 24px 0 0;
+  max-width: 52ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.btnPrimary,
+.btnGhost {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 14px 26px;
+  text-decoration: none !important;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.btnPrimary {
+  background: var(--p-red);
+  color: #ffffff !important;
+  border: 1px solid var(--p-red);
+}
+
+.btnPrimary:hover {
+  background: var(--p-red-hover);
+  border-color: var(--p-red-hover);
+  color: #ffffff !important;
+}
+
+.btnGhost {
+  background: transparent;
+  border: 1px solid var(--p-line);
+  color: var(--p-ink) !important;
+}
+
+.btnGhost:hover {
+  border-color: var(--p-ink-3);
+}
+
+.version {
+  border: 1px solid var(--p-line);
+  border-radius: 999px;
+  color: var(--p-ink-3);
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-top: 28px;
+  padding: 4px 12px;
+}
+
+/* ---------- Documentation Sections ---------- */
+
+.section {
+  background: var(--p-surface);
+  color: var(--p-ink);
+  padding: 72px 0;
+}
+
+.alt {
+  background: var(--p-alt);
+}
+
+.h2 {
+  color: var(--p-ink);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 40px;
+  max-width: 24ch;
+}
+
+/* ---------- Documentation Cards ---------- */
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--p-surface);
+  border: 1px solid var(--p-line);
+  border-radius: 12px;
+  color: var(--p-ink) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px;
+  text-decoration: none !important;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--p-accent);
+  box-shadow: 0 12px 32px #4a0b0d1f;
+  transform: translateY(-3px);
+}
+
+.cardIcon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  color: var(--p-ink);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 8px 0 0;
+}
+
+.cardText {
+  color: var(--p-ink-2);
+  flex: 1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.cardCta {
+  color: var(--p-accent);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* ---------- Feature List ---------- */
+
+.features {
+  border-top: 1px solid var(--p-line);
+  display: grid;
+  gap: 0 56px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  border-bottom: 1px solid var(--p-line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 40px minmax(0, 1fr);
+  padding: 28px 0;
+}
+
+.featureIcon {
+  color: var(--p-ink);
+  height: 32px;
+  margin-top: 2px;
+  width: 32px;
+}
+
+.featureTitle {
+  color: var(--p-ink);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.featureText {
+  color: var(--p-ink-2);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Quick Access ---------- */
+
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  border: 1px solid var(--p-line);
+  border-radius: 999px;
+  color: var(--p-ink) !important;
+  font-weight: 600;
+  padding: 12px 22px;
+  text-decoration: none !important;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.pill:hover {
+  border-color: var(--p-accent);
+  color: var(--p-accent) !important;
+}
+
+/* ---------- Desktop Background Positioning ---------- */
+
+@media (min-width: 1440px) {
+  .heroBanner {
+    background-position: center right;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .heroBanner {
+    background-position: center right;
+    background-size: auto 85%;
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1279px) {
+  .heroBanner {
+    background-position: center right;
+    background-size: auto 70%;
+  }
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1149px) {
+  .heroBanner {
+    background-image: none !important;
+    min-height: auto;
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 996px) {
+  .cards,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .heroBanner {
+    padding: 48px 0;
+  }
+
+  .heroTitle {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .heroLead {
+    font-size: 1.05rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .btnPrimary,
+  .btnGhost {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .features {
+    gap: 0;
+  }
+
+  .feature {
+    gap: 14px;
+    grid-template-columns: 36px minmax(0, 1fr);
+  }
+}
