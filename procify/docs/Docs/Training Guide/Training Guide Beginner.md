@@ -1,4 +1,7 @@
-
+---
+sidebar_position: 1
+title: "Training Guide - Beginner"
+---
 
  **Training Guide**
 
