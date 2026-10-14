@@ -26,7 +26,7 @@ const config = {
     },
   ],
 
-  // GitHub Pages configuration (new Procifynow repo)
+  // GitHub Pages configuration (Procifynow repo)
   url: 'https://procifynow.github.io',
   baseUrl: '/Procify_Documentation/',
   organizationName: 'Procifynow',
@@ -35,6 +35,7 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
+  onBrokenAnchors: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -57,7 +58,7 @@ const config = {
     ],
   ],
 
-  // Local documentation search
+  // Local documentation search (works fully in a production build)
   plugins: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
@@ -67,6 +68,8 @@ const config = {
         indexDocs: true,
         indexPages: true,
         indexBlog: false,
+        docsRouteBasePath: '/docs',
+        highlightSearchTermsOnTargetPage: true,
       },
     ],
   ],
@@ -107,7 +110,7 @@ const config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'trainingGuideSidebar', // Advance Training Guide + Sessions 1-8
+          sidebarId: 'trainingGuideSidebar',
           label: 'Training Guide',
           position: 'left',
         },
