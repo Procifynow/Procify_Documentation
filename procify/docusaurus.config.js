@@ -1,19 +1,19 @@
 // @ts-check
-
+ 
 import {themes as prismThemes} from 'prism-react-renderer';
 import {createRequire} from 'module';
-
+ 
 const require = createRequire(import.meta.url);
-
+ 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Procify Technical Documentation',
-
+ 
   tagline:
     'An enterprise-class low-code platform for transforming business ideas into outcomes',
-
+ 
   favicon: 'img/favicon.ico',
-
+ 
   // SEO metadata
   headTags: [
     {
@@ -25,23 +25,22 @@ const config = {
       },
     },
   ],
-
-  // GitHub Pages configuration (Procifynow repo)
+ 
+  // GitHub Pages configuration
   url: 'https://procifynow.github.io',
   baseUrl: '/Procify_Documentation/',
   organizationName: 'Procifynow',
   projectName: 'Procify_Documentation',
-  deploymentBranch: 'gh-pages',
   trailingSlash: false,
-
+ 
   onBrokenLinks: 'warn',
-  onBrokenAnchors: 'warn',
-
+  onBrokenMarkdownLinks: 'warn',
+ 
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+ 
   presets: [
     [
       'classic',
@@ -57,8 +56,8 @@ const config = {
       },
     ],
   ],
-
-  // Local documentation search (works fully in a production build)
+ 
+  // Local documentation search
   plugins: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
@@ -68,33 +67,34 @@ const config = {
         indexDocs: true,
         indexPages: true,
         indexBlog: false,
-        docsRouteBasePath: '/docs',
-        highlightSearchTermsOnTargetPage: true,
       },
     ],
   ],
-
+ 
   themeConfig: {
-    // Light mode only, no toggle button
-    colorMode: {
-      defaultMode: 'light',
-      disableSwitch: true,
-      respectPrefersColorScheme: false,
-    },
-
+  colorMode: {
+    defaultMode: 'light',
+    disableSwitch: true,
+    respectPrefersColorScheme: false,
+  },
+ 
     // Right-hand "On this page" panel: show only ## headings
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 2,
     },
-
+ 
     // Top navigation
     navbar: {
+      title: '',
+ 
       logo: {
         alt: 'Procify Logo',
         src: 'img/procify-logo.png',
+        srcDark: 'img/procify-logo-dark.png',
+        href: '/Technical-Documentation/',
       },
-
+ 
       items: [
         {
           to: '/',
@@ -109,10 +109,17 @@ const config = {
           position: 'left',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'trainingGuideSidebar',
+          type: 'dropdown',
           label: 'Training Guide',
           position: 'left',
+          items: [
+            // Add 'Docs/Training Guide/Basic Training' back here once that file exists in docs/
+            {
+              type: 'doc',
+              docId: 'Docs/Training Guide/Advance Training Guide',
+              label: 'Advanced Training',
+            },
+          ],
         },
         {
           type: 'docSidebar',
@@ -131,7 +138,7 @@ const config = {
         },
       ],
     },
-
+ 
     // Documentation sidebar
     docs: {
       sidebar: {
@@ -139,11 +146,11 @@ const config = {
         autoCollapseCategories: true,
       },
     },
-
+ 
     // Footer
     footer: {
       style: 'light',
-
+ 
       links: [
         {
           title: 'Documentation',
@@ -152,6 +159,7 @@ const config = {
               label: 'User Guide',
               to: '/docs/Docs/User Guide/Developer AI - User guide',
             },
+            // Add a 'Basic Training' link here once that doc exists
             {
               label: 'Advanced Training',
               to: '/docs/Docs/Training Guide/Advance Training Guide',
@@ -185,22 +193,20 @@ const config = {
           ],
         },
       ],
-
+ 
       copyright: `© ${new Date().getFullYear()} Procify Innovations Pvt Ltd.`,
     },
-
+ 
     prism: {
       theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
   },
-
+ 
   // Markdown configuration
   markdown: {
     format: 'detect',
-    hooks: {
-      onBrokenMarkdownLinks: 'warn',
-    },
   },
 };
-
+ 
 export default config;
