@@ -2,7 +2,7 @@
    PROCIFY DOCUMENTATION — OPENUI5-INSPIRED UI
    File: src/css/custom.css
    ========================================= */
-
+ 
 :root {
   --ifm-color-primary: #c00000;
   --ifm-color-primary-dark: #a60000;
@@ -11,73 +11,73 @@
   --ifm-color-primary-light: #d21b1b;
   --ifm-color-primary-lighter: #e34a4a;
   --ifm-color-primary-lightest: #f5dada;
-
+ 
   --ifm-font-family-base: "72", "Segoe UI", Arial, sans-serif;
   --ifm-font-size-base: 15px;
   --ifm-line-height-base: 1.65;
   --ifm-navbar-height: 62px;
   --ifm-code-font-size: 90%;
 }
-
+ 
 /* Top header */
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #d9dfe5;
   box-shadow: 0 1px 4px rgb(0 0 0 / 5%);
 }
-
+ 
 .navbar__inner {
   max-width: 1600px;
 }
-
+ 
 .navbar__title {
   color: #202a35;
   font-size: 17px;
   font-weight: 700;
 }
-
+ 
 .navbar__brand {
   margin-right: 24px;
 }
-
+ 
 .navbar__link {
   color: #344354;
   font-size: 14px;
   font-weight: 500;
 }
-
+ 
 .navbar__link:hover,
 .navbar__link--active {
   color: var(--ifm-color-primary);
 }
-
+ 
 /* Documentation page background */
 .main-wrapper {
   background: #ffffff;
 }
-
+ 
 .container {
   max-width: 1600px;
 }
-
+ 
 /* Left navigation sidebar */
 .theme-doc-sidebar-container {
   background: #f7f8fa;
   border-right: 1px solid #e0e5ea;
 }
-
+ 
 .theme-doc-sidebar-menu {
   padding: 12px 10px 24px;
 }
-
+ 
 .menu {
   font-size: 14px;
 }
-
+ 
 .menu__list {
   margin-top: 4px;
 }
-
+ 
 .menu__link {
   border-radius: 4px;
   color: #344354;
@@ -85,12 +85,12 @@
   padding: 8px 12px;
   transition: background 0.15s ease, color 0.15s ease;
 }
-
+ 
 .menu__link:hover {
   background: #e9edf2;
   color: #a60000;
 }
-
+ 
 .menu__link--active:not(.menu__link--sublist) {
   background: #fbe9e9;
   color: #a60000;
@@ -98,32 +98,37 @@
   border-left: 3px solid #c00000;
   border-radius: 0 4px 4px 0;
 }
-
+ 
 .menu__list-item-collapsible:hover {
   background: #edf0f4;
 }
-
-.menu__caret:before,
-.menu__link--sublist-caret:after {
-  filter: none;
-}
-
+ 
 /* Main article */
-.docMainContainer,
-.docMainContainer_gTbr {
+[class*="docMainContainer"] {
   background: #ffffff;
 }
-
+ 
 .theme-doc-markdown {
   max-width: 100%;
 }
-
+ 
+/* Remove the right-side "On this page" panel (desktop + mobile)
+   and let the article use the full width */
+.theme-doc-toc-desktop,
+.theme-doc-toc-mobile {
+  display: none !important;
+}
+ 
+[class*="docItemCol"] {
+  max-width: 100% !important;
+}
+ 
 .markdown {
   color: #263442;
   font-size: 15px;
   line-height: 1.75;
 }
-
+ 
 .markdown h1 {
   color: #1d2935;
   font-size: 2rem;
@@ -131,7 +136,7 @@
   letter-spacing: -0.4px;
   margin-bottom: 16px;
 }
-
+ 
 .markdown h2 {
   color: #253746;
   font-size: 1.5rem;
@@ -140,61 +145,43 @@
   padding-bottom: 8px;
   border-bottom: 1px solid #e1e6eb;
 }
-
+ 
 .markdown h3 {
   color: #34495b;
   font-size: 1.15rem;
   font-weight: 650;
   margin-top: 26px;
 }
-
+ 
 .markdown p,
 .markdown li {
   color: #344354;
 }
-
+ 
 .markdown a {
   color: #a60000;
   text-decoration: none;
 }
-
+ 
 .markdown a:hover {
   text-decoration: underline;
 }
-
+ 
 /* Breadcrumbs */
 .theme-doc-breadcrumbs {
   margin-bottom: 20px;
   font-size: 13px;
 }
-
+ 
 .breadcrumbs__link {
   color: #5b6875;
 }
-
+ 
 .breadcrumbs__item--active .breadcrumbs__link {
   color: #a60000;
   font-weight: 600;
 }
-
-/* Right-side "On this page" navigation */
-.table-of-contents {
-  border-left: 1px solid #dfe4e9;
-  font-size: 13px;
-  padding-left: 16px;
-}
-
-.table-of-contents__link {
-  color: #5b6875;
-  display: block;
-  padding: 4px 0;
-}
-
-.table-of-contents__link:hover,
-.table-of-contents__link--active {
-  color: #a60000;
-}
-
+ 
 /* Code blocks */
 .theme-code-block {
   border: 1px solid #dfe4e9;
@@ -202,12 +189,12 @@
   box-shadow: none;
   margin: 20px 0;
 }
-
+ 
 .prism-code {
   font-size: 13px;
   line-height: 1.65;
 }
-
+ 
 code {
   border: 1px solid #e3e6ea;
   border-radius: 4px;
@@ -215,7 +202,7 @@ code {
   background: #f6f7f9;
   padding: 2px 5px;
 }
-
+ 
 /* Tables */
 .markdown table {
   display: table;
@@ -224,84 +211,80 @@ code {
   border: 1px solid #dce2e8;
   font-size: 14px;
 }
-
+ 
 .markdown table th {
   background: #f0f3f6;
   color: #253746;
   font-weight: 650;
   text-align: left;
 }
-
+ 
 .markdown table th,
 .markdown table td {
   border: 1px solid #dce2e8;
   padding: 10px 14px;
 }
-
+ 
 .markdown table tr:nth-child(even) {
   background: #fafbfc;
 }
-
+ 
 /* Images */
 .markdown img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
 }
-
+ 
 /* Pagination at the bottom of documentation pages */
 .pagination-nav__link {
   border: 1px solid #dce2e8;
   border-radius: 6px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
-
+ 
 .pagination-nav__link:hover {
   border-color: #c00000;
   box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
 }
-
+ 
 .pagination-nav__sublabel {
   color: #657382;
 }
-
+ 
 .pagination-nav__label {
   color: #a60000;
 }
-
+ 
 /* Footer */
 .footer {
   background: #f4f6f8;
   border-top: 1px solid #dce2e8;
   color: #344354;
 }
-
+ 
 .footer a {
   color: #a60000;
 }
-
+ 
 /* Search field, if your search plugin provides these classes */
 .navbar__search-input {
   border: 1px solid #d5dce3;
   border-radius: 5px;
   font-size: 14px;
 }
-
+ 
 /* Smaller screens */
 @media (max-width: 996px) {
   .theme-doc-sidebar-container {
     background: #ffffff;
   }
-
+ 
   .markdown h1 {
     font-size: 1.7rem;
   }
-
+ 
   .markdown h2 {
     font-size: 1.35rem;
-  }
-
-  .table-of-contents {
-    border-left: none;
   }
 }
