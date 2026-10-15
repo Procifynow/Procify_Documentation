@@ -1,7 +1,6 @@
 # Session 4 — Offline, Middleware & Bulk Data
 
-**Date:** Thu, 10 Sep 2026  
-**Duration:** Full day
+
 
 ## Session Objectives
 

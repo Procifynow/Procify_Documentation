@@ -1,7 +1,6 @@
 # Session 6 — Reporting — Charts & Pivot Modeller
 
-**Date:** Mon, 14 Sep 2026  
-**Duration:** Full day
+
 
 ## Session Objectives
 

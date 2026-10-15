@@ -1,7 +1,5 @@
 # Session 8 — App Management, Branding & Deployment
 
-**Date:** Wed, 16 Sep 2026  
-**Duration:** Full day
 
 ## Session Objectives
 

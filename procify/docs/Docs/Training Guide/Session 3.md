@@ -1,7 +1,5 @@
 # Session 3 — Security, Permissions & Data Access
 
-**Date:** Wed, 09 Sep 2026  
-**Duration:** Full day
 
 ## Session Objectives
 

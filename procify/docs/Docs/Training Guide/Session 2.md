@@ -1,7 +1,5 @@
 # Session 2 — Advanced Page Builder & Client-Side Debugging
 
-**Date:** Tue, 08 Sep 2026  
-**Duration:** Full day
 
 ## Session Objectives
 

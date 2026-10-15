@@ -1,7 +1,6 @@
 # Session 7 — Monitoring & Troubleshooting
 
-**Date:** Tue, 15 Sep 2026  
-**Duration:** Full day
+
 
 ## Session Objectives
 

@@ -1,9 +1,5 @@
 # Session 1 — Advanced BOL & Data Modelling
 
-**Date:** Mon, 07 Sep 2026  
-**Duration:** Full day  
-**Topics:** `BOL, Data Modelling`
-
 ## Session Objectives
 
 * Configure Network Modes so offline-relevant properties sync correctly to field devices.

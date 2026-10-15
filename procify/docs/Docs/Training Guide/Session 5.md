@@ -1,7 +1,6 @@
 # Session 5 — Workflows, Scheduling & Notifications
 
-**Date:** Fri, 11 Sep 2026  
-**Duration:** Full day
+
 
 ## Session Objectives
 
