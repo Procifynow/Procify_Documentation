@@ -1,0 +1,20 @@
+{
+  "name": "procify_documentation",
+  "version": "1.0.0",
+  "description": "<<<<<<< HEAD\r # Technical Documentation Hub — Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Procifynow/Procify_Documentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Procifynow/Procify_Documentation/issues"
+  },
+  "homepage": "https://github.com/Procifynow/Procify_Documentation#readme"
+}

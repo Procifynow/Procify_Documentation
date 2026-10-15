@@ -6,38 +6,51 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
  
 import styles from './index.module.css';
  
-/* Latest release */
-const LATEST_RELEASE = '7.7.564';
- 
-const LINKS = {
+/* Static links */
+const BASE_LINKS = {
   userGuide: '/docs/Docs/User%20Guide/Developer%20AI%20-%20User%20guide',
   trainingGuide: '/docs/Docs/Training%20Guide/Advance%20Training%20Guide',
-  releaseNotes: `/docs/Docs/Release%20Notes/${LATEST_RELEASE}`,
 };
  
-const CARDS = [
-  {
-    icon: '📘',
-    title: 'User Guide',
-    text: 'Learn how to configure and use Procify features and functionality.',
-    cta: 'Open User Guide',
-    to: LINKS.userGuide,
-  },
-  {
-    icon: '🎓',
-    title: 'Training Guide',
-    text: 'Follow structured training material to learn Procify development and configuration.',
-    cta: 'Open Training Guide',
-    to: LINKS.trainingGuide,
-  },
-  {
-    icon: '📋',
-    title: 'Release Notes',
-    text: 'Review new features, enhancements, fixes and changes introduced in Procify releases.',
-    cta: 'View Release Notes',
-    to: LINKS.releaseNotes,
-  },
-];
+/* Links and version, built from the latest release detected in docusaurus.config.js */
+function useReleaseInfo() {
+  const { siteConfig } = useDocusaurusContext();
+  const latest = siteConfig.customFields?.latestRelease || null;
+ 
+  return {
+    version: latest ? latest.version : null,
+    links: {
+      ...BASE_LINKS,
+      releaseNotes: latest ? latest.path : '/docs/Docs/Release%20Notes',
+    },
+  };
+}
+ 
+function buildCards(links) {
+  return [
+    {
+      icon: '📘',
+      title: 'User Guide',
+      text: 'Learn how to configure and use Procify features and functionality.',
+      cta: 'Open User Guide',
+      to: links.userGuide,
+    },
+    {
+      icon: '🎓',
+      title: 'Training Guide',
+      text: 'Follow structured training material to learn Procify development and configuration.',
+      cta: 'Open Training Guide',
+      to: links.trainingGuide,
+    },
+    {
+      icon: '📋',
+      title: 'Release Notes',
+      text: 'Review new features, enhancements, fixes and changes introduced in Procify releases.',
+      cta: 'View Release Notes',
+      to: links.releaseNotes,
+    },
+  ];
+}
  
 /* Feature icons */
 const ICONS = {
@@ -111,12 +124,6 @@ const FEATURES = [
   },
 ];
  
-const QUICK_LINKS = [
-  { label: 'Getting Started', to: LINKS.userGuide },
-  { label: 'Training Guide', to: LINKS.trainingGuide },
-  { label: "What's New", to: LINKS.releaseNotes },
-];
- 
 function Icon({ name }) {
   return (
     <svg
@@ -134,7 +141,7 @@ function Icon({ name }) {
   );
 }
  
-function Hero() {
+function Hero({ links, version }) {
   const heroBackground = useBaseUrl(
     '/img/procify-docs-hero-light_2x.png',
   );
@@ -164,31 +171,33 @@ function Hero() {
         </p>
  
         <div className={styles.actions}>
-          <Link className={styles.btnPrimary} to={LINKS.userGuide}>
+          <Link className={styles.btnPrimary} to={links.userGuide}>
             Get started →
           </Link>
  
-          <Link className={styles.btnGhost} to={LINKS.releaseNotes}>
-            What&apos;s new in {LATEST_RELEASE}
+          <Link className={styles.btnGhost} to={links.releaseNotes}>
+            {version ? <>What&apos;s new in {version}</> : <>Release notes</>}
           </Link>
         </div>
  
-        <span className={styles.version}>
-          Latest release {LATEST_RELEASE}
-        </span>
+        {version && (
+          <span className={styles.version}>
+            Latest release {version}
+          </span>
+        )}
       </div>
     </header>
   );
 }
  
-function DocCards() {
+function DocCards({ links }) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.h2}>Find what you need</h2>
  
         <div className={styles.cards}>
-          {CARDS.map((card) => (
+          {buildCards(links).map((card) => (
             <Link
               key={card.title}
               className={styles.card}
@@ -241,14 +250,20 @@ function Features() {
   );
 }
  
-function QuickAccess() {
+function QuickAccess({ links }) {
+  const quickLinks = [
+    { label: 'Getting Started', to: links.userGuide },
+    { label: 'Training Guide', to: links.trainingGuide },
+    { label: "What's New", to: links.releaseNotes },
+  ];
+ 
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.h2}>Quick access</h2>
  
         <div className={styles.quick}>
-          {QUICK_LINKS.map((link) => (
+          {quickLinks.map((link) => (
             <Link
               key={link.label}
               className={styles.pill}
@@ -265,18 +280,19 @@ function QuickAccess() {
  
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  const { version, links } = useReleaseInfo();
  
   return (
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
-      <Hero />
+      <Hero links={links} version={version} />
  
       <main>
-        <DocCards />
+        <DocCards links={links} />
         <Features />
-        <QuickAccess />
+        <QuickAccess links={links} />
       </main>
     </Layout>
   );

@@ -103,6 +103,26 @@
   background: #edf0f4;
 }
  
+/* "LATEST" badge in the sidebar.
+   Add `sidebar_class_name: latest-release` to the front matter of the newest release note. */
+.latest-release > .menu__link {
+  align-items: center;
+}
+ 
+.latest-release > .menu__link::after {
+  content: "LATEST";
+  flex-shrink: 0;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  color: #ffffff;
+  background: #c00000;
+  border-radius: 10px;
+}
+ 
 /* Main article */
 [class*="docMainContainer"] {
   background: #ffffff;
