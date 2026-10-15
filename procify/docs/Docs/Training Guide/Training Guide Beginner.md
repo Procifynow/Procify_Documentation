@@ -32,15 +32,14 @@ The training spans 8 sessions. Each session introduces a new layer of the platfo
 
 | Session | Topic |
 | :---- | :---- |
-| Session 1 | Platform Setup & Account Management |
-| Session 2 | BOL — Entity Fundamentals & Initial Pages |
-| Session 3 | Entity Configuration (Relations, Object Types, Status, ID Series) |
-| Session 4 | Value Helps & Queries |
-| Session 5 | BOL Logic & Validations  with dashboard creation |
-| Session 6 | Bindings, Navigation & Styling |
-| Session 7 | Controllers & Client-Side Behaviour |
-| Session 8 | Menu Configuration & App Management, Versioning & Publishing |
-
+| [Session 1](#session-1) | [Platform Setup & Account Management](#session-1) |
+| [Session 2](#session-2) | [BOL — Entity Fundamentals & Initial Pages](#session-2) |
+| [Session 3](#session-3) | [Entity Configuration (Relations, Object Types, Status, ID Series)](#session-3) |
+| [Session 4](#session-4) | [Value Helps & Queries](#session-4) |
+| [Session 5](#session-5) | [BOL Logic & Validations with dashboard creation](#session-5) |
+| [Session 6](#session-6) | [Bindings, Navigation & Styling](#session-6) |
+| [Session 7](#session-7) | [Controllers & Client-Side Behaviour](#session-7) |
+| [Session 8](#session-8) | [Menu Configuration & App Management, Versioning & Publishing](#session-8) |
 ## 
 
 ## The Learn-by-Building Approach
@@ -50,7 +49,7 @@ This training does not teach concepts in isolation. You will build one real appl
 | Why this matters for you You will always know WHY you are doing each step, not just HOW. By Session 8 you will have a working application demonstrating every major platform capability. The application grows session by session — if you miss a step it will affect later sessions. When you encounter a similar situation on a real project, you will have a concrete reference point from training. |
 | :---- |
 
-## What Is Expected of You
+# What Is Expected of You
 
 * Attend each session with the previous session's assignment completed and verified.
 
@@ -63,7 +62,7 @@ This training does not teach concepts in isolation. You will build one real appl
 
 # 
 
-# **Session 1 — Platform Setup & Account Management**
+## Session 1 — Platform Setup & Account Management {#session-1}
 
 ## Session Objectives
 
@@ -1051,7 +1050,8 @@ pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 | ✔  UI Build Checkpoint — Verify Before Session 3 p\_complaints page created with pl\_complaints\_desk as default layout. Page Data Model has d\_complaints\_list (EntitySet) and d\_complaints\_detail (Entity, Fold From: list). pa\_complaints: s\_search (search, all filter fields) \+ s\_complaints (grid, 7 columns incl. navigation link). pa\_complaint\_details: section\_toolbar \+ s\_detail\_header (form, header fields) \+ pa\_comp\_details (tab). pa\_comp\_details: 7 tab sections including s\_complaint\_item (grid) for complaint line items. Full Preview shows the search bar — exact match with the reference screenshots from the trainer. Clicking a complaint row loads the detail area with all tabs populated. |
 | :---- |
 
-## Session 2 Assignment {#session-2-assignment}
+## Session 2 — BOL — Entity Fundamentals & Initial Pages {#session-2}
+ Assignment {#session-2-assignment}
 
 Complete all mandatory tasks before Session 3\. The trainer will verify each item at the start of Session 3\.
 
@@ -1068,7 +1068,8 @@ Complete all mandatory tasks before Session 3\. The trainer will verify each ite
 | Session 3 — Entity Configuration Duration: Full day  |  Pre-requisite: Session 2 assignment verified |
 | :---- |
 
-# **Session 3 — Entity Configuration**
+## Session 3 — Entity Configuration (Relations, Object Types, Status, ID Series) {#session-3}
+
 
 By the end of this session, you will be able to:
 
@@ -2479,7 +2480,7 @@ The s\_status field is a system property. Now that Status values are configured 
 | Session 4 — Value Helps & Queries Duration: Full day  |  Pre-requisite: Session 3 assignment verified |
 | :---- |
 
-# **Session 4 — Value Helps & Queries**
+## Session 4 — Value Helps & Queries {#session-4}
 
 ## Session Objectives
 
@@ -2816,7 +2817,7 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 | Jira — VH Query display data | PROC-26243 (Issue while displaying data of manual value help — Closed) |
 | API Help | https\://apihelp.procifynow.com/bol/index.html |
 
-# **Session 5 — BOL Logic & Validations**
+## Session 5 — BOL Logic & Validations with dashboard creation {#session-5}
 
 By the end of this session, you will be able to:
 
@@ -3403,7 +3404,7 @@ Perform all the tasks performed in session 05
 | Topics covered in Session 5 Entity-level callback methods: OnCreate, OnValidate, OnAfterSave. Writing TypeScript logic in entity files via private node. Applying mandatory field validations. Role-based logic and permission checks. |
 | :---- |
 
-# **Session 6 — Bindings, Navigation & Styling**
+## Session 6 — Bindings, Navigation & Styling {#session-6}
 
 ## **Session Objectives**
 
@@ -3807,7 +3808,7 @@ Style all the form sections  in pa\_comp\_details.
 4. Practice styling on controls, page area, page layout  
 5. Apply styling to application
 
-# **Session 7 — Controllers & Client-Side Behaviour**
+## Session 7 — Controllers & Client-Side Behaviour {#session-7}
 
 ## **Session Objectives**
 
@@ -4216,7 +4217,7 @@ These standards are non-negotiable on all Procify projects. Violations result in
 | Session 8— App Management, Versioning & Publishing Duration: Full day  |  Pre-requisite: Session 8 assignment verified |
 | :---- |
 
-# **Session 8 — App Management, Versioning & Publishing**
+## Session 8 — Menu Configuration & App Management, Versioning & Publishing {#session-8}
 
 ## **Session Objectives**
 
