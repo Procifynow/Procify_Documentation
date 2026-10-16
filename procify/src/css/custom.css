@@ -132,15 +132,14 @@
   max-width: 100%;
 }
  
-/* Remove the right-side "On this page" panel (desktop + mobile)
-   and let the article use the full width */
-.theme-doc-toc-desktop,
-.theme-doc-toc-mobile {
-  display: none !important;
+/* "On this page" panel (right side on desktop, collapsible bar on mobile) is shown */
+.table-of-contents {
+  font-size: 13px;
 }
  
-[class*="docItemCol"] {
-  max-width: 100% !important;
+.table-of-contents__link--active {
+  color: #a60000;
+  font-weight: 600;
 }
  
 .markdown {
@@ -307,4 +306,35 @@ code {
   .markdown h2 {
     font-size: 1.35rem;
   }
+}
+ 
+ 
+/* Floating "Back to top" button (created by src/clientModules/backToTop.js) */
+.to-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 100;
+  padding: 8px 14px;
+  border: 1px solid #c00000;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #a60000;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+ 
+.to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+ 
+.to-top-btn:hover {
+  background: #c00000;
+  color: #ffffff;
 }

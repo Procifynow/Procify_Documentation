@@ -3,8 +3,6 @@ sidebar_position: 1
 title: "Training Guide - Beginner"
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 
  **Training Guide**
@@ -30,7 +28,7 @@ THESE MATERIALS ARE PROVIDED BY PROCIFY INNOVATIONS PVT LTD, ON AN "AS IS" BASIS
 
 Welcome to the Procify Developer Training. This section explains the overall structure of the course, how sessions are designed, and what is expected of you as a trainee. Read this before starting Session 1\.
 
-## Course Structure — 8 Sessions
+### Course Structure — 8 Sessions
 
 The training spans 8 sessions. Each session introduces a new layer of the platform — starting with setup and ending with publishing a fully working application. Sessions must be taken in order; each one builds directly on the previous.
 
@@ -44,9 +42,9 @@ The training spans 8 sessions. Each session introduces a new layer of the platfo
 | [Session 6](#session-6) | [Bindings, Navigation & Styling](#session-6) |
 | [Session 7](#session-7) | [Controllers & Client-Side Behaviour](#session-7) |
 | [Session 8](#session-8) | [Menu Configuration & App Management, Versioning & Publishing](#session-8) |
-## 
+### 
 
-## The Learn-by-Building Approach
+### The Learn-by-Building Approach
 
 This training does not teach concepts in isolation. You will build one real application — a Customer complaint system — across all 89 sessions. Every concept is introduced exactly when you need it to make the next part of that application work.
 
@@ -68,7 +66,7 @@ This training does not teach concepts in isolation. You will build one real appl
 
 ## Session 1 — Platform Setup & Account Management {#session-1}
 
-## Session Objectives
+### Session Objectives
 
 By the end of this session, we will be able to:
 
@@ -87,11 +85,11 @@ By the end of this session, we will be able to:
 | ⚠  Why this session comes first The App you create today is built across ALL 9 sessions — treat it carefully. The Roles you define today are referenced in Session 5 (Validations) and Session 9 (Publishing access). The Users you create today are the test personas you will use to verify every screen built in Sessions 2–8. |
 | :---- |
 
-## Part A — Understanding the Customer complaint Application {#part-a-—-understanding-the-customer-complaint-application}
+### Part A — Understanding the Customer complaint Application {#part-a-—-understanding-the-customer-complaint-application}
 
 Before touching any tool, you need a clear picture of the application you are building. Read this section carefully — every configuration decision in Sessions 1– traces back to this Business Requirement Document.
 
-### Application Purpose {#application-purpose}
+#### Application Purpose {#application-purpose}
 
 The Customer Complaints Application is a solution designed to manage customer complaints end-to-end across three personas:
 
@@ -107,7 +105,7 @@ The Customer Complaints Application is a solution designed to manage customer co
 
  
 
-### **Application Roles — Three Personas**
+#### **Application Roles — Three Personas**
 
 This application defines exactly three application roles, each mapped to a Procify role-rollup level for viewable and UI-Auth controls:
 
@@ -126,7 +124,7 @@ This application defines exactly three application roles, each mapped to a Proci
 
  
 
-### **Role Responsibilities**
+#### **Role Responsibilities**
 
 | Action | Employee(Owner) | Manager(Supervisor) | Responsible Team(Reviewer) |
 | :---- | :---- | :---- | :---- |
@@ -147,7 +145,7 @@ This application defines exactly three application roles, each mapped to a Proci
 
  
 
-### **Entities to be Built**
+#### **Entities to be Built**
 
 | Entity ID | Primary Key | Built in Session |
 | :---- | :---- | :---- |
@@ -160,7 +158,7 @@ This application defines exactly three application roles, each mapped to a Proci
 
  
 
-### **Complaint Status Flow**
+#### **Complaint Status Flow**
 
 The status lifecycle has 6 states. Each transition is triggered by a specific role:
 
@@ -217,7 +215,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **d\_complaint\_item — Properties**
+#### **d\_complaint\_item — Properties**
 
 | Property ID | Data Type | Key Attr | Notes |
 | :---- | :---- | :---- | :---- |
@@ -228,7 +226,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **d\_complaint\_voices — Properties**
+#### **d\_complaint\_voices — Properties**
 
 | Property ID | Data Type | Key Attr | Notes |
 | :---- | :---- | :---- | :---- |
@@ -240,7 +238,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **d\_complaints\_attachment — Properties**
+#### **d\_complaints\_attachment — Properties**
 
 | Property ID | Data Type | Key Attr | Notes |
 | :---- | :---- | :---- | :---- |
@@ -251,7 +249,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **d\_customers — Properties**
+#### **d\_customers — Properties**
 
 | Property ID | Data Type | Key Attr | Notes |
 | :---- | :---- | :---- | :---- |
@@ -261,7 +259,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **d\_resp\_team — Properties**
+#### **d\_resp\_team — Properties**
 
 | Property ID | Data Type | Key Attr | Notes |
 | :---- | :---- | :---- | :---- |
@@ -270,7 +268,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **Entity Relationships**
+#### **Entity Relationships**
 
 | Relationship | Detail |
 | :---- | :---- |
@@ -281,7 +279,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **Pages to be Built**
+#### **Pages to be Built**
 
 | Screen ID | Purpose |
 | :---- | :---- |
@@ -290,7 +288,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **Menu Structure**
+#### **Menu Structure**
 
 | Menu Item | Screen | Icon | Visible to |
 | :---- | :---- | :---- | :---- |
@@ -298,7 +296,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **Naming Convention for This Training** {#naming-convention-for-this-training}
+#### **Naming Convention for This Training** {#naming-convention-for-this-training}
 
 | Item | Convention |
 | :---- | :---- |
@@ -316,15 +314,15 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 | ⚠ Naming Rules App ID must be unique across the landscape — use your PRID to avoid collisions. Use only lowercase letters, numbers, and underscores. No spaces, hyphens, or special characters. The App ID cannot be changed after creation. |
 | :---- |
 
-## 
+### 
 
-## Part B — Workspace Hub: Users
+### Part B — Workspace Hub: Users
 
 *Reference: [Workspace Hub 7.0 \- User Guide](https://docs.google.com/document/d/1KdP46c5_-BVEhWN5OgjVIcuHuZ_1Cf4-k7CZiMk5Tus/edit?tab=t.0)*
 
 Workspace Hub is an Admin Tool that focuses on managing applications and the application users. It is a versatile application that serves diverse purposes from user management to application management. Apart from that, this tool can also be used for modifying the already existing users and apps.
 
-### Navigating to the Workspace Hub
+#### Navigating to the Workspace Hub
 
 1. Workspace Hub menu will be visible for Users who are assigned as **TESTER** or **DEVELOPER** or **SUPERADMIN**  for **cockpit flavor.**
 
@@ -338,11 +336,11 @@ Workspace Hub is an Admin Tool that focuses on managing applications and the app
 
    
 
-### What Is a User?
+#### What Is a User?
 
 A User is a platform-level account — a person who can log in to one or more applications. Users exist independently of applications. You create the person first, then assign them to applications with roles separately. The same user can have different roles in different applications.
 
-### Creating a New User
+#### Creating a New User
 
 Create one test user to represent the end-user persona (emp01) throughout all sessions.
 
@@ -373,13 +371,13 @@ Create one test user to represent the end-user persona (emp01) throughout all se
 | Important — User Created ≠ User Has Access Creating a user only adds them to the platform's user directory. They cannot access any application until assigned to one with a specific role. You will complete that assignment in Part D of this session. If a user tries to log in before assignment, they will see error mentioning no applications assigned Refer [Create User](https://docs.google.com/document/d/1KdP46c5_-BVEhWN5OgjVIcuHuZ_1Cf4-k7CZiMk5Tus/edit?tab=t.0#heading=h.2jxsxqh) part from workspace hub manual for more information. |
 | :---- |
 
-## Part C — Workspace Hub: Apps & Roles
+### Part C — Workspace Hub: Apps & Roles
 
-### What Is an Application in Klobase?
+#### What Is an Application in Klobase?
 
 An application is a self-contained unit that holds all the metadata you build — entities, queries, pages, menus, and more. It is the primary organising structure of everything you will do in Sessions 2–8. Users are assigned to applications (with roles), not to individual Pages or features.
 
-### Creating the Customer complaint Application {#creating-the-customer-complaint-application}
+#### Creating the Customer complaint Application {#creating-the-customer-complaint-application}
 
 | 1 | Navigate to Apps In the  Workspace Hub, click Apps in the left navigation. |
 | :---: | :---- |
@@ -399,7 +397,7 @@ An application is a self-contained unit that holds all the metadata you build �
 | 4 | Save the Application Click Save. The app appears in the Apps list with Active status. |
 | :---: | :---- |
 
-### Understanding Roles
+#### Understanding Roles
 
 Roles control what a user can do inside the application. Procify has two categories:
 
@@ -417,7 +415,7 @@ For this training, define single application role inside your app:
 | Role Precedence — Key Rule Precedence is a number. Lower number \= higher priority. If a user has multiple roles, the one with the lowest precedence number takes effect at runtime. Delivery Admin(1) always overrides Delivery Agent(2) for a user assigned both roles. Your developer account will be Delivery Admin. The test user will be SRM\_User. This lets you test both personas. |
 | :---- |
 
-### Creating the DeliveryAgent Role {#creating-the-deliveryagent-role}
+#### Creating the DeliveryAgent Role {#creating-the-deliveryagent-role}
 
 | 1 | Open Your Application In the Apps list, click on srm\_\<prid\> to open its detail screen. |
 | :---: | :---- |
@@ -431,11 +429,11 @@ For this training, define single application role inside your app:
 | 4 | Verify Roles Are Listed Delivery Agents  appear in the Application Roles list. |
 | :---: | :---- |
 
-## Part D —  Workspace Hub: App Assignment
+### Part D —  Workspace Hub: App Assignment
 
 With the application created and roles defined, you now assign users to the application with their respective roles. Without this step, a user cannot see or open the application even with a valid platform account.
 
-### Assigning the customer complaints to user via employee role {#assigning-the-customer-complaints-to-user-via-employee-role}
+#### Assigning the customer complaints to user via employee role {#assigning-the-customer-complaints-to-user-via-employee-role}
 
 | 1 | Select the Employee Role In the same Roles & Users section, click on Employee. |
 | :---: | :---- |
@@ -445,7 +443,7 @@ With the application created and roles defined, you now assign users to the appl
 
 Repeat the same for remaining roles.
 
-### Verifying the Assignment
+#### Verifying the Assignment
 
 | 1 | Open new profile / guest mode Open a new Incognito / Private browser window so it does not use your developer session. |
 | :---: | :---- |
@@ -464,9 +462,9 @@ Repeat the same for remaining roles.
 
 	 	
 
-## Part D.1 — Team Groups: Bulk User Assignment 		 	
+### Part D.1 — Team Groups: Bulk User Assignment 		 	
 
-### **What Is a Team Group?**
+#### **What Is a Team Group?**
 
 Assigning one test user at a time (as done in Part D) works fine for training, but it does not scale. Real projects onboard users in batches — a new hire cohort, an entire department, or a partner organisation that all needs the same app access on day one. **Team Groups** (labelled **User collections**  inside the Workspace Hub screen) solve exactly this: they let you bundle a set of users once and assign the whole bundle to an application in a single step, instead of repeating the Part D steps per user.
 
@@ -490,11 +488,11 @@ Team Groups are of two kinds:
 
 	 	
 
-### **Scenario — Onboarding the Response Team** 	
+#### **Scenario — Onboarding the Response Team** 	
 
 The Customer Complaints BRD defines a ResponsibleTeam persona made up of several support agents, not just one test user. Rather than repeating Part D for each agent individually, model the onboarding the way a real project would:
 
-### 
+#### 
 
 | Action | Detail / Code |
 | :---- | :---- |
@@ -507,9 +505,9 @@ The Customer Complaints BRD defines a ResponsibleTeam persona made up of several
 
 	 	
 
-### 
+#### 
 
-### **Excel Upload for Team Groups** 	
+#### **Excel Upload for Team Groups** 	
 
 For onboarding sets larger than a handful of users, Team Groups also support bulk **Excel upload/download**, so a spreadsheet of usernames can populate group membership without clicking through the UI one row at a time. This is the same mechanism used for App Collections and is the recommended approach once a group exceeds roughly 10–15 members.	
 
@@ -527,18 +525,18 @@ For onboarding sets larger than a handful of users, Team Groups also support bul
 
 	 	
 
-## Part E —  understanding the importance of Procify {#part-e-—-understanding-the-importance-of-procify}
+### Part E —  understanding the importance of Procify {#part-e-—-understanding-the-importance-of-procify}
 
 Every application starts the same way: someone hands a developer a requirements document and says 'build this.' The Customer complaints Application Business Requirement Document (BRD) you read in Session 1 defines exactly what data needs to be stored — 3 data objects, their fields, and their relationships. The first job as a developer is to turn those definitions into a working database schema.
 
 Before opening any tool, it is worth understanding what that process looks like — and how much of it Procify eliminates. The rest of this part walks through the traditional process step by step, then shows exactly which steps the data studio replaces.
 
-##  What Is a Schema?
+###  What Is a Schema?
 
 | 📘  Schema — The Blueprint of Your Application's Data A schema is the complete definition of the data your application stores: what tables exist, what columns each table has, what type of data each column holds, and how tables relate to each other. The schema is the foundation of every application. Without it, there is no database. Without a database, there is no data. Without data, there is no application. Building the schema is always the first development task after reading a BRD. Everything else — APIs, Pages, logic — is built on top of it. In our BRD, the schema is already defined in Section 4 (Entity Relationship Overview). The 4 entities, their properties, and their relationships are all there. Our job today is to implement that schema. |
 | :---- |
 
-## The Traditional Way of Building a Schema
+### The Traditional Way of Building a Schema
 
 | 🏗  How developers build a schema without a low-code platform Step 1 — Write SQL scripts: A backend developer writes CREATE TABLE statements for each entity. For the Delivery table alone, that is 12 columns — each with its SQL data type, constraints, default values, and indexes. Step 2 — Write an ORM model: For every SQL table, the developer writes a model class in the backend language (Node.js/TypeScript, Python, Java). This class mirrors the database table and handles object-relational mapping. Step 3 — Write REST API endpoints: For each entity, the developer writes GET, POST, PUT, DELETE API handlers. Each handler validates input, maps it to the model, executes the database query, and returns the response. Step 4 — Write validation logic: For each property that has rules (mandatory, unique, min/max), the developer writes validation code — either in the model or in the API handler. Step 5 — Handle database migrations: Every time the schema changes (new property, renamed column), the developer writes a migration script to alter the existing tables without losing data. Step 6 — Test the API: The developer uses Postman or writes unit tests to verify each endpoint returns the correct data in the correct format. Repeat for all 4 entities. |
 | :---- |
@@ -546,9 +544,9 @@ Before opening any tool, it is worth understanding what that process looks like 
 | 🔴  The pain of the traditional approach Multiple files across multiple layers — SQL files, model files, API controller files, test files. A change to one field requires edits in 4–6 places. Context switching: a single developer must switch between SQL, backend language, API design, and test writing — each requiring a different mental mode. Time cost: 3–4 days of developer time before a single screen can be shown to a stakeholder. Repetition: most of this work is identical boilerplate — every entity needs the same pattern of SQL \+ ORM \+ CRUD APIs. Nothing creative, just repetitive. |
 | :---- |
 
-## 
+### 
 
-## The Procify Way {#the-procify-way}
+### The Procify Way {#the-procify-way}
 
 | ✅  How Procifyreplaces the traditional schema-building process In Klobase, all 6 traditional steps are replaced by a single tool: the data studio. You define the entity (name, type) → add properties (name, data type, key attributes) → click Update Schema. Done. The platform automatically generates: the database table (SQL step 1), the data access layer (ORM step 2), the REST API endpoints (step 3), basic validation from key attributes (step 4), and handles schema updates automatically (step 5). There are no separate files to keep in sync. The data studio is the single source of truth. Everything downstream — API, data validation, mobile sync — is derived from it automatically. Time with Klobase: the same 4 entities, all properties, schema live in the database — approximately 2 hours in this session. The developer's time is freed for the parts that actually require thinking: business logic, UI design, user experience. |
 | :---- |
@@ -564,29 +562,29 @@ This is not an approximation. Let us make it concrete:
 | Write database migration script | Click Update Schema again — the platform handles ALTER TABLE automatically |
 | Test APIs with Postman | Use the built-in Test function in the data studio toolbar |
 
-### 
+#### 
 
-### **The Traditional Way of Building a UI**
+#### **The Traditional Way of Building a UI**
 
-| 🔴 Traditional screen development requires five separate layers 1\. HTML / JSX template — the visual structure: list container, card component, placeholder slots for each field. 2\. CSS / styling — card appearance, status badge colours, spacing, responsiveness for mobile and desktop. 3\. API call — GET /complaints?user={currentUser.id} to fetch complaint records from the server. 4\. State management (React state, Redux, etc.) — store the fetched array, handle loading state, handle error state, trigger re-renders when data changes. 5\. Data binding — map each complaint object's fields to the template slots: {complaint.complaint\_desc}, {complaint.priority}. Total: 3–5 files, 150–300 lines of code, for one list screen. Any change to one layer often requires changes to the others. |
+| 🔴 Traditional screen development requires five separate layers 1\. HTML / JSX template — the visual structure: list container, card component, placeholder slots for each field. 2\. CSS / styling — card appearance, status badge colours, spacing, responsiveness for mobile and desktop. 3\. API call — GET /complaints?user=\{currentUser.id\} to fetch complaint records from the server. 4\. State management (React state, Redux, etc.) — store the fetched array, handle loading state, handle error state, trigger re-renders when data changes. 5\. Data binding — map each complaint object's fields to the template slots: \{complaint.complaint\_desc\}, \{complaint.priority\}. Total: 3–5 files, 150–300 lines of code, for one list screen. Any change to one layer often requires changes to the others. |
 | :---- |
 
  
 
-### **The Procify Way — The Page Wizard & Page Builder**
+#### **The Procify Way — The Page Wizard & Page Builder**
 
 | ✅ The Page Builder replaces all five layers with a single metadata configuration In the Page Builder you configure the screen structure. The platform reads your configuration and generates the visual rendering, handles all data fetching, manages state automatically, applies your styling choices, and wires up the data bindings. This means: one tool, no files to keep in sync, no merge conflicts on screen structure, no state management code. The Page Wizard (used in this session) gives you a ready-made screen in minutes. Session 2 teaches you to build the same screen step-by-step so you understand every level of the hierarchy. Pages configured in the Page Builder render identically on both browser (web) and mobile (KloTouch) — no separate mobile codebase needed. |
 | :---- |
 
  
 
-## Part F — Creating the d\_complaints Entity and Initial Page Using the Wizard
+### Part F — Creating the d\_complaints Entity and Initial Page Using the Wizard
 
 Now that you understand what Procify eliminates, you will experience it firsthand. You will create the d\_complaints entity and its Complaints list screen — using the Page Wizard — in this session. Session 2 will rebuild the same screen step-by-step so you understand every level of the hierarchy.
 
  
 
-### **F.1 — Open the Data Studio**
+#### **F.1 — Open the Data Studio**
 
 | 1 | Log in to the platform as your developer account. |
 | :---: | :---- |
@@ -596,7 +594,7 @@ Now that you understand what Procify eliminates, you will experience it firsthan
 
  
 
-### **F.2 — Create the d\_complaints Entity**
+#### **F.2 — Create the d\_complaints Entity**
 
 | ⚠ Naming rules — read before creating anything Only lowercase letters, numbers, and underscores. No spaces, hyphens, or capitals. IDs cannot be changed after creation — a wrong name requires deleting and recreating. Never use "user" as an entity ID — reserved keyword in MySQL. d\_ prefix \= Runtime Entity — always use this prefix for transactional entities. |
 | :---- |
@@ -611,7 +609,7 @@ Now that you understand what Procify eliminates, you will experience it firsthan
 
  
 
-### **F.3 — Add All Properties to d\_complaints**
+#### **F.3 — Add All Properties to d\_complaints**
 
 Follow the steps below to add each property. The complete property reference table is in Part A.
 
@@ -635,7 +633,7 @@ Follow the steps below to add each property. The complete property reference tab
 
  
 
-### **F.5 — Create Test Data**
+#### **F.5 — Create Test Data**
 
 | 1 | Click d\_complaints in the tree → Toolbar → Data Browser → Execute → Add. |
 | :---: | :---- |
@@ -645,7 +643,7 @@ Follow the steps below to add each property. The complete property reference tab
 
  
 
-### **F.6 — Create the Complaints Page Using the Wizard**
+#### **F.6 — Create the Complaints Page Using the Wizard**
 
 The Page Wizard creates a full working screen — with page, layout, area, section, and controls — in a few clicks. Use it now to produce your first Complaints screen quickly. In Session 2 you will build the same screen manually, step-by-step, so you understand every level.
 
@@ -695,7 +693,7 @@ Complete all mandatory tasks before Session 2\. The trainer will verify each ite
 
 # **Session 2 — BOL: Entity Fundamentals & Initial Pages** {#session-2-—-bol:-entity-fundamentals-&-initial-pages}
 
-## Session Objectives
+### Session Objectives
 
 By the end of this session, you will be able to:
 
@@ -714,27 +712,27 @@ By the end of this session, you will be able to:
 | ⚠  Pre-requisite Check Before this session begins, the trainer will verify: ✔  Application customer\_complaints\_\<prid\> created with 3 roles and 3 test users. ✔  d\_complaints entity has all 20 properties and schema updated. ✔  p\_complaints wizard page shows 3 test records in preview. Incomplete items must be resolved before the session continues. |
 | :---- |
 
-## Part A — BOL Entity Fundamentals: Creating the Remaining Entities
+### Part A — BOL Entity Fundamentals: Creating the Remaining Entities
 
 In Session 1, you created d\_complaints using the Wizard. In this session, you create the remaining five entities step by step.
 
-### 
+#### 
 
-### **A.1 — Business Object (BO) Hierarchy Explained**
+#### **A.1 — Business Object (BO) Hierarchy Explained**
 
 A Business Object is a hierarchical tree of entities. The root entity represents the BO. Child entities are dependent on the root via Primary Relations. Standalone entities are linked via Non-Primary (Aggregated) Relations.
 
 | 📘  BO Hierarchy — Customer Complaints d\_complaints  (Root Entity / BO)  d\_complaint\_item  (Root Entity / BO)  d\_complaint\_voices     (Root Entity / BO)  d\_complaints\_attachment (Root Entity / BO) d\_customers (Root Entity / BO)d\_resp\_team (Root Entity / BO) |
 | :---- |
 
-### **A.2 — Key Attribute Reference**
+#### **A.2 — Key Attribute Reference**
 
 Primary Key (PK) — unique record identifier.  
  Mandatory (❗) — field cannot be empty.   
 Unique Key — no duplicate values allowed.   
 Parent Key — auto-copies PK from parent entity into child on creation.
 
-### **A.3 — Creating d\_complaint\_item**
+#### **A.3 — Creating d\_complaint\_item**
 
 Stores individual line items raised within a complaint.
 
@@ -744,7 +742,7 @@ Stores individual line items raised within a complaint.
 | **3** | Go to Properties tab → \+. Add: ticket\_id (String), product (String — mark Mandatory), issue\_observed (Text). |
 | **4** | Save → Update Schema. Confirm success toast. |
 
-### **A.4 — Creating d\_complaint\_voices**
+#### **A.4 — Creating d\_complaint\_voices**
 
 Stores discussion comments and voice records for each complaint.
 
@@ -753,7 +751,7 @@ Stores discussion comments and voice records for each complaint.
 | **2** | Add properties: ticket\_id (String), customer (String), responsible\_team (String), sales\_manager (String), rd\_team (String), internal\_comments (Text), app (String). |
 | **3** | Save → Update Schema. |
 
-### **A.5 — Creating d\_complaints\_attachment**
+#### **A.5 — Creating d\_complaints\_attachment**
 
 Stores uploaded file attachments for a complaint.
 
@@ -762,7 +760,7 @@ Stores uploaded file attachments for a complaint.
 | **2** | Add properties: complaint\_id (String), attachment (Attachment), attachment\_type (String), app (String). |
 | **3** | Save → Update Schema. |
 
-### **A.6 — Creating d\_customers**
+#### **A.6 — Creating d\_customers**
 
 A standalone master entity. NOT a child of d\_complaints. Will be linked via Non-Primary Relation in Session 3\.
 
@@ -771,7 +769,7 @@ A standalone master entity. NOT a child of d\_complaints. Will be linked via Non
 | **2** | Add properties: customer\_name (String, Mandatory), customer\_type (String), customer\_category (String), app (String). |
 | **3** | Save → Update Schema. |
 
-### **A.7 — Creating d\_resp\_team**
+#### **A.7 — Creating d\_resp\_team**
 
 Holds the list of team members who can be assigned as the responsible team for complaint resolution.
 
@@ -783,11 +781,11 @@ Holds the list of team members who can be assigned as the responsible team for c
 | ✔  Entity Creation Checkpoint After Parts A.3 to A.7, verify in Data Studio tree: d\_complaints — 20 properties, schema updated d\_complaint\_item — 4 properties, schema updated d\_complaint\_voices — 8 properties, schema updated d\_complaints\_attachment — 5 properties, schema updated d\_customers — 5 properties, schema updated d\_resp\_team — 3 properties, schema updated Insert 2–3 test records in d\_customers and d\_resp\_team using Data Browser before proceeding to Part B. |
 | :---- |
 
-## Part B — Understanding Data Studio and Page Builder
+### Part B — Understanding Data Studio and Page Builder
 
 Before building screens, every developer must be familiar with the two core design tools in Klobase: the Data Studio (BOL Editor) and the Page Builder (UI Editor). This part gives you an orientation of both tools and their layouts, then walks through building the Customer Complaints screen step by step — showing the expected output at each stage.
 
-### **B.1 — Data Studio (BOL Editor) — Tool Layout**
+#### **B.1 — Data Studio (BOL Editor) — Tool Layout**
 
 Navigate to Design Studio → Data Studio. The editor is divided into two major sections: the Tree on the left and the Detail on the right.
 
@@ -802,7 +800,7 @@ Navigate to Design Studio → Data Studio. The editor is divided into two major 
 | 📘  Data Studio Reference Source: BOL Editor 7.0 User Guide — Sections 2.0 Editor Sections, 1.4 Modes Tree: expand, collapse, filter — same panel used for all entity operations. Detail panel tabs depend on context: entity selected shows Properties/Relations/Status; query shows query config. Update Schema: converts entity metadata into actual DB table. Required after every property change. Test button: opens the Data Browser for CRUD operations on the entity directly from the editor. |
 | :---- |
 
-### **B.2 — Page Builder (UI Editor) — Tool Layout**
+#### **B.2 — Page Builder (UI Editor) — Tool Layout**
 
 Navigate to Design Studio → Page Builder. According to the UI Editor 7.0 User Guide, the editor is divided into four major sections:
 
@@ -816,7 +814,7 @@ Navigate to Design Studio → Page Builder. According to the UI Editor 7.0 User 
 | 📘  Page Builder Toolbar Reference (UI Editor 7.0 User Guide — Section 1.0) Edit icon — enables edit mode on the tree. You MUST click this before creating or renaming anything. \+ icon — create a new page (blank or from wizard). Save icon — commits all pending changes. Required before preview refreshes. Show Full Preview — loads real database records into the preview for testing. Detail icon — toggles visibility of the detail properties panel. Page Data Model icon — toggles visibility of the TransNode / data model panel. Reset Perspective — restores all panels to their default size and position. Preview In — switch preview between desktop, tablet, and mobile device views. |
 | :---- |
 
-### **B.3 — The Page Hierarchy (UI Editor 7.0 User Guide — Sections 3.0–7.0)**
+#### **B.3 — The Page Hierarchy (UI Editor 7.0 User Guide — Sections 3.0–7.0)**
 
 Every screen in Klobase follows a strict 5-level hierarchy. This is the most important structural concept in UI development. Each level has a mandatory naming convention prefix:
 
@@ -833,7 +831,7 @@ Every screen in Klobase follows a strict 5-level hierarchy. This is the most imp
 | **tab** | Used on Page Areas to group child sections as tabs. showTitle must be true for tab labels. |
 | **tree** | Hierarchical tree display for nested data. |
 
-### **B.4 — Page Data Model (TransNodes) — Concept**
+#### **B.4 — Page Data Model (TransNodes) — Concept**
 
 The Page Data Model defines the data available to a screen. Every section and control that displays data must be bound to a TransNode. A TransNode is a “data pipe” — it fetches entity records from the database and makes them available to sections and controls on the page.
 
@@ -847,14 +845,14 @@ The Page Data Model defines the data available to a screen. Every section and co
 | 📘  Fold From — The Critical Link Between List and Detail When you create d\_complaints\_detail (Entity type) and set its “Fold From” \= d\_complaints\_list, the platform automatically loads the selected record’s data into d\_complaints\_detail whenever the user clicks a row in the list. This is the mechanism that connects list → detail. Without Fold From: the detail section will always be empty. With Fold From: clicking any complaint row in the list instantly populates the detail form. TransNode naming convention (from UI Editor 7.0 Guide):   EntitySet → \_list suffix    Entity → \_detail suffix    Query → \_query suffix |
 | :---- |
 
-### **B.5 — Target Screen Design for p\_complaints**
+#### **B.5 — Target Screen Design for p\_complaints**
 
 Based on the Customer Complaints Application design, the p\_complaints page has two page areas. The complete target structure is:
 
 | 📘  p\_complaints — Full Page Structure PAGE: p\_complaints   └─ pl\_complaints\_desk  (PageLayout — screenType: two column)        ├─ pa\_complaints           (PageArea 1 — List Panel)        |    ├─ s\_search             (Section — screenType: search)        |    |    Controls: ticket\_id, desc, customer\_id, responsible\_tea, priority,        |    |              s\_status, is\_escalated, cust\_category, cust\_type,        |    |              complaint\_type, raised\_by, state, nature\_of\_compl, actual\_tat, standard\_tat        |    └─ s\_complaints         (Section — screenType: grid)        |         Controls: ticket\_id (link), customer\_id, priority, s\_status,        |                   planned\_res\_dat, closed\_on, sales\_manager        └─ pa\_complaint\_details    (PageArea 2 — Tab)             ├─ section\_toolbar      (Action toolbar: Edit/Save/Add buttons)             ├─ s\_detail\_header      (Section — screenType: card— key fields)             |    Controls: desc, i\_ageing, t\_ageing, s\_status, i\_t\_priority, i\_res\_team, responsible\_tea             └─ pa\_comp\_details      (PageArea — screenType: default)                  ├─ s\_complaint\_details    ├─ s\_complaint\_details3 → form                  ├─ s\_complaint\_details5   ├─ s\_reporter\_details  —\> form                  ├─ s\_complaint\_details2   ├─ s\_complaint\_details4 → form |
 | :---- |
 
-### **B.6 — Step 1: Create the Page (p\_complaints)**
+#### **B.6 — Step 1: Create the Page (p\_complaints)**
 
 | 1 | Open Page Builder from Design Studio → Page Builder. Select your application from the app dropdown. |
 | :---: | :---- |
@@ -865,7 +863,7 @@ Based on the Customer Complaints Application design, the p\_complaints page has 
 
 	![][image3]
 
-### **B.7 — Step 2: Create the Page Layout (pl\_complaints\_desk)**
+#### **B.7 — Step 2: Create the Page Layout (pl\_complaints\_desk)**
 
 The Page Layout sits directly under the Page and defines the arrangement type for all page areas. According to UI Editor 7.0 Guide (Section 4.0): at runtime only one pageLayout is picked based on the device type — determined by the page’s screencontainerdefault, screencontainerdesktop, etc. properties.
 
@@ -882,7 +880,7 @@ The Page Layout sits directly under the Page and defines the arrangement type fo
 | 📘  Layout Type Quick Reference (UI Editor 7.0 Guide — Section 12.0) stack — Sections / areas render one after another vertically. One subscreen shown at a time. two\_column — Master-detail split: left panel (list) \+ right panel (detail). Max 2 columns. tab — Renders children as tabbed panels. Used at Page Area level for detail tabs. object\_page — SAP-style object page: sticky header \+ tab body sections. hsplitter — Horizontal split with resizable rows. vsplitter — Vertical split with resizable columns. grid\_layout / css\_grid — CSS Grid-based placement. Requires modeller configuration. |
 | :---- |
 
-### **B.8 — Step 3: Configure the Page Data Model (TransNodes)**
+#### **B.8 — Step 3: Configure the Page Data Model (TransNodes)**
 
 Select p\_complaints in the tree. Click the Page Data Model icon (right panel tab). Click \+ to add Model Paths. Create the two root TransNodes:
 
@@ -893,7 +891,7 @@ Select p\_complaints in the tree. Click the Page Data Model icon (right panel ta
 | **4** | Click Transfer\&Link of list Node Path: detail |
 | **5** | Save. These two TransNodes are the data backbone for all sections on this page. |
 
-### **B.9 — Step 4: Create the List Page Area (pa\_complaints)**
+#### **B.9 — Step 4: Create the List Page Area (pa\_complaints)**
 
 Per UI Editor 7.0 Guide (Section 5.0): The Page Area is the next level after Page Layout. Page Areas are embedded with the Page Layout via the Layout Data assignment.
 
@@ -902,7 +900,7 @@ Per UI Editor 7.0 Guide (Section 5.0): The Page Area is the next level after Pag
 | **2** | Right-click the new page area → Rename → pa\_complaints. |
 | **4** | Save. |
 
-### **B.9.1 — Creating the Search Section (s\_search)**
+#### **B.9.1 — Creating the Search Section (s\_search)**
 
 Per UI Editor 7.0 Guide (Section 6.1): To add a new section, right-click on the page area and select New → Section. The search screenType auto-generates the filter bar with Close / Reset / Search buttons.
 
@@ -930,7 +928,7 @@ Per UI Editor 7.0 Guide (Section 6.1): To add a new section, right-click on the 
 
 *Page Builder tree showing pa\_complaints → s\_search with all controls: ticket\_id, desc, customer\_id, responsible\_tea, priority, s\_status, is\_escalated, cust\_category\_lbl, cust\_category, cust\_type\_lbl, cust\_type, complaint\_type, raised\_by, state, nature\_of\_compl, actual\_tat, standard\_tat*
 
-### **B.9.2 — Creating the Complaints List Section (s\_complaints)**
+#### **B.9.2 — Creating the Complaints List Section (s\_complaints)**
 
 The grid section renders complaint records as rows with sortable, filterable columns. Per UI Editor 7.0 Guide (Section 6.2 — Grid): For desktop view, section screenType should be “grid”. Add a conf\_grid000 config node for grid behaviour settings.
 
@@ -966,7 +964,7 @@ Pont 1 & 2 will be achieved in the upcoming sessions. For point 3 we can achieve
 
 *Page Builder tree showing s\_complaints with controls: ticket\_id (link icon), customer\_id, priority, s\_status, planned\_res\_dat, closed\_on, sales\_manager, plus conf\_grid000 config and section\_toolbar*
 
-### **B.10 — Step 5: Create the Detail Page Area (pa\_complaint\_details)**
+#### **B.10 — Step 5: Create the Detail Page Area (pa\_complaint\_details)**
 
 The detail area loads when a complaint row is selected from the list. It contains a toolbar for actions, a header section showing critical fields, and a tabbed area for all complaint details.
 
@@ -974,7 +972,7 @@ The detail area loads when a complaint row is selected from the list. It contain
 | :---: | :---- |
 | **2** | Update screentype as tab |
 
-### **B.10.2 — Creating the Detail Header Section (s\_detail\_header)**
+#### **B.10.2 — Creating the Detail Header Section (s\_detail\_header)**
 
 The header section displays the most critical complaint fields prominently. screenType: card. Bound to d\_complaints\_detail TransNode.
 
@@ -996,7 +994,7 @@ The header section displays the most critical complaint fields prominently. scre
 
 *Page Builder tree showing s\_detail\_header with controls: desc, i\_ageing (icon), t\_ageing (text), s\_status, i\_t\_priority (priority icon), i\_res\_team (team icon), responsible\_tea*
 
-### **B.10.3 — Creating the Detail Area (pa\_comp\_details)**
+#### **B.10.3 — Creating the Detail Area (pa\_comp\_details)**
 
 pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 
@@ -1017,7 +1015,7 @@ pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 | **s\_timeline\_details** | form  | TAT & Timeline — actual\_tat, standard\_tat, closed\_on, created\_on, modified\_on |
 | **s\_admin\_info** | form  | Contains s\_created\_by, s\_modified\_by, s\_created\_on and s\_modified\_on |
 
-### **B.10.3 — Add Action buttons for pa\_comp\_details** {#b.10.3-—-add-action-buttons-for-pa_comp_details}
+#### **B.10.3 — Add Action buttons for pa\_comp\_details** {#b.10.3-—-add-action-buttons-for-pa_comp_details}
 
 | 1 | Right-click pa\_comp\_details→ New → Toolbar. |
 | :---: | :---- |
@@ -1040,7 +1038,7 @@ pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 
 *Page Builder tree showing pa\_complaint\_details with: section\_toolbar, s\_detail\_header, and nested pa\_comp\_details containing all 7 tab sections — s\_complaint\_details, s\_complaint\_details3, s\_complaint\_details5, s\_reporter\_details, s\_complaint\_details2, s\_complaint\_details4, s\_complaint\_item*
 
-### **B.11 — Step 6: Preview and Verify the Complete Screen**
+#### **B.11 — Step 6: Preview and Verify the Complete Screen**
 
 | 1 | Save all changes in the Page Builder. |
 | :---: | :---- |
@@ -1055,7 +1053,7 @@ pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 | :---- |
 
 ## Session 2 — BOL — Entity Fundamentals & Initial Pages {#session-2}
- Assignment {#session-2-assignment}
+ Assignment \{#session-2-assignment\}
 
 Complete all mandatory tasks before Session 3\. The trainer will verify each item at the start of Session 3\.
 
@@ -1637,7 +1635,7 @@ By the end of this session, you will be able to:
 
 [Documentation Sources Used in This Session](#documentation-sources-used-in-this-session)
 
-## 
+### 
 
 [Copyright](?tab=t.0#heading=)
 
@@ -2181,9 +2179,9 @@ By the end of this session, you will be able to:
 
 [Documentation Sources Used in This Session](#documentation-sources-used-in-this-session)
 
-## Part A — Creating Relations Between Entities
+### Part A — Creating Relations Between Entities
 
-## **A.1 — What Is an Entity Relation?**
+### **A.1 — What Is an Entity Relation?**
 
 An Entity Relation tells the Klobase server how two entities are connected to each other. Without a relation defined in the BOL Editor, the platform has no way to automatically load child records when a parent record is selected — and no way to bundle the BO for save/delete operations.
 
@@ -2202,7 +2200,7 @@ There are two types of relations in Klobase:
 | Naming convention (from BOL Editor 7.0 User Guide — Best Practices): pr\_ prefix for primary relations, r\_ prefix for associated/aggregated relations. Always lowercase. |
 |  |
 
-## **A.2 — Relations to Create for d\_complaints**
+### **A.2 — Relations to Create for d\_complaints**
 
 You will create 5 relations on the d\_complaints root entity — one for each related entity.
 
@@ -2214,11 +2212,11 @@ You will create 5 relations on the d\_complaints root entity — one for each re
 | r\_customer | Non-Primary (Aggregated) | d\_customers | 1:1 (One complaint has one customer) |
 | r\_resp\_team | Non-Primary (Aggregated) | d\_resp\_team | 1:1 (One complaint has one responsible team member) |
 
-## **A.3 — Step-by-Step: Creating a Primary Relation**
+### **A.3 — Step-by-Step: Creating a Primary Relation**
 
 Primary Relation will be automatically  created with the creation of child entity and requires no manual action
 
-## **A.4 — Step-by-Step: Creating a Non-Primary (Aggregated) Relation**
+### **A.4 — Step-by-Step: Creating a Non-Primary (Aggregated) Relation**
 
 Non-primary relations link d\_complaints to standalone master entities (d\_customers and d\_resp\_team). Follow these steps for r\_customer
 
@@ -2246,9 +2244,9 @@ Now repeat the same steps to create the remaining relations:
 | r\_complaint\_attach | d\_complaints\_attachment | complaint\_id → complaint\_id| Cardinality: 1:n | Mapping Type: BOTH |
 | r\_resp\_team | d\_resp\_team | responsible\_team → emp\_id | Cardinality: 1:1 | Mapping Type: ON QUERY |
 
-## Part B — Configuring Object Types for d\_complaints
+### Part B — Configuring Object Types for d\_complaints
 
-## **B.1 — What Is an Object Type?**
+### **B.1 — What Is an Object Type?**
 
 In Klobase, an Object Type (stored in the system property `s_object_type`) is a classification that tags each record as belonging to a specific type. Object Types serve two important purposes:
 
@@ -2260,14 +2258,14 @@ In Klobase, an Object Type (stored in the system property `s_object_type`) is a 
 | **Object Group** is a container that groups related Object Types together. The group is used as the filter boundary. **Object Type** is the actual tag applied to individual records (e.g. MAVENTIC, PROCIFY). Every Object Type must belong to exactly one Object Group. For the Customer Complaints application: Object Group \= `company_types` Object Types \= `MAVENTIC`, `PROCIFY` **Best Practice (BOL Editor 7.0 User Guide):** Always maintain an Object Group to group types — the same group can be used in default filters based on users. |
 |  |
 
-## **B.2 — Object Types for d\_complaints**
+### **B.2 — Object Types for d\_complaints**
 
 | Object Type ID | Description |
 | :---- | :---- |
 | MAVENTIC | Complaints created by Maventic employees |
 | PROCIFY | Complaints created by Procify employees |
 
-## **B.3 — Step-by-Step: Creating Object Group and Object Types**
+### **B.3 — Step-by-Step: Creating Object Group and Object Types**
 
 | \# | Action | Detail |
 | ----- | :---- | :---- |
@@ -2279,13 +2277,13 @@ In Klobase, an Object Type (stored in the system property `s_object_type`) is a 
 | **6** | **Add remaining types** | Repeat Add for: `PROCIFY` — under Object Group: `complaint_types`. Click Save after all are added. |
 | **7** | **Verify** | All Object Types appear in the list, all with Object Group: complaint\_types. |
 
-## 
+### 
 
 After adding the  object type to differentiate complaints based on company is only half in order to achieve difference in complaint\_id based on company another part is pending which is configuring ID Series based on object\_type. 
 
-## Part C — Setting Up ID Series for Auto-Numbering
+### Part C — Setting Up ID Series for Auto-Numbering
 
-## **D.1 — What Is an ID Series?**
+### **D.1 — What Is an ID Series?**
 
 An ID Series is a platform-managed counter that automatically generates primary key values when a new record is created. Without an ID Series on complaint\_id, a developer would need to generate unique IDs manually — which is error-prone and cannot produce readable, formatted numbers like CMP-00001.
 
@@ -2295,14 +2293,14 @@ An ID Series is a platform-managed counter that automatically generates primary 
 | GUID | Returns a 32-character UUID. Good for distributed offline scenarios. Not human-readable. |
 | None | No auto-generation. The developer or rule must set the key manually. |
 
-## **D.2 — ID Series to Configure**
+### **D.2 — ID Series to Configure**
 
 | Property | Type | Company | Pattern/Prefix | Start From |
 | :---- | :---- | :---- | :---- | :---- |
 | complaint\_id | Auto Number | PROCIFY | Prefix: P- (generates P-00001) | 1 |
 | complaint\_id | Auto Number | MAVENTIC | Prefix: M \- (generates M-00001) | 1 |
 
-## **D.3 — Step-by-Step: Creating the ID Series**
+### **D.3 — Step-by-Step: Creating the ID Series**
 
 | \# | Action | Detail |
 | ----- | :---- | :---- |
@@ -2327,7 +2325,7 @@ An ID Series is a platform-managed counter that automatically generates primary 
 | Pattern: Can be used to produce complex formats. For simple prefix \+ number, just use the Prefix field. |
 |  |
 
-## **D.4 — Testing the ID Series** {#d.4-—-testing-the-id-series}
+### **D.4 — Testing the ID Series** {#d.4-—-testing-the-id-series}
 
 | \# | Action | Detail |
 | ----- | :---- | :---- |
@@ -2336,9 +2334,9 @@ An ID Series is a platform-managed counter that automatically generates primary 
 | **3** | **Fill minimal fields** | complaint\_desc: Test auto-number | priority: Low. Click Save. |
 | **4** | **Verify** | The complaint\_id column should show P-00001 for Procify and M-0001 for Maventic (or the next available number). If it shows a blank or an error, revisit the ID Series configuration. |
 
-## Part C — Configuring Status and Status Groups
+### Part C — Configuring Status and Status Groups
 
-## **C.1 — What Is Status in Klobase?**
+### **C.1 — What Is Status in Klobase?**
 
 The system property s\_status represents the current state of a complaint record. The Status tab in the Data Studio lets you define the allowed values for s\_status and group them into Status Groups.
 
@@ -2352,7 +2350,7 @@ Status Groups are named collections of statuses. They are used in Vienable (Sess
 | In this session you define the status values and groups. The actual UI enforcement of transitions using Vienable happens in Session 7\. |
 |  |
 
-## **C.2 — Status Values and Groups to Configure**
+### **C.2 — Status Values and Groups to Configure**
 
 | Status ID | Short Label | Status Group | Triggered By |
 | :---- | :---- | :---- | :---- |
@@ -2363,7 +2361,7 @@ Status Groups are named collections of statuses. They are used in Vienable (Sess
 | CLOSED | Closed | COMPLETED | Manager confirms resolution and closes |
 | REOPEN | Re-Opened | OPEN | Employee or Manager reopens a closed complaint |
 
-## **C.3 — Step-by-Step: Adding Status Values**
+### **C.3 — Step-by-Step: Adding Status Values**
 
 | \# | Action | Detail |
 | ----- | :---- | :---- |
@@ -2382,7 +2380,7 @@ Status Groups are named collections of statuses. They are used in Vienable (Sess
 | Without the groups defined now, the Vienable configuration in Session 7 cannot be done. |
 |  |
 
-## Part E — Updating the UI to Reflect Entity Configuration
+### Part E — Updating the UI to Reflect Entity Configuration
 
 Now that d\_complaints has Relations, Object Types, Status values, and an ID Series configured, the p\_complaints page must be updated to expose and use these configurations. In this part you will:
 
@@ -2401,7 +2399,7 @@ Now that d\_complaints has Relations, Object Types, Status values, and an ID Ser
 | The complaint\_id field in the form section can now be set to read-only since the ID Series will fill it — the user should not manually enter a complaint ID. |
 |  |
 
-## **E.1 — Add Relation TransNodes to the Page Data Model**
+### **E.1 — Add Relation TransNodes to the Page Data Model**
 
 | \# | Action | Detail |
 | ----- | :---- | :---- |
@@ -2412,7 +2410,7 @@ Now that d\_complaints has Relations, Object Types, Status values, and an ID Ser
 | **6** | **Repeat**  | Repeat Action 4 for relation voices, attachments |
 | **7** | **Save** | Click Save. |
 
-## **E.2 — Wire the s\_complaint\_item Section to the Relation TransNode**
+### **E.2 — Wire the s\_complaint\_item Section to the Relation TransNode**
 
 Need to create a s\_complaint\_item, s\_complaint\_voices, s\_complaint\_attachments section with screen\_type as grid and bind with respective transnode.
 
@@ -2430,7 +2428,7 @@ Need to create a s\_complaint\_item, s\_complaint\_voices, s\_complaint\_attachm
 
  Repeat the same for s\_complaint\_voices  and s\_complaint\_attachments as well with respective transnodes.
 
-## **E.4 — Verify s\_status in Search and Detail Sections**
+### **E.4 — Verify s\_status in Search and Detail Sections**
 
 The s\_status field is a system property. Now that Status values are configured in the BOL Editor (Part C), the status dropdown in the search section and detail form will automatically render the configured values (OPEN, INPROCESS, ON\_HOLD, RESOLVED, CLOSED, REOPEN).
 
@@ -2444,11 +2442,11 @@ The s\_status field is a system property. Now that Status values are configured 
 
 # **Session 3 Assignment**
 
-## **Mandatory Tasks**
+### **Mandatory Tasks**
 
  Repeat all the actions performed in the session 03
 
-## **Exploration Task (Optional — Bonus)**
+### **Exploration Task (Optional — Bonus)**
 
 * Create a d\_complaint\_voices record for an existing complaint via the Data Browser. Verify the voice record is linked to the complaint via the ticket\_id field.
 
@@ -2456,7 +2454,7 @@ The s\_status field is a system property. Now that Status values are configured 
 
 # **Quick Reference**
 
-## **Naming Convention Summary** {#naming-convention-summary}
+### **Naming Convention Summary** {#naming-convention-summary}
 
 | Item | Convention | Example |
 | :---- | :---- | :---- |
@@ -2469,7 +2467,7 @@ The s\_status field is a system property. Now that Status values are configured 
 | ID Series ID | id\_\<entity\_short\> | id\_complaint |
 | ID Prefix | Uppercase abbreviation \+ dash | CMP- |
 
-## **Documentation Sources** {#documentation-sources}
+### **Documentation Sources** {#documentation-sources}
 
 | Topic | Reference |
 | :---- | :---- |
@@ -2486,7 +2484,7 @@ The s\_status field is a system property. Now that Status values are configured 
 
 ## Session 4 — Value Helps & Queries {#session-4}
 
-## Session Objectives
+### Session Objectives
 
 By the end of this session, you will be able to:
 
@@ -2513,9 +2511,9 @@ By the end of this session, you will be able to:
 | Saved Queries → drive the different list views per role (My Complaints for Employee, All Open for Manager). |
 |  |
 
-## Part A — Understanding Value Helps
+### Part A — Understanding Value Helps
 
-## **A.1 — What Is a Value Help?**
+### **A.1 — What Is a Value Help?**
 
 A Value Help (VH) is a platform-level component that provides a controlled list of choices for an entity property. When a VH is assigned to a property, the corresponding input field in the UI automatically renders as a dropdown (ComboBox), auto-complete field, or picker dialog (F4) — without any additional coding. The VH also validates that the entered value exists in the list when 'Is Restricted' is enabled.
 
@@ -2531,7 +2529,7 @@ A Value Help (VH) is a platform-level component that provides a controlled list 
 | VH Config | Metadata / Config DB | vhc\_\<name\> | priority, complaint\_type, nature\_of\_complaint |
 | VH Query | Transactional / Modelled Query | vhq\_\<name\> | customer\_id → d\_customers, responsible\_team → d\_resp\_team |
 
-## **A.2 — Value Helps to Create in This Session**
+### **A.2 — Value Helps to Create in This Session**
 
 | VH ID | Type | Property to Assign | Description |
 | :---- | :---- | :---- | :---- |
@@ -2541,13 +2539,13 @@ A Value Help (VH) is a platform-level component that provides a controlled list 
 | vhq\_customer | VH Query | customer\_id | Fetches from d\_customers — key: customer\_id, display: customer\_name |
 | vhq\_resp\_team | VH Query | responsible\_team | Fetches from d\_resp\_team — key: emp\_id, display: name |
 
-## Part B — Creating VH Config Value Helps
+### Part B — Creating VH Config Value Helps
 
-## **B.1 — What Is VH Config and When to Use It?**
+### **B.1 — What Is VH Config and When to Use It?**
 
 VH Config stores its values in the metadata database — the same database that stores entity definitions, page structures, and app metadata. These values are part of the application definition itself, not the transaction data. Use VH Config for lists that are defined once by the developer and rarely change: priority levels, complaint categories, nature classifications.
 
-## **B.2 — Step-by-Step: Creating vhc\_priority**
+### **B.2 — Step-by-Step: Creating vhc\_priority**
 
 Follow these steps to create the priority VH Config. Repeat the process for vhc\_complaint\_type and vhc\_nature.
 
@@ -2560,7 +2558,7 @@ Follow these steps to create the priority VH Config. Repeat the process for vhc\
 | **6** | **Add VH Config items** | Click the Add (+) icon in the VH Config Items section. Add Row 1: Key: LOW | Display Text: Low. Add Row 2: Key: MEDIUM | Display Text: Medium. Add Row 3: Key: HIGH | Display Text: High. Add Row 4: Key: CRITICAL | Display Text: Critical. |
 | **7** | **Save** | Click Save. vhc\_priority is saved. Note: a build is required for this to appear in the UI — proceed to create all VH Configs first, then the trainer will trigger the build. |
 
-## **B.3 — Assign VH Config to Entity Properties**
+### **B.3 — Assign VH Config to Entity Properties**
 
 After creating all three VH Configs, assign each to the corresponding property in d\_complaints. This is done in the Properties tab of the entity.
 
@@ -2581,9 +2579,9 @@ After creating all three VH Configs, assign each to the corresponding property i
 | Save confirmed for all. |
 |  |
 
-## Part C — Creating VH Query Value Helps
+### Part C — Creating VH Query Value Helps
 
-## **C.1 — What Is VH Query?**
+### **C.1 — What Is VH Query?**
 
 A VH Query fetches its suggestion items from a live entity or modelled query at runtime. Unlike VH Config (which is static metadata), VH Query shows records that are currently in the transactional database. This is the right choice for master entity pickers — where the data comes from d\_customers, d\_resp\_team, or any other entity that can be searched and selected.
 
@@ -2596,7 +2594,7 @@ A VH Query fetches its suggestion items from a live entity or modelled query at 
 | Icon: Optional — entity property that holds an icon URL to show alongside each suggestion item. |
 |  |
 
-## **C.2 — Step-by-Step: Creating vhq\_customer**
+### **C.2 — Step-by-Step: Creating vhq\_customer**
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -2610,7 +2608,7 @@ A VH Query fetches its suggestion items from a live entity or modelled query at 
 
      Perform the same for vhq\_res\_team
 
-## **C.4 — Assign VH Query to Entity Properties**
+### **C.4 — Assign VH Query to Entity Properties**
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -2628,9 +2626,9 @@ A VH Query fetches its suggestion items from a live entity or modelled query at 
 | The platform automatically uses the appropriate type based on the VH type. You can override it in the Page Data Model or the control properties. |
 |  |
 
-## Part D — Understanding and Creating KloQueries
+### Part D — Understanding and Creating KloQueries
 
-## **D.1 — What Is a KloQuery?**
+### **D.1 — What Is a KloQuery?**
 
 A KloQuery is the Klobase equivalent of a SQL SELECT statement. It lets you define — within the Data Studio — exactly what records to fetch, from which entity, with which filters, joins, and sort order. Unlike a Runtime Entity Query (which simply fetches all records of an entity), a Modelled Query gives you full control over the WHERE clause, JOIN entities, and sort order — and is reusable across multiple pages.
 
@@ -2652,13 +2650,13 @@ A KloQuery is the Klobase equivalent of a SQL SELECT statement. It lets you defi
 | Naming convention: Query IDs must start with q\_. All lowercase. |
 |  |
 
-## **D.2 — Queries to Create in This Session**
+### **D.2 — Queries to Create in This Session**
 
 | Query ID | Type | Purpose |
 | :---- | :---- | :---- |
 | q\_complaints | Modelled | Employee: shows only complaints assigned to the logged-in user |
 
-## **D.3 — Step-by-Step: Creating q\_my\_complaints**
+### **D.3 — Step-by-Step: Creating q\_my\_complaints**
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -2670,9 +2668,9 @@ A KloQuery is the Klobase equivalent of a SQL SELECT statement. It lets you defi
 | **7** | **Add Sort Order** | Click the Sort Order tab. Click Add. Field: d\_complaints.created\_on | Order: DESC. This shows the newest complaints first. |
 | **8** | **Save** | Click Save. q\_my\_complaints is ready. |
 
-## Part E — Saved Queries
+### Part E — Saved Queries
 
-## **E.1 — What Is a Saved Query?**
+### **E.1 — What Is a Saved Query?**
 
 A Saved Query is a named combination of a base query and a specific set of pre-filled search parameters. Where a Modelled Query defines the structure, a Saved Query defines a pre-configured instance of that query — ready to execute with one click in the search bar. Saved Queries appear as quick-filter options in the search TransNode of the UI.
 
@@ -2685,7 +2683,7 @@ A Saved Query is a named combination of a base query and a specific set of pre-f
 | Naming convention for Saved Query IDs: Begin with sq\_ by convention. |
 |  |
 
-## **E.2 — Step-by-Step: Creating a Saved Query from Data Browser**
+### **E.2 — Step-by-Step: Creating a Saved Query from Data Browser**
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -2696,7 +2694,7 @@ A Saved Query is a named combination of a base query and a specific set of pre-f
 | **5** | **Save as Saved Query** | Click the Save Query button (or the Save icon in the Advance Search toolbar). Enter Saved Query ID: sq\_my\_complaints | Description: My Complaints — filter by current user. Click Save. |
 | **6** | **Verify** | Click search. The Data Browser should show only complaints where assigned\_to matches the current user (or empty if no matches). The saved query is now available. |
 
-## Part F — Updating the UI to Use Value Helps and Queries
+### Part F — Updating the UI to Use Value Helps and Queries
 
 With all Value Helps and Queries configured in the BOL Editor, the p\_complaints page now needs to be updated to use them. In this part you will:
 
@@ -2708,7 +2706,7 @@ With all Value Helps and Queries configured in the BOL Editor, the p\_complaints
 
 * Set the vhType on customer\_id and responsible\_team controls to F4 (full picker dialog).
 
-## **F.1 — Update the TransNode to Use q\_complaints\_list instead d\_complaints**
+### **F.1 — Update the TransNode to Use q\_complaints\_list instead d\_complaints**
 
 Currently the search TransNode uses the default entity fetch. Switching it to q\_complaints\_list gives you control over sort order and allows future WHERE customisation.
 
@@ -2719,7 +2717,7 @@ Currently the search TransNode uses the default entity fetch. Switching it to q\
 | **3** | **Update the search TransNode** | Delete the existing transnode (search → list → detail) and create the same with q\_complaints instead of d\_complaints and verify bindings once more. |
 | **4** | **Save** | Click Save. |
 
-## **F.2 — Verify VH Controls Render Correctly in Full Preview**
+### **F.2 — Verify VH Controls Render Correctly in Full Preview**
 
 After the build is triggered by the trainer (required for VH Config changes), verify the following in Full Preview:
 
@@ -2773,11 +2771,11 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 | The trainer will verify each item at the start of Session 5\. |
 |  |
 
-## **Mandatory Tasks**
+### **Mandatory Tasks**
 
  Repeat all the actions performed in the session 03
 
-## **Exploration Task (Optional — Bonus)**
+### **Exploration Task (Optional — Bonus)**
 
 * Create a dependent VH: vhc\_nature\_product that shows only TECHNICAL and LOGISTICS when complaint\_type \= PRODUCT\_ISSUE. Configure the Is Dependent flag on vhc\_nature and test in the UI.
 
@@ -2796,7 +2794,7 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 
 # **Quick Reference**
 
-## **Naming Convention Summary** {#naming-convention-summary-1}
+### **Naming Convention Summary** {#naming-convention-summary-1}
 
 | Item | Convention | Example |
 | :---- | :---- | :---- |
@@ -2807,7 +2805,7 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 | Query parameter | lowercase, descriptive | current\_user |
 | Desc Format | :\<key\>--:\<display\> | :customer\_id--:customer\_name |
 
-## **Documentation Sources** {#documentation-sources-1}
+### **Documentation Sources** {#documentation-sources-1}
 
 | Topic | Reference |
 | :---- | :---- |
@@ -2848,13 +2846,13 @@ By the end of this session, you will be able to:
 | Reference: PROC-23582 (Validation Logic to Be Maintained in Entity Callback onValidate Methods instead of Controller files). |
 |  |
 
-## Part A — Setting Up the Private Node Environment
+### Part A — Setting Up the Private Node Environment
 
 *Reference: [Private Node setup Guide](https://sites.google.com/procifynow.com/procifyhelpcenter/application-development/reference-manual)*
 
 The Private Node is a local Node.js server running on your laptop that acts as the workspace server for your development session. Instead of your browser talking to the shared landscape server, it talks to your VS Code instance — giving you full debugging capability and instant iteration on server-side code.
 
-### Pre-requisites
+#### Pre-requisites
 
 | Requirement | How to verify |
 | :---- | :---- |
@@ -2863,7 +2861,7 @@ The Private Node is a local Node.js server running on your laptop that acts as t
 | Network access to the landscape | Open your landscape URL in a browser. If the login page loads, connectivity is confirmed. |
 | Node.js installed | Open a terminal: node \--version. You should see v22+. |
 
-### Setting the Private Node in VS Code {#setting-the-private-node-in-vs-code}
+#### Setting the Private Node in VS Code {#setting-the-private-node-in-vs-code}
 
 | 1 | Create Your Workspace Folder Create a new folder on your laptop: Documents/PrivateNode/srm\_\<your\_prid\>. All application server-side files will be downloaded here. |
 | :---: | :---- |
@@ -2889,7 +2887,7 @@ The Private Node is a local Node.js server running on your laptop that acts as t
 | 8 | Checkout application The VS Code will open a webview to checkout the assigned apps. Select  the created app and perform checkout |
 | :---: | :---- |
 
-## **A.2 — Entity File Location and Structure**
+### **A.2 — Entity File Location and Structure**
 
 The entity .ts file for d\_complaints is located in the Private Node workspace at the path:
 
@@ -2898,7 +2896,7 @@ The entity .ts file for d\_complaints is located in the Private Node workspace a
 
 If the file does not exist yet, the private node can generate it. The base structure looks like this:
 
-| import { KloEntity, ValidationError, ErrorType } from 'klobase'; export class d\_complaints extends KloEntity {   // ── Getters & Setters ──────────────────────────────────────────   // ── Lifecycle Hooks ────────────────────────────────────────────   public async onAfterCreate(): Promise\<any\> {     // Called after a new complaint record is created   }   public async OnValidate(): Promise\<any\> {     // Called during navigation if transnode setActiveIf \= Valid   }   public async onDelete(): Promise\<any\> {     // Called after the record is deleted   } } |
+| import \{ KloEntity, ValidationError, ErrorType \} from 'klobase'; export class d\_complaints extends KloEntity \{   // ── Getters & Setters ──────────────────────────────────────────   // ── Lifecycle Hooks ────────────────────────────────────────────   public async onAfterCreate(): Promise\<any\> \{     // Called after a new complaint record is created   \}   public async OnValidate(): Promise\<any\> \{     // Called during navigation if transnode setActiveIf \= Valid   \}   public async onDelete(): Promise\<any\> \{     // Called after the record is deleted   \} \} |
 | :---- |
 
 | 💡  Architecture Principle: Business Logic Belongs Here |
@@ -2910,9 +2908,9 @@ If the file does not exist yet, the private node can generate it. The base struc
 | Reference: kloTouch 7.0 Basic Training Guide — Section 7.5 Best Practice Do's and Don'ts (Entity File). |
 |  |
 
-## Part B — Entity Lifecycle Hooks
+### Part B — Entity Lifecycle Hooks
 
-## **B.1 — The Three Hook Methods**
+### **B.1 — The Three Hook Methods**
 
 Klobase provides three entity lifecycle hook methods that you override in the entity .ts file. These run on the server and are triggered automatically by the platform at the appropriate point in the entity's lifecycle.
 
@@ -2932,7 +2930,7 @@ Klobase provides three entity lifecycle hook methods that you override in the en
 | After your OnValidate runs, the platform ALSO runs its own mandatory-field validation based on key attributes — you don't need to repeat those. |
 |  |
 
-## **B.2 — Configuring TransNode setActiveIf for Validation**
+### **B.2 — Configuring TransNode setActiveIf for Validation**
 
 Before OnValidate can fire, the TransNode that holds the complaint detail must be configured with setActiveIf \= Valid in the Page Builder.
 
@@ -2943,9 +2941,9 @@ Before OnValidate can fire, the TransNode that holds the complaint detail must b
 | **3** | **Set setActiveIf \= Valid** | In the TransNode detail section (right side), find the 'setActiveIf' property. Change from the default (Always) to 'Valid'. This means: when the user tries to navigate away from the detail form, the platform will call OnValidate first. If errors exist, navigation is blocked. |
 | **4** | **Save** | Click Save. |
 
-## Part C — Entity Rules
+### Part C — Entity Rules
 
-## **C.1 — What are Entity Rules?**
+### **C.1 — What are Entity Rules?**
 
 Rules contain business logic codes. It works with the event bus, any change in the entity will trigger the event, and all the rules hooked with the event will be executed sequentially. Rules are reusable objects across client, server and middleware.
 
@@ -2962,7 +2960,7 @@ EX:
 | created\_on | this.s\_created\_on — already auto-set by system field, no action needed |
 | created\_by | this.s\_created\_by — already auto-set by system field, no action needed |
 
-## **C.2 — How to create an Entity Rule?** {#c.2-—-how-to-create-an-entity-rule?}
+### **C.2 — How to create an Entity Rule?** {#c.2-—-how-to-create-an-entity-rule?}
 
 **Step 1:** Go to the Rule tab and click on the **add icon(+).**  
 **![][image13]**
@@ -3023,13 +3021,13 @@ EX:
 **Step 6:** Click on the **save** button to save the newly created rule.  
 ![][image18]
 
-## **C.3 — Implementing onCreateRule for default values**
+### **C.3 — Implementing onCreateRule for default values**
 
 As mentioned above, create a rule for onCreate with channel type as ALWAYS\_ON\_SERVER with class as this.
 
 Create Entity Folder and d\_complaints.ts file 
 
-| public async onCreateComplaint(oEvent:any): Promise\<any\> {   // Auto-set status to OPEN on every new complaint   let complaint \= oEvent.getObject();   complaint.s\_status \= 'OPEN';   // Auto-set assigned\_to to the creating user's login ID   const currentUser \= this.txn.getUserID();   complaint.assigned\_to \= currentUser;   // Log for debugging (visible in Private Node terminal)   this.info('Complaint created by:', currentUser, '| Status set to OPEN'); } |
+| public async onCreateComplaint(oEvent:any): Promise\<any\> \{   // Auto-set status to OPEN on every new complaint   let complaint \= oEvent.getObject();   complaint.s\_status \= 'OPEN';   // Auto-set assigned\_to to the creating user's login ID   const currentUser \= this.txn.getUserID();   complaint.assigned\_to \= currentUser;   // Log for debugging (visible in Private Node terminal)   this.info('Complaint created by:', currentUser, '| Status set to OPEN'); \} |
 | :---- |
 
 | 📘  this.txn — The Transaction Object (BOL API Reference) |
@@ -3041,7 +3039,7 @@ Create Entity Folder and d\_complaints.ts file
 | this.info(), this.warn(), this.error() → server-side logging methods. Output appears in the Private Node terminal and the Google Cloud logs. |
 |  |
 
-## **C.4 — Testing onCreate**
+### **C.4 — Testing onCreate**
 
 | \# | Action | Detail / Code |
 | :---- | :---- | :---- |
@@ -3051,29 +3049,29 @@ Create Entity Folder and d\_complaints.ts file
 | **4** | **Fill minimal fields and save** | Enter complaint\_desc: 'Test Create logic'. Select priority \= HIGH. Click Save (commitP from the Save button). |
 | **5** | **Verify in Data Browser** | Open Data Studio → d\_complaints → Test → Data Browser. The latest record should show: s\_status \= OPEN, assigned\_to \= your login ID (e.g. PR0045). |
 
-## **C.5 — Implementing onUpdate for assignee** {#c.5-—-implementing-onupdate-for-assignee}
+### **C.5 — Implementing onUpdate for assignee** {#c.5-—-implementing-onupdate-for-assignee}
 
 As mentioned above, create a rule for onUpdate with channel type as ALWAYS\_ON\_SERVER with class as this.
 
 Create Entity Folder and d\_complaints.ts file if not available
 
-| public async onUpdateComplaint (oEvent:any): Promise\<any\> {   // Auto-set status to OPEN on every new complaint   Let complaint \= oEvent.getObject();   Const \= previousState \= await complaint.fromP()   if((previousState.assigned\_to \!= complaint.assigned\_to)&& oEvent.getTxn().\$SYSTEM.roleID \!= ‘EMPLOYEE\_MANAGER’){  Throw Error (‘team assignment should be done by manager’)//Make “T” in to a //lowercase} } |
+| public async onUpdateComplaint (oEvent:any): Promise\<any\> \{   // Auto-set status to OPEN on every new complaint   Let complaint \= oEvent.getObject();   Const \= previousState \= await complaint.fromP()   if((previousState.assigned\_to \!= complaint.assigned\_to)&& oEvent.getTxn().\$SYSTEM.roleID \!= ‘EMPLOYEE\_MANAGER’)\{  Throw Error (‘team assignment should be done by manager’)//Make “T” in to a //lowercase\} \} |
 | :---- |
 
-## **C.6 — Implementing onDelete for validation** {#c.6-—-implementing-ondelete-for-validation}
+### **C.6 — Implementing onDelete for validation** {#c.6-—-implementing-ondelete-for-validation}
 
 As mentioned above, create a rule for onUpdate with channel type as ALWAYS\_ON\_SERVER with class as this.
 
 Create Entity Folder and d\_complaints.ts file if not available
 
-| public async onDeleteComplaint (oEvent:any): Promise\<any\> {      if(oEvent.getTxn().\$SYSTEM.roleID \== ‘IT\_TEAM’){//Change ’ ’ to “ ”this  Throw Error (‘it\_team cannot delete complaint’)//Make “T” in to a lowercase} } |
+| public async onDeleteComplaint (oEvent:any): Promise\<any\> \{      if(oEvent.getTxn().\$SYSTEM.roleID \== ‘IT\_TEAM’)\{//Change ’ ’ to “ ”this  Throw Error (‘it\_team cannot delete complaint’)//Make “T” in to a lowercase\} \} |
 | :---- |
 
-## 
+### 
 
-## Part D — Property Setters and Getters
+### Part D — Property Setters and Getters
 
-## **D.1 — What Are Setters and Getters?**
+### **D.1 — What Are Setters and Getters?**
 
 TypeScript property accessors let you intercept reads and writes of entity properties. In Klobase, setters and getters in the entity .ts file are the correct place for computed/derived field logic — not the controller.
 
@@ -3090,18 +3088,18 @@ TypeScript property accessors let you intercept reads and writes of entity prope
 | Then: this.s('propertyId', new\_value, 'dataType', false, false); |
 |  |
 
-## **D.2 — Setter: Auto-Compute actual\_tat When closed\_on Changes**
+### **D.2 — Setter: Auto-Compute actual\_tat When closed\_on Changes**
 
 When a complaint is closed (closed\_on is set), actual\_tat should be computed as: (closed\_on \- created\_on) in days.
 
-| public set closed\_on(new\_value: Date) {   if (new\_value \== this.closed\_on) return;   this.s('closed\_on', new\_value, 'date', false, false);   // Compute actual\_tat when closed\_on is set   if (new\_value && this.s\_created\_on) {     const msPerDay \= 1000 \* 60 \* 60 \* 24;     const diffMs \= new Date(new\_value).getTime() \- new Date(this.s\_created\_on).getTime();     this.actual\_tat \= parseFloat((diffMs / msPerDay).toFixed(1));   } } |
+| public set closed\_on(new\_value: Date) \{   if (new\_value \== this.closed\_on) return;   this.s('closed\_on', new\_value, 'date', false, false);   // Compute actual\_tat when closed\_on is set   if (new\_value && this.s\_created\_on) \{     const msPerDay \= 1000 \* 60 \* 60 \* 24;     const diffMs \= new Date(new\_value).getTime() \- new Date(this.s\_created\_on).getTime();     this.actual\_tat \= parseFloat((diffMs / msPerDay).toFixed(1));   \} \} |
 | :---- |
 
-## **D.3 — Getter: Display complaint\_id with Priority Badge**
+### **D.3 — Getter: Display complaint\_id with Priority Badge**
 
 A getter can return a formatted composite string. For example, a display\_title getter that combines complaint\_id and priority:
 
-| // t\_ prefix \= transient property (not stored in DB) // Define t\_display\_title as a Transient property in the BOL Editor first public get t\_display\_title(): string {   return \`\${this.complaint\_id} \[\${this.priority || 'UNSET'}\]\`; } |
+| // t\_ prefix \= transient property (not stored in DB) // Define t\_display\_title as a Transient property in the BOL Editor first public get t\_``display_title(): string { return `${this.complaint_id} [${this.priority \|\| 'UNSET'}]`; }`` |
 | :---- |
 
 | 📘  Transient Properties (BOL Editor 7.0 User Guide — Entity Property Qualifier) |
@@ -3113,9 +3111,9 @@ A getter can return a formatted composite string. For example, a display\_title 
 | Use transient properties for: display labels, formatted dates, computed totals, role-based display logic. |
 |  |
 
-## Part E — Writing Business Rule Validations in OnValidate
+### Part E — Writing Business Rule Validations in OnValidate
 
-## **E.1 — Validation Rules for the Customer Complaints App**
+### **E.1 — Validation Rules for the Customer Complaints App**
 
 Based on the BRD from Session 1, the following validations must be enforced when a complaint is saved:
 
@@ -3127,9 +3125,9 @@ Based on the BRD from Session 1, the following validations must be enforced when
 | V004 | planned\_resolution\_date | Set AND is before created\_on | The planned resolution date cannot be before the complaint creation date. |
 | V005 | s\_status | Attempt to set CLOSED but role is Employee | Employees cannot close a complaint. Only the manager can close. |
 
-## **E.2 — Implementing OnValidate**
+### **E.2 — Implementing OnValidate**
 
-| public async OnValidate(): Promise\<any\> {   // V001 — complaint\_desc minimum length   if (\!this.complaint\_desc || this.complaint\_desc.trim().length \< 10\) {     this.errors.push(new ValidationError(       this, 'complaint\_desc', 'V001',       'Complaint description must be at least 10 characters.',       ErrorType.ERROR     ));   }   // V002 — priority is required   if (\!this.priority) {     this.errors.push(new ValidationError(       this, 'priority', 'V002',       'Priority is required.',       ErrorType.ERROR     ));   }   // V003 — planned\_resolution\_date not in the past   if (this.planned\_resolution\_date) {     const today \= new Date();     today.setHours(0, 0, 0, 0);     if (new Date(this.planned\_resolution\_date) \< today) {       this.errors.push(new ValidationError(         this, 'planned\_resolution\_date', 'V003',         'Planned resolution date cannot be in the past.',         ErrorType.ERROR       ));     }   }   // V004 — planned\_resolution\_date not before created\_on   if (this.planned\_resolution\_date && this.s\_created\_on) {     if (new Date(this.planned\_resolution\_date) \< new Date(this.s\_created\_on)) {       this.errors.push(new ValidationError(         this, 'planned\_resolution\_date', 'V004',         'Planned resolution date cannot be before the complaint creation date.',         ErrorType.ERROR       ));     }   } } |
+| public async OnValidate(): Promise\<any\> \{   // V001 — complaint\_desc minimum length   if (\!this.complaint\_desc || this.complaint\_desc.trim().length \< 10\) \{     this.errors.push(new ValidationError(       this, 'complaint\_desc', 'V001',       'Complaint description must be at least 10 characters.',       ErrorType.ERROR     ));   \}   // V002 — priority is required   if (\!this.priority) \{     this.errors.push(new ValidationError(       this, 'priority', 'V002',       'Priority is required.',       ErrorType.ERROR     ));   \}   // V003 — planned\_resolution\_date not in the past   if (this.planned\_resolution\_date) \{     const today \= new Date();     today.setHours(0, 0, 0, 0);     if (new Date(this.planned\_resolution\_date) \< today) \{       this.errors.push(new ValidationError(         this, 'planned\_resolution\_date', 'V003',         'Planned resolution date cannot be in the past.',         ErrorType.ERROR       ));     \}   \}   // V004 — planned\_resolution\_date not before created\_on   if (this.planned\_resolution\_date && this.s\_created\_on) \{     if (new Date(this.planned\_resolution\_date) \< new Date(this.s\_created\_on)) \{       this.errors.push(new ValidationError(         this, 'planned\_resolution\_date', 'V004',         'Planned resolution date cannot be before the complaint creation date.',         ErrorType.ERROR       ));     \}   \} \} |
 | :---- |
 
 | 📘  Role Rollup Values (Training Guide Beginner — Session 1 Part A) |
@@ -3142,7 +3140,7 @@ Based on the BRD from Session 1, the following validations must be enforced when
 | You can also use this.txn.hasPermission('permission\_id') for custom permission checks. See Permissions User Guide. |
 |  |
 
-## **E.4 — Testing OnValidate**
+### **E.4 — Testing OnValidate**
 
 | \# | Action | Detail / Code |
 | :---- | :---- | :---- |
@@ -3181,7 +3179,7 @@ Creating query rules is the same as creating entity rules, except the event type
 
 queryInstance.getResults() / setResults() — read or replace the raw JSON array of result rows in an afterQ callback. These are plain objects, not KloEntity instances — they cannot be saved back.
 
-## **E.3 — Implementing before Query on q\_complaints** {#e.3-—-implementing-before-query-on-q_complaints}
+### **E.3 — Implementing before Query on q\_complaints** {#e.3-—-implementing-before-query-on-q_complaints}
 
 As we already know from the BRD document complaints page behaviour will be different based on role.
 
@@ -3191,21 +3189,22 @@ As we already know from the BRD document complaints page behaviour will be diffe
 
 Create query folder and q\_complaints.ts
 
+```ts
 public async beforeQ(oEvent: EventContext) {
 
-       let obj : any \= oEvent.getObject();
+       let obj : any = oEvent.getObject();
 
-       let role \= oEvent.getTxn().\$SYSTEM.roleID;
+       let role = oEvent.getTxn().$SYSTEM.roleID;
 
-       if(role \=== 'EMPLOYEE'){
+       if(role === 'EMPLOYEE'){
 
-           obj.customer\_id \= (await this.txn.get\$User()).login\_id;
+           obj.customer_id = (await this.txn.get$User()).login_id;
 
-           obj.s\_created\_by \= (await this.txn.get\$User()).login\_id; // Added for Business AI
+           obj.s_created_by = (await this.txn.get$User()).login_id; // Added for Business AI
 
-       }else if( role \== "IT\_TEAM"){
+       }else if( role == "IT_TEAM"){
 
-           obj.assigned\_to \= (await this.txn.get\$User()).login\_id;
+           obj.assigned_to = (await this.txn.get$User()).login_id;
 
        }
 
@@ -3213,17 +3212,18 @@ public async beforeQ(oEvent: EventContext) {
 
        if(obj.description) {
 
-           obj.description \= \`%\${obj.description}%\`;
+           obj.description = `%${obj.description}%`;
 
        }
 
    }
+```
 
-## **E.3 — validate before query implementation** {#e.3-—-validate-before-query-implementation}
+### **E.3 — validate before query implementation** {#e.3-—-validate-before-query-implementation}
 
 Validate both the screen and data browser that data should be filtered based on role.
 
-###  **E.4 — Testing beforeQ**
+####  **E.4 — Testing beforeQ**
 
 | \# | Action | Detail / Code |
 | :---- | :---- | :---- |
@@ -3233,25 +3233,25 @@ Validate both the screen and data browser that data should be filtered based on 
 | **4** | 	 	 	 	 Test as IT Team  | 	 	 	 	 Log in as it\_team\_\<prid\>. Only complaints where assigned\_to equals this user should appear.  |
 | **5** | 	 	 	 	 Test in Data Browser  | 	 	 	 	 Repeat the same three logins in the Data Browser (not just the app screen) against q\_complaints. The same role-based filtering must hold — beforeQ applies at the query level, so it protects every entry point, not just one screen.  |
 
-#### *Part E.1 — Implementing after Query on q\_complaints*	 	
+##### *Part E.1 — Implementing after Query on q\_complaints*	 	
 
-### **Scenario**	
+#### **Scenario**	
 
-## The Manager’s complaint list needs a column showing how many days a complaint has been open — days\_open — without storing it on the entity (it changes every day, so persisting it would immediately go stale). This is a textbook afterQ use case: compute it once, on the way out, from data already in the result set. 	
+### The Manager’s complaint list needs a column showing how many days a complaint has been open — days\_open — without storing it on the entity (it changes every day, so persisting it would immediately go stale). This is a textbook afterQ use case: compute it once, on the way out, from data already in the result set. 	
 
-### **Implementing afterQ**	 	
+#### **Implementing afterQ**	 	
 
-public async afterQ(oEvent: EventContext) { let queryInstance \= oEvent.getObject(); let results \= await queryInstance.getResults(); let today \= new Date(); let newResults \= results.map((row: any) \=\> { if (row.s\_created\_on) { let created \= new Date(row.s\_created\_on); let diffMs \= today.getTime() \- created.getTime(); row.days\_open \= Math.floor(diffMs / (1000 \* 60 \* 60 \* 24)); } else { row.days\_open \= 0; } return row; }); queryInstance.setResults(newResults); }
+public async afterQ(oEvent: EventContext) \{ let queryInstance \= oEvent.getObject(); let results \= await queryInstance.getResults(); let today \= new Date(); let newResults \= results.map((row: any) \=\> \{ if (row.s\_created\_on) \{ let created \= new Date(row.s\_created\_on); let diffMs \= today.getTime() \- created.getTime(); row.days\_open \= Math.floor(diffMs / (1000 \* 60 \* 60 \* 24)); \} else \{ row.days\_open \= 0; \} return row; \}); queryInstance.setResults(newResults); \}
 
-## 	 	
+### 	 	
 
-## 	 	
+### 	 	
 
-## **Wiring days\_open into the UI**
+### **Wiring days\_open into the UI**
 
-## Add days\_open as a transient property (Session 5, Part D) on d\_complaints so the Page Builder can bind a column to it, then add that column to s\_complaints (Session 2, Part B.9.2). Because the value arrives already computed on the result row, no additional binding logic is needed on the client.
+### Add days\_open as a transient property (Session 5, Part D) on d\_complaints so the Page Builder can bind a column to it, then add that column to s\_complaints (Session 2, Part B.9.2). Because the value arrives already computed on the result row, no additional binding logic is needed on the client.
 
-### **Testing afterQ**
+#### **Testing afterQ**
 
 | \# | Action | Detail / Code |
 | :---- | :---- | :---- |
@@ -3260,11 +3260,11 @@ public async afterQ(oEvent: EventContext) { let queryInstance \= oEvent.getObjec
 | **3** | 		 	 Create a fresh complaint  |  	 	 Its days\_open should read 0 on the day it is created.  |
 | **4** | Cross-check one row against Data Browser  | Compare s\_created\_on for that record against today’s date manually — the displayed days\_open should match.  |
 
-#### 
+##### 
 
-## Part F — Preparing the Landing Page {#part-f-—-preparing-the-landing-page}
+### Part F — Preparing the Landing Page {#part-f-—-preparing-the-landing-page}
 
-## **F.1 — What Is a Landing Page?**
+### **F.1 — What Is a Landing Page?**
 
 The landing page is the first screen a user sees after logging into the application. In the Customer Complaints Application, p\_complaints\_dash will serve as the landing page — the list of complaints filtered by role will be immediately visible after login.
 
@@ -3278,7 +3278,7 @@ The screen we are going to create will be as mentioned below.
 
 ![][image19]
 
-## **F.1 — create dashboard screen?** {#f.1-—-create-dashboard-screen?}
+### **F.1 — create dashboard screen?** {#f.1-—-create-dashboard-screen?}
 
 Dashboard also follows p\_complaints page with limited changes
 
@@ -3299,7 +3299,7 @@ Model the card with modeler as mentioned below
 
 After this you might have noticed the screen contains 0 rather than actual count for this controller is required which will be covered later and at that time we will update the dashboard as well.
 
-## **F.2 — configure landing page** {#f.2-—-configure-landing-page}
+### **F.2 — configure landing page** {#f.2-—-configure-landing-page}
 
 | \# | Action | Detail / Code |
 | :---- | :---- | :---- |
@@ -3310,7 +3310,7 @@ After this you might have noticed the screen contains 0 rather than actual count
 | **5** | Title  | Dashboard |
 | **8** | Save | sae |
 
-## **F.1 — Verification** {#f.1-—-verification}
+### **F.1 — Verification** {#f.1-—-verification}
 
 1. Login with employee and check whether dashboard is available  
 2. Repeat the same with manager and it\_team as well
@@ -3343,7 +3343,7 @@ After this you might have noticed the screen contains 0 rather than actual count
 | All entity hooks must be working before styling is applied. |
 |  |
 
-## **Mandatory Tasks**
+### **Mandatory Tasks**
 
 Perform all the tasks performed in session 05
 
@@ -3359,13 +3359,13 @@ Perform all the tasks performed in session 05
 | **8** | **Verify beforeQ row-level filtering**  | Repeat the role-based checks from E.4: Employee sees only their own complaints, IT Team sees only assigned ones, Manager sees everything.  |
 | **9** | 	 	 **Verify afterQ computed field**  | Confirm days\_open renders correctly for at least one old and one newly-created complaint.  |
 
-## 
+### 
 
-## **Exploration Task (Optional — Bonus)**
+### **Exploration Task (Optional — Bonus)**
 
 * Add a V006 validation: if is\_escalated \= true and responsible\_team is empty, block save with message: 'Escalated complaints must have a responsible team assigned.'
 
-* Implement onDelete hook: log a message 'Complaint deleted: {complaint\_id} by {user}' and push an entry into d\_complaint\_voices as an audit trail before deletion.
+* Implement onDelete hook: log a message 'Complaint deleted: \{complaint\_id\} by \{user\}' and push an entry into d\_complaint\_voices as an audit trail before deletion.
 
 ## **Session 6 Preview — What Comes Next**
 
@@ -3380,7 +3380,7 @@ Perform all the tasks performed in session 05
 
 # **Quick Reference**
 
-## **Entity Hook Summary** {#entity-hook-summary}
+### **Entity Hook Summary** {#entity-hook-summary}
 
 | Hook / Method | Signature | Called When |
 | :---- | :---- | :---- |
@@ -3390,7 +3390,7 @@ Perform all the tasks performed in session 05
 | set property | set propId(new\_value: Type) | When property value is changed (client or server) |
 | get property | get propId(): Type | When property value is read (returns computed value) |
 
-## **Documentation Sources** {#documentation-sources-2}
+### **Documentation Sources** {#documentation-sources-2}
 
 | Topic | Reference |
 | :---- | :---- |
@@ -3410,7 +3410,7 @@ Perform all the tasks performed in session 05
 
 ## Session 6 — Bindings, Navigation & Styling {#session-6}
 
-## **Session Objectives**
+### **Session Objectives**
 
 By the end of this session, you will be able to:
 
@@ -3424,11 +3424,11 @@ Implement all navigation scenarios using navTo: section nav, page nav, key-based
 
 Apply pre-defined and user-defined style classes to controls, sections, page areas, and layouts.
 
-## Part A — Data Bindings In Depth
+### Part A — Data Bindings In Depth
 
 Every control on a Klobase screen reads and writes data through the Transaction Model (\$M). The model is a JSON model object. All bindings use the prefix \$M to reference it. Without a binding, a control shows a static value or nothing at all — it is disconnected from the live data.
 
-### A.1 — The \$M Model Path Structure
+#### A.1 — The \$M Model Path Structure
 
 The Transaction Model is organized as a tree. Each TransNode in the Page Data Model corresponds to a branch in the \$M tree. The full path to any property follows this pattern:
 
@@ -3444,18 +3444,18 @@ For the detail TransNode with relationId \= detail:
 
 The leading / after \> is mandatory. Omitting it causes a silent bind failure.
 
-### A.2 — The Four Binding Modes
+#### A.2 — The Four Binding Modes
 
 | Mode | When to Use | Syntax / Where to Set | Example |
 | :---- | :---- | :---- | :---- |
 | Value | Static, hardcoded value — no model connection. Control always shows this literal text regardless of data. | Properties tab → Value field | text \= 'Complaint ID' — always shows that label. |
-| Path | Bind to exactly ONE model property. Two-way binding by default: changes in UI write back to model. | Properties tab → DSRC field | {\$M\>/detail/complaint\_desc} — shows and edits the complaint description. |
-| Parts | Combine MULTIPLE paths into one display value via a formatter function. Always one-way (read only). | Properties tab → dsrc field (add each path as a part) \+ Formatter Function field | Parts: {\$M\>/detail/first\_name} \+ {\$M\>/detail/last\_name} → formatter returns full name string. |
-| Expression | Inline calculated value. No formatter function needed. Supports ternary operators and comparisons. Always one-way. | Properties tab → dsrc field (starts with {= ...}) | {= \${\$M\>/detail/is\_escalated} \=== true ? 'Escalated' : 'Normal'} |
+| Path | Bind to exactly ONE model property. Two-way binding by default: changes in UI write back to model. | Properties tab → DSRC field | \{\$M\>/detail/complaint\_desc\} — shows and edits the complaint description. |
+| Parts | Combine MULTIPLE paths into one display value via a formatter function. Always one-way (read only). | Properties tab → dsrc field (add each path as a part) \+ Formatter Function field | Parts: \{\$M\>/detail/first\_name\} \+ \{\$M\>/detail/last\_name\} → formatter returns full name string. |
+| Expression | Inline calculated value. No formatter function needed. Supports ternary operators and comparisons. Always one-way. | Properties tab → dsrc field (starts with \{= ...\}) | \{= \$\{\$M\>/detail/is\_escalated\} \=== true ? 'Escalated' : 'Normal'\} |
 
 ⚠  Path and Parts are mutually exclusive on the same property — you cannot use both at once. If you need multiple values combined, always use Parts.
 
-### A.3 — Path Binding: Step-by-Step
+#### A.3 — Path Binding: Step-by-Step
 
 Path binding wires one control property to one model property. This is the most common binding type for form fields.
 
@@ -3463,44 +3463,44 @@ Path binding wires one control property to one model property. This is the most 
 | :---- | :---- | :---- |
 | 1 | Select the control in the tree | Example: select the complaint\_desc m.Input control inside s\_complaint\_details section. |
 | 2 | Open Properties tab | Detail panel (right side) → Properties tab. |
-| 4 | Enter the binding in dsrc | Type: {\$M\>/detail/complaint\_desc} — the detail TransNode relationId followed by the property ID. |
+| 4 | Enter the binding in dsrc | Type: \{\$M\>/detail/complaint\_desc\} — the detail TransNode relationId followed by the property ID. |
 | 5 | Save and verify in Full Preview | The field loads with the active complaint's description. Edit it and save — the new value persists in the database. |
 
-📘  The TransNode relationId is set in the Page Data Model, not the entity name. If your detail TransNode's relationId is complaints\_detail, the path is {\$M\>/complaints\_detail/complaint\_desc}.
+📘  The TransNode relationId is set in the Page Data Model, not the entity name. If your detail TransNode's relationId is complaints\_detail, the path is \{\$M\>/complaints\_detail/complaint\_desc\}.
 
-### A.4 — Parts Binding with Formatter Function
+#### A.4 — Parts Binding with Formatter Function
 
 Use Parts when you need to combine or transform multiple model values into a single display string. Parts binding is one-way only — it cannot write back to the model.
 
 ![][image22]
 
-#### **Value:** {#value:}
+##### **Value:** {#value:}
 
 The value field will hold the value provided for the property.
 
-#### **Path:**  {#path:}
+##### **Path:**  {#path:}
 
 In this path field, users can only bind with exactly one property or value. This can be used if there is only one property to bind.
 
-#### **Parts:**  {#parts:}
+##### **Parts:**  {#parts:}
 
 In this path field, users can bind multiple properties or values. This can be used if multiple values or properties need to be provided for binding.
 
 **(Note**: If we are using formatter function, then it is mandatory to provide either parts or path value)
 
-#### **Formatter Functions** {#formatter-functions}
+##### **Formatter Functions** {#formatter-functions}
 
 Controller function name (formatter function) can be given for the field.
 
-#### **Type:** {#type:}
+##### **Type:** {#type:}
 
 In the type field, the user can provide the datatype for the control’s value.
 
-#### **Formatter Options:** {#formatter-options:}
+##### **Formatter Options:** {#formatter-options:}
 
 Formatter options define how a value is formatted and displayed in the UI.
 
-#### **Validation Constraint:** {#validation-constraint:}
+##### **Validation Constraint:** {#validation-constraint:}
 
 Constraints are optional and define how an input value that is entered in the UI should look like. During parsing, the value is validated against these constraints. For example, an Integer type has a constraint for the maximum that is automatically validated when parsing the input values.
 
@@ -3508,7 +3508,7 @@ Example: displaying TAT status as a composite string from actual\_tat and standa
 
 // Controller function — formatTAT
 
-public formatTAT(actual: number, standard: number): string {
+public formatTAT(actual: number, standard: number): string \{
 
   if (\!actual || \!standard) return '—';
 
@@ -3518,46 +3518,47 @@ public formatTAT(actual: number, standard: number): string {
 
   return \`⚠ Overdue by \${diff} day(s) — Actual: \${actual}, SLA: \${standard}\`;
 
-}
+\}
 
 ⚠  The formatter function receives Part values in the exact order they appear in the Parts list. If you add actual\_tat first and standard\_tat second, the function signature must be formatTAT(actual, standard).
 
-## Part B — Expression Bindings
+### Part B — Expression Bindings
 
-Expression binding lets you write a JavaScript ternary expression directly inside a binding path string. It starts with {= and ends with }. It is evaluated live at runtime whenever the bound model values change.
+Expression binding lets you write a JavaScript ternary expression directly inside a binding path string. It starts with \{= and ends with \}. It is evaluated live at runtime whenever the bound model values change.
 
-### B.1 — Syntax Rules
+#### B.1 — Syntax Rules
 
 | Rule | Detail |
 | :---- | :---- |
-| Starts with {= | The expression must begin with {= (curly brace, equals). Without the \=, it is treated as a plain path, not an expression. |
-| Reference model paths with \${} | Inside an expression, wrap every \$M path in \${}: \${\$M\>/detail/s\_status}. This dereferences the path to its current value. |
+| Starts with \{= | The expression must begin with \{= (curly brace, equals). Without the \=, it is treated as a plain path, not an expression. |
+| Reference model paths with \$\{\} | Inside an expression, wrap every \$M path in \$\{\}: \$\{\$M\>/detail/s\_status\}. This dereferences the path to its current value. |
 | Must return a value | The expression must evaluate to a value matching the property type. visible expects boolean. text expects string. enabled expects boolean. |
 | Ternary only for simple cases | Use condition ? valueIfTrue : valueIfFalse. Complex multi-branch logic belongs in a formatter function, not in expression binding. |
 | No function calls | You cannot call controller functions from expression binding. Use Parts \+ formatter for that. |
 
-### B.2 — Expression Binding Examples (Customer Complaints App)
+#### B.2 — Expression Binding Examples (Customer Complaints App)
 
 | Use Case | Property | Expression | Explanation |
 | :---- | :---- | :---- | :---- |
-| Show Save/Cancel only in EDIT or CREATE mode | visible | {= \${\$M\>/TransactionMode } \=== 'EDIT' || \${\$M\>/TransactionMode } \=== 'CREATE' ? true : false} | screenMode is a system property on every screen. It switches to EDIT when setMode is called. |
-| Make Edit button invisible in EDIT mode | visible | {= \${\$M\>/TransactionMode } \=== 'DISPLAY' ? true : false} | Edit button should disappear the moment the user clicks it and mode switches to EDIT. |
-| Show escalation badge only when escalated | visible | {= \${\$M\>/detail/is\_escalated} \=== true ? true : false} | is\_escalated is a Boolean property. Bind to the is\_escalated path directly. |
-| Dynamic text: 'Escalated' vs empty | text | {= \${\$M\>/detail/is\_escalated} \=== true ? 'ESCALATED' : ''} | Shows ESCALATED label text conditionally. Returns empty string otherwise. |
-| Disable complaint\_desc when not OPEN | enabled | {= \${\$M\>/detail/s\_status} \=== 'OPEN' ? true : false} | The complaint description should only be editable when the complaint is in OPEN status. |
-| Dynamic placeholder label for priority | text | {= \${\$M\>/detail/priority} \=== 'VERY\_HIGH' ? '🚨 Critical' : \${\$M\>/detail/priority}} | Shows emoji label for critical priority, falls back to raw value for others. |
-| TAT warning color | class | {= \${\$M\>/detail/actual\_tat} \> \${\$M\>/detail/standard\_tat} ? 'tat-overdue' : 'tat-ok'} | Applies different CSS class depending on whether actual exceeds standard TAT. |
+| Show Save/Cancel only in EDIT or CREATE mode | visible | \{= \$\{\$M\>/TransactionMode \} \=== 'EDIT' || \$\{\$M\>/TransactionMode \} \=== 'CREATE' ? true : false\} | screenMode is a system property on every screen. It switches to EDIT when setMode is called. |
+| Make Edit button invisible in EDIT mode | visible | \{= \$\{\$M\>/TransactionMode \} \=== 'DISPLAY' ? true : false\} | Edit button should disappear the moment the user clicks it and mode switches to EDIT. |
+| Show escalation badge only when escalated | visible | \{= \$\{\$M\>/detail/is\_escalated\} \=== true ? true : false\} | is\_escalated is a Boolean property. Bind to the is\_escalated path directly. |
+| Dynamic text: 'Escalated' vs empty | text | \{= \$\{\$M\>/detail/is\_escalated\} \=== true ? 'ESCALATED' : ''\} | Shows ESCALATED label text conditionally. Returns empty string otherwise. |
+| Disable complaint\_desc when not OPEN | enabled | \{= \$\{\$M\>/detail/s\_status\} \=== 'OPEN' ? true : false\} | The complaint description should only be editable when the complaint is in OPEN status. |
+| Dynamic placeholder label for priority | text | \{= \$\{\$M\>/detail/priority\} \=== 'VERY\_HIGH' ? '🚨 Critical' : \$\{\$M\>/detail/priority\}\} | Shows emoji label for critical priority, falls back to raw value for others. |
+| TAT warning color | class | \{= \$\{\$M\>/detail/actual\_tat\} \> \$\{\$M\>/detail/standard\_tat\} ? 'tat-overdue' : 'tat-ok'\} | Applies different CSS class depending on whether actual exceeds standard TAT. |
 
 ⚠  Expression binding is evaluated once per model change event. For heavy computation (e.g. comparing arrays or doing date math), use a formatter function instead — expression binding performance degrades with complex logic.
 
-## Part C — Formatter Functions
+### Part C — Formatter Functions
 
 A formatter function is a TypeScript method in the controller file that takes one or more raw model values as input and returns a formatted display value. It is the right tool whenever expression binding would become too long, needs multi-step logic, or needs to look up external data.
 
-### C.1 — Where Formatter Functions Live
+#### C.1 — Where Formatter Functions Live
 
 Formatter functions are public methods on the controller class. They must be public — the framework calls them reflectively from the Page Builder binding.
 
+```ts
 export class p_complaints extends KloController {
 
   // Formatter functions — called from Parts binding in Page Builder
@@ -3572,24 +3573,25 @@ export class p_complaints extends KloController {
 
     };
 
-    return map\[priority\] || priority || '—';
+    return map[priority] || priority || '—';
 
   }
 
 }
+```
 
-### C.2 — Formatter Function Examples for the Complaints App
+#### C.2 — Formatter Function Examples for the Complaints App
 
 | Function Name | Input Parts | Return | Example Output |
 | :---- | :---- | :---- | :---- |
-| formatPriority(priority) | {\$M\>/detail/priority} | string | 🔴 High |
-| formatTAT(actual, standard) | {\$M\>/detail/actual\_tat}, {\$M\>/detail/standard\_tat} | string | ⚠ Overdue by 3 day(s) |
-| formatStatusLabel(status) | {\$M\>/detail/s\_status} | string | 🟠 IN PROCESS |
-| formatFullName(first, last) | {\$M\>/detail/created\_by\_first}, {\$M\>/detail/created\_by\_last} | string | John Doe |
-| formatEscalationText(isEsc, type) | {\$M\>/detail/is\_escalated}, {\$M\>/detail/complaint\_type} | string | ESCALATED — BILLING |
-| formatDateAge(createdOn) | {\$M\>/detail/created\_on} | string | 3 days ago |
+| formatPriority(priority) | \{\$M\>/detail/priority\} | string | 🔴 High |
+| formatTAT(actual, standard) | \{\$M\>/detail/actual\_tat\}, \{\$M\>/detail/standard\_tat\} | string | ⚠ Overdue by 3 day(s) |
+| formatStatusLabel(status) | \{\$M\>/detail/s\_status\} | string | 🟠 IN PROCESS |
+| formatFullName(first, last) | \{\$M\>/detail/created\_by\_first\}, \{\$M\>/detail/created\_by\_last\} | string | John Doe |
+| formatEscalationText(isEsc, type) | \{\$M\>/detail/is\_escalated\}, \{\$M\>/detail/complaint\_type\} | string | ESCALATED — BILLING |
+| formatDateAge(createdOn) | \{\$M\>/detail/created\_on\} | string | 3 days ago |
 
-### C.3 — Wiring a Formatter Function: Complete Steps
+#### C.3 — Wiring a Formatter Function: Complete Steps
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -3604,76 +3606,76 @@ export class p_complaints extends KloController {
 
 ⚠  Formatter functions must be PURE — they should not modify model state, call APIs, or have side effects. They are called repeatedly on every model refresh. Side effects cause unpredictable behavior and performance issues.
 
-## Part D — Navigation In Depth
+### Part D — Navigation In Depth
 
 Navigation in Klobase is handled exclusively through the navTo() controller API. All legacy navigation methods (navToS, navToByEvent, navToScreenByKeyScreen) are deprecated — always use navTo. It is defined on KloController and is available in every page controller via this.navTo().
 
-### D.1 — navTo Parameter Reference
+#### D.1 — navTo Parameter Reference
 
 | Parameter | Type | Purpose | Example |
 | :---- | :---- | :---- | :---- |
 | SS | string | Navigate to a section (PageArea or Section) WITHIN the same page. Used for list-to-detail navigation on the same screen. | SS: 'pa\_complaint\_details' |
 | S | string | Navigate to a DIFFERENT page by page ID. | S: 'p\_customers' |
 | D | string | Navigate to a page AND set a specific record as active by its primary key. Format: entity@@key@@suffix. | D: 'd\_complaints@@CMP-00012@@F' |
-| QP | object | Navigate to a page AND apply a query parameter filter on the target page's search TransNode. | QP: { complaint\_type: 'BILLING' } |
+| QP | object | Navigate to a page AND apply a query parameter filter on the target page's search TransNode. | QP: \{ complaint\_type: 'BILLING' \} |
 | F | string | Navigate to a specific flavor (application variant). | F: 'flavor\_prod' |
 | Mode | string | Set the page mode on the target page when navigating. Values: DISPLAY, EDIT, CREATE. | Mode: 'CREATE' |
-| AppData | object | Pass arbitrary data to the target page. Read from controller using this.getAppData(). | AppData: { source: 'dashboard' } |
+| AppData | object | Pass arbitrary data to the target page. Read from controller using this.getAppData(). | AppData: \{ source: 'dashboard' \} |
 
-### D.2 — Navigation Scenarios with Code
+#### D.2 — Navigation Scenarios with Code
 
 Scenario 1 — List row click navigates to detail section on the same page:
 
 // Press event on ticket\_id m.Link control:
 
-await this.navTo({ SS: 'pa\_complaint\_details' }, oEvent);
+await this.navTo(\{ SS: 'pa\_complaint\_details' \}, oEvent);
 
 // oEvent is required for SS nav — it carries the row index for setActive
 
 Scenario 2 — Navigate to a different page:
 
-await this.navTo({ S: 'p\_customers' });
+await this.navTo(\{ S: 'p\_customers' \});
 
 Scenario 3 — Navigate to a different page AND a specific section within it:
 
-await this.navTo({ S: 'p\_customers', SS: 'pa\_customer\_details' }, oEvent);
+await this.navTo(\{ S: 'p\_customers', SS: 'pa\_customer\_details' \}, oEvent);
 
 Scenario 4 — Navigate to a page and load a specific record by key (requires navbykey on target TransNode):
 
 const key \= this.tm.getTN('list').getProperty(\`\${idx}/complaint\_id\`);
 
-await this.navTo({ S: 'p\_complaints', SS: 'pa\_complaint\_details',
+await this.navTo(\{ S: 'p\_complaints', SS: 'pa\_complaint\_details',
 
-  D: \`d\_complaints@@\${key}@@F\` });
+  D: \`d\_complaints@@\${key}@@F\` \});
 
-// Target page's detail TransNode must have navbykey: {"sourcePath": "list"}
+// Target page's detail TransNode must have navbykey: \{"sourcePath": "list"\}
 
 Scenario 5 — Navigate and pre-filter with query parameters (requires navbyquery on target TransNode):
 
 const type \= this.tm.getTN('detail').getProperty('complaint\_type');
 
-await this.navTo({ S: 'p\_complaints', SS: 'pa\_complaints',
+await this.navTo(\{ S: 'p\_complaints', SS: 'pa\_complaints',
 
-  QP: { complaint\_type: type } });
+  QP: \{ complaint\_type: type \} \});
 
-// Target page's search TransNode must have navbyquery: {"sourcePath": "search"}
+// Target page's search TransNode must have navbyquery: \{"sourcePath": "search"\}
 
 Scenario 6 — Navigate to Create mode on a different page:
 
-await this.navTo({ S: 'p\_complaints', Mode: 'CREATE' });
+await this.navTo(\{ S: 'p\_complaints', Mode: 'CREATE' \});
 
-### D.3 — navbykey and navbyquery Configuration
+#### D.3 — navbykey and navbyquery Configuration
 
 | Config Field | Where to Set | Value Format | When Required |
 | :---- | :---- | :---- | :---- |
-| navbykey | Target page's detail/list TransNode → Properties → navbykey field | {"sourcePath": "list"} — the list TransNode relationId of the TARGET page | Required when using D: parameter in navTo. It tells the target page which TransNode to activate. |
-| navbyquery | Target page's search TransNode → Properties → navbyquery field | {"sourcePath": "search"} — the search TransNode relationId of the TARGET page | Required when using QP: parameter in navTo. It tells the target page to filter using the passed query params. |
+| navbykey | Target page's detail/list TransNode → Properties → navbykey field | \{"sourcePath": "list"\} — the list TransNode relationId of the TARGET page | Required when using D: parameter in navTo. It tells the target page which TransNode to activate. |
+| navbyquery | Target page's search TransNode → Properties → navbyquery field | \{"sourcePath": "search"\} — the search TransNode relationId of the TARGET page | Required when using QP: parameter in navTo. It tells the target page to filter using the passed query params. |
 
-## Part E — Style Classes for Controls, Sections, Page Areas & Layouts
+### Part E — Style Classes for Controls, Sections, Page Areas & Layouts
 
 The Style Classes tab in the Page Builder is the single place to control all visual formatting. It has two modes: QuickAdd (pre-built bundles) and Manual (full control). Different QuickAdd bundles are available depending on what is selected in the tree: a Section, a PageArea/PageLayout, or a Control.
 
-### E.1 — QuickAdd for Sections
+#### E.1 — QuickAdd for Sections
 
 ![][image23]
 
@@ -3683,7 +3685,7 @@ The Style Classes tab in the Page Builder is the single place to control all vis
 | Grid | Sections (grid type) | Adds alternating row colors, column borders, header background, and hover highlight. Improves readability for dense tabular data. | List sections (s\_complaints). Always apply Grid QuickAdd to any grid-type section. |
 | Transparent | Sections | Removes background and border. Content sits directly on the page background. | Dashboard tile sections where background should show through. |
 
-### E.2 — QuickAdd for Controls
+#### E.2 — QuickAdd for Controls
 
 ![][image24]
 
@@ -3696,7 +3698,7 @@ The Style Classes tab in the Page Builder is the single place to control all vis
 | Background Color | Any control | Applies a background highlight. Useful for dashboard tiles and key metrics. |
 | Color Combination | Any control | Pre-defined foreground \+ background pairs ensuring WCAG contrast compliance. Safer than picking colors individually. |
 
-### E.3 — Format Rules (Conditional Styling)
+#### E.3 — Format Rules (Conditional Styling)
 
 Format Rules apply a style class conditionally based on the control's current value. This is how status badge colors work. Configure via Style Classes tab → Category \+ Style Class \+ Format Rule \+ Format Value.
 
@@ -3719,7 +3721,7 @@ Status badge rules for the complaints app — apply to s\_status control in both
 | RESOLVED | Background | status-resolved | Text Contains | RESOLVED |
 | CLOSED | Background | status-completed | Text Contains | CLOSED |
 
-### E.4 — User-Defined CSS Classes
+#### E.4 — User-Defined CSS Classes
 
 When QuickAdd and Format Rules are not sufficient, create custom CSS classes in the Settings Editor.
 
@@ -3730,7 +3732,7 @@ When QuickAdd and Format Rules are not sufficient, create custom CSS classes in 
 | 3 | Add css file | Maintain css file in css folder |
 | 4 | Load file in controller | FileLoaderUtils.loadCSSFile(this.getFlavor(), this.getFlavorVersion(), "myStyleSheet"); "myStyleSheet" this is the style sheet has been created  |
 
-## CSS Usage — Do's & Don'ts
+### CSS Usage — Do's & Don'ts
 
 * ### ✓ Do
 
@@ -3759,15 +3761,15 @@ When QuickAdd and Format Rules are not sufficient, create custom CSS classes in 
 | **✗** | ✗  **Don’t hardcode custom class names in multiple places.** Once loaded, the class is available under **Category: User Defined** in the Style Class UI. Reuse that class instead. |
 
 
-## F — Implement binding in application {#f-—-implement-binding-in-application}
+### F — Implement binding in application {#f-—-implement-binding-in-application}
 
 As you might have already seen that we already used bindings to attach data to control.
 
-## G — Implement styling {#g-—-implement-styling}
+### G — Implement styling {#g-—-implement-styling}
 
 As you can see the customer complaints showed and the one we are developing functionality might be looking the same at this point but ui is looking different which is due to styling difference. Let's implement styling.
 
-### G.1 — list screen {#g.1-—-list-screen}
+#### G.1 — list screen {#g.1-—-list-screen}
 
 Add formatting to complaint\_id to change it to bold.
 
@@ -3783,12 +3785,12 @@ Style all the form sections  in pa\_comp\_details.
 
 ![][image28]
 
-## Concepts Recap — What You Learned in Session 6
+### Concepts Recap — What You Learned in Session 6
 
 | Concept | What It Does | Config Location |
 | :---- | :---- | :---- |
-| \$M path binding | Binds a control to a TransNode property value. | Properties tab → Path field: {\$M\>/detail/prop} |
-| Expression binding | Inline ternary for conditional visible/enabled. | Path field: {= condition ? true : false} |
+| \$M path binding | Binds a control to a TransNode property value. | Properties tab → Path field: \{\$M\>/detail/prop\} |
+| Expression binding | Inline ternary for conditional visible/enabled. | Path field: \{= condition ? true : false\} |
 | navTo (Events tab / press event) | Navigates to a section or page on control interaction. | Events tab → press → NavTo function |
 | Layout type \= header | Pins s\_detail\_header at top of pa\_complaint\_details. | Detail panel → type \= header |
 | Layout type \= section | Sets pa\_comp\_details as scrollable body area. | Detail panel → type \= section |
@@ -3804,7 +3806,7 @@ Style all the form sections  in pa\_comp\_details.
 | Session 7 (Controllers & Client-Side Behaviour) adds vienable and controller logic on top of today's styling. |
 |  |
 
-## **Mandatory Tasks** {#mandatory-tasks}
+### **Mandatory Tasks** {#mandatory-tasks}
 
 1. Practice all the steps performed in the session  
 2. Navigate to a screen using QP to filter the data of the target  
@@ -3814,7 +3816,7 @@ Style all the form sections  in pa\_comp\_details.
 
 ## Session 7 — Controllers & Client-Side Behaviour {#session-7}
 
-## **Session Objectives**
+### **Session Objectives**
 
 By the end of this session, you will be able to:
 
@@ -3832,7 +3834,7 @@ Apply Procify coding standards for controller and entity files.
 
 Vienable (Visible \+ Enable) is the declarative system for controlling control visibility and editability across four independent dimensions. The final result for any control is the intersection of all configured dimensions: a control is visible only if ALL applicable dimension rules say it should be visible.
 
-## **A.1 — The Four Vienable Dimensions**
+### **A.1 — The Four Vienable Dimensions**
 
 | Dimension | What It Controls | Values | Configuration Location |
 | :---- | :---- | :---- | :---- |
@@ -3843,7 +3845,7 @@ Vienable (Visible \+ Enable) is the declarative system for controlling control v
 
 ⚠  Entity must be set to TRUE for the control row in the Vienable Dashboard. If Entity \= false, Role and Status Group dimensions are ignored — the control will always be visible/enabled regardless of role or status.
 
-## **A.2 — Screen Size Vienable (Responsive Layout)**
+### **A.2 — Screen Size Vienable (Responsive Layout)**
 
 Screen size Vienable controls which columns/fields appear on small vs large screens. This is how the platform supports mobile without a separate build.
 
@@ -3867,7 +3869,7 @@ Steps to configure phone layout for s\_complaints grid:
 | 5 | Test with Preview In → Phone | Toolbar → Preview In → Phone. Grid should show only the essential 3 columns. |
 | 6 | Verify desktop unaffected | Preview In → Desktop. All columns must still show. |
 
-## **A.3 — Page Mode Vienable**
+### **A.3 — Page Mode Vienable**
 
 | Control | Display Mode | Edit Mode | Create Mode | Rationale |
 | :---- | :---- | :---- | :---- | :---- |
@@ -3878,7 +3880,7 @@ Steps to configure phone layout for s\_complaints grid:
 | complaint\_desc input | Show As Label | Depends on Role | Editable | Read-only in display, role-controlled in edit. |
 | responsible\_team input | Show As Label | Depends on Role | Editable for MANAGER only | Only manager assigns team. |
 
-## **A.4 — Role Rollup Vienable**
+### **A.4 — Role Rollup Vienable**
 
 Role-based Vienable uses the s\_role\_rollup value of the logged-in user. This value is set in BOL Editor → Object Type tab → role configuration table (KloTuner config). The mapping for this is:
 
@@ -3898,7 +3900,7 @@ Role-based Vienable rules for p\_complaints — key controls:
 | assigned\_to field (EDIT) | Show As Label | Editable | Show As Label |
 | remark field (EDIT) | Hidden | Editable | Editable |
 
-## **A.5 — Status Group Vienable**
+### **A.5 — Status Group Vienable**
 
 Status Group maps a set of s\_status values to a group name. The configuration is in BOL Editor → Status tab. Vienable evaluates the group of the entity's CURRENT s\_status to decide visibility.
 
@@ -3911,7 +3913,7 @@ Status Group maps a set of s\_status values to a group name. The configuration i
 
 ⚠  Status Group Vienable requires Entity \= true on the control row AND the entity's Status tab must have the groups configured in BOL Editor. Missing group config causes the status group column to be ignored — the control remains visible regardless of status.
 
-## **A.6 — Apply vienability for application.** {#a.6-—-apply-vienability-for-application.}
+### **A.6 — Apply vienability for application.** {#a.6-—-apply-vienability-for-application.}
 
 1. s\_complaint\_details   
    1. should not be editable in display mode  
@@ -3949,7 +3951,7 @@ Status Group maps a set of s\_status values to a group name. The configuration i
 
 The Klobase framework calls lifecycle hook methods on your controller class at specific points in the page's life. Understanding WHEN each fires is essential — using the wrong hook causes bugs that are hard to trace because they appear intermittently depending on navigation order.
 
-## **B.1 — Hook Execution Order**
+### **B.1 — Hook Execution Order**
 
 On first page load: onPageInit → onPageModelReady → onPageEnter
 
@@ -3959,7 +3961,7 @@ On backward navigation away from page: onPageExit (source page), onPageEnter (ta
 
 On back-navigation that destroys the page: onPageExit → onPageDestroy
 
-## **B.2 — Lifecycle Hook Reference**
+### **B.2 — Lifecycle Hook Reference**
 
 | Hook | When It Fires | Model Data Available? | Primary Use Cases | Common Mistakes |
 | :---- | :---- | :---- | :---- | :---- |
@@ -3969,23 +3971,23 @@ On back-navigation that destroys the page: onPageExit → onPageDestroy
 | onPageExit | When the user navigates AWAY to a different page. | Yes | Auto-save draft, log exit event, clear unsaved state. | Not called for within-page section navigation (SS). Only fires on cross-page navigation. |
 | onPageDestroy | Once, when the page is removed from memory (back-nav that exits the page history). | Partially | Unsubscribe event listeners. Release resources. Not needed for most standard screens. | Using it as a reliable 'save on exit' hook — the page may be destroyed without user navigation (memory pressure, app backgrounding). |
 
-## **B.3 — onPageEnter: The Most Important Hook**
+### **B.3 — onPageEnter: The Most Important Hook**
 
 onPageEnter is the page lifecycle hook. It fires with data already loaded, on every navigation — making it perfect for dashboard counts, summaries, and state resets.
 
 This event will be called whenever the screen enters the visible area by means of navigation (Both front and back navigation).
 
-public async onPageEnter(): Promise\<void\> {
+public async onPageEnter(): Promise\<void\> \{
 
   // ── 1\. One-time initialization guard ──────────────────────────────────
 
-  if (\!this.\_initialized) {
+  if (\!this.\_initialized) \{
 
     this.\_initialized \= true;
 
     // Logic that must run only ONCE goes here
 
-  }
+  \}
 
   // ── 2\. Dashboard count computation (server-side aggregate) ────────────
 
@@ -4001,13 +4003,13 @@ public async onPageEnter(): Promise\<void\> {
 
   const rows \= aggregateResult;
 
-  const counts: Record\<string, number\> \= {
+  const counts: Record\<string, number\> \= \{
 
     OPEN: 0, REOPEN: 0, INPROCESS: 0, ON\_HOLD: 0, RESOLVED: 0, CLOSED: 0
 
-  };
+  \};
 
-  rows.forEach((row: any) \=\> {
+  rows.forEach((row: any) \=\> \{
 
     const st \= row.s\_status || '';
 
@@ -4015,13 +4017,13 @@ public async onPageEnter(): Promise\<void\> {
 
     if (counts.hasOwnProperty(st)) counts\[st\] \= c;
 
-  });
+  \});
 
   // Build the derived object once, then set it on a dedicated
 
   // "other"-type transnode used purely for binding — no full row payload involved.
 
-  const statusCount \= {
+  const statusCount \= \{
 
     t\_open\_count:      counts.OPEN \+ counts.REOPEN,
 
@@ -4031,15 +4033,15 @@ public async onPageEnter(): Promise\<void\> {
 
     t\_closed\_count:    counts.CLOSED
 
-  };
+  \};
 
   await this.tm.getTN('status\_count').setData(statusCount);
 
-}
+\}
 
 # **Part C — Controller APIs: Complete Reference**
 
-## **C.1 — TransModel APIs (this.tm.\*)**
+### **C.1 — TransModel APIs (this.tm.\*)**
 
 | API | Signature | Returns | Description |
 | :---- | :---- | :---- | :---- |
@@ -4049,7 +4051,7 @@ public async onPageEnter(): Promise\<void\> {
 | getAllTransNodes() | this.tm.getAllTransNodes() | TransNode\[\] | Get all TransNodes on the page. Useful for bulk operations. |
 | getTransactionFromTransnodeData() | this.tm.getTransactionFromTransnodeData(tn) | any | Get the raw transaction object from a TransNode. Advanced use only. |
 
-## **C.2 — TransNode APIs (this.tm.getTN('id').\*)**
+### **C.2 — TransNode APIs (this.tm.getTN('id').\*)**
 
 | API | Signature | Returns | Description & Example |
 | :---- | :---- | :---- | :---- |
@@ -4063,9 +4065,9 @@ public async onPageEnter(): Promise\<void\> {
 | getSelectedEntities() | .getSelectedEntities(ssID?) | KloEntity\[\] | Get all checked rows in a grid section (multi-select). selected \= this.tm.getTN('list').getSelectedEntities(); |
 | executeP() | .executeP() | Promise\<void\> | Re-execute the query associated with a query-type TransNode. Use to refresh data without full page reload. await this.tm.getTN('search').executeP(); |
 | applySortP() | .applySortP(property, order) | Promise\<void\> | Sort the TransNode data by a property. order: 'ASCENDING' or 'DESCENDING'. await this.tm.getTN('list').applySortP('created\_on', 'DESCENDING'); |
-| createEntityP() | .createEntityP(json, successMsg, errorMsg) | Promise\<KloEntity\> | Create a new entity and add to the TransNode. Triggers onAfterCreate hook server-side. await this.tm.getTN('list').createEntityP({complaint\_desc: 'test'}, 'Created', 'Failed'); |
+| createEntityP() | .createEntityP(json, successMsg, errorMsg) | Promise\<KloEntity\> | Create a new entity and add to the TransNode. Triggers onAfterCreate hook server-side. await this.tm.getTN('list').createEntityP(\{complaint\_desc: 'test'\}, 'Created', 'Failed'); |
 
-## **C.3 — Controller Navigation & UI APIs**
+### **C.3 — Controller Navigation & UI APIs**
 
 | API | Signature | Description |
 | :---- | :---- | :---- |
@@ -4075,14 +4077,14 @@ public async onPageEnter(): Promise\<void\> {
 | refreshTransnode() | this.refreshTransnode(nodeId, mode, discard) | Refresh a named TransNode, set its mode, and optionally discard unsaved changes. Standard Cancel button handler. |
 | showBusy() | this.showBusy(msg?, id?) | Show the platform busy/loading indicator. Use during async operations. this.showBusy('Loading...'); |
 | hideBusy() | this.hideBusy(id?) | Hide the busy indicator. Always call in a finally block to ensure it's dismissed even on error. |
-| getAppData() | this.getAppData() | Retrieve AppData passed from the source page's navTo call. Returns the object passed as AppData: {...}. |
+| getAppData() | this.getAppData() | Retrieve AppData passed from the source page's navTo call. Returns the object passed as AppData: \{...\}. |
 | getPathFromEvent() | this.getPathFromEvent(oEvent) | Get the model path string from a press event. Use with getTN().getProperty(path.split('/')\[2\] \+ '/propertyId') to get a specific row value. |
 
 # **Part D — Client-Side Validation**
 
 Client-side validation in Klobase operates at two levels: (1) field-level required constraints using the 'required' property, and (2) full-form OnValidate triggered by commitP or saveTransaction. Both are enforced in the browser before any network call is made.
 
-## **D.1 — Required Field Validation**
+### **D.1 — Required Field Validation**
 
 Mark a control as required by adding the 'required' property and setting it to true. The platform renders a red asterisk and prevents submission if the field is empty.
 
@@ -4092,13 +4094,13 @@ Mark a control as required by adding the 'required' property and setting it to t
 | 2 | Add 'required' property | Properties tab → Add → required → set Value to true. |
 | 3 | Test in Full Preview (CREATE mode) | Click New → leave complaint\_desc empty → click Save. Platform shows required validation error and blocks save. |
 
-## **D.2 — OnValidate (Server-Side Validation Triggered from Client)**
+### **D.2 — OnValidate (Server-Side Validation Triggered from Client)**
 
 OnValidate runs in the entity file (.ts) on the Private Node when saveTransaction is called with validate=true. The client sends the dirty object to the server; the server validates and returns errors if any rule fails. The client then displays these errors as message dialogs.
 
 // In d\_complaints.ts entity file — OnValidate hook
 
-public async OnValidate(oEvent: IKloEvent): Promise\<void\> {
+public async OnValidate(oEvent: IKloEvent): Promise\<void\> \{
 
   const entity \= oEvent.getEntity();
 
@@ -4106,35 +4108,35 @@ public async OnValidate(oEvent: IKloEvent): Promise\<void\> {
 
   // V001: Description must be at least 20 characters
 
-  if (\!entity.complaint\_desc || entity.complaint\_desc.length \< 20\) {
+  if (\!entity.complaint\_desc || entity.complaint\_desc.length \< 20\) \{
 
     errors.push('V001: Complaint description must be at least 20 characters.');
 
-  }
+  \}
 
   // V002: Priority is mandatory
 
-  if (\!entity.priority) {
+  if (\!entity.priority) \{
 
     errors.push('V002: Priority is mandatory.');
 
-  }
+  \}
 
   // V003: Cannot close without a remark
 
-  if (entity.s\_status \=== 'CLOSED' && \!entity.remark) {
+  if (entity.s\_status \=== 'CLOSED' && \!entity.remark) \{
 
     errors.push('V003: Remark is required when closing a complaint.');
 
-  }
+  \}
 
-  if (errors.length \> 0\) {
+  if (errors.length \> 0\) \{
 
     oEvent.setError(errors.join('\\n'));
 
-  }
+  \}
 
-}
+\}
 
 For OnValidate to fire from the UI, the detail TransNode's setActiveIf must be set to 'Valid' in the Page Data Model. Without this, saveTransaction with validate=true does nothing.
 
@@ -4149,19 +4151,19 @@ For OnValidate to fire from the UI, the detail TransNode's setActiveIf must be s
 
 These standards are non-negotiable on all Procify projects. Violations result in code review rejection and technical debt. The principles come from kloTouch 7.0 Basic Training Guide §7.4 and §7.5.
 
-## **E.1 — Controller File Standards**
+### **E.1 — Controller File Standards**
 
 | Rule | Do | Don't | Reason |
 | :---- | :---- | :---- | :---- |
 | Scope | Write ONLY UI logic in the controller: formatters, navigation, show/hide, model reads for display. | Write business logic (status transitions, validations, default-setting) in the controller. | Business logic in the controller bypasses server validation and breaks when the screen is accessed via API. |
 | TypeScript typing | Declare every variable with its type: const count: number \= 0; const msg: string \= ''; | Use implicit any: let x \= someValue; or omit types on function parameters. | Untyped code hides bugs at compile time that surface as runtime errors in production. |
 | Variable declaration | Declare variables only when necessary. Prefer const over let. | Declare variables at file scope (class properties) when a local variable suffices. | File-scope variables persist across page navigations and cause state leakage between sessions. |
-| Nested functions | Keep functions flat. Extract complex logic to named private methods. | Nest arrow functions inside controller methods: onClick(() \=\> { const x \= () \=\> {...}; }) | Nested functions are not testable, not readable, and difficult to debug. |
+| Nested functions | Keep functions flat. Extract complex logic to named private methods. | Nest arrow functions inside controller methods: onClick(() \=\> \{ const x \= () \=\> \{...\}; \}) | Nested functions are not testable, not readable, and difficult to debug. |
 | Async/await | Use async/await for all TransNode API calls. Mark the function async. | Use .then().catch() promise chains. | Consistent await pattern is required by the framework for proper error propagation. |
 | Deprecated APIs | Always use navTo(), tm.commitP(), this.setMode(). | Use navToS(), navToByEvent(), getTN('x').commitP() | Deprecated APIs are removed in future versions. Using them creates upgrade risk. |
 | Model mutation | Only modify model properties via setProperty() for transient display values. | Directly mutate entity properties from the controller (entity.some\_prop \= value). | Direct mutations bypass the dirty-tracking mechanism and do not persist on save. |
 
-## **E.2 — Entity File Standards**
+### **E.2 — Entity File Standards**
 
 | Rule | Do | Don't |
 | :---- | :---- | :---- |
@@ -4171,7 +4173,7 @@ These standards are non-negotiable on all Procify projects. Violations result in
 | Error handling | Always wrap async BOL API calls (createEntityP, LoadEntityByKeyP) in try/catch and log errors. | Let unhandled promise rejections propagate silently. |
 | Role checks in rules | Use oEvent.getTxn().\$SYSTEM.roleID to get the runtime role and enforce role-specific logic. | Hardcode user IDs or email addresses for role checks. |
 
-## **E.3 — Naming Conventions**
+### **E.3 — Naming Conventions**
 
 | Item | Convention | Example |
 | :---- | :---- | :---- |
@@ -4207,7 +4209,7 @@ These standards are non-negotiable on all Procify projects. Violations result in
 | Session 8 finalises the menu, home page, versioning, and publishing — the application must be fully working. |
 |  |
 
-## **Mandatory Tasks** {#mandatory-tasks-1}
+### **Mandatory Tasks** {#mandatory-tasks-1}
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -4223,7 +4225,7 @@ These standards are non-negotiable on all Procify projects. Violations result in
 
 ## Session 8 — Menu Configuration & App Management, Versioning & Publishing {#session-8}
 
-## **Session Objectives**
+### **Session Objectives**
 
 By the end of this session, you will be able to:
 
@@ -4245,13 +4247,13 @@ By the end of this session, you will be able to:
 
 # **Part A — Menu Editor**
 
-## **A.1 — What Is the Menu Editor?**
+### **A.1 — What Is the Menu Editor?**
 
 The Menu Editor (also called Menu Builder per PROC-26419) is the tool you use to define the navigation structure visible to users in the hamburger menu of the application at runtime. Without a menu entry, users cannot navigate between screens — they would need to know URLs manually.
 
 Access path: Running app → Hamburger menu (☰) → Dev Tools → Menu Editor.
 
-## **A.2 — Menu Fields Reference**
+### **A.2 — Menu Fields Reference**
 
 | Field | Description | Rules / Notes |
 | ----- | ----- | ----- |
@@ -4264,7 +4266,7 @@ Access path: Running app → Hamburger menu (☰) → Dev Tools → Menu Editor.
 | Roles | Restrict visibility to specific application roles. | Leave BLANK \= visible to ALL roles. Fill role IDs (comma-separated) to restrict. |
 | Test Navigation | Validates the menu item navigates correctly. | Always click Test Navigation before saving — catches target page errors early. |
 
-## **A.3 — BRD Menu Structure to Implement**
+### **A.3 — BRD Menu Structure to Implement**
 
 | Menu Field | Value |
 | ----- | ----- |
@@ -4276,7 +4278,7 @@ Access path: Running app → Hamburger menu (☰) → Dev Tools → Menu Editor.
 | Roles | Leave blank — visible to ALL roles (Employee, Manager, IT Team) |
 | Page Parameters | Not required — leave blank |
 
-## **A.4 — Step-by-Step: Creating the Application Menu**
+### **A.4 — Step-by-Step: Creating the Application Menu**
 
 | 1 | Open Menu Editor In the running application, open the hamburger menu (☰ top-left). Go to Dev Tools → Menu Editor. |
 | :---: | :---- |
@@ -4292,14 +4294,14 @@ Access path: Running app → Hamburger menu (☰) → Dev Tools → Menu Editor.
 
 # **Part B — HomePage Editor**
 
-## **B.1 — What Is the HomePage Editor?**
+### **B.1 — What Is the HomePage Editor?**
 
 The HomePage Editor configures which screen tiles appear on the application's built-in Home grid — accessible via the Home (🏠) icon. This is separate from the Landing Page (p\_complaint\_dashboard configured in Session 5). The Landing Page loads automatically on login. The Home grid gives users tile-based navigation to frequently used screens.
 
 | 📘  Reference / Tip Three 'home' concepts — don't confuse them Landing Page (Session 5): Configured via Landing Page Settings. Auto-loads after login. Shows p\_complaint\_dashboard. HomePage Editor: Tile grid shown when user clicks the Home (🏠) icon. Configure p\_complaints and p\_complaint\_dashboard tiles here. p\_home\_page (BRD): A screen defined in the BRD. Can be built as an additional home screen — not required for this session's delivery. |
 | :---- |
 
-## **B.2 — HomePage Editor Fields Reference**
+### **B.2 — HomePage Editor Fields Reference**
 
 | Field | Description |
 | ----- | ----- |
@@ -4309,7 +4311,7 @@ The HomePage Editor configures which screen tiles appear on the application's bu
 | Sequence | Order of the tile. Lower \= appears first. |
 | Role | Restrict tile visibility to specific roles. Leave blank \= all roles. |
 
-## **B.3 — Step-by-Step: Adding Tiles to HomePage Editor**
+### **B.3 — Step-by-Step: Adding Tiles to HomePage Editor**
 
 | 1 | Open HomePage Editor Hamburger menu (☰) → Dev Tools → HomePage Editor. Select customer\_complaints\_\<prid\> from the App dropdown. Click the Edit icon (✏). |
 | :---: | :---- |
@@ -4320,7 +4322,7 @@ The HomePage Editor configures which screen tiles appear on the application's bu
 
 # **Part C — App Status Lifecycle & Versioning**
 
-## **C.1 — App Status Values**
+### **C.1 — App Status Values**
 
 Every version of an application on the Procify platform has a Status that controls what operations are allowed on it. Understanding these statuses is essential before releasing or transporting.
 
@@ -4334,7 +4336,7 @@ Every version of an application on the Procify platform has a Status that contro
 | ⚠  Important Critical Versioning Rules — memorise these before proceeding A NEW VERSION can only be created from a RELEASED version. A BRANCH can only be created from an ACTIVE version. Branch flavors CANNOT be transported. Merge the branch into a new version first, then transport. Once status is changed to RELEASED, no further development is possible on that version. Always build (Validate & Publish) BEFORE changing status to RELEASED. |
 | :---- |
 
-## **C.2 — Step-by-Step: Releasing the Application**
+### **C.2 — Step-by-Step: Releasing the Application**
 
 | 1 | Navigate to Account Console (also called Workspace Hub) Open the hamburger menu → Sys Admin → Account Console (or Workspace Hub). Alternatively: Hamburger menu → My Apps (if visible in your role). |
 | :---: | :---- |
@@ -4345,7 +4347,7 @@ Every version of an application on the Procify platform has a Status that contro
 
 # **Part D — App Branching and Merging**
 
-## **D.1 — Why Branch?**
+### **D.1 — Why Branch?**
 
 A Branch creates a parallel ACTIVE copy of your application. Use it when you need to work on next-phase enhancements while the current version is being tested in QA. The branch is fully isolated — changes in the branch don't affect the main RELEASED version until you explicitly merge them.
 
@@ -4355,7 +4357,7 @@ A Branch creates a parallel ACTIVE copy of your application. Use it when you nee
 | New feature development while current is in QA | ✅ Yes — branch from current ACTIVE version |
 | Experimental UI changes for client review | ✅ Yes — branch lets you show without committing to main |
 
-## **D.2 — Step-by-Step: Creating a Branch**
+### **D.2 — Step-by-Step: Creating a Branch**
 
 | 1 | Go to Account Console → My Apps Locate customer\_complaints\_\<prid\>. The app must be in ACTIVE status to create a branch. |
 | :---: | :---- |
@@ -4363,7 +4365,7 @@ A Branch creates a parallel ACTIVE copy of your application. Use it when you nee
 | **3** | Assign Users to the Branch Click the branch version to open its detail. Go to the Roles & Users tab → click Edit. Assign ALL three test users and your developer account to their respective roles. ⚠ Users are NOT copied automatically from the parent — you must assign them manually in the branch. |
 | **4** | Develop in the Branch Open Data Studio or Page Builder. In the App dropdown, select the BRANCH version (not the main version). Make your changes. Save and test independently. |
 
-## **D.3 — Branch Merge Workflow (Summary)**
+### **D.3 — Branch Merge Workflow (Summary)**
 
 When the branch is ready to be merged back into the main release cycle:
 
@@ -4379,14 +4381,14 @@ When the branch is ready to be merged back into the main release cycle:
 
 # **Part E — Validate & Publish**
 
-## **E.1 — Validate vs. Publish — What's the Difference?**
+### **E.1 — Validate vs. Publish — What's the Difference?**
 
 | Action | What It Does | When to Use |
 | ----- | ----- | ----- |
 | Validate | Scans the application for errors WITHOUT building. Safe — nothing changes in the running app. | Run first, every time. Fix all errors before triggering Publish. |
 | Publish | Validates first, then builds the app if no blocking errors exist. Updates the running app. | After Validate passes with 0 errors. Use Full Build for first publish or after VH Config changes. |
 
-## **E.2 — Common Publish Blockers**
+### **E.2 — Common Publish Blockers**
 
 | Blocker | Cause | Fix |
 | ----- | ----- | ----- |
@@ -4396,7 +4398,7 @@ When the branch is ready to be merged back into the main release cycle:
 | Another build IN-QUEUE | A previous build is already running. | Click 'Proceed' to queue behind the current build. Do NOT cancel it. |
 | Missing app\_util flavor | Validate and Publish menu not visible. | Ask trainer — app\_util must be assigned to your developer account. |
 
-## **E.3 — Step-by-Step: Validate and Publish**
+### **E.3 — Step-by-Step: Validate and Publish**
 
 | 1 | Open Validate and Publish Hamburger menu (☰) → Dev Tools → Validate and Publish. (If this menu item is missing, app\_util flavor is not assigned to your account. Ask the trainer.) |
 | :---: | :---- |
@@ -4411,7 +4413,7 @@ When the branch is ready to be merged back into the main release cycle:
 
 # **Part F — Transport: DEV to QA**
 
-## **F.1 — How Transport Works**
+### **F.1 — How Transport Works**
 
 Transport is a PULL mechanism: the TARGET system (QA) asks the SOURCE system (DEV) for the latest published version. You perform ALL transport steps while logged into the QA environment, not DEV.
 
@@ -4425,7 +4427,7 @@ Transport is a PULL mechanism: the TARGET system (QA) asks the SOURCE system (DE
 | ⚠  Important Transport Pre-requisites — verify ALL before starting 1\. The application must be in RELEASED status on the DEV system. 2\. Branch flavors CANNOT be transported. Create a new version, merge, then transport. 3\. The QA server's config.json must have mm\_klo\_online\_server pointing to the DEV landscape URL. 4\. A host file entry for the DEV system must exist on the QA server. 5\. The transport\_1 app must be assigned to the developer account on the QA system. If any pre-requisite is missing, the transport will fail at Setup or Download stage. Ask the trainer to verify the QA environment config before proceeding. |
 | :---- |
 
-## **F.2 — Step-by-Step: Transporting to QA**
+### **F.2 — Step-by-Step: Transporting to QA**
 
 | 1 | Log in to the QA System Open the QA environment URL in a browser (trainer provides the URL). Log in with your developer credentials. ⚠ ALL remaining steps are done on QA, not on DEV. |
 | :---: | :---- |
@@ -4479,7 +4481,7 @@ This smoke test must be completed AFTER publish. It verifies every major feature
 | 🎓  This Is the Final Session of the Beginner Training Track The Customer Complaints Application is now a fully published, transportable product. All three personas (Employee, Manager, IT Team) have correct access, menu, and data visibility. After this assignment you will have built and shipped a complete enterprise application from scratch. |
 | :---- |
 
-## **Mandatory Tasks**
+### **Mandatory Tasks**
 
 | \# | Task | Verify By |
 | ----- | ----- | ----- |
@@ -4492,7 +4494,7 @@ This smoke test must be completed AFTER publish. It verifies every major feature
 | 7 | Transport to QA (trainer-guided). Assign users in QA. | App is ACTIVE in QA. All test users can login. p\_complaints loads end-to-end. |
 | 8 | Run the full 10-step smoke test above on DEV and on QA. | All 10 smoke test checks pass on both environments. |
 
-## **Documentation Sources Used in This Session** {#documentation-sources-used-in-this-session}
+### **Documentation Sources Used in This Session** {#documentation-sources-used-in-this-session}
 
 | Topic | Reference | Link / Location |
 | ----- | ----- | ----- |

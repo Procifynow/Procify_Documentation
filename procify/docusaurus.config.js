@@ -134,6 +134,9 @@ const config = {
       : null,
   },
  
+  // Floating "Back to top" button (see src/clientModules/backToTop.js)
+  clientModules: [require.resolve('./src/clientModules/backToTop.js')],
+ 
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',
  
@@ -218,12 +221,26 @@ const config = {
       respectPrefersColorScheme: false,
     },
  
-    // "On this page" headings (the panel itself is hidden in custom.css)
+    // "On this page" panel: only ## headings (Session 1, Session 2, ...) are listed
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 2,
     },
- 
+ ...(latestRelease
+  ? {
+      announcementBar: {
+        // a new id for each release, so people who closed the bar see the next one
+        id: `release-${latestRelease.version.join('.')}`,
+        content:
+          `<span class="ann-tag">New release</span> ` +
+          `${latestRelease.version.join('.')} is live. ` +
+          `<a href="/Procify_Documentation/docs/Docs/Release%20Notes/${encodeURIComponent(latestRelease.id)}">Read the release notes</a>`,
+        backgroundColor: '#211E1D',
+        textColor: 'rgba(255,255,255,0.78)',
+        isCloseable: true,
+      },
+    }
+  : {}),
     // Top navigation
     navbar: {
       logo: {

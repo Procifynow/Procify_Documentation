@@ -3,8 +3,6 @@ sidebar_position: 1
 title: "Training Guide - Beginner"
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 
  **Training Guide**
@@ -66,7 +64,7 @@ This training does not teach concepts in isolation. You will build one real appl
 
 # 
 
-## Session 1 — Platform Setup & Account Management \{#session-1\}
+## Session 1 — Platform Setup & Account Management {#session-1}
 
 ## Session Objectives
 
@@ -87,11 +85,11 @@ By the end of this session, we will be able to:
 | ⚠  Why this session comes first The App you create today is built across ALL 9 sessions — treat it carefully. The Roles you define today are referenced in Session 5 (Validations) and Session 9 (Publishing access). The Users you create today are the test personas you will use to verify every screen built in Sessions 2–8. |
 | :---- |
 
-## Part A — Understanding the Customer complaint Application \{#part-a-—-understanding-the-customer-complaint-application\}
+## Part A — Understanding the Customer complaint Application {#part-a-—-understanding-the-customer-complaint-application}
 
 Before touching any tool, you need a clear picture of the application you are building. Read this section carefully — every configuration decision in Sessions 1– traces back to this Business Requirement Document.
 
-### Application Purpose \{#application-purpose\}
+### Application Purpose {#application-purpose}
 
 The Customer Complaints Application is a solution designed to manage customer complaints end-to-end across three personas:
 
@@ -298,7 +296,7 @@ The status lifecycle has 6 states. Each transition is triggered by a specific ro
 
  
 
-### **Naming Convention for This Training** \{#naming-convention-for-this-training\}
+### **Naming Convention for This Training** {#naming-convention-for-this-training}
 
 | Item | Convention |
 | :---- | :---- |
@@ -379,7 +377,7 @@ Create one test user to represent the end-user persona (emp01) throughout all se
 
 An application is a self-contained unit that holds all the metadata you build — entities, queries, pages, menus, and more. It is the primary organising structure of everything you will do in Sessions 2–8. Users are assigned to applications (with roles), not to individual Pages or features.
 
-### Creating the Customer complaint Application \{#creating-the-customer-complaint-application\}
+### Creating the Customer complaint Application {#creating-the-customer-complaint-application}
 
 | 1 | Navigate to Apps In the  Workspace Hub, click Apps in the left navigation. |
 | :---: | :---- |
@@ -417,7 +415,7 @@ For this training, define single application role inside your app:
 | Role Precedence — Key Rule Precedence is a number. Lower number \= higher priority. If a user has multiple roles, the one with the lowest precedence number takes effect at runtime. Delivery Admin(1) always overrides Delivery Agent(2) for a user assigned both roles. Your developer account will be Delivery Admin. The test user will be SRM\_User. This lets you test both personas. |
 | :---- |
 
-### Creating the DeliveryAgent Role \{#creating-the-deliveryagent-role\}
+### Creating the DeliveryAgent Role {#creating-the-deliveryagent-role}
 
 | 1 | Open Your Application In the Apps list, click on srm\_\<prid\> to open its detail screen. |
 | :---: | :---- |
@@ -435,7 +433,7 @@ For this training, define single application role inside your app:
 
 With the application created and roles defined, you now assign users to the application with their respective roles. Without this step, a user cannot see or open the application even with a valid platform account.
 
-### Assigning the customer complaints to user via employee role \{#assigning-the-customer-complaints-to-user-via-employee-role\}
+### Assigning the customer complaints to user via employee role {#assigning-the-customer-complaints-to-user-via-employee-role}
 
 | 1 | Select the Employee Role In the same Roles & Users section, click on Employee. |
 | :---: | :---- |
@@ -527,7 +525,7 @@ For onboarding sets larger than a handful of users, Team Groups also support bul
 
 	 	
 
-## Part E —  understanding the importance of Procify \{#part-e-—-understanding-the-importance-of-procify\}
+## Part E —  understanding the importance of Procify {#part-e-—-understanding-the-importance-of-procify}
 
 Every application starts the same way: someone hands a developer a requirements document and says 'build this.' The Customer complaints Application Business Requirement Document (BRD) you read in Session 1 defines exactly what data needs to be stored — 3 data objects, their fields, and their relationships. The first job as a developer is to turn those definitions into a working database schema.
 
@@ -548,7 +546,7 @@ Before opening any tool, it is worth understanding what that process looks like 
 
 ## 
 
-## The Procify Way \{#the-procify-way\}
+## The Procify Way {#the-procify-way}
 
 | ✅  How Procifyreplaces the traditional schema-building process In Klobase, all 6 traditional steps are replaced by a single tool: the data studio. You define the entity (name, type) → add properties (name, data type, key attributes) → click Update Schema. Done. The platform automatically generates: the database table (SQL step 1), the data access layer (ORM step 2), the REST API endpoints (step 3), basic validation from key attributes (step 4), and handles schema updates automatically (step 5). There are no separate files to keep in sync. The data studio is the single source of truth. Everything downstream — API, data validation, mobile sync — is derived from it automatically. Time with Klobase: the same 4 entities, all properties, schema live in the database — approximately 2 hours in this session. The developer's time is freed for the parts that actually require thinking: business logic, UI design, user experience. |
 | :---- |
@@ -693,7 +691,7 @@ Complete all mandatory tasks before Session 2\. The trainer will verify each ite
 
 9\. Create a Team Group (grp\_response\_team\_\<prid\>) with at least two of your test users as members, link it to the app’s App Collection, and verify both members can see the application without being assigned individually.
 
-# **Session 2 — BOL: Entity Fundamentals & Initial Pages** \{#session-2-—-bol:-entity-fundamentals-&-initial-pages\}
+# **Session 2 — BOL: Entity Fundamentals & Initial Pages** {#session-2-—-bol:-entity-fundamentals-&-initial-pages}
 
 ## Session Objectives
 
@@ -1017,7 +1015,7 @@ pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 | **s\_timeline\_details** | form  | TAT & Timeline — actual\_tat, standard\_tat, closed\_on, created\_on, modified\_on |
 | **s\_admin\_info** | form  | Contains s\_created\_by, s\_modified\_by, s\_created\_on and s\_modified\_on |
 
-### **B.10.3 — Add Action buttons for pa\_comp\_details** \{#b.10.3-—-add-action-buttons-for-pa_comp_details\}
+### **B.10.3 — Add Action buttons for pa\_comp\_details** {#b.10.3-—-add-action-buttons-for-pa_comp_details}
 
 | 1 | Right-click pa\_comp\_details→ New → Toolbar. |
 | :---: | :---- |
@@ -1054,7 +1052,7 @@ pa\_comp\_details is a nested Page Area inside pa\_complaint\_details.
 | ✔  UI Build Checkpoint — Verify Before Session 3 p\_complaints page created with pl\_complaints\_desk as default layout. Page Data Model has d\_complaints\_list (EntitySet) and d\_complaints\_detail (Entity, Fold From: list). pa\_complaints: s\_search (search, all filter fields) \+ s\_complaints (grid, 7 columns incl. navigation link). pa\_complaint\_details: section\_toolbar \+ s\_detail\_header (form, header fields) \+ pa\_comp\_details (tab). pa\_comp\_details: 7 tab sections including s\_complaint\_item (grid) for complaint line items. Full Preview shows the search bar — exact match with the reference screenshots from the trainer. Clicking a complaint row loads the detail area with all tabs populated. |
 | :---- |
 
-## Session 2 — BOL — Entity Fundamentals & Initial Pages \{#session-2\}
+## Session 2 — BOL — Entity Fundamentals & Initial Pages {#session-2}
  Assignment \{#session-2-assignment\}
 
 Complete all mandatory tasks before Session 3\. The trainer will verify each item at the start of Session 3\.
@@ -1072,7 +1070,7 @@ Complete all mandatory tasks before Session 3\. The trainer will verify each ite
 | Session 3 — Entity Configuration Duration: Full day  |  Pre-requisite: Session 2 assignment verified |
 | :---- |
 
-## Session 3 — Entity Configuration (Relations, Object Types, Status, ID Series) \{#session-3\}
+## Session 3 — Entity Configuration (Relations, Object Types, Status, ID Series) {#session-3}
 
 
 By the end of this session, you will be able to:
@@ -2327,7 +2325,7 @@ An ID Series is a platform-managed counter that automatically generates primary 
 | Pattern: Can be used to produce complex formats. For simple prefix \+ number, just use the Prefix field. |
 |  |
 
-## **D.4 — Testing the ID Series** \{#d.4-—-testing-the-id-series\}
+## **D.4 — Testing the ID Series** {#d.4-—-testing-the-id-series}
 
 | \# | Action | Detail |
 | ----- | :---- | :---- |
@@ -2456,7 +2454,7 @@ The s\_status field is a system property. Now that Status values are configured 
 
 # **Quick Reference**
 
-## **Naming Convention Summary** \{#naming-convention-summary\}
+## **Naming Convention Summary** {#naming-convention-summary}
 
 | Item | Convention | Example |
 | :---- | :---- | :---- |
@@ -2469,7 +2467,7 @@ The s\_status field is a system property. Now that Status values are configured 
 | ID Series ID | id\_\<entity\_short\> | id\_complaint |
 | ID Prefix | Uppercase abbreviation \+ dash | CMP- |
 
-## **Documentation Sources** \{#documentation-sources\}
+## **Documentation Sources** {#documentation-sources}
 
 | Topic | Reference |
 | :---- | :---- |
@@ -2484,7 +2482,7 @@ The s\_status field is a system property. Now that Status values are configured 
 | Session 4 — Value Helps & Queries Duration: Full day  |  Pre-requisite: Session 3 assignment verified |
 | :---- |
 
-## Session 4 — Value Helps & Queries \{#session-4\}
+## Session 4 — Value Helps & Queries {#session-4}
 
 ## Session Objectives
 
@@ -2796,7 +2794,7 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 
 # **Quick Reference**
 
-## **Naming Convention Summary** \{#naming-convention-summary-1\}
+## **Naming Convention Summary** {#naming-convention-summary-1}
 
 | Item | Convention | Example |
 | :---- | :---- | :---- |
@@ -2807,7 +2805,7 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 | Query parameter | lowercase, descriptive | current\_user |
 | Desc Format | :\<key\>--:\<display\> | :customer\_id--:customer\_name |
 
-## **Documentation Sources** \{#documentation-sources-1\}
+## **Documentation Sources** {#documentation-sources-1}
 
 | Topic | Reference |
 | :---- | :---- |
@@ -2821,7 +2819,7 @@ After the build is triggered by the trainer (required for VH Config changes), ve
 | Jira — VH Query display data | PROC-26243 (Issue while displaying data of manual value help — Closed) |
 | API Help | https\://apihelp.procifynow.com/bol/index.html |
 
-## Session 5 — BOL Logic & Validations with dashboard creation \{#session-5\}
+## Session 5 — BOL Logic & Validations with dashboard creation {#session-5}
 
 By the end of this session, you will be able to:
 
@@ -2863,7 +2861,7 @@ The Private Node is a local Node.js server running on your laptop that acts as t
 | Network access to the landscape | Open your landscape URL in a browser. If the login page loads, connectivity is confirmed. |
 | Node.js installed | Open a terminal: node \--version. You should see v22+. |
 
-### Setting the Private Node in VS Code \{#setting-the-private-node-in-vs-code\}
+### Setting the Private Node in VS Code {#setting-the-private-node-in-vs-code}
 
 | 1 | Create Your Workspace Folder Create a new folder on your laptop: Documents/PrivateNode/srm\_\<your\_prid\>. All application server-side files will be downloaded here. |
 | :---: | :---- |
@@ -2962,7 +2960,7 @@ EX:
 | created\_on | this.s\_created\_on — already auto-set by system field, no action needed |
 | created\_by | this.s\_created\_by — already auto-set by system field, no action needed |
 
-## **C.2 — How to create an Entity Rule?** \{#c.2-—-how-to-create-an-entity-rule?\}
+## **C.2 — How to create an Entity Rule?** {#c.2-—-how-to-create-an-entity-rule?}
 
 **Step 1:** Go to the Rule tab and click on the **add icon(+).**  
 **![][image13]**
@@ -3051,7 +3049,7 @@ Create Entity Folder and d\_complaints.ts file
 | **4** | **Fill minimal fields and save** | Enter complaint\_desc: 'Test Create logic'. Select priority \= HIGH. Click Save (commitP from the Save button). |
 | **5** | **Verify in Data Browser** | Open Data Studio → d\_complaints → Test → Data Browser. The latest record should show: s\_status \= OPEN, assigned\_to \= your login ID (e.g. PR0045). |
 
-## **C.5 — Implementing onUpdate for assignee** \{#c.5-—-implementing-onupdate-for-assignee\}
+## **C.5 — Implementing onUpdate for assignee** {#c.5-—-implementing-onupdate-for-assignee}
 
 As mentioned above, create a rule for onUpdate with channel type as ALWAYS\_ON\_SERVER with class as this.
 
@@ -3060,7 +3058,7 @@ Create Entity Folder and d\_complaints.ts file if not available
 | public async onUpdateComplaint (oEvent:any): Promise\<any\> \{   // Auto-set status to OPEN on every new complaint   Let complaint \= oEvent.getObject();   Const \= previousState \= await complaint.fromP()   if((previousState.assigned\_to \!= complaint.assigned\_to)&& oEvent.getTxn().\$SYSTEM.roleID \!= ‘EMPLOYEE\_MANAGER’)\{  Throw Error (‘team assignment should be done by manager’)//Make “T” in to a //lowercase\} \} |
 | :---- |
 
-## **C.6 — Implementing onDelete for validation** \{#c.6-—-implementing-ondelete-for-validation\}
+## **C.6 — Implementing onDelete for validation** {#c.6-—-implementing-ondelete-for-validation}
 
 As mentioned above, create a rule for onUpdate with channel type as ALWAYS\_ON\_SERVER with class as this.
 
@@ -3181,7 +3179,7 @@ Creating query rules is the same as creating entity rules, except the event type
 
 queryInstance.getResults() / setResults() — read or replace the raw JSON array of result rows in an afterQ callback. These are plain objects, not KloEntity instances — they cannot be saved back.
 
-## **E.3 — Implementing before Query on q\_complaints** \{#e.3-—-implementing-before-query-on-q_complaints\}
+## **E.3 — Implementing before Query on q\_complaints** {#e.3-—-implementing-before-query-on-q_complaints}
 
 As we already know from the BRD document complaints page behaviour will be different based on role.
 
@@ -3191,35 +3189,37 @@ As we already know from the BRD document complaints page behaviour will be diffe
 
 Create query folder and q\_complaints.ts
 
-public async beforeQ(oEvent: EventContext) \{
+```ts
+public async beforeQ(oEvent: EventContext) {
 
-       let obj : any \= oEvent.getObject();
+       let obj : any = oEvent.getObject();
 
-       let role \= oEvent.getTxn().\$SYSTEM.roleID;
+       let role = oEvent.getTxn().$SYSTEM.roleID;
 
-       if(role \=== 'EMPLOYEE')\{
+       if(role === 'EMPLOYEE'){
 
-           obj.customer\_id \= (await this.txn.get\$User()).login\_id;
+           obj.customer_id = (await this.txn.get$User()).login_id;
 
-           obj.s\_created\_by \= (await this.txn.get\$User()).login\_id; // Added for Business AI
+           obj.s_created_by = (await this.txn.get$User()).login_id; // Added for Business AI
 
-       \}else if( role \== "IT\_TEAM")\{
+       }else if( role == "IT_TEAM"){
 
-           obj.assigned\_to \= (await this.txn.get\$User()).login\_id;
+           obj.assigned_to = (await this.txn.get$User()).login_id;
 
-       \}
+       }
 
       
 
-       if(obj.description) \{
+       if(obj.description) {
 
-           obj.description \= \`%\${obj.description}%\`;
+           obj.description = `%${obj.description}%`;
 
-       \}
+       }
 
-   \}
+   }
+```
 
-## **E.3 — validate before query implementation** \{#e.3-—-validate-before-query-implementation\}
+## **E.3 — validate before query implementation** {#e.3-—-validate-before-query-implementation}
 
 Validate both the screen and data browser that data should be filtered based on role.
 
@@ -3262,7 +3262,7 @@ public async afterQ(oEvent: EventContext) \{ let queryInstance \= oEvent.getObje
 
 #### 
 
-## Part F — Preparing the Landing Page \{#part-f-—-preparing-the-landing-page\}
+## Part F — Preparing the Landing Page {#part-f-—-preparing-the-landing-page}
 
 ## **F.1 — What Is a Landing Page?**
 
@@ -3278,7 +3278,7 @@ The screen we are going to create will be as mentioned below.
 
 ![][image19]
 
-## **F.1 — create dashboard screen?** \{#f.1-—-create-dashboard-screen?\}
+## **F.1 — create dashboard screen?** {#f.1-—-create-dashboard-screen?}
 
 Dashboard also follows p\_complaints page with limited changes
 
@@ -3299,7 +3299,7 @@ Model the card with modeler as mentioned below
 
 After this you might have noticed the screen contains 0 rather than actual count for this controller is required which will be covered later and at that time we will update the dashboard as well.
 
-## **F.2 — configure landing page** \{#f.2-—-configure-landing-page\}
+## **F.2 — configure landing page** {#f.2-—-configure-landing-page}
 
 | \# | Action | Detail / Code |
 | :---- | :---- | :---- |
@@ -3310,7 +3310,7 @@ After this you might have noticed the screen contains 0 rather than actual count
 | **5** | Title  | Dashboard |
 | **8** | Save | sae |
 
-## **F.1 — Verification** \{#f.1-—-verification\}
+## **F.1 — Verification** {#f.1-—-verification}
 
 1. Login with employee and check whether dashboard is available  
 2. Repeat the same with manager and it\_team as well
@@ -3380,7 +3380,7 @@ Perform all the tasks performed in session 05
 
 # **Quick Reference**
 
-## **Entity Hook Summary** \{#entity-hook-summary\}
+## **Entity Hook Summary** {#entity-hook-summary}
 
 | Hook / Method | Signature | Called When |
 | :---- | :---- | :---- |
@@ -3390,7 +3390,7 @@ Perform all the tasks performed in session 05
 | set property | set propId(new\_value: Type) | When property value is changed (client or server) |
 | get property | get propId(): Type | When property value is read (returns computed value) |
 
-## **Documentation Sources** \{#documentation-sources-2\}
+## **Documentation Sources** {#documentation-sources-2}
 
 | Topic | Reference |
 | :---- | :---- |
@@ -3408,7 +3408,7 @@ Perform all the tasks performed in session 05
 | Topics covered in Session 5 Entity-level callback methods: OnCreate, OnValidate, OnAfterSave. Writing TypeScript logic in entity files via private node. Applying mandatory field validations. Role-based logic and permission checks. |
 | :---- |
 
-## Session 6 — Bindings, Navigation & Styling \{#session-6\}
+## Session 6 — Bindings, Navigation & Styling {#session-6}
 
 ## **Session Objectives**
 
@@ -3474,33 +3474,33 @@ Use Parts when you need to combine or transform multiple model values into a sin
 
 ![][image22]
 
-#### **Value:** \{#value:\}
+#### **Value:** {#value:}
 
 The value field will hold the value provided for the property.
 
-#### **Path:**  \{#path:\}
+#### **Path:**  {#path:}
 
 In this path field, users can only bind with exactly one property or value. This can be used if there is only one property to bind.
 
-#### **Parts:**  \{#parts:\}
+#### **Parts:**  {#parts:}
 
 In this path field, users can bind multiple properties or values. This can be used if multiple values or properties need to be provided for binding.
 
 **(Note**: If we are using formatter function, then it is mandatory to provide either parts or path value)
 
-#### **Formatter Functions** \{#formatter-functions\}
+#### **Formatter Functions** {#formatter-functions}
 
 Controller function name (formatter function) can be given for the field.
 
-#### **Type:** \{#type:\}
+#### **Type:** {#type:}
 
 In the type field, the user can provide the datatype for the control’s value.
 
-#### **Formatter Options:** \{#formatter-options:\}
+#### **Formatter Options:** {#formatter-options:}
 
 Formatter options define how a value is formatted and displayed in the UI.
 
-#### **Validation Constraint:** \{#validation-constraint:\}
+#### **Validation Constraint:** {#validation-constraint:}
 
 Constraints are optional and define how an input value that is entered in the UI should look like. During parsing, the value is validated against these constraints. For example, an Integer type has a constraint for the maximum that is automatically validated when parsing the input values.
 
@@ -3761,15 +3761,15 @@ When QuickAdd and Format Rules are not sufficient, create custom CSS classes in 
 | **✗** | ✗  **Don’t hardcode custom class names in multiple places.** Once loaded, the class is available under **Category: User Defined** in the Style Class UI. Reuse that class instead. |
 
 
-## F — Implement binding in application \{#f-—-implement-binding-in-application\}
+## F — Implement binding in application {#f-—-implement-binding-in-application}
 
 As you might have already seen that we already used bindings to attach data to control.
 
-## G — Implement styling \{#g-—-implement-styling\}
+## G — Implement styling {#g-—-implement-styling}
 
 As you can see the customer complaints showed and the one we are developing functionality might be looking the same at this point but ui is looking different which is due to styling difference. Let's implement styling.
 
-### G.1 — list screen \{#g.1-—-list-screen\}
+### G.1 — list screen {#g.1-—-list-screen}
 
 Add formatting to complaint\_id to change it to bold.
 
@@ -3799,14 +3799,14 @@ Style all the form sections  in pa\_comp\_details.
 | Status Group badge | Format Rule Text Contains using group-level IDs: OPEN, INPROCESS, ACCEPTED, COMPLETED. | Style Classes tab → Format Rule |
 | Quick Add style | Pre-defined style bundle for Grid or Card sections. | Style Classes tab → QuickAdd |
 
-# **Session 6 Assignment** \{#session-6-assignment\}
+# **Session 6 Assignment** {#session-6-assignment}
 
 | ⚠  Complete ALL mandatory tasks before Session 7 |
 | :---- |
 | Session 7 (Controllers & Client-Side Behaviour) adds vienable and controller logic on top of today's styling. |
 |  |
 
-## **Mandatory Tasks** \{#mandatory-tasks\}
+## **Mandatory Tasks** {#mandatory-tasks}
 
 1. Practice all the steps performed in the session  
 2. Navigate to a screen using QP to filter the data of the target  
@@ -3814,7 +3814,7 @@ Style all the form sections  in pa\_comp\_details.
 4. Practice styling on controls, page area, page layout  
 5. Apply styling to application
 
-## Session 7 — Controllers & Client-Side Behaviour \{#session-7\}
+## Session 7 — Controllers & Client-Side Behaviour {#session-7}
 
 ## **Session Objectives**
 
@@ -3913,7 +3913,7 @@ Status Group maps a set of s\_status values to a group name. The configuration i
 
 ⚠  Status Group Vienable requires Entity \= true on the control row AND the entity's Status tab must have the groups configured in BOL Editor. Missing group config causes the status group column to be ignored — the control remains visible regardless of status.
 
-## **A.6 — Apply vienability for application.** \{#a.6-—-apply-vienability-for-application.\}
+## **A.6 — Apply vienability for application.** {#a.6-—-apply-vienability-for-application.}
 
 1. s\_complaint\_details   
    1. should not be editable in display mode  
@@ -4202,14 +4202,14 @@ These standards are non-negotiable on all Procify projects. Violations result in
 | \$SYSTEM.roleID | Runtime role ID of the logged-in user. Used in Entity/Query Rules for role checks. | oEvent.getTxn().\$SYSTEM.roleID in rules |
 | onPageEnter | Controller hook fires after page data loads. Use for dashboard count calculations. | p\_complaint\_dashboard.controller.ts |
 
-# **Session 7 Assignment** \{#session-7-assignment\}
+# **Session 7 Assignment** {#session-7-assignment}
 
 | ⚠  Complete ALL mandatory tasks before Session 8 |
 | :---- |
 | Session 8 finalises the menu, home page, versioning, and publishing — the application must be fully working. |
 |  |
 
-## **Mandatory Tasks** \{#mandatory-tasks-1\}
+## **Mandatory Tasks** {#mandatory-tasks-1}
 
 | \# | Action | Detail |
 | :---- | :---- | :---- |
@@ -4223,7 +4223,7 @@ These standards are non-negotiable on all Procify projects. Violations result in
 | Session 8— App Management, Versioning & Publishing Duration: Full day  |  Pre-requisite: Session 8 assignment verified |
 | :---- |
 
-## Session 8 — Menu Configuration & App Management, Versioning & Publishing \{#session-8\}
+## Session 8 — Menu Configuration & App Management, Versioning & Publishing {#session-8}
 
 ## **Session Objectives**
 
@@ -4494,7 +4494,7 @@ This smoke test must be completed AFTER publish. It verifies every major feature
 | 7 | Transport to QA (trainer-guided). Assign users in QA. | App is ACTIVE in QA. All test users can login. p\_complaints loads end-to-end. |
 | 8 | Run the full 10-step smoke test above on DEV and on QA. | All 10 smoke test checks pass on both environments. |
 
-## **Documentation Sources Used in This Session** \{#documentation-sources-used-in-this-session\}
+## **Documentation Sources Used in This Session** {#documentation-sources-used-in-this-session}
 
 | Topic | Reference | Link / Location |
 | ----- | ----- | ----- |

@@ -22,14 +22,14 @@ Sessions must be taken in order — each session's steps assume the previous ses
 
 | Session | Date | Topic Area | Application Enhancement |
 | :---- | :---- | :---- | :---- |
-| **Session 1** | Mon, 07 Sep 2026 | Advanced BOL & Data Modelling | Network Modes — Offline-Ready Properties · Sort Order & Entity Index · Entity Rules — Auto-Escalation on Update · Query Rules — Role-Based Field Masking · BOL Transaction — Close Complaint with Feedback |
-| **Session 2** | Tue, 08 Sep 2026 | Advanced Page Builder & Client-Side Debugging | Embedded Section — Complaint Timeline · Advanced kloControls · TransNode onArrive & navigateId · Server-Side Debugging & Auto Update Data |
-| **Session 3** | Wed, 09 Sep 2026 | Security, Permissions & Data Access | Design-Time Permissions · Row Wise Auth · Data Access Rules & User Access Summary · Role Permissions (Runtime) & Permission Logs |
-| **Session 4** | Thu, 10 Sep 2026 | Offline, Middleware & Bulk Data | Local Archive · Initial Downloads · Middleware — Device & SAP · KloSectionXlsx — Bulk Customer Import |
-| **Session 5** | Fri, 11 Sep 2026 | Workflows, Scheduling & Notifications | Escalation Approval Workflow · Scheduler — Nightly SLA Sweep · Notifications · deeplink & Banner |
-| **Session 6** | Mon, 14 Sep 2026 | Reporting — Charts & Pivot Modeller | kloChart — Status Breakdown · Advanced Chart — TAT Trend · Pivot Modeller |
-| **Session 7** | Tue, 15 Sep 2026 | Monitoring & Troubleshooting | Scheduler & Log Monitoring · Notification & Queue Monitoring · APK/IPA & Query Console |
-| **Session 8** | Wed, 16 Sep 2026 | App Management, Branding & Deployment | App Inheritance & Modification · Customer Branding · Git Repo & Active Sessions · App Migration to QA |
+| [**Session 1**](./Session%201.md) | Mon, 07 Sep 2026 | Advanced BOL & Data Modelling | Network Modes — Offline-Ready Properties · Sort Order & Entity Index · Entity Rules — Auto-Escalation on Update · Query Rules — Role-Based Field Masking · BOL Transaction — Close Complaint with Feedback |
+| [**Session 2**](./Session%202.md) | Tue, 08 Sep 2026 | Advanced Page Builder & Client-Side Debugging | Embedded Section — Complaint Timeline · Advanced kloControls · TransNode onArrive & navigateId · Server-Side Debugging & Auto Update Data |
+| [**Session 3**](./Session%203.md) | Wed, 09 Sep 2026 | Security, Permissions & Data Access | Design-Time Permissions · Row Wise Auth · Data Access Rules & User Access Summary · Role Permissions (Runtime) & Permission Logs |
+| [**Session 4**](./Session%204.md) | Thu, 10 Sep 2026 | Offline, Middleware & Bulk Data | Local Archive · Initial Downloads · Middleware — Device & SAP · KloSectionXlsx — Bulk Customer Import |
+| [**Session 5**](./Session%205.md) | Fri, 11 Sep 2026 | Workflows, Scheduling & Notifications | Escalation Approval Workflow · Scheduler — Nightly SLA Sweep · Notifications · deeplink & Banner |
+| [**Session 6**](./Session%206.md) | Mon, 14 Sep 2026 | Reporting — Charts & Pivot Modeller | kloChart — Status Breakdown · Advanced Chart — TAT Trend · Pivot Modeller |
+| [**Session 7**](./Session%207.md) | Tue, 15 Sep 2026 | Monitoring & Troubleshooting | Scheduler & Log Monitoring · Notification & Queue Monitoring · APK/IPA & Query Console |
+| [**Session 8**](./Session%208.md) | Wed, 16 Sep 2026 | App Management, Branding & Deployment | App Inheritance & Modification · Customer Branding · Git Repo & Active Sessions · App Migration to QA |
 
 ---
 
