@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
  
 import styles from './index.module.css';
@@ -19,6 +18,7 @@ function useReleaseInfo() {
  
   return {
     version: latest ? latest.version : null,
+    latest,
     links: {
       ...BASE_LINKS,
       releaseNotes: latest ? latest.path : '/docs/Docs/Release%20Notes',
@@ -29,21 +29,21 @@ function useReleaseInfo() {
 function buildCards(links) {
   return [
     {
-      icon: '📘',
+      icon: 'book',
       title: 'User Guide',
       text: 'Learn how to configure and use Procify features and functionality.',
       cta: 'Open User Guide',
       to: links.userGuide,
     },
     {
-      icon: '🎓',
+      icon: 'cap',
       title: 'Training Guide',
       text: 'Follow structured training material to learn Procify development and configuration.',
       cta: 'Open Training Guide',
       to: links.trainingGuide,
     },
     {
-      icon: '📋',
+      icon: 'clipboard',
       title: 'Release Notes',
       text: 'Review new features, enhancements, fixes and changes introduced in Procify releases.',
       cta: 'View Release Notes',
@@ -54,6 +54,25 @@ function buildCards(links) {
  
 /* Feature icons */
 const ICONS = {
+  book: (
+    <>
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z" />
+    </>
+  ),
+  cap: (
+    <>
+      <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+    </>
+  ),
+  clipboard: (
+    <>
+      <rect width="8" height="4" x="8" y="2" rx="1" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+      <path d="M12 11h4M12 16h4M8 11h.01M8 16h.01" />
+    </>
+  ),
   layout: (
     <>
       <rect width="7" height="9" x="3" y="3" rx="1" />
@@ -128,6 +147,9 @@ function Icon({ name }) {
   return (
     <svg
       className={styles.featureIcon}
+      width="32"
+      height="32"
+      style={{ flex: 'none' }}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -141,49 +163,88 @@ function Icon({ name }) {
   );
 }
  
-function Hero({ links, version }) {
-  const heroBackground = useBaseUrl(
-    '/img/procify-docs-hero-light_2x.png',
-  );
+function Hero({ links, latest }) {
+  const searchRef = useRef(null);
+ 
+  // Hands the query to the navbar search, which shows the results
+  const onSearch = (e) => {
+    e.preventDefault();
+    const nav = document.querySelector('.navbar__search-input');
+    if (!nav) return;
+    const setValue = Object.getOwnPropertyDescriptor(
+      HTMLInputElement.prototype,
+      'value',
+    ).set;
+    nav.focus();
+    setValue.call(nav, searchRef.current?.value || '');
+    nav.dispatchEvent(new Event('input', { bubbles: true }));
+  };
+ 
+  const facts = latest
+    ? [
+        ['Release date', latest.date],
+        ['Release type', latest.type],
+        ['Scope', latest.scope],
+      ].filter(([, value]) => value)
+    : [];
  
   return (
-    <header
-      className={styles.heroBanner}
-      style={{
-        backgroundImage: `linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.94) 0%,
-          rgba(255, 255, 255, 0.78) 48%,
-          rgba(255, 255, 255, 0.18) 100%
-        ), url("${heroBackground}")`,
-      }}
-    >
-      <div className={styles.container}>
-        <p className={styles.eyebrow}>Documentation</p>
+    <header className={styles.hero}>
+      <div className={styles.heroInner}>
+        <div className={styles.heroText}>
+          <p className={styles.eyebrow}>Documentation</p>
  
-        <h1 className={styles.heroTitle}>
-          Procify Technical Documentation
-        </h1>
+          <h1 className={styles.heroTitle}>Procify Technical Documentation</h1>
  
-        <p className={styles.heroLead}>
-          An enterprise-class low-code platform for transforming business
-          ideas into outcomes.
-        </p>
+          <p className={styles.heroLead}>
+            An enterprise-class low-code platform for transforming business
+            ideas into outcomes. Guides, training and release notes in one
+            place.
+          </p>
  
-        <div className={styles.actions}>
-          <Link className={styles.btnPrimary} to={links.userGuide}>
-            Get started →
-          </Link>
+          <form className={styles.searchRow} onSubmit={onSearch}>
+            <input
+              ref={searchRef}
+              type="search"
+              className={styles.searchInput}
+              aria-label="Search guides, sessions and release notes"
+              placeholder="Search guides, sessions and release notes"
+            />
+            <button type="submit" className={styles.searchBtn}>
+              Search
+            </button>
+          </form>
  
-          <Link className={styles.btnGhost} to={links.releaseNotes}>
-            {version ? <>What&apos;s new in {version}</> : <>Release notes</>}
-          </Link>
+          <p className={styles.popular}>
+            <span>Popular</span>
+            <Link to={links.trainingGuide}>Advanced Training Guide</Link>
+            {latest && (
+              <Link to={links.releaseNotes}>Release {latest.version}</Link>
+            )}
+            <Link to={links.userGuide}>User Guide</Link>
+          </p>
         </div>
  
-        {version && (
-          <span className={styles.version}>
-            Latest release {version}
-          </span>
+        {latest && (
+          <aside className={styles.releaseCard}>
+            <p className={styles.cardEyebrow}>Latest release</p>
+            <p className={styles.cardVersion}>{latest.version}</p>
+ 
+            {facts.length > 0 && (
+              <dl className={styles.facts}>
+                {facts.map(([label, value]) => (
+                  <div key={label} className={styles.fact}>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+ 
+            <Link className={styles.cardBtn} to={links.releaseNotes}>
+              Read the release notes →
+            </Link>
+          </aside>
         )}
       </div>
     </header>
@@ -192,7 +253,7 @@ function Hero({ links, version }) {
  
 function DocCards({ links }) {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${styles.alt}`}>
       <div className={styles.container}>
         <h2 className={styles.h2}>Find what you need</h2>
  
@@ -204,7 +265,7 @@ function DocCards({ links }) {
               to={card.to}
             >
               <span className={styles.cardIcon} aria-hidden="true">
-                {card.icon}
+                <Icon name={card.icon} />
               </span>
  
               <h3 className={styles.cardTitle}>{card.title}</h3>
@@ -223,7 +284,7 @@ function DocCards({ links }) {
  
 function Features() {
   return (
-    <section className={`${styles.section} ${styles.alt}`}>
+    <section className={styles.section}>
       <div className={styles.container}>
         <p className={styles.eyebrow}>Key features</p>
  
@@ -278,20 +339,66 @@ function QuickAccess({ links }) {
   );
 }
  
+/* Advanced track sessions. Not shown right now: to bring the band back,
+   add <Sessions links={links} /> at the end of <main> in Home. */
+const SESSIONS = [
+  { n: 1, title: 'Advanced BOL & Data Modelling', date: 'Mon, 07 Sep 2026' },
+  { n: 2, title: 'Advanced Page Builder & Client-Side Debugging', date: 'Tue, 08 Sep 2026' },
+  { n: 3, title: 'Security, Permissions & Data Access', date: 'Wed, 09 Sep 2026' },
+  { n: 4, title: 'Offline, Middleware & Bulk Data', date: 'Thu, 10 Sep 2026' },
+  { n: 5, title: 'Workflows, Scheduling & Notifications', date: 'Fri, 11 Sep 2026' },
+  { n: 6, title: 'Reporting — Charts & Pivot Modeller', date: 'Mon, 14 Sep 2026' },
+  { n: 7, title: 'Monitoring & Troubleshooting', date: 'Tue, 15 Sep 2026' },
+  { n: 8, title: 'App Management, Branding & Deployment', date: 'Wed, 16 Sep 2026' },
+];
+ 
+function Sessions({ links }) {
+  return (
+    <section className={`${styles.section} ${styles.dark}`}>
+      <div className={styles.container}>
+        <p className={styles.eyebrowLight}>Advanced track · 8 sessions</p>
+ 
+        <h2 className={styles.h2Light}>
+          One application, eight advanced capabilities
+        </h2>
+ 
+        <p className={styles.lead}>
+          Every session goes back into the same Customer Complaints app built
+          in Developer Level 1 and layers one new capability onto it.
+        </p>
+ 
+        <div className={styles.sessions}>
+          {SESSIONS.map((s) => (
+            <Link
+              key={s.n}
+              className={styles.session}
+              to={`${links.trainingGuide}#session-${s.n}`}
+            >
+              <span className={styles.sessionLabel}>Session {s.n}</span>
+              <span className={styles.sessionTitle}>{s.title}</span>
+              <span className={styles.sessionDate}>{s.date}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+ 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  const { version, links } = useReleaseInfo();
+  const { latest, links } = useReleaseInfo();
  
   return (
     <Layout
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
-      <Hero links={links} version={version} />
+      <Hero links={links} latest={latest} />
  
       <main>
-        <DocCards links={links} />
         <Features />
+        <DocCards links={links} />
         <QuickAccess links={links} />
       </main>
     </Layout>

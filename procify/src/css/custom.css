@@ -138,7 +138,6 @@
 }
  
 .table-of-contents__link--active {
-  color: #a60000;
   font-weight: 600;
 }
  
@@ -214,7 +213,7 @@
   line-height: 1.65;
 }
  
-code {
+:not(pre) > code {
   border: 1px solid #e3e6ea;
   border-radius: 4px;
   color: #a60000;
@@ -275,17 +274,6 @@ code {
   color: #a60000;
 }
  
-/* Footer */
-.footer {
-  background: #f4f6f8;
-  border-top: 1px solid #dce2e8;
-  color: #344354;
-}
- 
-.footer a {
-  color: #a60000;
-}
- 
 /* Search field, if your search plugin provides these classes */
 .navbar__search-input {
   border: 1px solid #d5dce3;
@@ -337,4 +325,52 @@ code {
 .to-top-btn:hover {
   background: #c00000;
   color: #ffffff;
+}
+ 
+ 
+/* "On this page" heading above the right-hand table of contents */
+.theme-doc-toc-desktop::before {
+  content: "On this page";
+  display: block;
+  margin: 0 0 14px 12px;
+  font-family: Arimo, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6b6461;
+}
+ 
+.table-of-contents__link {
+  color: #4a4543;
+}
+ 
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #c4161c;
+}
+ 
+ 
+/* LATEST badge beside the title of the newest release note */
+.is-latest-release h1::after {
+  content: "LATEST";
+  display: block;
+  width: fit-content;
+  margin: 16px 0 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #c4161c;
+  color: #ffffff;
+  font-family: Arimo, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+}
+ 
+ 
+/* Home page: the search lives in the hero, so hide the one in the navbar */
+body.is-home .navbar .navbar__search,
+body.is-home .navbar [class*='navbarSearchContainer'] {
+  display: none;
 }

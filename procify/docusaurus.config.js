@@ -63,6 +63,7 @@ function readDocs(folder, exclude = null, byVersion = false) {
         type: 'doc',
         docId: `Docs/${folder}/${id}`,
         id,
+        file: path.join(dir, file),
         label: itemLabel,
         skip:
           exclude &&
@@ -94,6 +95,18 @@ function docsDropdown(folder, label, exclude = null, byVersion = false) {
  
 // Newest release note, used for the footer link (highest version number)
 const latestRelease = readDocs('Release Notes', null, true)[0];
+ 
+// Release date / type / scope, read from the "| Release Date | ... |" table
+// at the top of the newest release note
+const facts = {};
+if (latestRelease) {
+  const text = fs.readFileSync(latestRelease.file, 'utf8');
+  for (const m of text.matchAll(/^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*$/gm)) {
+    facts[m[1].replace(/\*+/g, '').trim().toLowerCase()] = m[2]
+      .replace(/\*+/g, '')
+      .trim();
+  }
+}
  
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -130,6 +143,9 @@ const config = {
       ? {
           version: latestRelease.version.join('.'),
           path: `/docs/Docs/Release%20Notes/${encodeURIComponent(latestRelease.id)}`,
+          date: facts['release date'],
+          type: facts['release type'],
+          scope: facts['scope'],
         }
       : null,
   },
@@ -226,21 +242,24 @@ const config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 2,
     },
- ...(latestRelease
-  ? {
-      announcementBar: {
-        // a new id for each release, so people who closed the bar see the next one
-        id: `release-${latestRelease.version.join('.')}`,
-        content:
-          `<span class="ann-tag">New release</span> ` +
-          `${latestRelease.version.join('.')} is live. ` +
-          `<a href="/Procify_Documentation/docs/Docs/Release%20Notes/${encodeURIComponent(latestRelease.id)}">Read the release notes</a>`,
-        backgroundColor: '#211E1D',
-        textColor: 'rgba(255,255,255,0.78)',
-        isCloseable: true,
-      },
-    }
-  : {}),
+ 
+    // Announcement bar: always shows the newest release
+    ...(latestRelease
+      ? {
+          announcementBar: {
+            // new id per release, so people who closed the bar see the next one
+            id: `release-${latestRelease.version.join('.')}`,
+            content:
+              `<span class="ann-tag">New release</span> ` +
+              `${latestRelease.version.join('.')} is live. ` +
+              `<a href="/Procify_Documentation/docs/Docs/Release%20Notes/${encodeURIComponent(latestRelease.id)}">Read the release notes</a>`,
+            backgroundColor: '#211E1D',
+            textColor: 'rgba(255,255,255,0.78)',
+            isCloseable: true,
+          },
+        }
+      : {}),
+ 
     // Top navigation
     navbar: {
       logo: {
