@@ -1,6 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import Head from '@docusaurus/Head';
+import SearchBar from '@theme/SearchBar';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
  
 import styles from './index.module.css';
@@ -164,22 +166,6 @@ function Icon({ name }) {
 }
  
 function Hero({ links, latest }) {
-  const searchRef = useRef(null);
- 
-  // Hands the query to the navbar search, which shows the results
-  const onSearch = (e) => {
-    e.preventDefault();
-    const nav = document.querySelector('.navbar__search-input');
-    if (!nav) return;
-    const setValue = Object.getOwnPropertyDescriptor(
-      HTMLInputElement.prototype,
-      'value',
-    ).set;
-    nav.focus();
-    setValue.call(nav, searchRef.current?.value || '');
-    nav.dispatchEvent(new Event('input', { bubbles: true }));
-  };
- 
   const facts = latest
     ? [
         ['Release date', latest.date],
@@ -202,18 +188,10 @@ function Hero({ links, latest }) {
             place.
           </p>
  
-          <form className={styles.searchRow} onSubmit={onSearch}>
-            <input
-              ref={searchRef}
-              type="search"
-              className={styles.searchInput}
-              aria-label="Search guides, sessions and release notes"
-              placeholder="Search guides, sessions and release notes"
-            />
-            <button type="submit" className={styles.searchBtn}>
-              Search
-            </button>
-          </form>
+          {/* The real site search, shown here so results open under this box */}
+          <div className={styles.heroSearch}>
+            <SearchBar />
+          </div>
  
           <p className={styles.popular}>
             <span>Popular</span>
@@ -394,6 +372,10 @@ export default function Home() {
       title={siteConfig.title}
       description={siteConfig.tagline}
     >
+      <Head>
+        <body className="is-home" />
+      </Head>
+ 
       <Hero links={links} latest={latest} />
  
       <main>
