@@ -3,6 +3,10 @@ sidebar_position: 1
 title: "Training Guide - Beginner"
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
  **Training Guide**
 
 		**Beginner**
@@ -3428,15 +3432,15 @@ Every control on a Klobase screen reads and writes data through the Transaction 
 
 The Transaction Model is organized as a tree. Each TransNode in the Page Data Model corresponds to a branch in the \$M tree. The full path to any property follows this pattern:
 
-{\$M\>/transNodeRelationId/propertyId}
+`{$M>/transNodeRelationId/propertyId}`
 
 For a list TransNode with relationId \= list, the first row's complaint\_desc is:
 
-{\$M\>/list/0/complaint\_desc}
+`{\$M\>/list/0/complaint\_desc}`
 
 For the detail TransNode with relationId \= detail:
 
-{\$M\>/detail/complaint\_desc}
+`{\$M\>/detail/complaint\_desc}`
 
 The leading / after \> is mandatory. Omitting it causes a silent bind failure.
 
@@ -3554,17 +3558,17 @@ A formatter function is a TypeScript method in the controller file that takes on
 
 Formatter functions are public methods on the controller class. They must be public — the framework calls them reflectively from the Page Builder binding.
 
-export class p\_complaints extends KloController {
+export class p_complaints extends KloController {
 
   // Formatter functions — called from Parts binding in Page Builder
 
   public formatPriority(priority: string): string {
 
-    const map: Record\<string,string\> \= {
+    const map: Record<string,string> = {
 
       'LOW': '🟢 Low', 'MEDIUM': '🟡 Medium',
 
-      'HIGH': '🔴 High', 'VERY\_HIGH': '🚨 Very High'
+      'HIGH': '🔴 High', 'VERY_HIGH': '🚨 Very High'
 
     };
 
