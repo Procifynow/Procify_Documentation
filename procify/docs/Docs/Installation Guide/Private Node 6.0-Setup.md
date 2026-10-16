@@ -1,4 +1,6 @@
-# 
+---
+title: Private Node 6.0 Setup
+---# 
 
 ---
 

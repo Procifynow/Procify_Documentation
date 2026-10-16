@@ -5,6 +5,7 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import {themes as prismThemes} from 'prism-react-renderer';
 import {createRequire} from 'module';
+import remarkNormalizeHeadings from './src/plugins/remark-normalize-headings.js';
  
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -35,15 +36,28 @@ const compareVersions = (a, b) => {
  * Label: sidebar_label, else title, else file name (surrounding ** removed).
  * Optional `exclude` (RegExp): files whose name, id or label match are skipped.
  */
+/** Lists every .md/.mdx file under dir (sub-folders included), as relative paths. */
+function listMarkdown(dir, rel = '') {
+  let out = [];
+  for (const entry of fs.readdirSync(path.join(dir, rel), {withFileTypes: true})) {
+    // Docusaurus ignores files and folders that start with "_" or "."
+    if (entry.name.startsWith('.') || entry.name.startsWith('_')) continue;
+    const relPath = rel ? `${rel}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) out = out.concat(listMarkdown(dir, relPath));
+    else if (/\.mdx?$/.test(entry.name)) out.push(relPath);
+  }
+  return out;
+}
+ 
 function readDocs(folder, exclude = null, byVersion = false) {
   const dir = path.join(__dirname, 'docs', 'Docs', folder);
   if (!fs.existsSync(dir)) return [];
  
-  return fs
-    .readdirSync(dir)
-    .filter((file) => /\.mdx?$/.test(file))
-    .map((file) => {
-      const text = fs.readFileSync(path.join(dir, file), 'utf8');
+  return listMarkdown(dir)
+    .map((relPath) => {
+      const file = path.basename(relPath);
+      const subDir = path.dirname(relPath) === '.' ? '' : `${path.dirname(relPath)}/`;
+      const text = fs.readFileSync(path.join(dir, relPath), 'utf8');
       const fm = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
       const front = fm ? fm[1] : '';
       const clean = (m) => (m ? m[1].replace(/\*+/g, '').trim() : null);
@@ -58,12 +72,12 @@ function readDocs(folder, exclude = null, byVersion = false) {
  
       return {
         position: pos ? parseFloat(pos[1]) : 9999,
-        sortName: base,
+        sortName: subDir + base,
         version: parseVersion(`${base} ${id} ${itemLabel}`),
         type: 'doc',
-        docId: `Docs/${folder}/${id}`,
-        id,
-        file: path.join(dir, file),
+        docId: `Docs/${folder}/${subDir}${id}`,
+        id: `${subDir}${id}`,
+        file: path.join(dir, relPath),
         label: itemLabel,
         skip:
           exclude &&
@@ -92,6 +106,64 @@ function docsDropdown(folder, label, exclude = null, byVersion = false) {
  
   return {type: 'dropdown', label, position: 'left', items};
 }
+ 
+// ---------------------------------------------------------------------
+// Every folder inside docs/Docs becomes a navbar dropdown automatically.
+// Add a folder with .md files and it shows up after the next restart/build.
+// ---------------------------------------------------------------------
+const DOCS_ROOT = path.join(__dirname, 'docs', 'Docs');
+ 
+// Menu order. New folders not listed here go just before "Release Notes".
+const MENU_ORDER = ['User Guide', 'Installation Guide', 'Training Guide', 'Release Notes'];
+ 
+// Folders that need special handling
+const FOLDER_OPTIONS = {
+  // Session 1-8 pages are hidden from the menu (they are listed on the guide page)
+  'Training Guide': {exclude: SESSION_RE},
+  // Newest version first, newest marked "(Latest)"
+  'Release Notes': {byVersion: true},
+};
+ 
+const menuRank = (name) => {
+  const i = MENU_ORDER.indexOf(name);
+  return i >= 0 ? i : MENU_ORDER.indexOf('Release Notes') - 0.5;
+};
+ 
+const guideFolders = fs.existsSync(DOCS_ROOT)
+  ? fs
+      .readdirSync(DOCS_ROOT, {withFileTypes: true})
+      .filter(
+        (d) =>
+          d.isDirectory() &&
+          !d.name.startsWith('.') &&
+          !d.name.startsWith('_') &&
+          readDocs(d.name, FOLDER_OPTIONS[d.name]?.exclude ?? null).length > 0,
+      )
+      .map((d) => d.name)
+      .sort((a, b) => menuRank(a) - menuRank(b) || a.localeCompare(b))
+  : [];
+ 
+const guideDropdowns = guideFolders.map((name) =>
+  docsDropdown(
+    name,
+    name,
+    FOLDER_OPTIONS[name]?.exclude ?? null,
+    !!FOLDER_OPTIONS[name]?.byVersion,
+  ),
+);
+ 
+// Folders beyond the three main guides: shown as extra cards on the home page
+// and extra links in the footer (label + link to the first page)
+const MAIN_GUIDES = ['User Guide', 'Training Guide', 'Release Notes'];
+const extraGuides = guideFolders
+  .filter((name) => !MAIN_GUIDES.includes(name))
+  .map((name) => {
+    const first = readDocs(name, FOLDER_OPTIONS[name]?.exclude ?? null)[0];
+    return {
+      label: name,
+      path: '/docs/' + first.docId.split('/').map(encodeURIComponent).join('/'),
+    };
+  });
  
 // Newest release note, used for the footer link (highest version number)
 const latestRelease = readDocs('Release Notes', null, true)[0];
@@ -148,6 +220,7 @@ const config = {
           scope: facts['scope'],
         }
       : null,
+    extraGuides,
   },
  
   // Floating "Back to top" button (see src/clientModules/backToTop.js)
@@ -168,6 +241,11 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           breadcrumbs: true,
+ 
+          // "# Section" headings (Word exports) become "## Section" so every
+          // section appears in the "On this page" panel.
+          // Must run BEFORE the default plugins, because they build that panel.
+          beforeDefaultRemarkPlugins: [remarkNormalizeHeadings],
  
           // Release Notes sidebar: newest version on top, tagged with the
           // "latest-release" class (styled as a LATEST badge in custom.css).
@@ -275,12 +353,8 @@ const config = {
           exact: true,
         },
  
-        // Dropdowns below are built automatically from the docs folders
-        docsDropdown('User Guide', 'User Guide'),
-        // Session 1-8 excluded: only the main Training Guide pages are listed
-        docsDropdown('Training Guide', 'Training Guide', SESSION_RE),
-        // Release Notes: newest version first, marked "(Latest)"
-        docsDropdown('Release Notes', 'Release Notes', null, true),
+        // One dropdown per folder in docs/Docs (built automatically, see above)
+        ...guideDropdowns,
  
         {
           type: 'search',

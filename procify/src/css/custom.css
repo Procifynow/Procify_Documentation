@@ -374,3 +374,9 @@ body.is-home .navbar .navbar__search,
 body.is-home .navbar [class*='navbarSearchContainer'] {
   display: none;
 }
+ 
+ 
+/* Session pages: every entry in "On this page" is bold */
+.toc-sessions .table-of-contents__link {
+  font-weight: 700;
+}

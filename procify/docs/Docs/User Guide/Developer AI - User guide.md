@@ -1,6 +1,8 @@
-					
+---
+sidebar_label: Developer AI - User Guide
+---					
 
-#   **Developer AI \- User Guide**
+#   **Developer AI  User Guide**
 
 ---
 

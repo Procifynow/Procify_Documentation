@@ -28,8 +28,8 @@ function useReleaseInfo() {
   };
 }
  
-function buildCards(links) {
-  return [
+function buildCards(links, extraGuides = []) {
+  const main = [
     {
       icon: 'book',
       title: 'User Guide',
@@ -52,6 +52,17 @@ function buildCards(links) {
       to: links.releaseNotes,
     },
   ];
+ 
+  // Folders added later in docs/Docs get their own card automatically
+  const extra = extraGuides.map((g) => ({
+    icon: 'book',
+    title: g.label,
+    text: `Browse the ${g.label}.`,
+    cta: `Open ${g.label}`,
+    to: g.path,
+  }));
+ 
+  return [...main, ...extra];
 }
  
 /* Feature icons */
@@ -230,13 +241,16 @@ function Hero({ links, latest }) {
 }
  
 function DocCards({ links }) {
+  const { siteConfig } = useDocusaurusContext();
+  const extraGuides = siteConfig.customFields?.extraGuides || [];
+ 
   return (
     <section className={`${styles.section} ${styles.alt}`}>
       <div className={styles.container}>
         <h2 className={styles.h2}>Find what you need</h2>
  
         <div className={styles.cards}>
-          {buildCards(links).map((card) => (
+          {buildCards(links, extraGuides).map((card) => (
             <Link
               key={card.title}
               className={styles.card}
