@@ -1,6 +1,6 @@
 					
 
-#  **Landing Page Settings  User Guide**
+# Landing Page Settings  User Guide
 
 
 **Date of Issue: 09 OCT 2025**  
