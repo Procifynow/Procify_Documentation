@@ -1,12 +1,7 @@
-# 	
 
-# ---
-
-#  
 
 # **Procify Data Studio \- User Guide** 
 
-# ---
 
 **Date of Issue: October 2023**
 
