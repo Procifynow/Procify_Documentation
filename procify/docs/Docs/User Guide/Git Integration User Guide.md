@@ -1,6 +1,6 @@
 					
 
-#   **Git Integration** 
+#   Git Integration 
 
 # **User Guide**
 

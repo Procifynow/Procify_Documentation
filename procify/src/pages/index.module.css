@@ -50,6 +50,8 @@
 /* ---------- Hero ---------- */
  
 .hero {
+  position: relative;
+  overflow: hidden;
   background: #f7f6f5;
   border-bottom: 1px solid #e4e1de;
 }
@@ -67,6 +69,9 @@
 .heroText {
   flex: 1 1 520px;
   min-width: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
 }
  
 .heroTitle {
@@ -137,17 +142,27 @@
   font-weight: 500;
 }
  
-/* Hero image (replaces the old latest release card) */
+/* Hero image: fills the right half of the hero (full width of that half, full hero height) */
 
 .heroImage {
-  flex: 1 1 420px;
-  max-width: 560px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  pointer-events: none;   /* never block the search box or links */
 }
 
+/* cover scales the PNG up to fill the half; multiply blends its white into #f7f6f5 */
 .heroImage img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  mix-blend-mode: multiply;
+  transform: scale(2.1);          /* overall size: raise/lower this one number */
+  transform-origin: top right;    /* grows left and down from the top-right corner */
 }
 
 /* ---------- Key features ---------- */
@@ -291,9 +306,20 @@
     font-size: 40px;
   }
 
-  .heroImage {
-    flex-basis: 100%;
+  .heroText {
     max-width: 100%;
+  }
+
+  .heroImage {
+    position: static;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .heroImage img {
+    height: auto;
+    object-fit: initial;
+    transform: none;
   }
  
   .features {
