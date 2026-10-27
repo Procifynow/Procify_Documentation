@@ -137,79 +137,19 @@
   font-weight: 500;
 }
  
-/* Latest release card */
- 
-.releaseCard {
-  flex: 1 1 360px;
-  max-width: 460px;
-  padding: 32px;
-  background: #ffffff;
-  border: 1px solid #e4e1de;
-  border-radius: 12px;
+/* Hero image (replaces the old latest release card) */
+
+.heroImage {
+  flex: 1 1 420px;
+  max-width: 560px;
 }
- 
-.cardEyebrow {
-  margin: 0;
-  font-family: Arimo, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #6b6461;
+
+.heroImage img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
- 
-.cardVersion {
-  margin: 16px 0 20px;
-  font-family: Arimo, Arial, sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  color: #211e1d;
-}
- 
-.facts {
-  margin: 0 0 20px;
-  border-top: 1px solid #e4e1de;
-}
- 
-.fact {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid #e4e1de;
-  font-size: 15px;
-}
- 
-.fact dt {
-  color: #6b6461;
-}
- 
-.fact dd {
-  margin: 0;
-  color: #211e1d;
-  font-weight: 600;
-}
- 
-.cardBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  background: #211e1d;
-  color: #ffffff;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-}
- 
-.cardBtn:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background: #000000;
-}
- 
+
 /* ---------- Key features ---------- */
  
 .features {
@@ -349,6 +289,11 @@
  
   .heroTitle {
     font-size: 40px;
+  }
+
+  .heroImage {
+    flex-basis: 100%;
+    max-width: 100%;
   }
  
   .features {

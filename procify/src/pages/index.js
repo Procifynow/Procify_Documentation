@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import SearchBar from '@theme/SearchBar';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
  
 import styles from './index.module.css';
  
@@ -177,14 +178,8 @@ function Icon({ name }) {
 }
  
 function Hero({ links, latest }) {
-  const facts = latest
-    ? [
-        ['Release date', latest.date],
-        ['Release type', latest.type],
-        ['Scope', latest.scope],
-      ].filter(([, value]) => value)
-    : [];
- 
+  const heroImage = useBaseUrl('/img/procify-docs-hero-light_2x.png');
+
   return (
     <header className={styles.hero}>
       <div className={styles.heroInner}>
@@ -214,27 +209,13 @@ function Hero({ links, latest }) {
           </p>
         </div>
  
-        {latest && (
-          <aside className={styles.releaseCard}>
-            <p className={styles.cardEyebrow}>Latest release</p>
-            <p className={styles.cardVersion}>{latest.version}</p>
- 
-            {facts.length > 0 && (
-              <dl className={styles.facts}>
-                {facts.map(([label, value]) => (
-                  <div key={label} className={styles.fact}>
-                    <dt>{label}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            )}
- 
-            <Link className={styles.cardBtn} to={links.releaseNotes}>
-              Read the release notes →
-            </Link>
-          </aside>
-        )}
+        <div className={styles.heroImage}>
+          <img
+            src={heroImage}
+            alt="Procify platform"
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+        </div>
       </div>
     </header>
   );
