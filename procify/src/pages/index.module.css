@@ -2,6 +2,7 @@
    PROCIFY DOCS HOME PAGE
    File: src/pages/index.module.css
    Complete stylesheet: replace the whole file with this one.
+   (Hero search styles removed: search now lives in the navbar, top right.)
    ========================================= */
  
 /* ---------- Shared ---------- */
@@ -91,40 +92,6 @@
   color: #4a4543;
 }
  
-.searchRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  max-width: 620px;
-}
- 
-.searchInput {
-  flex: 1 1 320px;
-  min-height: 56px;
-  padding: 0 16px;
-  font-size: 16px;
-  border: 1px solid #cfcac6;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #211e1d;
-}
- 
-.searchBtn {
-  min-height: 56px;
-  padding: 0 28px;
-  border: 0;
-  border-radius: 8px;
-  background: #c4161c;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-}
- 
-.searchBtn:hover {
-  background: #a60000;
-}
- 
 .popular {
   margin: 20px 0 0;
   display: flex;
@@ -143,16 +110,16 @@
 }
  
 /* Hero image: fills the right half of the hero (full width of that half, full hero height) */
-
+ 
 .heroImage {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: 50%;
-  pointer-events: none;   /* never block the search box or links */
+  pointer-events: none;   /* never block links */
 }
-
+ 
 /* cover scales the PNG up to fill the half; multiply blends its white into #f7f6f5 */
 .heroImage img {
   display: block;
@@ -164,7 +131,7 @@
   transform: scale(2.1);          /* overall size: raise/lower this one number */
   transform-origin: top right;    /* grows left and down from the top-right corner */
 }
-
+ 
 /* ---------- Key features ---------- */
  
 .features {
@@ -305,17 +272,17 @@
   .heroTitle {
     font-size: 40px;
   }
-
+ 
   .heroText {
     max-width: 100%;
   }
-
+ 
   .heroImage {
     position: static;
     flex-basis: 100%;
     width: 100%;
   }
-
+ 
   .heroImage img {
     height: auto;
     object-fit: initial;
@@ -428,34 +395,4 @@
   .h2Light {
     font-size: 30px;
   }
-}
- 
- 
-/* ---------- Hero search (the site's real search bar, placed in the hero) ---------- */
- 
-.heroSearch {
-  position: relative;
-  max-width: 620px;
-}
- 
-.heroSearch :global(.navbar__search) {
-  display: block;
-  width: 100%;
-  margin: 0;
-}
- 
-.heroSearch :global(.navbar__search-input) {
-  width: 100%;
-  min-height: 56px;
-  font-size: 16px;
-  border: 1px solid #cfcac6;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #211e1d;
-}
- 
-/* Results open under this box and line up with its left edge */
-.heroSearch [class*='dropdownMenu'] {
-  left: 0 !important;
-  right: auto !important;
 }

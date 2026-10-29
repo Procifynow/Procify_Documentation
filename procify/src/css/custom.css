@@ -274,11 +274,31 @@
   color: #a60000;
 }
  
-/* Search field, if your search plugin provides these classes */
+/* Navbar search (top right, before GitHub) */
+.navbar__search {
+  display: block;
+  margin: 0 16px 0 0;
+}
+ 
 .navbar__search-input {
-  border: 1px solid #d5dce3;
-  border-radius: 5px;
+  width: 260px;
+  min-height: 38px;
   font-size: 14px;
+  background-color: #ffffff;
+  color: #211e1d;
+  border: 1px solid #cfcac6;
+  border-radius: 8px;
+}
+ 
+.navbar__search-input:focus {
+  border-color: #c4161c;
+  outline: none;
+}
+ 
+/* Results open under the box, aligned to its right edge */
+.navbar [class*='dropdownMenu'] {
+  left: auto !important;
+  right: 0 !important;
 }
  
 /* Smaller screens */
@@ -293,6 +313,10 @@
  
   .markdown h2 {
     font-size: 1.35rem;
+  }
+ 
+  .navbar__search-input {
+    width: 100%;
   }
 }
  
@@ -369,14 +393,29 @@
 }
  
  
-/* Home page: the search lives in the hero, so hide the one in the navbar */
-body.is-home .navbar .navbar__search,
-body.is-home .navbar [class*='navbarSearchContainer'] {
-  display: none;
-}
- 
- 
 /* Session pages: every entry in "On this page" is bold */
 .toc-sessions .table-of-contents__link {
   font-weight: 700;
+}
+ 
+ 
+/* Announcement bar: make the close (X) button white and visible on the dark bar */
+.theme-announcement-bar .close,
+div[class*='announcementBar'] button.close,
+div[class*='announcementBar'] button[class*='closeButton'] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+ 
+.theme-announcement-bar .close:hover,
+div[class*='announcementBar'] button.close:hover,
+div[class*='announcementBar'] button[class*='closeButton']:hover {
+  color: #ee6266 !important;
+}
+ 
+/* The close icon is an SVG: make it follow the button colour */
+.theme-announcement-bar .close svg,
+div[class*='announcementBar'] button svg {
+  fill: currentColor !important;
+  stroke: currentColor;
 }

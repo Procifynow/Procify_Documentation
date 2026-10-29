@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
-import SearchBar from '@theme/SearchBar';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
  
@@ -179,7 +178,7 @@ function Icon({ name }) {
  
 function Hero({ links, latest }) {
   const heroImage = useBaseUrl('/img/procify-docs-hero-light_2x.png');
-
+ 
   return (
     <header className={styles.hero}>
       <div className={styles.heroInner}>
@@ -194,10 +193,7 @@ function Hero({ links, latest }) {
             place.
           </p>
  
-          {/* The real site search, shown here so results open under this box */}
-          <div className={styles.heroSearch}>
-            <SearchBar />
-          </div>
+          {/* Search now lives in the top-right of the navbar (see docusaurus.config.js) */}
  
           <p className={styles.popular}>
             <span>Popular</span>
