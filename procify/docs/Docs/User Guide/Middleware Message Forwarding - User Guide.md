@@ -1,6 +1,6 @@
 					
 
-#   ***Middleware Message Forwarding \- User Guide***
+#   Middleware Message Forwarding User Guide
 
 ---
 
