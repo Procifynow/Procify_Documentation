@@ -440,36 +440,15 @@
   line-height: 1.4;
 }
  
-/* HOTFIX badge beside the title of a hotfix release note.
-   Apply the class `is-hotfix-release` to the page the same way `is-latest-release` is applied. */
-.is-hotfix-release h1::after {
-  content: "HOTFIX";
+/* HOTFIX pill under the title of a hotfix release note.
+   Used in the page body, right after the H1:
+   <span className="hotfix-pill">HOTFIX</span>
+   For the newest release that is also a hotfix, keep `is-latest-release` for the LATEST
+   pill and add this span as well. */
+.hotfix-pill {
   display: block;
   width: fit-content;
-  margin: 16px 0 0;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: var(--release-hotfix-bg);
-  color: #ffffff;
-  font-family: Arimo, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-}
- 
-/* Newest release that is also a hotfix: LATEST stays under the title (::after),
-   HOTFIX sits above the title (::before), since a heading has only one ::after. */
-.is-latest-release.is-hotfix-release h1::after {
-  content: "LATEST";
-  background: #c4161c;
-}
- 
-.is-latest-release.is-hotfix-release h1::before {
-  content: "HOTFIX";
-  display: block;
-  width: fit-content;
-  margin: 0 0 12px;
+  margin: 16px 0;
   padding: 4px 12px;
   border-radius: 999px;
   background: var(--release-hotfix-bg);
