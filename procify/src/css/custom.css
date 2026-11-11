@@ -149,18 +149,27 @@
 }
  
 /* A release that is both the newest AND a hotfix (for example 7.2.375):
-   use `sidebar_class_name: latest-release hotfix-release`.
-   Only one ::after exists per link, so the HOTFIX pill moves to ::before on the
-   right-hand side and LATEST keeps ::after. */
+   use `sidebar_class_name: latest-release hotfix-release` (or className in sidebars.js).
+   Both pills must be set explicitly here, otherwise the plain .hotfix-release rule above
+   (which also targets ::after) wins and LATEST disappears.
+   LATEST = ::after, HOTFIX = ::before ordered after it. */
 .latest-release.hotfix-release > .menu__link {
   flex-wrap: wrap;
+  align-items: center;
+}
+ 
+.latest-release.hotfix-release > .menu__link::after {
+  content: "LATEST";
+  order: 2;
+  margin: 4px 0 0 0;
+  background: var(--release-latest-bg);
 }
  
 .latest-release.hotfix-release > .menu__link::before {
   content: "HOTFIX";
   order: 3;
   flex-shrink: 0;
-  margin: 4px 0 0 0;
+  margin: 4px 0 0 6px;
   padding: 2px 8px;
   font-size: 0.65rem;
   font-weight: 700;
