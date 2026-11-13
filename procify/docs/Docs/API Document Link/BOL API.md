@@ -1,6 +1,6 @@
 ---
-title: API Document Link
-sidebar_label: API Document Link
+title: BOL API
+sidebar_label: BOL API
 ---
 
 # PROCIFY API Reference
