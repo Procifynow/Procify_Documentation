@@ -109,20 +109,67 @@
 }
  
 /* =========================================
-   SIDEBAR RELEASE BADGES
+   SIDEBAR RELEASE ITEMS (button/card style + badges)
    Rendered by src/theme/DocSidebarItem/Link/index.js
-   Driven by front matter of each release note:
+   Driven by the front matter of each release note:
  
    sidebar_custom_props:
      badges: [latest, patch, hotfix]
  
    Allowed values: latest, major, minor, patch, hotfix
+   hotfix  -> orange banner across the top of the card
+   others  -> pills under the version number
    ========================================= */
+.sb-release-item > .menu__link {
+  background: #ffffff;
+  border: 1px solid #dce2e8;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 6px 0;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+ 
+.sb-release-item > .menu__link:hover {
+  background: #ffffff;
+  border-color: #c00000;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+ 
+.sb-release-item > .menu__link--active {
+  background: #fbe9e9;
+  border: 1px solid #c00000;
+  border-left: 4px solid #c00000;
+  border-radius: 8px;
+}
+ 
+.sb-release-item--hotfix > .menu__link:not(.menu__link--active) {
+  border-color: #f0c48a;
+}
+ 
 .sb-label {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  align-items: stretch;
+  gap: 6px;
+  width: 100%;
+}
+ 
+.sb-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+ 
+/* Orange HOTFIX banner across the top of the card */
+.sb-banner {
+  display: block;
+  padding: 2px 0;
+  border-radius: 4px;
+  background: var(--release-hotfix-bg);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: center;
 }
  
 .sb-badges {
@@ -145,7 +192,6 @@
 .sb-badge--patch  { background: var(--release-patch-bg); }
 .sb-badge--minor  { background: #1a5fb4; }
 .sb-badge--major  { background: #5b3fc4; }
-.sb-badge--hotfix { background: var(--release-hotfix-bg); }
  
 /* Main article */
 [class*="docMainContainer"] {
