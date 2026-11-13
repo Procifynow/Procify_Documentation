@@ -21,6 +21,7 @@
   /* Release badge colours */
   --release-latest-bg: #c00000;
   --release-hotfix-bg: #e67e00;
+  --release-patch-bg: #0f7a55;
 }
  
 /* Top header */
@@ -107,78 +108,44 @@
   background: #edf0f4;
 }
  
-/* "LATEST" badge in the sidebar.
-   Add `sidebar_class_name: latest-release` to the front matter of the newest release note. */
-.latest-release > .menu__link {
-  align-items: center;
+/* =========================================
+   SIDEBAR RELEASE BADGES
+   Rendered by src/theme/DocSidebarItem/Link/index.js
+   Driven by front matter of each release note:
+ 
+   sidebar_custom_props:
+     badges: [latest, patch, hotfix]
+ 
+   Allowed values: latest, major, minor, patch, hotfix
+   ========================================= */
+.sb-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
  
-.latest-release > .menu__link::after {
-  content: "LATEST";
-  flex-shrink: 0;
-  margin-left: 8px;
-  padding: 2px 8px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  line-height: 1.4;
-  color: #ffffff;
-  background: var(--release-latest-bg);
-  border-radius: 10px;
-}
- 
-/* "HOTFIX" badge in the sidebar.
-   Add `sidebar_class_name: hotfix-release` to the front matter of every release note
-   whose "Release Type" is Hotfix. */
-.hotfix-release > .menu__link {
-  align-items: center;
-}
- 
-.hotfix-release > .menu__link::after {
-  content: "HOTFIX";
-  flex-shrink: 0;
-  margin-left: 8px;
-  padding: 2px 8px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  line-height: 1.4;
-  color: #ffffff;
-  background: var(--release-hotfix-bg);
-  border-radius: 10px;
-}
- 
-/* A release that is both the newest AND a hotfix (for example 7.2.375):
-   use `sidebar_class_name: latest-release hotfix-release` (or className in sidebars.js).
-   Both pills must be set explicitly here, otherwise the plain .hotfix-release rule above
-   (which also targets ::after) wins and LATEST disappears.
-   LATEST = ::after, HOTFIX = ::before ordered after it. */
-.latest-release.hotfix-release > .menu__link {
+.sb-badges {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 6px;
 }
  
-.latest-release.hotfix-release > .menu__link::after {
-  content: "LATEST";
-  order: 2;
-  margin: 4px 0 0 0;
-  background: var(--release-latest-bg);
-}
- 
-.latest-release.hotfix-release > .menu__link::before {
-  content: "HOTFIX";
-  order: 3;
-  flex-shrink: 0;
-  margin: 4px 0 0 6px;
+.sb-badge {
   padding: 2px 8px;
+  border-radius: 10px;
+  color: #ffffff;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.4px;
   line-height: 1.4;
-  color: #ffffff;
-  background: var(--release-hotfix-bg);
-  border-radius: 10px;
 }
+ 
+.sb-badge--latest { background: var(--release-latest-bg); }
+.sb-badge--patch  { background: var(--release-patch-bg); }
+.sb-badge--minor  { background: #1a5fb4; }
+.sb-badge--major  { background: #5b3fc4; }
+.sb-badge--hotfix { background: var(--release-hotfix-bg); }
  
 /* Main article */
 [class*="docMainContainer"] {
@@ -432,15 +399,44 @@
 }
  
  
-/* LATEST badge beside the title of the newest release note */
-.is-latest-release h1::after {
-  content: "LATEST";
+/* =========================================
+   RELEASE NOTE PILLS (page body, under the H1)
+   Usage in a release note, right after the H1:
+ 
+   <div className="release-pills">
+     <span className="latest-pill">LATEST</span>   (newest release only)
+     <span className="patch-pill">PATCH</span>
+     <span className="hotfix-pill">HOTFIX</span>   (hotfix releases only)
+   </div>
+ 
+   Optional extra types, same pattern:
+     <span className="minor-pill">MINOR</span>
+     <span className="major-pill">MAJOR</span>
+ 
+   The old `is-latest-release` h1::after badge has been removed:
+   LATEST is now a span, so all pills sit in one row.
+   ========================================= */
+ 
+/* Row that holds the pills */
+.release-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+ 
+/* Shared pill look */
+.latest-pill,
+.patch-pill,
+.minor-pill,
+.major-pill,
+.hotfix-pill {
   display: block;
   width: fit-content;
-  margin: 16px 0 0;
+  margin: 16px 0;
   padding: 4px 12px;
   border-radius: 999px;
-  background: #c4161c;
   color: #ffffff;
   font-family: Arimo, Arial, sans-serif;
   font-size: 12px;
@@ -449,25 +445,22 @@
   line-height: 1.4;
 }
  
-/* HOTFIX pill under the title of a hotfix release note.
-   Used in the page body, right after the H1:
-   <span className="hotfix-pill">HOTFIX</span>
-   For the newest release that is also a hotfix, keep `is-latest-release` for the LATEST
-   pill and add this span as well. */
-.hotfix-pill {
-  display: block;
-  width: fit-content;
-  margin: 16px 0;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: var(--release-hotfix-bg);
-  color: #ffffff;
-  font-family: Arimo, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
+/* Inside the row: sit side by side, no extra margin */
+.release-pills .latest-pill,
+.release-pills .patch-pill,
+.release-pills .minor-pill,
+.release-pills .major-pill,
+.release-pills .hotfix-pill {
+  display: inline-block;
+  margin: 0;
 }
+ 
+/* Pill colours */
+.latest-pill { background: var(--release-latest-bg); }
+.patch-pill  { background: var(--release-patch-bg); }
+.minor-pill  { background: #1a5fb4; }
+.major-pill  { background: #5b3fc4; }
+.hotfix-pill { background: var(--release-hotfix-bg); }
  
  
 /* Session pages: every entry in "On this page" is bold */
