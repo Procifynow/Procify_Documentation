@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@theme-original/DocSidebarItem/Link';
 
-const LABELS = { latest: 'LATEST', major: 'MAJOR', minor: 'MINOR', patch: 'PATCH' };
+const LABELS = { latest: 'LATEST', major: 'MAJOR', minor: 'MINOR', patch: 'PATCH', hotfix: 'HOTFIX' };
 const SUFFIX = /\s*Klobase Release Note\s*$/i;
 const VERSION = /^\d+(\.\d+)+$/;   // e.g. 7.2.375
 
