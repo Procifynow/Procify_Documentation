@@ -2,7 +2,7 @@
    PROCIFY DOCUMENTATION — OPENUI5-INSPIRED UI
    File: src/css/custom.css
    ========================================= */
- 
+
 :root {
   --ifm-color-primary: #c00000;
   --ifm-color-primary-dark: #a60000;
@@ -11,78 +11,78 @@
   --ifm-color-primary-light: #d21b1b;
   --ifm-color-primary-lighter: #e34a4a;
   --ifm-color-primary-lightest: #f5dada;
- 
+
   --ifm-font-family-base: "72", "Segoe UI", Arial, sans-serif;
   --ifm-font-size-base: 15px;
   --ifm-line-height-base: 1.65;
   --ifm-navbar-height: 62px;
   --ifm-code-font-size: 90%;
- 
+
   /* Release badge colours */
   --release-latest-bg: #c00000;
   --release-hotfix-bg: #e67e00;
   --release-patch-bg: #0f7a55;
 }
- 
+
 /* Top header */
 .navbar {
   background: #ffffff;
   border-bottom: 1px solid #d9dfe5;
   box-shadow: 0 1px 4px rgb(0 0 0 / 5%);
 }
- 
+
 .navbar__inner {
   max-width: 1600px;
 }
- 
+
 .navbar__title {
   color: #202a35;
   font-size: 17px;
   font-weight: 700;
 }
- 
+
 .navbar__brand {
   margin-right: 24px;
 }
- 
+
 .navbar__link {
   color: #344354;
   font-size: 14px;
   font-weight: 500;
 }
- 
+
 .navbar__link:hover,
 .navbar__link--active {
   color: var(--ifm-color-primary);
 }
- 
+
 /* Documentation page background */
 .main-wrapper {
   background: #ffffff;
 }
- 
+
 .container {
   max-width: 1600px;
 }
- 
+
 /* Left navigation sidebar */
 .theme-doc-sidebar-container {
   background: #f7f8fa;
   border-right: 1px solid #e0e5ea;
 }
- 
+
 .theme-doc-sidebar-menu {
   padding: 12px 10px 24px;
 }
- 
+
 .menu {
   font-size: 14px;
 }
- 
+
 .menu__list {
   margin-top: 4px;
 }
- 
+
 .menu__link {
   border-radius: 4px;
   color: #344354;
@@ -90,12 +90,12 @@
   padding: 8px 12px;
   transition: background 0.15s ease, color 0.15s ease;
 }
- 
+
 .menu__link:hover {
   background: #e9edf2;
   color: #a60000;
 }
- 
+
 .menu__link--active:not(.menu__link--sublist) {
   background: #fbe9e9;
   color: #a60000;
@@ -103,22 +103,21 @@
   border-left: 3px solid #c00000;
   border-radius: 0 4px 4px 0;
 }
- 
+
 .menu__list-item-collapsible:hover {
   background: #edf0f4;
 }
- 
+
 /* =========================================
    SIDEBAR RELEASE ITEMS (button/card style + badges)
    Rendered by src/theme/DocSidebarItem/Link/index.js
    Driven by the front matter of each release note:
- 
+
    sidebar_custom_props:
      badges: [latest, patch, hotfix]
- 
+
    Allowed values: latest, major, minor, patch, hotfix
-   hotfix  -> orange banner across the top of the card
-   others  -> pills under the version number
+   All badges, including hotfix, sit in one row under the version number
    ========================================= */
 .sb-release-item > .menu__link {
   background: #ffffff;
@@ -128,57 +127,50 @@
   margin: 6px 0;
   box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
 }
- 
+
 .sb-release-item > .menu__link:hover {
   background: #ffffff;
   border-color: #c00000;
   box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
 }
- 
+
 .sb-release-item > .menu__link--active {
   background: #fbe9e9;
   border: 1px solid #c00000;
   border-left: 4px solid #c00000;
   border-radius: 8px;
 }
- 
+
 .sb-release-item--hotfix > .menu__link:not(.menu__link--active) {
   border-color: #f0c48a;
 }
- 
+
 .sb-label {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 6px;
   width: 100%;
 }
- 
+
 .sb-title {
   font-weight: 600;
   font-size: 14px;
 }
- 
-/* Orange HOTFIX banner across the top of the card */
-.sb-banner {
-  display: block;
-  padding: 2px 0;
-  border-radius: 4px;
-  background: var(--release-hotfix-bg);
-  color: #ffffff;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-align: center;
-}
- 
+
 .sb-badges {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
 }
- 
-.sb-badge {
+
+/* Shared look for all sidebar tags, HOTFIX included */
+.sb-badge,
+.sb-banner {
+  display: inline-block;
+  margin: 0;
   padding: 2px 8px;
   border-radius: 10px;
   color: #ffffff;
@@ -186,37 +178,40 @@
   font-weight: 700;
   letter-spacing: 0.4px;
   line-height: 1.4;
+  text-align: left;
 }
- 
+
+.sb-banner { background: var(--release-hotfix-bg); }
+
 .sb-badge--latest { background: var(--release-latest-bg); }
 .sb-badge--patch  { background: var(--release-patch-bg); }
 .sb-badge--minor  { background: #1a5fb4; }
 .sb-badge--major  { background: #5b3fc4; }
- 
+
 /* Main article */
 [class*="docMainContainer"] {
   background: #ffffff;
 }
- 
+
 .theme-doc-markdown {
   max-width: 100%;
 }
- 
+
 /* "On this page" panel (right side on desktop, collapsible bar on mobile) is shown */
 .table-of-contents {
   font-size: 13px;
 }
- 
+
 .table-of-contents__link--active {
   font-weight: 600;
 }
- 
+
 .markdown {
   color: #263442;
   font-size: 15px;
   line-height: 1.75;
 }
- 
+
 .markdown h1 {
   color: #1d2935;
   font-size: 2rem;
@@ -224,7 +219,7 @@
   letter-spacing: -0.4px;
   margin-bottom: 16px;
 }
- 
+
 .markdown h2 {
   color: #253746;
   font-size: 1.5rem;
@@ -233,43 +228,43 @@
   padding-bottom: 8px;
   border-bottom: 1px solid #e1e6eb;
 }
- 
+
 .markdown h3 {
   color: #34495b;
   font-size: 1.15rem;
   font-weight: 650;
   margin-top: 26px;
 }
- 
+
 .markdown p,
 .markdown li {
   color: #344354;
 }
- 
+
 .markdown a {
   color: #a60000;
   text-decoration: none;
 }
- 
+
 .markdown a:hover {
   text-decoration: underline;
 }
- 
+
 /* Breadcrumbs */
 .theme-doc-breadcrumbs {
   margin-bottom: 20px;
   font-size: 13px;
 }
- 
+
 .breadcrumbs__link {
   color: #5b6875;
 }
- 
+
 .breadcrumbs__item--active .breadcrumbs__link {
   color: #a60000;
   font-weight: 600;
 }
- 
+
 /* Code blocks */
 .theme-code-block {
   border: 1px solid #dfe4e9;
@@ -277,12 +272,12 @@
   box-shadow: none;
   margin: 20px 0;
 }
- 
+
 .prism-code {
   font-size: 13px;
   line-height: 1.65;
 }
- 
+
 :not(pre) > code {
   border: 1px solid #e3e6ea;
   border-radius: 4px;
@@ -290,7 +285,7 @@
   background: #f6f7f9;
   padding: 2px 5px;
 }
- 
+
 /* Tables */
 .markdown table {
   display: table;
@@ -299,57 +294,57 @@
   border: 1px solid #dce2e8;
   font-size: 14px;
 }
- 
+
 .markdown table th {
   background: #f0f3f6;
   color: #253746;
   font-weight: 650;
   text-align: left;
 }
- 
+
 .markdown table th,
 .markdown table td {
   border: 1px solid #dce2e8;
   padding: 10px 14px;
 }
- 
+
 .markdown table tr:nth-child(even) {
   background: #fafbfc;
 }
- 
+
 /* Images */
 .markdown img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
 }
- 
+
 /* Pagination at the bottom of documentation pages */
 .pagination-nav__link {
   border: 1px solid #dce2e8;
   border-radius: 6px;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
- 
+
 .pagination-nav__link:hover {
   border-color: #c00000;
   box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
 }
- 
+
 .pagination-nav__sublabel {
   color: #657382;
 }
- 
+
 .pagination-nav__label {
   color: #a60000;
 }
- 
+
 /* Navbar search (top right, before GitHub) */
 .navbar__search {
   display: block;
   margin: 0 16px 0 0;
 }
- 
+
 .navbar__search-input {
   width: 260px;
   min-height: 38px;
@@ -359,38 +354,38 @@
   border: 1px solid #cfcac6;
   border-radius: 8px;
 }
- 
+
 .navbar__search-input:focus {
   border-color: #c4161c;
   outline: none;
 }
- 
+
 /* Results open under the box, aligned to its right edge */
 .navbar [class*='dropdownMenu'] {
   left: auto !important;
   right: 0 !important;
 }
- 
+
 /* Smaller screens */
 @media (max-width: 996px) {
   .theme-doc-sidebar-container {
     background: #ffffff;
   }
- 
+
   .markdown h1 {
     font-size: 1.7rem;
   }
- 
+
   .markdown h2 {
     font-size: 1.35rem;
   }
- 
+
   .navbar__search-input {
     width: 100%;
   }
 }
- 
- 
+
+
 /* Floating "Back to top" button (created by src/clientModules/backToTop.js) */
 .to-top-btn {
   position: fixed;
@@ -410,18 +405,18 @@
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
- 
+
 .to-top-btn.show {
   opacity: 1;
   pointer-events: auto;
 }
- 
+
 .to-top-btn:hover {
   background: #c00000;
   color: #ffffff;
 }
- 
- 
+
+
 /* "On this page" heading above the right-hand table of contents */
 .theme-doc-toc-desktop::before {
   content: "On this page";
@@ -434,35 +429,35 @@
   text-transform: uppercase;
   color: #6b6461;
 }
- 
+
 .table-of-contents__link {
   color: #4a4543;
 }
- 
+
 .table-of-contents__link:hover,
 .table-of-contents__link--active {
   color: #c4161c;
 }
- 
- 
+
+
 /* =========================================
    RELEASE NOTE PILLS (page body, under the H1)
    Usage in a release note, right after the H1:
- 
+
    <div className="release-pills">
      <span className="latest-pill">LATEST</span>   (newest release only)
      <span className="patch-pill">PATCH</span>
      <span className="hotfix-pill">HOTFIX</span>   (hotfix releases only)
    </div>
- 
+
    Optional extra types, same pattern:
      <span className="minor-pill">MINOR</span>
      <span className="major-pill">MAJOR</span>
- 
+
    The old `is-latest-release` h1::after badge has been removed:
    LATEST is now a span, so all pills sit in one row.
    ========================================= */
- 
+
 /* Row that holds the pills */
 .release-pills {
   display: flex;
@@ -471,7 +466,7 @@
   gap: 8px;
   margin: 16px 0;
 }
- 
+
 /* Shared pill look */
 .latest-pill,
 .patch-pill,
@@ -490,7 +485,7 @@
   letter-spacing: 0.1em;
   line-height: 1.4;
 }
- 
+
 /* Inside the row: sit side by side, no extra margin */
 .release-pills .latest-pill,
 .release-pills .patch-pill,
@@ -500,21 +495,21 @@
   display: inline-block;
   margin: 0;
 }
- 
+
 /* Pill colours */
 .latest-pill { background: var(--release-latest-bg); }
 .patch-pill  { background: var(--release-patch-bg); }
 .minor-pill  { background: #1a5fb4; }
 .major-pill  { background: #5b3fc4; }
 .hotfix-pill { background: var(--release-hotfix-bg); }
- 
- 
+
+
 /* Session pages: every entry in "On this page" is bold */
 .toc-sessions .table-of-contents__link {
   font-weight: 700;
 }
- 
- 
+
+
 /* Announcement bar: make the close (X) button white and visible on the dark bar */
 .theme-announcement-bar .close,
 div[class*='announcementBar'] button.close,
@@ -522,16 +517,45 @@ div[class*='announcementBar'] button[class*='closeButton'] {
   color: #ffffff !important;
   opacity: 1 !important;
 }
- 
+
 .theme-announcement-bar .close:hover,
 div[class*='announcementBar'] button.close:hover,
 div[class*='announcementBar'] button[class*='closeButton']:hover {
   color: #ee6266 !important;
 }
- 
+
 /* The close icon is an SVG: make it follow the button colour */
 .theme-announcement-bar .close svg,
 div[class*='announcementBar'] button svg {
   fill: currentColor !important;
   stroke: currentColor;
+}
+
+
+/* =========================================
+   FALLBACK: old sidebar markup
+   Applies only when .sb-banner is a direct child of .sb-label
+   (old JS). Does nothing once the new JS is running.
+   ========================================= */
+.sb-label:has(> .sb-banner) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 6px;
+  row-gap: 6px;
+  align-items: center;
+}
+
+.sb-label:has(> .sb-banner) > .sb-title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.sb-label:has(> .sb-banner) > .sb-banner {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.sb-label:has(> .sb-banner) > .sb-badges {
+  grid-column: 2;
+  grid-row: 2;
 }
