@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkprocify||=[]).push([[4984],{9352(o){o.exports=JSON.parse('{"metadata":{"permalink":"/Procify_Documentation/blogs","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Tips, how-tos and release highlights from the Procify application teams","blogTitle":"App Teams \u2013 Blogs"}}')}}]);

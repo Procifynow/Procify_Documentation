@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkprocify||=[]).push([[4654],{8772(e){e.exports=JSON.parse('{"tags":[{"label":"Announcement","permalink":"/Procify_Documentation/blogs/tags/announcement","description":"News from the application teams.","count":1}]}')}}]);

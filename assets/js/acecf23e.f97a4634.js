@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkprocify||=[]).push([[1903],{1912(o){o.exports=JSON.parse('{"blogBasePath":"/Procify_Documentation/blogs","blogTitle":"App Teams \u2013 Blogs","authorsListPath":"/Procify_Documentation/blogs/authors"}')}}]);

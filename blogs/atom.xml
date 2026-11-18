@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://procifynow.github.io/Procify_Documentation/blogs</id>
+    <title>Procify Technical Documentation Blog</title>
+    <updated>2026-11-18T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://procifynow.github.io/Procify_Documentation/blogs"/>
+    <subtitle>Procify Technical Documentation Blog</subtitle>
+    <icon>https://procifynow.github.io/Procify_Documentation/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome to App Teams – Blogs]]></title>
+        <id>https://procifynow.github.io/Procify_Documentation/blogs/2026/11/18/welcome</id>
+        <link href="https://procifynow.github.io/Procify_Documentation/blogs/2026/11/18/welcome"/>
+        <updated>2026-11-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Tips, how-tos and release highlights from the Procify application teams.]]></summary>
+        <content type="html"><![CDATA[<p>Technical articles from the Procify application teams will be published here.</p>
+<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#393A34"><span class="token console class-name">console</span><span class="token punctuation" style="color:#393A34">.</span><span class="token method function property-access" style="color:#d73a49">log</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'Hello from App Teams'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">;</span><br></div></code></pre></div></div>]]></content>
+        <author>
+            <name>Procify Team</name>
+        </author>
+        <category label="Announcement" term="Announcement"/>
+    </entry>
+</feed>
