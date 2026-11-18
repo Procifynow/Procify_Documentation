@@ -81,7 +81,12 @@ function readDocs(folder, exclude = null, byVersion = false) {
       const clean = (m) => (m ? m[1].replace(/\*+/g, '').trim() : null);
  
       const base = file.replace(/\.mdx?$/, '');
-      const id = clean(front.match(/^id:\s*["']?(.+?)["']?\s*$/m)) || base;
+      // Docusaurus drops a leading "1. " / "02 - " from file names when it builds
+      // doc ids (but not version numbers like "7.2.104 ..."), so do the same here.
+      const id =
+        clean(front.match(/^id:\s*["']?(.+?)["']?\s*$/m)) ||
+        base.replace(/^\d+\s*[-_.]+\s*(?!\d)/, '') ||
+        base;
       const pos = front.match(/^sidebar_position:\s*(-?\d+(?:\.\d+)?)/m);
       const itemLabel =
         clean(front.match(/^sidebar_label:\s*["']?(.+?)["']?\s*$/m)) ||
@@ -148,6 +153,8 @@ function docsDropdown(folder, label, exclude = null, byVersion = false) {
     type: 'dropdown',
     label,
     position: 'left',
+    // icon class, e.g. nav-ico--user-guide (see custom.css)
+    className: `nav-ico nav-ico--${label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
     ...(landing && {to: docPath(landing.docId)}),
     items,
   };
@@ -486,6 +493,7 @@ const config = {
           label: 'Home',
           position: 'left',
           exact: true,
+          className: 'nav-ico nav-ico--home',
         },
  
         // One dropdown per folder in docs/Docs (built automatically, see above).
@@ -497,6 +505,7 @@ const config = {
           to: '/blogs',
           label: 'App Teams – Blogs',
           position: 'left',
+          className: 'nav-ico nav-ico--app-teams',
         },
  
         {
