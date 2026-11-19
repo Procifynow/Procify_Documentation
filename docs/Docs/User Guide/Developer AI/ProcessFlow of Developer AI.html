@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/User Guide/Developer AI/ProcessFlow of Developer AI" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Developer AI — ProcessFlow of Developer AI | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Developer AI/ProcessFlow of Developer AI"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Developer AI — ProcessFlow of Developer AI | Procify Technical Documentation"><meta data-rh="true" name="description" content="Screenshot"><meta data-rh="true" property="og:description" content="Screenshot"><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Developer AI/ProcessFlow of Developer AI"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Developer AI/ProcessFlow of Developer AI" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Developer AI/ProcessFlow of Developer AI" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ProcessFlow of Developer AI","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Developer AI/ProcessFlow of Developer AI"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.01d4a2b9.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.d134d965.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.6a5dfa98.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--user-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction">User Guide</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction">API Services</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction">App Dependencies</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction">App Lifecycle Events</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction">App Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction">Auto-Number Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction">Automation</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction">Best Practice Guidelines</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction">Developer AI</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction">Dialog Events</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction">FAQs Editor</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction">KloAvatar</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction">KloController closeDialog</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction">KloTriState</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction">Menu Builder</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction">Notification Modeler</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction">Page Builder</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction">Permission Designer</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction">Pivot Modeller</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction">Query Console</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction">Row wise authorization</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction">Server Side Attachment Upload</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction">Workspace Hub</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction">Workspace Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction">Git Integration</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction">Landing Page Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction">Message Monitoring</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction">Middleware Message Forwarding</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction">Query Analysis</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--installation-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction">Installation Guide</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction">Android APK Build</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Introduction">iOS IPA Build</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node Setup on Macbook/Introduction">Private Node Setup on Macbook</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node 6.0 Setup - 1. Introduction">Private Node 6.0 Setup</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--training-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide - Beginner</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advance Training Guide</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--api-document-link" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">API Document Link</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">BOL API</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/Class EndPointBean">EndPointBean</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--release-notes" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">7.2.375 (Latest)</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.374 Klobase Release Note">7.2.374</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.370 Klobase Release Note">7.2.370</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.368 Klobase Release Note">7.2.368</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.367 Klobase Release Note">7.2.367</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.365 Klobase Release Note">7.2.365</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.360 Klobase Release Note">7.2.360</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.359 Klobase Release Note">7.2.359</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.356 Klobase Release Note">7.2.356</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.351 Klobase Release Note">7.2.351</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.350 Klobase Release Note">7.2.350</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.346 Klobase Release Note">7.2.346</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.345 Klobase Release Note">7.2.345</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.344 Klobase Release Note">7.2.344</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.343 KloBase Release Note">7.2.343</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.338 Klobase Release Note">7.2.338</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.336 Klobase Release Note">7.2.336</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.335 Klobase Release Note">7.2.335</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.334 Klobase Release Note">7.2.334</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.333 Klobase Release Note">7.2.333</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.329 Klobase Release Note">7.2.329</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.327 Klobase Release Note">7.2.327</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.326 Klobase Release Note">7.2.326</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.322 Klobase Release Note">7.2.322</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.321 Klobase Release Note">7.2.321</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.319 Klobase Release Note">7.2.319</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.314 Klobase Release Note">7.2.314</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.312 Klobase Release Note">7.2.312</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.305 Klobase Release Note">7.2.305</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.298 Klobase Release Note">7.2.298</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.297 Klobase Release Note">7.2.297</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.291 Klobase Release Note">7.2.291</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.286 Klobase Release Note">7.2.286</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.285 Klobase Release Note">7.2.285</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.284 Klobase Release Note">7.2.284</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.281 Klobase Release Note">7.2.281</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.277 Klobase Release Note">7.2.277</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.275 Klobase Release Note">7.2.275</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.265 Klobase Release Note">7.2.265</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.258 Klobase Release Note">7.2.258</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.256 Klobase Release Note">7.2.256</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.254 Klobase Release Note">7.2.254</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.239 Klobase Release Note">7.2.239</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.238 Klobase Release Note">7.2.238</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.237 Klobase Release Note">7.2.237</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.235 Klobase Release Note">7.2.235</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.229 Klobase Release Note">7.2.229</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.228 Klobase Release Note">7.2.228</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.226 Klobase Release Note">7.2.226</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.223 Klobase Release Note">7.2.223</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.219 Klobase Release Note">7.2.219</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.216 Klobase Release Note">7.2.216</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.210 Klobase Release Note">7.2.210</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.208 Klobase Release Note">7.2.208</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.199 Klobase Release Note">7.2.199</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.195 Klobase Release Note">7.2.195</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.188 Klobase Release Note">7.2.188</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.181 Klobase Release Note">7.2.181</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.171 Klobase Release Note">7.2.171</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.167 Klobase Release Note">7.2.167</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.165 Klobase Release Note">7.2.165</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.163 Klobase Release Note">7.2.163</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.158 Klobase Release Note">7.2.158</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.152 Klobase Release Note">7.2.152</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.149 Klobase Release Note">7.2.149</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.147 Klobase Release Note">7.2.147</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.138 Klobase Release Note">7.2.138</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.136 Klobase Release Note">7.2.136</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.129 Klobase Release Note">7.2.129</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.126 Klobase Release Note">7.2.126</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.118 Klobase Release Note">7.2.118</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.115 Klobase Release Note">7.2.115</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.113 Klobase Release Note">7.2.113</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.109 Klobase Release Note">7.2.109</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.108 Klobase Release Note">7.2.108</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.104 Klobase Release Note">7.2.104</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.98 Klobase Release Note">7.2.98</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.96 Klobase Release Note">7.2.96</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.94 Klobase Release Note">7.2.94</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.92 Klobase Release Note">7.2.92</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.87 Klobase Release Note">7.2.87</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.86 Klobase Release Note">7.2.86</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.84 Klobase Release Note">7.2.84</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.82 Klobase Release Note">7.2.82</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.76 Klobase Release Note">7.2.76</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.74 Klobase Release Note">7.2.74</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.70 Klobase Release Note">7.2.70</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.69 Klobase Release Note">7.2.69</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.68 Klobase Release Note">7.2.68</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.65 Klobase Release Note">7.2.65</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.61 Klobase Release Note">7.2.61</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.58 Klobase Release Note">7.2.58</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.57 Klobase Release Note">7.2.57</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.54 Klobase Release Note">7.2.54</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.52 Klobase Release Note">7.2.52</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.49 Klobase Release Note">7.2.49</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.48 Klobase Release Note">7.2.48</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.47 Klobase Release Note">7.2.47</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.45 Klobase Release Note">7.2.45</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.39 Klobase Release Note">7.2.39</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.36 Klobase Release Note">7.2.36</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.35 Klobase Release Note">7.2.35</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.34 Klobase Release Note">7.2.34</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.33 Klobase Release Note">7.2.33</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.32 Klobase Release Note">7.2.32</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.27 Klobase Release Note">7.2.27</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--legal">Legal</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Copyright">Copyright</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Disclaimer">Disclaimer</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">User Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction"><span class="categoryLinkLabel_W154">Server Side Attachment Upload</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction"><span class="categoryLinkLabel_W154">Workspace Hub</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction"><span class="categoryLinkLabel_W154">App Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction"><span class="categoryLinkLabel_W154">Workspace Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction"><span class="categoryLinkLabel_W154">Menu Builder</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction"><span class="categoryLinkLabel_W154">Notification Modeler</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction"><span class="categoryLinkLabel_W154">App Dependencies</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction"><span class="categoryLinkLabel_W154">FAQs Editor</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction"><span class="categoryLinkLabel_W154">KloController closeDialog</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction"><span class="categoryLinkLabel_W154">API Services</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction"><span class="categoryLinkLabel_W154">Query Console</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction"><span class="categoryLinkLabel_W154">Page Builder</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction"><span class="categoryLinkLabel_W154">Developer AI</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction"><span class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Overview"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/What is Developer AI"><span class="linkLabel_WmDU">What is Developer AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/How Developer AI Works"><span class="linkLabel_WmDU">How Developer AI Works</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Why Developer AI"><span class="linkLabel_WmDU">Why Developer AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Key Reasons to Use Developer AI"><span class="linkLabel_WmDU">Key Reasons to Use Developer AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/User - Assignment"><span class="linkLabel_WmDU">User - Assignment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/User Collection"><span class="linkLabel_WmDU">User Collection</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/App Management"><span class="linkLabel_WmDU">App Management</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/ProcessFlow of Developer AI"><span class="linkLabel_WmDU">ProcessFlow of Developer AI</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Generated Application Walkthrough"><span class="linkLabel_WmDU">Generated Application Walkthrough</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Features Not Yet Supported"><span class="linkLabel_WmDU">Features Not Yet Supported</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction"><span class="categoryLinkLabel_W154">Permission Designer</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction"><span class="categoryLinkLabel_W154">Row wise authorization</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction"><span class="categoryLinkLabel_W154">Automation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction"><span class="categoryLinkLabel_W154">Auto-Number Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction"><span class="categoryLinkLabel_W154">Dialog Events</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction"><span class="categoryLinkLabel_W154">KloTriState</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction"><span class="categoryLinkLabel_W154">Best Practice Guidelines</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction"><span class="categoryLinkLabel_W154">KloAvatar</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction"><span class="categoryLinkLabel_W154">Pivot Modeller</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction"><span class="categoryLinkLabel_W154">App Lifecycle Events</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction"><span class="categoryLinkLabel_W154">Git Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction"><span class="categoryLinkLabel_W154">Landing Page Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction"><span class="categoryLinkLabel_W154">Message Monitoring</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction"><span class="categoryLinkLabel_W154">Middleware Message Forwarding</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction"><span class="categoryLinkLabel_W154">Query Analysis</span></a></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">User Guide</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Developer AI</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">ProcessFlow of Developer AI</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>ProcessFlow of Developer AI</h1></header>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image16-07d243fa3927ee0e304543bd81ef73cb.png" width="622" height="935" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="chatbot-and-advanced-mode">Chatbot and Advanced Mode<a href="#chatbot-and-advanced-mode" class="hash-link" aria-label="Direct link to Chatbot and Advanced Mode" title="Direct link to Chatbot and Advanced Mode" translate="no">​</a></h2>
+<p>We can access Developer AI from chatbot, the chatbot Icon is preset beside notification icon, in Homepage header</p>
+<p><strong>Note: The chatbot icon is displayed only when Developer AI is enabled for the current landscape. If Developer AI is not enabled, the chatbot icon will not be visible.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image1-2429e6aef765621172ca3b8369ee8cca.png" width="1915" height="750" class="img_ev3q"></p>
+<p>After click on this chatbot Icon, it will open the chatbot, from there to use the Developer AI, click on “Advanced Mode “ option, which will open the screen for using Developer AI</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image12-f3a23cded35f62225dfeebbcfe2141ea.png" width="546" height="934" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="developer-ai-wizard-screen-and-its-tabs"><strong>Developer AI Wizard Screen and Its Tabs</strong><a href="#developer-ai-wizard-screen-and-its-tabs" class="hash-link" aria-label="Direct link to developer-ai-wizard-screen-and-its-tabs" title="Direct link to developer-ai-wizard-screen-and-its-tabs" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-1--upload-brd-business-requirement-document-"><strong>Step 1 : Upload BRD (Business Requirement Document )</strong><a href="#step-1--upload-brd-business-requirement-document-" class="hash-link" aria-label="Direct link to step-1--upload-brd-business-requirement-document-" title="Direct link to step-1--upload-brd-business-requirement-document-" translate="no">​</a></h3>
+<p>The <strong>Upload Business Requirement Document</strong> screen is the first step in the Developer AI application generation workflow. In this step, users select the target application, review the available AI token quota, and upload the Business Requirement Document (BRD) or Business Blueprint (BBP) that Developer AI will analyze to generate the application.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="select-application">Select Application<a href="#select-application" class="hash-link" aria-label="Direct link to Select Application" title="Direct link to Select Application" translate="no">​</a></h4>
+<p>The <strong>Select Application</strong> dropdown displays all applications, select application with Developer AI enabled the selected application acts as the target application where Developer AI will generate all the required components.</p>
+<ul>
+<li class="">
+<p>All AI-generated artifacts, such as entities, screens, dashboards, workflows, and configurations, are created within the selected application.</p>
+</li>
+<li class="">
+<p>Ensure the correct application is selected before proceeding with document upload.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image2-1366fe7ead80f94b4e4c4ee5ca47dabe.png" width="1691" height="801" class="img_ev3q"></p>
+<p><strong>Note :-</strong></p>
+<p><strong>1. Developer AI not Enabled for Application</strong></p>
+<p>If Developer AI is not enabled for the selected Application, It will show warning that Developer AI is not enabled for that application</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image25-f9fc9ecfedb76ce082856451c31adce0.png" width="1381" height="796" class="img_ev3q"></p>
+<p><strong>2. Developer AI server is not available</strong></p>
+<p>If the Developer AI Server is not running, a dialog will be displayed with the message: “<em>Developer AI server is currently unavailable. Kindly contact the Administration team.</em>”</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image27-56af68a8858554b07c96284ff878435d.png" width="1563" height="839" class="img_ev3q"></p>
+<p><strong>3. BBP Build is triggered when other BBP build is in-progress in the same application</strong></p>
+<p>If Build is triggered in the same application when other BBP Build is in-progress in the same application, then also the warning will come showing the BBP Build is already in progress</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image34-1a1efca9629d3a276453d5a45fbe7973.png" width="1303" height="477" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="token-quota">Token Quota<a href="#token-quota" class="hash-link" aria-label="Direct link to Token Quota" title="Direct link to Token Quota" translate="no">​</a></h4>
+<p>The <strong>Token Quota</strong> section displays the AI token consumption details for the selected user.</p>
+<p>A token represents a unit of text processed by the AI model. Every analysis performed on a BRD or BBP consumes tokens.</p>
+<p>The Token Quota panel provides the following information:</p>
+<ul>
+<li class="">
+<p><strong>Tokens Used</strong> – Total number of tokens consumed by Developer AI.</p>
+</li>
+<li class="">
+<p><strong>Total Token Allocation</strong> – Maximum tokens allocated to the application.</p>
+</li>
+<li class="">
+<p><strong>Remaining Tokens</strong> – Tokens still available for future AI operations.</p>
+</li>
+<li class="">
+<p><strong>Usage Percentage</strong> – Visual progress bar showing the percentage of the allocated quota that has been consumed.</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="token-units"><strong>Token Units</strong><a href="#token-units" class="hash-link" aria-label="Direct link to token-units" title="Direct link to token-units" translate="no">​</a></h4>
+<p>Developer AI displays large token counts using abbreviated units:</p>
+<table><colgroup>
+<col style="width:15%">
+<col style="width:39%">
+<col style="width:44%">
+</colgroup><thead><tr class="header"><th><strong>Unit</strong></th><th><blockquote>
+<p><strong>Meaning</strong></p>
+</blockquote></th><th><blockquote>
+<p><strong>Example</strong></p>
+</blockquote></th></tr><tr class="odd"><th><strong>K</strong></th><th><blockquote>
+<p>Thousand (1,000)</p>
+</blockquote></th><th><blockquote>
+<p>250K = 250,000 tokens</p>
+</blockquote></th></tr><tr class="header"><th><strong>M</strong></th><th><blockquote>
+<p>Million (1,000,000)</p>
+</blockquote></th><th><blockquote>
+<p>2.0M = 2,000,000 tokens</p>
+</blockquote></th></tr></thead><tbody></tbody></table>
+<p><strong>Example</strong></p>
+<p>If the Token Quota displays:</p>
+<ul>
+<li class="">
+<p><strong>2.0M / 26.5M tokens</strong></p>
+</li>
+<li class="">
+<p><strong>7% Used</strong></p>
+</li>
+<li class="">
+<p><strong>24.5M Remaining</strong></p>
+</li>
+</ul>
+<p><strong>It means:</strong></p>
+<ul>
+<li class="">
+<p>A total of <strong>26.5 million tokens</strong> have been allocated.</p>
+</li>
+<li class="">
+<p><strong>2.0 million tokens</strong> have already been consumed.</p>
+</li>
+<li class="">
+<p><strong>24.5 million tokens</strong> are still available.</p>
+</li>
+<li class="">
+<p>Approximately <strong>7%</strong> of the total token allocation has been utilized.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image21-e8d5aba3bb45e09972fa475dbc0e2f44.png" width="847" height="158" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="generate-bbp">Generate BBP<a href="#generate-bbp" class="hash-link" aria-label="Direct link to Generate BBP" title="Direct link to Generate BBP" translate="no">​</a></h4>
+<p>The <strong>Generate BBP</strong> feature enables users to generate a <strong>Business Blueprint (BBP)</strong> by simply describing their application requirements in natural language. Instead of manually preparing a detailed BBP document, users can provide a high-level business description, and Developer AI automatically transforms it into a structured Business Blueprint.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image7-6f8a308cbbae04b8248e862a324d45db.png" width="1500" height="546" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="upload-brd--bbp-document">Upload BRD / BBP Document<a href="#upload-brd--bbp-document" class="hash-link" aria-label="Direct link to Upload BRD / BBP Document" title="Direct link to Upload BRD / BBP Document" translate="no">​</a></h4>
+<p>Once the application has been selected, upload the project documentation for analysis.</p>
+<p>Developer AI supports the following documents:</p>
+<ul>
+<li class="">
+<p><strong>Business Requirement Document (BRD)</strong></p>
+</li>
+<li class="">
+<p><strong>Business Blueprint (BBP)</strong></p>
+</li>
+</ul>
+<p>The document can be uploaded by:</p>
+<ul>
+<li class="">
+<p>Dragging and dropping the file into the upload area.</p>
+</li>
+<li class="">
+<p>Selecting the file from the local system.</p>
+</li>
+</ul>
+<p>Once the document is uploaded, Developer AI begins analyzing its contents to understand the business requirements and extract key information required to build the application. During this process, Developer AI identifies and generates:</p>
+<ul>
+<li class="">
+<p>Business entities</p>
+</li>
+<li class="">
+<p>Functional requirements</p>
+</li>
+<li class="">
+<p>User roles</p>
+</li>
+<li class="">
+<p>Application screens</p>
+</li>
+<li class="">
+<p>Menu structure</p>
+</li>
+<li class="">
+<p>Business workflows</p>
+</li>
+<li class="">
+<p>Notifications</p>
+</li>
+<li class="">
+<p>Schedulers</p>
+</li>
+<li class="">
+<p>Dashboard requirements</p>
+</li>
+<li class="">
+<p>Homepage configuration</p>
+</li>
+<li class="">
+<p>Relationships between business objects</p>
+</li>
+</ul>
+<p>The extracted information is then used to automatically generate the initial application structure within the selected Procify application.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="preparing-a-bbp-for-developer-ai">Preparing a BBP for Developer AI<a href="#preparing-a-bbp-for-developer-ai" class="hash-link" aria-label="Direct link to Preparing a BBP for Developer AI" title="Direct link to Preparing a BBP for Developer AI" translate="no">​</a></h4>
+<p>Developer AI expects the <strong>Business Blueprint (BBP)</strong> to follow a predefined structure for accurate analysis and application generation. If your existing BBP is not already in this format, it must be converted before uploading.</p>
+<p>To prepare a Developer AI-compatible BBP:</p>
+<ol>
+<li class="">
+<p>Ensure you have the existing <strong>Business Blueprint (BBP)</strong> for your project.</p>
+</li>
+<li class="">
+<p>Refer to the <strong>Developer AI BBP Conversion Prompt</strong> document (<a href="https://docs.google.com/document/d/18dXHlydkvZ2SMipZpGXcWWWLH1r762fjQcnmV8Y79Pg/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class=""><u>Prompt</u></a>).</p>
+</li>
+<li class="">
+<p>Upload both:</p>
+<ul>
+<li class="">
+<p>Your existing BBP.</p>
+</li>
+<li class="">
+<p>The Developer AI BBP Conversion Prompt.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Submit both documents to <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" class=""><strong><u>Claude</u></strong></a> for processing. The conversion prompt has been specifically designed and validated for <strong>Claude</strong>, and it is recommended <strong>not to use other AI models</strong> for this conversion.</p>
+</li>
+<li class="">
+<p>Claude will generate a new BBP that conforms to the standardized format required by Developer AI.</p>
+</li>
+<li class="">
+<p>Review the generated BBP to verify that the business requirements have been accurately converted.</p>
+</li>
+<li class="">
+<p>Upload the converted BBP using the <strong>Upload Business Requirement Document</strong> section to continue the application generation process.</p>
+</li>
+</ol>
+<p>Once uploaded, Developer AI will analyze the standardized BBP and generate the application&#x27;s foundational components, including entities, screens, dashboards, workflows, configurations, and other required artifacts.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image24-8332c93101827f97fc94cb93bde6daaf.png" width="1480" height="579" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2--analyze--review"><strong>Step 2 : Analyze &amp; Review</strong><a href="#step-2--analyze--review" class="hash-link" aria-label="Direct link to step-2--analyze--review" title="Direct link to step-2--analyze--review" translate="no">​</a></h3>
+<p>The <strong>Analyze &amp; Review</strong> tab is the second step in the Developer AI application generation workflow. In this stage, Developer AI processes the uploaded <strong>BRD</strong> or <strong>BBP</strong> and extracts all the business information required to build the application.</p>
+<p>The purpose of this step is to validate that the uploaded document has been successfully analyzed before proceeding with application generation.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image32-f1a39bd0740e4e7ddf6d22e9bc8238bb.png" width="1894" height="1075" class="img_ev3q"></p>
+<p>Once the document analysis is completed successfully and the extracted summary has been reviewed, click Open Dashboard to proceed to the detailed review screen.</p>
+<p>The Open Dashboard button opens the Review Extracted Information dashboard, where users can:</p>
+<ul>
+<li class="">
+<p>Review all extracted business components in detail.</p>
+</li>
+<li class="">
+<p>Verify entities, screens, functional requirements, user roles, notifications, schedulers, menu access, and homepage configuration.</p>
+</li>
+<li class="">
+<p>Modify, add, or remove extracted items as required.</p>
+</li>
+<li class="">
+<p>Validate the extracted information before proceeding to the Execution Plan stage.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image31-9a34421e70a7d58faa55e7e93b5e4410.png" width="1919" height="1079" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="review-extracted-information">Review Extracted Information<a href="#review-extracted-information" class="hash-link" aria-label="Direct link to Review Extracted Information" title="Direct link to Review Extracted Information" translate="no">​</a></h4>
+<p>This section provides categorized access to all the information extracted from the uploaded BRD or BBP. Each category displays the number of items identified during the analysis, allowing users to review every component before proceeding with application generation.</p>
+<p>The available categories include:</p>
+<ul>
+<li class="">
+<p><strong>Entities</strong> – Displays the entities extracted from the document.</p>
+</li>
+<li class="">
+<p><strong>Screens</strong> – Lists the application screens identified during analysis.</p>
+</li>
+<li class="">
+<p><strong>Schedulers</strong> – Displays scheduled jobs or background processes.</p>
+</li>
+<li class="">
+<p><strong>Functional Requirements</strong> – Shows the extracted business requirements.</p>
+</li>
+<li class="">
+<p><strong>Notifications</strong> – Lists notification and alert configurations.</p>
+</li>
+<li class="">
+<p><strong>User Roles</strong> – Displays user roles identified for role-based access control.</p>
+</li>
+<li class="">
+<p><strong>Menu Access</strong> – Shows the application&#x27;s navigation menu structure.</p>
+</li>
+<li class="">
+<p><strong>Homepage</strong> – Displays the extracted homepage configuration.</p>
+</li>
+<li class="">
+<p><strong>Out of Scope</strong> – Lists requirements identified as outside the application&#x27;s scope.</p>
+</li>
+<li class="">
+<p><strong>AI Visualize</strong> – Provides AI-generated visual representations of the extracted business information.</p>
+</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image4-5c0d50bfbae0ed96b6bdcfd85c2861d7.png" width="1423" height="880" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class=""><strong>Ask BBP –</strong> An AI-powered assistant that answers questions related to the uploaded BBP.</li>
+</ul>
+<p>Selecting a category displays its corresponding details in the main content area for review.</p>
+<p><strong>Note: At present, manual addition, modification, or deletion of extracted components is not supported. The entities, screens, functional requirements, user roles, and other components displayed on this screen are generated by Developer AI based on the uploaded BRD or BBP and are used as the foundation for application generation. Users can review the extracted information before proceeding to the next step.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image15-2c6b658425d8eac628221baa641b5d36.png" width="1919" height="1079" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="export-options"><strong>Export Options</strong><a href="#export-options" class="hash-link" aria-label="Direct link to export-options" title="Direct link to export-options" translate="no">​</a></h3>
+<p>Developer AI provides an option to export the extracted entity information for offline review or integration.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="export-to-json"><strong>Export to JSON</strong><a href="#export-to-json" class="hash-link" aria-label="Direct link to export-to-json" title="Direct link to export-to-json" translate="no">​</a></h4>
+<p>The Export to JSON button downloads the extracted entity metadata in JSON (JavaScript Object Notation) format.</p>
+<p>The exported file contains structured information such as:</p>
+<ul>
+<li class="">
+<p>Entity details</p>
+</li>
+<li class="">
+<p>Attributes</p>
+</li>
+<li class="">
+<p>Relationships</p>
+</li>
+<li class="">
+<p>Entity types</p>
+</li>
+<li class="">
+<p>Associated metadata</p>
+</li>
+</ul>
+<p>The JSON format can be used for documentation, integration with external systems, or further processing.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="export-to-txt"><strong>Export to TXT</strong><a href="#export-to-txt" class="hash-link" aria-label="Direct link to export-to-txt" title="Direct link to export-to-txt" translate="no">​</a></h4>
+<p><strong>The Export to TXT option is currently not supported.</strong></p>
+<p>Although the option is visible in the interface, exporting the extracted information in TXT format is not available in the current release and will be supported in a future version.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image28-8a7bc2ce34908fbd2ef97eb8eb9b6ca2.png" width="1919" height="1079" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="re-analyze"><strong>Re-Analyze</strong><a href="#re-analyze" class="hash-link" aria-label="Direct link to re-analyze" title="Direct link to re-analyze" translate="no">​</a></h2>
+<p>The Re-Analyze button allows users to run the document analysis again if changes have been made to the uploaded BRD or BBP, or if the extracted results need to be refreshed.</p>
+<p>When clicked, Developer AI:</p>
+<ul>
+<li class="">
+<p>Reprocesses the uploaded document.</p>
+</li>
+<li class="">
+<p>Extracts the latest business requirements and application components.</p>
+</li>
+<li class="">
+<p>Updates the extracted entities, screens, functional requirements, user roles, notifications, menu access, and other information.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image35-89ea7bb48547a9abedd4921e201bf663.png" width="1919" height="1079" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="mark-all-review-completed"><strong>Mark All Review Completed</strong><a href="#mark-all-review-completed" class="hash-link" aria-label="Direct link to mark-all-review-completed" title="Direct link to mark-all-review-completed" translate="no">​</a></h2>
+<p>The Mark All Review Completed button confirms that the extracted information has been reviewed and approved.</p>
+<p>Selecting this option indicates that:</p>
+<ul>
+<li class="">
+<p>The extracted entities have been verified.</p>
+</li>
+<li class="">
+<p>Screens and functional requirements have been reviewed.</p>
+</li>
+<li class="">
+<p>User roles, menu access, homepage configuration, and other extracted components have been validated.</p>
+</li>
+<li class="">
+<p>The application is ready to proceed to the next stage.</p>
+</li>
+</ul>
+<p><strong>Note: Marking the review as complete is mandatory before proceeding. If this step is not completed, an alert message will appear when you attempt to continue, prompting you to mark all reviews as completed before moving to the next stage.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image22-b6ce16d31f33a96f0bea63730717aeac.png" width="1919" height="1079" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="execution-plan"><strong>Execution Plan</strong><a href="#execution-plan" class="hash-link" aria-label="Direct link to execution-plan" title="Direct link to execution-plan" translate="no">​</a></h2>
+<p>The Execution Plan button navigates to the next step in the Developer AI workflow.</p>
+<p>After the review is completed, clicking Execution Plan opens the Execution Plan screen, where Developer AI displays the sequence of activities required to generate the application.</p>
+<p>The Execution Plan provides an overview of:</p>
+<ul>
+<li class="">
+<p>Components to be generated.</p>
+</li>
+<li class="">
+<p>Order of execution.</p>
+</li>
+</ul>
+<p>This serves as the final review before Developer AI begins generating the application.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image9-5414d7c87167007774c7aeb15c0d406a.png" width="1919" height="1079" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="refine-bbp-with-ai"><strong>Refine BBP with AI</strong><a href="#refine-bbp-with-ai" class="hash-link" aria-label="Direct link to refine-bbp-with-ai" title="Direct link to refine-bbp-with-ai" translate="no">​</a></h2>
+<p>The Refine BBP with AI feature is designed to allow users to improve or modify the extracted Business Blueprint (BBP) using natural language instructions before proceeding with application generation.</p>
+<p>This option can be accessed by clicking the ✨ (AI Refine) button available on the Review Extracted Information screen.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works">How it Works<a href="#how-it-works" class="hash-link" aria-label="Direct link to How it Works" title="Direct link to How it Works" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>Click the ✨ (AI Refine) button.</p>
+</li>
+<li class="">
+<p>The Refine BBP with AI dialog is displayed.</p>
+</li>
+<li class="">
+<p>What should AI change? text box, enter the required modifications or enhancements in natural language.</p>
+</li>
+</ol>
+<p>Examples:</p>
+<ul>
+<li class="">
+<p>Tighten the module scope.</p>
+</li>
+<li class="">
+<p>Add missing approval rules.</p>
+</li>
+<li class="">
+<p>Correct notification triggers.</p>
+</li>
+<li class="">
+<p>Add a new business entity.</p>
+</li>
+<li class="">
+<p>Update the workflow for order approval.</p>
+</li>
+</ul>
+<ol start="4">
+<li class="">Click Apply AI Changes.</li>
+</ol>
+<p>Developer AI is designed to analyze the provided instructions and update the extracted BBP accordingly. The refined information would then be reflected in the extracted components for further review before proceeding with application generation.</p>
+<p><strong>Note: The Refine BBP with AI feature is currently not supported in the current release. Although the option is available in the interface, AI-based refinement of the extracted BBP is not yet functional and will be supported in a future release.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image23-046e05457c38eeacce5bfce54aa73fbe.png" width="1920" height="923" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="review-bbp-changes-before-build"><strong>Review BBP Changes Before Build</strong><a href="#review-bbp-changes-before-build" class="hash-link" aria-label="Direct link to review-bbp-changes-before-build" title="Direct link to review-bbp-changes-before-build" translate="no">​</a></h3>
+<p>After clicking Execution Plan, the Review BBP Changes Before Build dialog is displayed. This screen provides a final summary of the extracted Business Blueprint (BBP) before the application build process begins.</p>
+<p>The summary displays the number of:</p>
+<ul>
+<li class="">
+<p>Existing in BBP – Components that were identified from the uploaded BRD or BBP.</p>
+</li>
+<li class="">
+<p>Added – New components that have been added during the review process.</p>
+</li>
+<li class="">
+<p>Updated – Components that have been modified before execution.</p>
+</li>
+</ul>
+<p>The dialog also lists all the extracted application components, such as:</p>
+<ul>
+<li class="">
+<p>Entities</p>
+</li>
+<li class="">
+<p>Screens</p>
+</li>
+<li class="">
+<p>Functional Requirements</p>
+</li>
+<li class="">
+<p>Notifications</p>
+</li>
+<li class="">
+<p>User Roles</p>
+</li>
+<li class="">
+<p>Other extracted artifacts</p>
+</li>
+</ul>
+<p>This allows users to perform a final verification of the application metadata before proceeding with the build.</p>
+<p>Available Options</p>
+<ul>
+<li class="">
+<p><strong>Compare AI Changes</strong> – Displays a comparison between the original extracted information and any AI-generated changes (if applicable).</p>
+</li>
+<li class="">
+<p><strong>Back to Review</strong> – Returns to the Review Extracted Information screen to make further changes or validations.</p>
+</li>
+<li class="">
+<p><strong>Proceed to Execution Plan</strong> – Confirms the review and navigates to the Execution Plan screen, where the application generation workflow is initiated.</p>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image18-1aa0f17a854740eff7013aebb2152fb0.png" width="1257" height="864" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-3--execution-selection"><strong>Step 3 : Execution Selection</strong><a href="#step-3--execution-selection" class="hash-link" aria-label="Direct link to step-3--execution-selection" title="Direct link to step-3--execution-selection" translate="no">​</a></h3>
+<p>After clicking Proceed to Execution Plan, the Execution Selection screen is displayed. This screen allows users to review all extracted components and select the items that should be included in the application generation process.</p>
+<p>A summary at the top of the screen displays the total number of extracted components, including:</p>
+<ul>
+<li class="">
+<p>Entities</p>
+</li>
+<li class="">
+<p>UI Screens</p>
+</li>
+<li class="">
+<p>Schedulers</p>
+</li>
+<li class="">
+<p>Workflows</p>
+</li>
+<li class="">
+<p>Notifications</p>
+</li>
+<li class="">
+<p>User Roles</p>
+</li>
+<li class="">
+<p>Menu Access</p>
+</li>
+<li class="">
+<p>Homepage</p>
+</li>
+</ul>
+<p>Each category shows the number of items identified from the uploaded BRD or BBP.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="component-selection"><strong>Component Selection</strong><a href="#component-selection" class="hash-link" aria-label="Direct link to component-selection" title="Direct link to component-selection" translate="no">​</a></h3>
+<p>The lower section displays the extracted components grouped by category. Each item is accompanied by a checkbox, allowing users to choose whether it should be included in the application build.</p>
+<p>Users can:</p>
+<ul>
+<li class="">
+<p>Review the extracted entities and screens.</p>
+</li>
+<li class="">
+<p>Select or deselect individual components.</p>
+</li>
+<li class="">
+<p>Use the Select All option to include all available components for generation.</p>
+</li>
+</ul>
+<p>Only the selected components will be considered during the application generation process.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="execute"><strong>Execute</strong><a href="#execute" class="hash-link" aria-label="Direct link to execute" title="Direct link to execute" translate="no">​</a></h3>
+<p>After reviewing and selecting the required components, click Execute to start the application generation process.</p>
+<p>Developer AI begins generating the selected application components within the chosen Procify application. This includes creating the selected entities, screens, workflows, notifications, user roles, menu access, homepage configuration, and other supported artifacts.</p>
+<p><strong>Note: Ensure that all required components are selected before clicking Execute, as only the selected items will be included in the application generation process.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image5-06aa782ac48b71e6c46b8a96670b9ca9.png" width="1919" height="1079" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-4--application"><strong>Step 4 :Build Application</strong><a href="#step-4--application" class="hash-link" aria-label="Direct link to step-4--application" title="Direct link to step-4--application" translate="no">​</a></h3>
+<p>After clicking Execute, the Execution Progress screen is displayed. This screen tracks the progress of the application generation process and shows the status of each component being created.</p>
+<p>To begin generating the application, click Build Application.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="build-application"><strong>Build Application</strong><a href="#build-application" class="hash-link" aria-label="Direct link to build-application" title="Direct link to build-application" translate="no">​</a></h3>
+<p>The Build Application button initiates the application generation process based on the components selected in the Execution Plan.</p>
+<p>During the build process, Developer AI automatically creates and configures the selected application components, including:</p>
+<ul>
+<li class="">
+<p>Business entities</p>
+</li>
+<li class="">
+<p>UI screens</p>
+</li>
+<li class="">
+<p>Value Helps</p>
+</li>
+<li class="">
+<p>Sample data</p>
+</li>
+<li class="">
+<p>Application roles</p>
+</li>
+<li class="">
+<p>Notifications</p>
+</li>
+<li class="">
+<p>Business rules</p>
+</li>
+<li class="">
+<p>Menus</p>
+</li>
+<li class="">
+<p>Homepage configuration</p>
+</li>
+<li class="">
+<p>Permissions</p>
+</li>
+<li class="">
+<p>Other supported application artifacts</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="execution-progress"><strong>Execution Progress</strong><a href="#execution-progress" class="hash-link" aria-label="Direct link to execution-progress" title="Direct link to execution-progress" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image13-68b1c500ed9f3a2968882fda0dabf1ac.png" width="1558" height="714" class="img_ev3q"></p>
+<p>As the build progresses, the Execution Progress section displays the status of each component.</p>
+<p>Each component is marked with one of the following statuses:</p>
+<ul>
+<li class="">
+<p>In Progress – The component is currently being generated.</p>
+</li>
+<li class="">
+<p>Completed – The component has been successfully created.</p>
+</li>
+</ul>
+<p>The progress cards provide a quick overview of the build status for each application component.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="execution-log"><strong>Execution Log</strong><a href="#execution-log" class="hash-link" aria-label="Direct link to execution-log" title="Direct link to execution-log" translate="no">​</a></h3>
+<p>The Execution Log records every step performed during the application generation process.</p>
+<p>The log includes information such as:</p>
+<ul>
+<li class="">
+<p>Analysis completion</p>
+</li>
+<li class="">
+<p>Entity creation</p>
+</li>
+<li class="">
+<p>Screen generation</p>
+</li>
+<li class="">
+<p>Business rule creation</p>
+</li>
+<li class="">
+<p>Sample data insertion</p>
+</li>
+<li class="">
+<p>Role creation</p>
+</li>
+<li class="">
+<p>Menu generation</p>
+</li>
+<li class="">
+<p>Homepage configuration</p>
+</li>
+<li class="">
+<p>Permission assignment</p>
+</li>
+<li class="">
+<p>Any warnings or errors encountered during the build</p>
+</li>
+</ul>
+<p>The execution log helps users monitor the build process and troubleshoot issues if required.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="build-completed"><strong>Build Completed</strong><a href="#build-completed" class="hash-link" aria-label="Direct link to build-completed" title="Direct link to build-completed" translate="no">​</a></h3>
+<p>When all selected components have been generated successfully, the status changes to Build Completed.</p>
+<p>A confirmation message indicates that the application has been successfully created within the selected Procify application.</p>
+<p>Users can then click Continue to proceed to the next step in the Developer AI workflow.<img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image14-0a584d712f15bddcda794b0a7f288b36.png" width="1918" height="1079" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image26-c2b8b177360c8622ac572ca900093db1.png" width="1841" height="945" class="img_ev3q"><strong>Note :-</strong></p>
+<ol>
+<li class=""><strong>Build Queue Notification</strong></li>
+</ol>
+<blockquote>
+<p>When a BBP build is triggered for an application while another BBP build is already in progress for a different application, the new build request is not started immediately. Instead, it is automatically placed in a system-wide queue and will begin execution once the currently running build is completed.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image11-070dc2e33ab3aeaa1f66ced4e09e739d.png" width="1312" height="305" class="img_ev3q"></p>
+</blockquote>
+<ol start="2">
+<li class=""><strong>Build Already in Progress</strong></li>
+</ol>
+<blockquote>
+<p>If a BBP build is triggered for an application that already has an active build in progress, Developer AI does not start a new build for the same application. Instead, it notifies the user that a build is already running and provides an option to view the current build progress.</p>
+<p>Click <strong>Yes, Show Progress</strong> to open the ongoing build progress screen, or click <strong>Cancel</strong> to close the notification</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/developer-ai-image17-bbdbee75e658e3b0b11b264076a3568f.png" width="1276" height="460" class="img_ev3q"></p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="setup--config-upcoming-feature"><strong>Setup &amp; Config <em>(Upcoming Feature)</em></strong><a href="#setup--config-upcoming-feature" class="hash-link" aria-label="Direct link to setup--config-upcoming-feature" title="Direct link to setup--config-upcoming-feature" translate="no">​</a></h2>
+<p>This step will allow users to configure application settings, assign users and roles, manage permissions, customize branding, and define deployment-related configurations before publishing the application.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="publish-app-upcoming-feature"><strong>Publish App <em>(Upcoming Feature)</em></strong><a href="#publish-app-upcoming-feature" class="hash-link" aria-label="Direct link to publish-app-upcoming-feature" title="Direct link to publish-app-upcoming-feature" translate="no">​</a></h2>
+<p>This step will allow users to validate the generated application, perform publish readiness checks, and publish the application to the target environment.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="test-automation-upcoming-feature"><strong>Test Automation <em>(Upcoming Feature)</em></strong><a href="#test-automation-upcoming-feature" class="hash-link" aria-label="Direct link to test-automation-upcoming-feature" title="Direct link to test-automation-upcoming-feature" translate="no">​</a></h2>
+<p>This step will allow users to generate AI-powered test cases and execute automated Playwright tests to validate the generated application.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-upcoming-feature"><strong>Documentation <em>(Upcoming Feature)</em></strong><a href="#documentation-upcoming-feature" class="hash-link" aria-label="Direct link to documentation-upcoming-feature" title="Direct link to documentation-upcoming-feature" translate="no">​</a></h2>
+<p>This step will allow users to generate AI-powered technical documentation, user guides, configuration guides, and downloadable project documentation for the generated application.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="finish-upcoming-feature"><strong>Finish <em>(Upcoming Feature)</em></strong><a href="#finish-upcoming-feature" class="hash-link" aria-label="Direct link to finish-upcoming-feature" title="Direct link to finish-upcoming-feature" translate="no">​</a></h2>
+<p>This step will allow users to review the final application generation summary, verify the completed workflow, and conclude the Developer AI application generation process.</p></div></div><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Developer%20AI%20%E2%80%94%20ProcessFlow%20of%20Developer%20AI">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Developer%20AI%20%E2%80%94%20ProcessFlow%20of%20Developer%20AI">Report an issue</a></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/App Management"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">App Management</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Generated Application Walkthrough"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Generated Application Walkthrough</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#chatbot-and-advanced-mode" class="table-of-contents__link toc-highlight">Chatbot and Advanced Mode</a></li><li><a href="#developer-ai-wizard-screen-and-its-tabs" class="table-of-contents__link toc-highlight"><strong>Developer AI Wizard Screen and Its Tabs</strong></a></li><li><a href="#re-analyze" class="table-of-contents__link toc-highlight"><strong>Re-Analyze</strong></a></li><li><a href="#mark-all-review-completed" class="table-of-contents__link toc-highlight"><strong>Mark All Review Completed</strong></a></li><li><a href="#execution-plan" class="table-of-contents__link toc-highlight"><strong>Execution Plan</strong></a></li><li><a href="#refine-bbp-with-ai" class="table-of-contents__link toc-highlight"><strong>Refine BBP with AI</strong></a></li><li><a href="#setup--config-upcoming-feature" class="table-of-contents__link toc-highlight"><strong>Setup &amp; Config <em>(Upcoming Feature)</em></strong></a></li><li><a href="#publish-app-upcoming-feature" class="table-of-contents__link toc-highlight"><strong>Publish App <em>(Upcoming Feature)</em></strong></a></li><li><a href="#test-automation-upcoming-feature" class="table-of-contents__link toc-highlight"><strong>Test Automation <em>(Upcoming Feature)</em></strong></a></li><li><a href="#documentation-upcoming-feature" class="table-of-contents__link toc-highlight"><strong>Documentation <em>(Upcoming Feature)</em></strong></a></li><li><a href="#finish-upcoming-feature" class="table-of-contents__link toc-highlight"><strong>Finish <em>(Upcoming Feature)</em></strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advanced Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer></div>
+</body>
+</html>

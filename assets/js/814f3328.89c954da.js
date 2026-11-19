@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkprocify||=[]).push([[7472],{55513(e){e.exports=JSON.parse('{"title":"All posts","items":[{"title":"Welcome to App Teams \u2013 Blogs","permalink":"/Procify_Documentation/blogs/2026/11/18/welcome","unlisted":false,"date":"2026-11-18T00:00:00.000Z"}]}')}}]);

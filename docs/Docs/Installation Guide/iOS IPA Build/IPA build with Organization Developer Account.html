@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">iOS IPA Build — IPA build with Organization Developer Account | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="iOS IPA Build — IPA build with Organization Developer Account | Procify Technical Documentation"><meta data-rh="true" name="description" content="3.1.Bundle ID creation using Firebase"><meta data-rh="true" property="og:description" content="3.1.Bundle ID creation using Firebase"><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"IPA build with Organization Developer Account","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.01d4a2b9.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.d134d965.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.6a5dfa98.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--user-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction">User Guide</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction">API Services</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction">App Dependencies</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction">App Lifecycle Events</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction">App Settings</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction">Auto-Number Settings</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction">Automation</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction">Best Practice Guidelines</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction">Developer AI</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction">Dialog Events</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction">FAQs Editor</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction">KloAvatar</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction">KloController closeDialog</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction">KloTriState</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction">Menu Builder</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction">Notification Modeler</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction">Page Builder</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction">Permission Designer</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction">Pivot Modeller</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction">Query Console</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction">Row wise authorization</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction">Server Side Attachment Upload</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction">Workspace Hub</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction">Workspace Settings</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction">Git Integration</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction">Landing Page Settings</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction">Message Monitoring</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction">Middleware Message Forwarding</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction">Query Analysis</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--installation-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction">Installation Guide</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction">Android APK Build</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Introduction">iOS IPA Build</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node Setup on Macbook/Introduction">Private Node Setup on Macbook</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node 6.0 Setup - 1. Introduction">Private Node 6.0 Setup</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--training-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide - Beginner</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advance Training Guide</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--api-document-link" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">API Document Link</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">BOL API</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/Class EndPointBean">EndPointBean</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--release-notes" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">7.2.375 (Latest)</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.374 Klobase Release Note">7.2.374</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.370 Klobase Release Note">7.2.370</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.368 Klobase Release Note">7.2.368</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.367 Klobase Release Note">7.2.367</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.365 Klobase Release Note">7.2.365</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.360 Klobase Release Note">7.2.360</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.359 Klobase Release Note">7.2.359</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.356 Klobase Release Note">7.2.356</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.351 Klobase Release Note">7.2.351</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.350 Klobase Release Note">7.2.350</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.346 Klobase Release Note">7.2.346</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.345 Klobase Release Note">7.2.345</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.344 Klobase Release Note">7.2.344</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.343 KloBase Release Note">7.2.343</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.338 Klobase Release Note">7.2.338</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.336 Klobase Release Note">7.2.336</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.335 Klobase Release Note">7.2.335</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.334 Klobase Release Note">7.2.334</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.333 Klobase Release Note">7.2.333</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.329 Klobase Release Note">7.2.329</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.327 Klobase Release Note">7.2.327</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.326 Klobase Release Note">7.2.326</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.322 Klobase Release Note">7.2.322</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.321 Klobase Release Note">7.2.321</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.319 Klobase Release Note">7.2.319</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.314 Klobase Release Note">7.2.314</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.312 Klobase Release Note">7.2.312</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.305 Klobase Release Note">7.2.305</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.298 Klobase Release Note">7.2.298</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.297 Klobase Release Note">7.2.297</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.291 Klobase Release Note">7.2.291</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.286 Klobase Release Note">7.2.286</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.285 Klobase Release Note">7.2.285</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.284 Klobase Release Note">7.2.284</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.281 Klobase Release Note">7.2.281</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.277 Klobase Release Note">7.2.277</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.275 Klobase Release Note">7.2.275</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.265 Klobase Release Note">7.2.265</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.258 Klobase Release Note">7.2.258</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.256 Klobase Release Note">7.2.256</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.254 Klobase Release Note">7.2.254</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.239 Klobase Release Note">7.2.239</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.238 Klobase Release Note">7.2.238</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.237 Klobase Release Note">7.2.237</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.235 Klobase Release Note">7.2.235</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.229 Klobase Release Note">7.2.229</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.228 Klobase Release Note">7.2.228</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.226 Klobase Release Note">7.2.226</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.223 Klobase Release Note">7.2.223</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.219 Klobase Release Note">7.2.219</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.216 Klobase Release Note">7.2.216</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.210 Klobase Release Note">7.2.210</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.208 Klobase Release Note">7.2.208</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.199 Klobase Release Note">7.2.199</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.195 Klobase Release Note">7.2.195</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.188 Klobase Release Note">7.2.188</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.181 Klobase Release Note">7.2.181</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.171 Klobase Release Note">7.2.171</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.167 Klobase Release Note">7.2.167</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.165 Klobase Release Note">7.2.165</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.163 Klobase Release Note">7.2.163</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.158 Klobase Release Note">7.2.158</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.152 Klobase Release Note">7.2.152</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.149 Klobase Release Note">7.2.149</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.147 Klobase Release Note">7.2.147</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.138 Klobase Release Note">7.2.138</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.136 Klobase Release Note">7.2.136</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.129 Klobase Release Note">7.2.129</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.126 Klobase Release Note">7.2.126</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.118 Klobase Release Note">7.2.118</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.115 Klobase Release Note">7.2.115</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.113 Klobase Release Note">7.2.113</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.109 Klobase Release Note">7.2.109</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.108 Klobase Release Note">7.2.108</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.104 Klobase Release Note">7.2.104</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.98 Klobase Release Note">7.2.98</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.96 Klobase Release Note">7.2.96</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.94 Klobase Release Note">7.2.94</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.92 Klobase Release Note">7.2.92</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.87 Klobase Release Note">7.2.87</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.86 Klobase Release Note">7.2.86</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.84 Klobase Release Note">7.2.84</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.82 Klobase Release Note">7.2.82</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.76 Klobase Release Note">7.2.76</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.74 Klobase Release Note">7.2.74</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.70 Klobase Release Note">7.2.70</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.69 Klobase Release Note">7.2.69</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.68 Klobase Release Note">7.2.68</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.65 Klobase Release Note">7.2.65</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.61 Klobase Release Note">7.2.61</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.58 Klobase Release Note">7.2.58</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.57 Klobase Release Note">7.2.57</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.54 Klobase Release Note">7.2.54</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.52 Klobase Release Note">7.2.52</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.49 Klobase Release Note">7.2.49</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.48 Klobase Release Note">7.2.48</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.47 Klobase Release Note">7.2.47</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.45 Klobase Release Note">7.2.45</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.39 Klobase Release Note">7.2.39</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.36 Klobase Release Note">7.2.36</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.35 Klobase Release Note">7.2.35</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.34 Klobase Release Note">7.2.34</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.33 Klobase Release Note">7.2.33</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.32 Klobase Release Note">7.2.32</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.27 Klobase Release Note">7.2.27</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--legal">Legal</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Copyright">Copyright</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Disclaimer">Disclaimer</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">Installation Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node Setup on Macbook/Introduction"><span class="categoryLinkLabel_W154">Private Node Setup on Macbook</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Introduction"><span class="categoryLinkLabel_W154">iOS IPA Build</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Introduction"><span class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Requirements"><span class="linkLabel_WmDU">Requirements</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build Using Bitbucket Pipeline"><span class="linkLabel_WmDU">IPA build Using Bitbucket Pipeline</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Enterprise apple developer account"><span class="linkLabel_WmDU">IPA build with Enterprise apple developer account</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Organization Developer Account"><span class="linkLabel_WmDU">IPA build with Organization Developer Account</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Create a URL for ipa"><span class="linkLabel_WmDU">Create a URL for ipa</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/How to upload IPA to testFlight"><span class="linkLabel_WmDU">How to upload IPA to testFlight</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Definitions"><span class="linkLabel_WmDU">Definitions</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction"><span class="categoryLinkLabel_W154">Android APK Build</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node 6.0 Setup - 1. Introduction"><span class="categoryLinkLabel_W154">Private Node 6.0 Setup</span></a></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Installation Guide</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">iOS IPA Build</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">IPA build with Organization Developer Account</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>IPA build with Organization Developer Account</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="31bundle-id-creation-using-firebase">3.1.Bundle ID creation using Firebase<a href="#31bundle-id-creation-using-firebase" class="hash-link" aria-label="Direct link to 3.1.Bundle ID creation using Firebase" title="Direct link to 3.1.Bundle ID creation using Firebase" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="311firebase-account-access">3.1.1.Firebase account access<a href="#311firebase-account-access" class="hash-link" aria-label="Direct link to 3.1.1.Firebase account access" title="Direct link to 3.1.1.Firebase account access" translate="no">​</a></h3>
+<ul>
+<li class="">Get the <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer" class=""><u>Firebase</u></a> account access from the infra team.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image372-a7ba2e3ad3c508ca1c416aec126ad32c.png" width="1920" height="1037" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>Go to Console</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image303-12624a1e132a2e64dfcf07c982b8e29b.png" width="1907" height="1014" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once you are inside <strong>your Firebase project screen,</strong> you can create a new project or you can use the existing one (click on <strong>Add Project</strong> to create a new project). Here we are using the existing one.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image436-accc56098bda5feda1d5bbd1201bc4f6.png" width="1915" height="1052" class="img_ev3q"></p>
+<p><strong>Note:</strong> In case you want to create a new project contact the infra team.</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="312create-a-new-bundle-id">3.1.2.Create a new bundle ID<a href="#312create-a-new-bundle-id" class="hash-link" aria-label="Direct link to 3.1.2.Create a new bundle ID" title="Direct link to 3.1.2.Create a new bundle ID" translate="no">​</a></h3>
+<ul>
+<li class="">Click on the <strong>Create</strong> button as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image362-f6c75ac96832e4cb835124249439ecde.png" width="1920" height="1027" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>ios</strong> from the platform list as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image219-6a85ee671d10f0c83ad55f0567fbadce.png" width="1916" height="1019" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Fill in the <strong>bundle ID</strong> as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image377-0a7a8a7d51d1377db10ade9101e186f8.png" width="1299" height="1030" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Download the <strong>GoogleService-Info.plist</strong> as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image383-0bb5b34457e5e03198a5f16b694a32f7.png" width="1770" height="1010" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>next</strong> button as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image208-57e3fb60045dcbde1c00615d6d22206a.png" width="1110" height="1018" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>next</strong> button as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image258-c815ef54f466e5b99499adb90d335742.png" width="1048" height="1007" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on the <strong>Continue to Console</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image428-2c3a972d21969f009ba47669c4fc6749.png" width="946" height="824" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>button</strong> as shown below to see all the bundle IDs.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image373-48928dc938782398eb1ccf5bd0e8ed2a.png" width="1906" height="1022" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on the <strong>setting icon</strong> button of your bundle ID to see the details as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image217-1520674eb1a56587050d9e19a233b81e.png" width="1905" height="1016" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on the <strong>Cloud Messaging</strong> tab for configuration.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image417-6cccbc8b4fef88d765418015dd2c247e.png" width="1920" height="1030" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on <strong>Upload</strong> to continue with the APNs Authentication Key(For the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image404-ab24b9db294f39317b6a6c8ed7f6383f.png" width="1906" height="1030" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Upload the <strong>APN auth key</strong> as shown below (For the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image349-95dc0f9e525c1c199b7a21dc800afe3a.png" width="1907" height="1032" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Fill in all the <a href="#key-id-creation" class=""><u>Key Id</u></a> and <a href="#team-id-creation" class=""><u>Team Id</u></a> and click on <strong>upload</strong> (For FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image359-9f1ca3bf9599a1aac107c2c1907f50fd.png" width="1453" height="849" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once the above things are done your bundle ID is ready with the FCM configuration. (For FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image427-48ef30ab2fcd64b4914ba1f51137fc2b.png" width="1534" height="855" class="img_ev3q"></p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-key-id-and-team-id-creation-using-apple-developer-account">3.2. Key ID and Team ID creation using Apple developer account<a href="#32-key-id-and-team-id-creation-using-apple-developer-account" class="hash-link" aria-label="Direct link to 3.2. Key ID and Team ID creation using Apple developer account" title="Direct link to 3.2. Key ID and Team ID creation using Apple developer account" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="321apple-developer-account-access">3.2.1.Apple developer account access<a href="#321apple-developer-account-access" class="hash-link" aria-label="Direct link to 3.2.1.Apple developer account access" title="Direct link to 3.2.1.Apple developer account access" translate="no">​</a></h3>
+<ul>
+<li class="">Get the <a href="https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Faccount%2F&amp;rv=1" target="_blank" rel="noopener noreferrer" class=""><u>Apple developer account</u></a> details from the infra team.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image255-5a06409b9a8d143357dac4bbb66c51a6.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Give the Two-factor authentication from <a href="mailto:piyush.patil@procifynow.com" target="_blank" rel="noopener noreferrer" class=""><strong><u>Piyush Patil</u></strong></a>Sir.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image310-84fec5cef55799fa8c9cf4e8cb819210.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on <strong>Trust</strong> in this browser.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image333-7f5922df3e3e47d8dcb454ee81dcb7b5.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>Account</strong> from the tab.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image424-569566bf989e588a7810ef25da0a2cd7.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Now you have the Apple developer account.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image440-514011f5a13911cc9242605ae188707e.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="322key-id-creation">3.2.2.Key ID Creation<a href="#322key-id-creation" class="hash-link" aria-label="Direct link to 3.2.2.Key ID Creation" title="Direct link to 3.2.2.Key ID Creation" translate="no">​</a></h3>
+<ul>
+<li class="">Click the <strong>keys</strong> as shown below</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image440-514011f5a13911cc9242605ae188707e.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>( + )</strong> button to create a new key as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image438-a50d60eb6cae9128c94e84457fc20d7c.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Fill in the <strong>key name</strong> field and select the <strong>APN service,</strong> then click the <strong>Continue</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image263-14aafbcf02fed6a6083aa7c1cdbfc40f.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>Register</strong> button to continue as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image213-c938bc153bb67c2852afacc96851c85b.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class=""><a href="#create-a-new-bundle-id-1" class=""><u>Copy the key</u></a> ID, <strong>download</strong> the APN auth key and then, click on the <strong>Done</strong> button to complete the process.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image296-bbd34c243d739a95f9b1cc22afc1df90.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">You can check the <strong>new key</strong> in your key list as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image378-7caa00541c0661dc8e8c7e57b478d510.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="323team-id-creation">3.2.3.Team ID Creation<a href="#323team-id-creation" class="hash-link" aria-label="Direct link to 3.2.3.Team ID Creation" title="Direct link to 3.2.3.Team ID Creation" translate="no">​</a></h3>
+<ul>
+<li class="">Click the <strong>( + )</strong> button to create a new team ID in the <strong>Identifiers screen</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image442-a41ae8a80e59be4255dc203502cd0d41.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>App IDs</strong> and click continue.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image334-e5c933d28b1610abb3dc867814a20213.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select App as type and continue.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image220-2a9267223ff9e431284bb74930a0153a.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Fill in the <strong>Description</strong> field and <strong>bundle ID</strong> as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image326-1fd2d4897622a1904cbab52746389836.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>Push Notifications</strong> and click the <strong>Continue</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image441-a3f0cde55e8863f36f0e31cfa2b50375.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class=""><a href="#create-a-new-bundle-id-1" class=""><u>Copy the App ID prefix</u></a> and click <strong>Register</strong> to complete the process.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image300-4383d79d1eeb4c385ebd486259be4587.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">You can search for the identifier as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image254-b2d14cfc79b2d4d5abf9b06b4908df79.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="324add-udid">3.2.4.Add UDID<a href="#324add-udid" class="hash-link" aria-label="Direct link to 3.2.4.Add UDID" title="Direct link to 3.2.4.Add UDID" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3241get-the-udid-of-the-device">3.2.4.1.Get the UDID of the device<a href="#3241get-the-udid-of-the-device" class="hash-link" aria-label="Direct link to 3.2.4.1.Get the UDID of the device" title="Direct link to 3.2.4.1.Get the UDID of the device" translate="no">​</a></h4>
+<ul>
+<li class="">Connect the ios device to the mac.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image371-577c9f8a00ee5eea6392697d4a1ff0ee.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Sync the device.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image363-4336fd71d3cdfd2b0cfc7b2f4140003c.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">
+<p>Check the device is visible as shown below. If it’s not visible, select the song option from the menu and select the device again.</p>
+</li>
+<li class="">
+<p>Double-click the iPad Pro - 123.49.gb to see the UDID.</p>
+</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image212-fc11baddab847bce91f15471211df63b.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3242how-to-add-udid-for-project">3.2.4.2.How to Add UDID for project<a href="#3242how-to-add-udid-for-project" class="hash-link" aria-label="Direct link to 3.2.4.2.How to Add UDID for project" title="Direct link to 3.2.4.2.How to Add UDID for project" translate="no">​</a></h4>
+<ul>
+<li class="">Go to the Device screen which is present inside the <a href="#apple-developer-account-access" class=""><u>developer screen</u></a> and click the <strong>(+)</strong> to add a new UDID.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image391-80ab90f8b1096f449879678bce3a1086.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Fill in your UDID and <strong>device name</strong> as shown below and click <strong>continue</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image452-0098abf6f97d2ba90b7837a51efbaa12.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Check the details and click <strong>Register</strong> to register the device.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image397-f3318833828daee87b5ef9b950525150.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>done</strong> button to finish the process.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image277-3008086c2ba9041a57fcde12f5f7ba6a.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Now you can see your <strong>UDID</strong> in the list.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image289-438df28d30fcd4a13ade39b72dd73db9.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="33build-ios-project">3.3.Build IOS project<a href="#33build-ios-project" class="hash-link" aria-label="Direct link to 3.3.Build IOS project" title="Direct link to 3.3.Build IOS project" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="331get-a-working-project">3.3.1.Get a working project<a href="#331get-a-working-project" class="hash-link" aria-label="Direct link to 3.3.1.Get a working project" title="Direct link to 3.3.1.Get a working project" translate="no">​</a></h3>
+<ul>
+<li class="">Get the working sample project from here. The structure of the project looks as shown below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image279-2c6f7b143662f1853af5453d9f17a6c2.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="332change-the-config-file">3.3.2.Change the config file<a href="#332change-the-config-file" class="hash-link" aria-label="Direct link to 3.3.2.Change the config file" title="Direct link to 3.3.2.Change the config file" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p>Go to config.xml. Open the XML file with <strong>TextEdit</strong> as shown in the image below.<img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image306-45630978f9d3eb3d13f306768f709626.png" width="1322" height="826" class="img_ev3q"></p>
+</li>
+<li class="">
+<p>In the config.xml file,</p>
+</li>
+</ul>
+<ul>
+<li class="">
+<p><strong>Orange highlight:</strong> Bundle ID/App ID can be changed here.</p>
+</li>
+<li class="">
+<p><strong>Yellow Highlight:</strong> This will be the Project Name.</p>
+</li>
+<li class="">
+<p><strong>Red Highlight:</strong> This depicts the App description. App defining name.</p>
+</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image364-15a68b83dd0f02b4b16ca3c636b5fd15.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<p>If you aren&#x27;t making any changes, proceed with the build. However, if you&#x27;re making any changes to the config.xml, be sure to modify and save it first.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="333remove-the-platform">3.3.3.Remove the platform<a href="#333remove-the-platform" class="hash-link" aria-label="Direct link to 3.3.3.Remove the platform" title="Direct link to 3.3.3.Remove the platform" translate="no">​</a></h3>
+<ul>
+<li class="">Put the following command in the terminal window.</li>
+</ul>
+<ul>
+<li class="">
+<p>Orange: <strong>sudo -s</strong> current directory to root directory.</p>
+</li>
+<li class="">
+<p>Green: <strong>chmod -R 777</strong> .: This gives the read and write access</p>
+</li>
+<li class="">
+<p>Blue: <strong>Cordova platforms:</strong> when you want to check the platform details.</p>
+</li>
+<li class="">
+<p>Yellow: <strong>Cordova platform rm ios</strong>: this is for removing the platform.</p>
+</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image370-497f1159d4edf6ab70affb43f295ef3d.png" width="1322" height="826" class="img_ev3q"></p>
+<p><strong>Note:</strong> After entering <strong>sudo -s</strong> in the terminal, you&#x27;ll be prompted for a password. Enter the system password in that field (Highlighted with red).</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="334add-the-platform">3.3.4.Add the platform<a href="#334add-the-platform" class="hash-link" aria-label="Direct link to 3.3.4.Add the platform" title="Direct link to 3.3.4.Add the platform" translate="no">​</a></h3>
+<ul>
+<li class="">Once you remove the platform, add the new one as shown below.</li>
+</ul>
+<ul>
+<li class="">
+<p><strong>Orange Highlight:cordova platform add ios@7</strong> ,the command to add platform.</p>
+</li>
+<li class="">
+<p><strong>Blue Highlight:</strong> This highlight is used to make you notice that you have added the correct iOS version.</p>
+</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image402-20b3f0ed44e27a97175a18b0ecd638bf.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="335add-the-plugin-if-any-">3.3.5.Add the plugin( If any )<a href="#335add-the-plugin-if-any-" class="hash-link" aria-label="Direct link to 3.3.5.Add the plugin( If any )" title="Direct link to 3.3.5.Add the plugin( If any )" translate="no">​</a></h3>
+<ul>
+<li class="">Add the below two plugins for SOCIAL LOGIN</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Below steps are only for the SOCIAL LOGIN.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image216-eabcbf0f44d8fa510c90b3bb9b736d3f.png" width="2048" height="1280" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image205-efe069a2310394b552064a6fbfeb1567.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Here we are adding a plugin for FCM.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image406-e77cda3fdb31eaf7720a2b98e7feb674.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once you add the FCM plugin, you will face this as shown below.</li>
+</ul>
+<p><strong>Note:</strong> These steps are only for the FCM plugin.</p>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image273-70798187a8700094e86e1effae25b2c0.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Now delete the FCM plugin as shown below.</li>
+</ul>
+<p><strong>Note:</strong> This step is only for the FCM plugin.</p>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image214-3dcfee900c7ded04e0dbfd4022095c3a.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Delete the <strong>GoogleService-Info.plist</strong> as shown below (This step is Only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image379-22a5542aa8cf7c78d208572f5179c2d1.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Delete the <strong>node_modules</strong> from the project as shown below (This step is only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image336-b903290990063c5d03261ed56e2756ab.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Install the <strong>node_modules</strong> using the command “<strong>npm install</strong> ” as shown below (This step is Only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image384-ee2c85c48e8a46b37e3e3920c0ca1662.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Add the plugin again as shown below (This step is Only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image395-1f39d0c0edccff5ed3cc9af64c4a1b61.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="336update-the-googleservice-infoplist-and-images">3.3.6.Update the GoogleService-Info.plist and images<a href="#336update-the-googleservice-infoplist-and-images" class="hash-link" aria-label="Direct link to 3.3.6.Update the GoogleService-Info.plist and images" title="Direct link to 3.3.6.Update the GoogleService-Info.plist and images" translate="no">​</a></h3>
+<ul>
+<li class="">When you want to get a <strong>bundle ID (it is an authentication identifier that is unique for any application)</strong> from someone, use this Google file/service.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image431-5513a27b2f8b7f7561fbc85d82e99b5d.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Copy and paste the bundle ID in two other places in your project folder; one under your <strong>Project folder</strong> and the other in your <strong>Resourcesfolder</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image55-b58a628a759843d817ea16efdce3c8f2.png" width="1322" height="826" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image178-d26398151bef08c221389cdc6c21ed33.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">When you want to change the app icon, go to this folder.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image148-f3d0b6a7489444876795950a115a1408.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">The following folder highlighted should be kept in a shared folder. This will help the users get access, and use it to change the size and dimension as required.<img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image38-48954b9ba0d654f6e73559da1edf9a81.png" width="1322" height="826" class="img_ev3q"></li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="337change-in-podfile">3.3.7.Change in Podfile<a href="#337change-in-podfile" class="hash-link" aria-label="Direct link to 3.3.7.Change in Podfile" title="Direct link to 3.3.7.Change in Podfile" translate="no">​</a></h3>
+<ul>
+<li class="">Open the existing <strong>Podfile</strong> as shown below (This step is only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image355-6318a113f9410c5300f2952a8b02c34f.png" width="2048" height="1280" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image380-67fb526450c38a4197e265934025a619.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Change the <strong>iOS</strong> version as shown below (This step is Only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image351-46e13bfbb1a0246c902648583b86e618.png" width="2048" height="1280" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image314-f94d5bf7baa04bcc38d69ec2dea43788.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Open the terminal in the ios folder as shown below (This step is only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image409-b327afae782611ff5240beb1877604eb.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Give the root access and install the pod using the command: <strong>pod install –allow-root</strong> (This step is only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image257-d43add3a2d2f3413ef3dc584c1ef9ad2.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once you install the pod, then the pod installation process is finished (This step is Only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image262-abffc3ad42247af03c217f52121d0b2c.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="338xcode-setup-if-its-a-new-mac">3.3.8.XCode setup( If it’s a new Mac)<a href="#338xcode-setup-if-its-a-new-mac" class="hash-link" aria-label="Direct link to 3.3.8.XCode setup( If it’s a new Mac)" title="Direct link to 3.3.8.XCode setup( If it’s a new Mac)" translate="no">​</a></h3>
+<ul>
+<li class="">Open your project and open the XCode project as shown below</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image256-b80efe0e554a5eaba3af09fbe6afd76b.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">You can see the Team field showing some errors.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image345-ff5ebfaf0bc49377e253e37509120579.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on the drop-down and click <strong>Add an Account</strong> to add an Apple developer account.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image318-5e5ba9a93c4b2dd2bb6123d444f6e8e7.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Give the Apple developer account credentials for login.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image203-c5b72d83cf20c1ca57455fd91859a254.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once the login process is done, click the manage certificate button and check the team list.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image339-5e0e6ea1b8f5afc15891053c7a83823a.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="339some-changes-in-the-xcode-environment">3.3.9.Some changes in the XCode environment<a href="#339some-changes-in-the-xcode-environment" class="hash-link" aria-label="Direct link to 3.3.9.Some changes in the XCode environment" title="Direct link to 3.3.9.Some changes in the XCode environment" translate="no">​</a></h3>
+<ul>
+<li class="">Change things as shown below.</li>
+</ul>
+<blockquote>
+<p>(This step is only for the FCM plugin).</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image291-b873a1b4a3eedf944b8ecd82cccc6f95.png" width="2048" height="1280" class="img_ev3q"></p>
+<p><strong>Above mentioned fields data need to be modified as shown in the below screenshot.</strong><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image283-0dfe1429cc39c623a0c8714f7912a2b1.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>certification</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image420-f9d629d752203797a51404f4c6fa094f.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">After selection, the authorized team will be selected.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image332-f532439a524c838a15b64c668bd5a7c0.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">If you have any feature or plugin based on Location, add that to your <strong>Custom iOS Target Properties,</strong> under Info.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image423-0f4417ad371eada144c8e1b78ceb8c7e.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Under Build Settings, change the Swift Language Version to <strong>Swift 5.</strong></li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image357-dd6f18846f5629046fb931c29452e9ae.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3310connect-the-ipad-to-the-mac-and-build-it">3.3.10.Connect the iPad to the Mac and build it<a href="#3310connect-the-ipad-to-the-mac-and-build-it" class="hash-link" aria-label="Direct link to 3.3.10.Connect the iPad to the Mac and build it" title="Direct link to 3.3.10.Connect the iPad to the Mac and build it" translate="no">​</a></h3>
+<ul>
+<li class="">Select your project from the top bar.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image324-04dc757974f88cd7af44a4b70a9aecd5.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the testing device.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image253-028ccd28e8c7e570c812b66937f0252d.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on the <strong>run</strong> button to start the build process.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image426-e8a8976e71e78dd8ab65c74fb3cb5102.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once the build is triggered, it will appear in the location shown in the image below.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image408-435d31e50a1a1df0a4239fe5ef3e19c8.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Here you can also find the number of errors that came during the build. Once you click on the error, you will be taken to the error log (list of errors).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image415-a4c4d7510a43b37ddb63891b828283b0.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">You will see the error line. You are required to delete the error code.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> delete the error code.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image268-37dc975af24e4e927353228d65d608f6.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once the code is deleted the screen looks like this.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image276-fef2ee05c3224491cfa1d37c9a10f246.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once the code is removed, clean the build folder.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image295-b60629e59588f12297d8cc6d20842bf8.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Once again click on the build. Once the process is completed, the logs will be visible in the screen below.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> These logs are from Xcode.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image347-1b3c53adb9d9f75247b12d4455cd3fee.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Open the <strong>.xcworkspace</strong> ( This step is Only for the FCM plugin )</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image211-aea9c06da97571a289df5e70b4db4f6e.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">And click on the run button (This step is Only for the FCM plugin).</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image341-59570331ed4f47bbf1575a503e0e6f57.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">To debug from Safari, go to <strong>Develop&gt; ipad&gt; localhost</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image342-3392db852c532c26046065e19b6982d4.png" width="1322" height="826" class="img_ev3q"></p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="34create-ipa-file">3.4.Create IPA file<a href="#34create-ipa-file" class="hash-link" aria-label="Direct link to 3.4.Create IPA file" title="Direct link to 3.4.Create IPA file" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="341change-the-archive-type">3.4.1.Change the archive type<a href="#341change-the-archive-type" class="hash-link" aria-label="Direct link to 3.4.1.Change the archive type" title="Direct link to 3.4.1.Change the archive type" translate="no">​</a></h3>
+<ul>
+<li class="">As shown below, navigate to the <strong>Scheme screen.</strong></li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image356-73e145218f0ffbb8b257e51aaa1308ce.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Change the <strong>Archive build configuration</strong> to &quot;Debug&quot; as shown below, then click the <strong>close</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image315-5dc7295897392ee8ca60d29a5544b6a3.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="342archive-and-create-the-ipa-file">3.4.2.Archive and create the IPA file<a href="#342archive-and-create-the-ipa-file" class="hash-link" aria-label="Direct link to 3.4.2.Archive and create the IPA file" title="Direct link to 3.4.2.Archive and create the IPA file" translate="no">​</a></h3>
+<ul>
+<li class="">Click on <strong>Archive</strong>.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image356-73e145218f0ffbb8b257e51aaa1308ce.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click on the <strong>Distribute app.</strong></li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image446-2da32ea4e84411920d9e8575f0713a09.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>Development</strong> option and click the <strong>next</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image330-71df44ec054beb045fa675319cf899a7.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select all compatible device variants from the list and click on the <strong>next</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image338-17960b32d494f8624f9664f15e08dcf6.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the <strong>Automatically manage signing</strong> and click the <strong>next</strong> button.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image288-b5d7a3b47dcfce09b532eddd4a05c029.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Click the <strong>Export</strong> button to export to your folder.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image451-2445d02fd6e0bb559117e7eff799d62d.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Select the folder location and <strong>export</strong> it.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image360-e54c8917aa67df6a9994b97105388019.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote>
+<ul>
+<li class="">Check your folder; your IPA is ready.</li>
+</ul>
+<blockquote>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/ios-ipa-build-image265-a908f207255435a72340c0e6b32e56ca.png" width="2048" height="1280" class="img_ev3q"></p>
+</blockquote></div></div><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20iOS%20IPA%20Build%20%E2%80%94%20IPA%20build%20with%20Organization%20Developer%20Account">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20iOS%20IPA%20Build%20%E2%80%94%20IPA%20build%20with%20Organization%20Developer%20Account">Report an issue</a></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/IPA build with Enterprise apple developer account"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">IPA build with Enterprise apple developer account</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Create a URL for ipa"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Create a URL for ipa</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#31bundle-id-creation-using-firebase" class="table-of-contents__link toc-highlight">3.1.Bundle ID creation using Firebase</a></li><li><a href="#32-key-id-and-team-id-creation-using-apple-developer-account" class="table-of-contents__link toc-highlight">3.2. Key ID and Team ID creation using Apple developer account</a></li><li><a href="#33build-ios-project" class="table-of-contents__link toc-highlight">3.3.Build IOS project</a></li><li><a href="#34create-ipa-file" class="table-of-contents__link toc-highlight">3.4.Create IPA file</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advanced Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer></div>
+</body>
+</html>

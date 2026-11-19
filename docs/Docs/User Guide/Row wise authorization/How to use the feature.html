@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/User Guide/Row wise authorization/How to use the feature" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Row wise authorization — How to use the feature? | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use the feature"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Row wise authorization — How to use the feature? | Procify Technical Documentation"><meta data-rh="true" name="description" content="How does Row-wise authorization work ?"><meta data-rh="true" property="og:description" content="How does Row-wise authorization work ?"><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use the feature"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use the feature" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use the feature" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"How to use the feature?","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use the feature"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.01d4a2b9.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.d134d965.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.6a5dfa98.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--user-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction">User Guide</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction">API Services</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction">App Dependencies</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction">App Lifecycle Events</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction">App Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction">Auto-Number Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction">Automation</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction">Best Practice Guidelines</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction">Developer AI</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction">Dialog Events</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction">FAQs Editor</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction">KloAvatar</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction">KloController closeDialog</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction">KloTriState</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction">Menu Builder</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction">Notification Modeler</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction">Page Builder</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction">Permission Designer</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction">Pivot Modeller</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction">Query Console</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction">Row wise authorization</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction">Server Side Attachment Upload</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction">Workspace Hub</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction">Workspace Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction">Git Integration</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction">Landing Page Settings</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction">Message Monitoring</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction">Middleware Message Forwarding</a></li><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction">Query Analysis</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--installation-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction">Installation Guide</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Android APK Build/Introduction">Android APK Build</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/iOS IPA Build/Introduction">iOS IPA Build</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node Setup on Macbook/Introduction">Private Node Setup on Macbook</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Private Node 6.0 Setup - 1. Introduction">Private Node 6.0 Setup</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--training-guide" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide - Beginner</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advance Training Guide</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--api-document-link" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">API Document Link</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">BOL API</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/Class EndPointBean">EndPointBean</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--release-notes" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">7.2.375 (Latest)</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.374 Klobase Release Note">7.2.374</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.370 Klobase Release Note">7.2.370</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.368 Klobase Release Note">7.2.368</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.367 Klobase Release Note">7.2.367</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.365 Klobase Release Note">7.2.365</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.360 Klobase Release Note">7.2.360</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.359 Klobase Release Note">7.2.359</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.356 Klobase Release Note">7.2.356</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.351 Klobase Release Note">7.2.351</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.350 Klobase Release Note">7.2.350</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.346 Klobase Release Note">7.2.346</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.345 Klobase Release Note">7.2.345</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.344 Klobase Release Note">7.2.344</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.343 KloBase Release Note">7.2.343</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.338 Klobase Release Note">7.2.338</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.336 Klobase Release Note">7.2.336</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.335 Klobase Release Note">7.2.335</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.334 Klobase Release Note">7.2.334</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.333 Klobase Release Note">7.2.333</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.329 Klobase Release Note">7.2.329</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.327 Klobase Release Note">7.2.327</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.326 Klobase Release Note">7.2.326</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.322 Klobase Release Note">7.2.322</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.321 Klobase Release Note">7.2.321</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.319 Klobase Release Note">7.2.319</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.314 Klobase Release Note">7.2.314</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.312 Klobase Release Note">7.2.312</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.305 Klobase Release Note">7.2.305</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.298 Klobase Release Note">7.2.298</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.297 Klobase Release Note">7.2.297</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.291 Klobase Release Note">7.2.291</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.286 Klobase Release Note">7.2.286</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.285 Klobase Release Note">7.2.285</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.284 Klobase Release Note">7.2.284</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.281 Klobase Release Note">7.2.281</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.277 Klobase Release Note">7.2.277</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.275 Klobase Release Note">7.2.275</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.265 Klobase Release Note">7.2.265</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.258 Klobase Release Note">7.2.258</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.256 Klobase Release Note">7.2.256</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.254 Klobase Release Note">7.2.254</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.239 Klobase Release Note">7.2.239</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.238 Klobase Release Note">7.2.238</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.237 Klobase Release Note">7.2.237</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.235 Klobase Release Note">7.2.235</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.229 Klobase Release Note">7.2.229</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.228 Klobase Release Note">7.2.228</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.226 Klobase Release Note">7.2.226</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.223 Klobase Release Note">7.2.223</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.219 Klobase Release Note">7.2.219</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.216 Klobase Release Note">7.2.216</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.210 Klobase Release Note">7.2.210</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.208 Klobase Release Note">7.2.208</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.199 Klobase Release Note">7.2.199</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.195 Klobase Release Note">7.2.195</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.188 Klobase Release Note">7.2.188</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.181 Klobase Release Note">7.2.181</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.171 Klobase Release Note">7.2.171</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.167 Klobase Release Note">7.2.167</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.165 Klobase Release Note">7.2.165</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.163 Klobase Release Note">7.2.163</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.158 Klobase Release Note">7.2.158</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.152 Klobase Release Note">7.2.152</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.149 Klobase Release Note">7.2.149</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.147 Klobase Release Note">7.2.147</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.138 Klobase Release Note">7.2.138</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.136 Klobase Release Note">7.2.136</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.129 Klobase Release Note">7.2.129</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.126 Klobase Release Note">7.2.126</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.118 Klobase Release Note">7.2.118</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.115 Klobase Release Note">7.2.115</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.113 Klobase Release Note">7.2.113</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.109 Klobase Release Note">7.2.109</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.108 Klobase Release Note">7.2.108</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.104 Klobase Release Note">7.2.104</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.98 Klobase Release Note">7.2.98</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.96 Klobase Release Note">7.2.96</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.94 Klobase Release Note">7.2.94</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.92 Klobase Release Note">7.2.92</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.87 Klobase Release Note">7.2.87</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.86 Klobase Release Note">7.2.86</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.84 Klobase Release Note">7.2.84</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.82 Klobase Release Note">7.2.82</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.76 Klobase Release Note">7.2.76</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.74 Klobase Release Note">7.2.74</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.70 Klobase Release Note">7.2.70</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.69 Klobase Release Note">7.2.69</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.68 Klobase Release Note">7.2.68</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.65 Klobase Release Note">7.2.65</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.61 Klobase Release Note">7.2.61</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.58 Klobase Release Note">7.2.58</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.57 Klobase Release Note">7.2.57</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.54 Klobase Release Note">7.2.54</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.52 Klobase Release Note">7.2.52</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.49 Klobase Release Note">7.2.49</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.48 Klobase Release Note">7.2.48</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.47 Klobase Release Note">7.2.47</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.45 Klobase Release Note">7.2.45</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.39 Klobase Release Note">7.2.39</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.36 Klobase Release Note">7.2.36</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.35 Klobase Release Note">7.2.35</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.34 Klobase Release Note">7.2.34</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.33 Klobase Release Note">7.2.33</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.32 Klobase Release Note">7.2.32</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.27 Klobase Release Note">7.2.27</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--legal">Legal</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Copyright">Copyright</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Disclaimer">Disclaimer</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">User Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction"><span class="categoryLinkLabel_W154">Server Side Attachment Upload</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction"><span class="categoryLinkLabel_W154">Workspace Hub</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction"><span class="categoryLinkLabel_W154">App Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction"><span class="categoryLinkLabel_W154">Workspace Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction"><span class="categoryLinkLabel_W154">Menu Builder</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction"><span class="categoryLinkLabel_W154">Notification Modeler</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction"><span class="categoryLinkLabel_W154">App Dependencies</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction"><span class="categoryLinkLabel_W154">FAQs Editor</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction"><span class="categoryLinkLabel_W154">KloController closeDialog</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction"><span class="categoryLinkLabel_W154">API Services</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction"><span class="categoryLinkLabel_W154">Query Console</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction"><span class="categoryLinkLabel_W154">Page Builder</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction"><span class="categoryLinkLabel_W154">Developer AI</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction"><span class="categoryLinkLabel_W154">Permission Designer</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction"><span class="categoryLinkLabel_W154">Row wise authorization</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction"><span class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Overview"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Pre-requisites"><span class="linkLabel_WmDU">Pre-requisites</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to enable the feature"><span class="linkLabel_WmDU">How to enable the feature?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use the feature"><span class="linkLabel_WmDU">How to use the feature?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/User Data Access"><span class="linkLabel_WmDU">User Data Access</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Pre-requisites for User Data Access"><span class="linkLabel_WmDU">Pre-requisites for User Data Access</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to enable User Data Access"><span class="linkLabel_WmDU">How to enable User Data Access</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use User Data Access"><span class="linkLabel_WmDU">How to use User Data Access</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to get Data Access Rules"><span class="linkLabel_WmDU">How to get Data Access Rules?</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Pre-requisites for Data Access Rules"><span class="linkLabel_WmDU">Pre-requisites for Data Access Rules</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to enable Data Access Rules"><span class="linkLabel_WmDU">How to enable Data Access Rules</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to use Data Access Rules"><span class="linkLabel_WmDU">How to use Data Access Rules</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Best practices"><span class="linkLabel_WmDU">Best practices</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction"><span class="categoryLinkLabel_W154">Automation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction"><span class="categoryLinkLabel_W154">Auto-Number Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction"><span class="categoryLinkLabel_W154">Dialog Events</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction"><span class="categoryLinkLabel_W154">KloTriState</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction"><span class="categoryLinkLabel_W154">Best Practice Guidelines</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction"><span class="categoryLinkLabel_W154">KloAvatar</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction"><span class="categoryLinkLabel_W154">Pivot Modeller</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction"><span class="categoryLinkLabel_W154">App Lifecycle Events</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction"><span class="categoryLinkLabel_W154">Git Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction"><span class="categoryLinkLabel_W154">Landing Page Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction"><span class="categoryLinkLabel_W154">Message Monitoring</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction"><span class="categoryLinkLabel_W154">Middleware Message Forwarding</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction"><span class="categoryLinkLabel_W154">Query Analysis</span></a></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">User Guide</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Row wise authorization</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">How to use the feature?</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>How to use the feature?</h1></header>
+<p>How does Row-wise authorization work ?</p>
+<p>Row wise authorization works by filtering records on the server level by matching tokens (strings that are used to create a mapping) between user and data.</p>
+<p>A simple illustration like:</p>
+<p><strong>Entity Data:</strong></p>
+<p>data1 -&gt; [token1, token2]</p>
+<p>data2 -&gt; [token2, token3]</p>
+<p>data3 -&gt; [token4, token5]</p>
+<p><strong>User tokens:</strong></p>
+<p>user1 -&gt; [token1] -&gt; [data1]</p>
+<p>user2 -&gt; [token1, token2] -&gt; [data1, data2]</p>
+<p>user3 -&gt; [token3, token4] -&gt; [data2, data3]</p>
+<p>user4 -&gt; [] -&gt; []</p>
+<p>Consider an entity ENT_A, where row wise authorization is enabled, and each record in ENT_A has a set of tokens assigned to it. Consider user USER_A, who has a set of tokens for that entity assigned to him. When USER_A fires a query, he will get only the records in the entity ENT_A which have at least of the tokens that USER_A has.</p>
+<p>Eg : Consider entity d_no_hdr</p>
+<table><colgroup>
+<col style="width:7%">
+<col style="width:32%">
+<col style="width:20%">
+<col style="width:20%">
+<col style="width:20%">
+</colgroup><thead><tr class="header"><th>S.no</th><th>k_notif_id</th><th>work_center</th><th>plant</th><th>Access Tokens</th></tr><tr class="odd"><th>1</th><th>10005154</th><th><mark>ELEC</mark></th><th>2000</th><th><p>wc=elec</p>
+<p>pl=2000</p></th></tr><tr class="header"><th>2</th><th>M10236914</th><th><mark>CIVIL</mark></th><th>2000</th><th><p>wc=civil</p>
+<p>pl=2000</p></th></tr><tr class="odd"><th>3</th><th>M10236913</th><th><mark>AIW</mark></th><th>2000</th><th><p>wc=aiw</p>
+<p>pl=2000</p></th></tr><tr class="header"><th>4</th><th>10005141</th><th><mark>AIW</mark></th><th>2000</th><th><p>wc=aiw</p>
+<p>pl=2000</p></th></tr><tr class="odd"><th>5</th><th>10005140</th><th><mark>CIVIL</mark></th><th>2000</th><th><p>wc=civil</p>
+<p>pl=2000</p></th></tr><tr class="header"><th>6</th><th>10005142</th><th><mark>CIVIL</mark></th><th>2002</th><th><p>wc=civil</p>
+<p>pl=2002</p></th></tr></thead><tbody></tbody></table>
+<p>In the above example we have two tokens assigned for each record of data, as listed in the access token column.</p>
+<p>Now consider a set of users and the token assigned to the users as listed below.</p>
+<table><colgroup>
+<col style="width:50%">
+<col style="width:50%">
+</colgroup><thead><tr class="header"><th>User Id</th><th>Access Tokens</th></tr><tr class="odd"><th>asset_manager_01</th><th>wc=aiw</th></tr><tr class="header"><th>elec_manager_01</th><th>wc=elec</th></tr><tr class="odd"><th>plant_head_01</th><th>pl=2000</th></tr><tr class="header"><th>elec_civil_user_01</th><th><p>wc=elec</p>
+<p>wc=civil</p></th></tr></thead><tbody></tbody></table>
+<p>Now when query is fired by,</p>
+<ol>
+<li class="">
+<p>asset_manager_01, record 3rd &amp; 4th will be returned as the user has only <strong>wc=aiw</strong> token assigned to him and only the 3rd &amp; 4th record have the <strong>wc=aiw</strong> tokens.</p>
+</li>
+<li class="">
+<p>elec_manager_01, has token <strong>wc=elec</strong>, so records 1st will be returned as that is the only record with token <strong>wc=elec</strong>.</p>
+</li>
+<li class="">
+<p>plant_head_01, has token <strong>pl=2000</strong>, so all records from 1-5 will be returned as all those records have token <strong>pl=2000.</strong></p>
+</li>
+<li class="">
+<p>elec_civil_user_01, has tokens <strong>wc=elec, wc=civil</strong>, so, records 1,2,5,6 will be returned. As record 1 has token <strong>wc=elec</strong> and record 2,5,6 has token <strong>wc=civil.</strong></p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="41quick-start">4.1.Quick start:<a href="#41quick-start" class="hash-link" aria-label="Direct link to 4.1.Quick start:" title="Direct link to 4.1.Quick start:" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="411-quick-start-for-row-wise-authorization">4.1.1 Quick start for row wise authorization.<a href="#411-quick-start-for-row-wise-authorization" class="hash-link" aria-label="Direct link to 4.1.1 Quick start for row wise authorization." title="Direct link to 4.1.1 Quick start for row wise authorization." translate="no">​</a></h3>
+<p><strong>Step 1</strong> : Enable row wise authorization on the entity via Data Studio.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image15-528f159077d3b81e3ccaef6b6ef24722.png" width="1902" height="877" class="img_ev3q"></p>
+<p><strong>Step 2 :</strong> Create an access token template, enter a readable ID and Key (can be the same).</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image11-18652cbf9052b817973e47271a407e64.png" width="1440" height="423" class="img_ev3q"></p>
+<p><strong>Step 3 :</strong> Click on the property expand icon, click on + - add property, and select the property with which you want to control data access.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image18-ee789918eeb6ae7e5379533316b82918.png" width="1920" height="919" class="img_ev3q"></p>
+<p><strong>Step 4 :</strong> Save the entity. You will see a dialog asking to recalculate the access token. (This dialog won’t be shown if the entity was newly created). Click OK.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image7-9ed3a91178e214f05f6613ff04a71003.png" width="1920" height="920" class="img_ev3q"></p>
+<p><strong>Step 5 :</strong> After recalculation is done, another dialog will appear to build the flavor (This dialog won’t be shown if the entity was newly created). Build the flavor.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image13-020289ed23c328a942c3b7677901a90b.png" width="1920" height="917" class="img_ev3q"></p>
+<p><strong>Step 6 :</strong> Add some data in the Data Studio. And make sure to fill the property used for row wise authorization. (Optional if data is already present.)</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image16-da4d9d269d3b5844d355726035d88c6e.png" width="1920" height="920" class="img_ev3q"></p>
+<p><strong>Step 7 :</strong> Click on the navigate icon <img decoding="async" loading="lazy" alt="Screenshot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAaCAYAAADbhS54AAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjlkYjYyNTFjLTM3ZDQtNDQzZC05YmExLTMzOTQzODExZDIwOAAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNob58v0+5NffWkxrut30PbwQAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6MzBmMDg3MzEtYTgzNC00Njc2LThmZmMtMzYyNDg0NzRlOGE4bHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaPgFzCOatVfKAG4VqES68dcAAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIChy+AE07/a5q/VgyH12Nhf/umH7rkrBznSFKUU6mjILpGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2gmuJBWHJAXNWkrBHZ+6fzeAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggLDTOBGnBheZVLaXRqN6jTnL3n6oVgIb5TfGmkYMSE65kbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTo5ZGI2MjUxYy0zN2Q0LTQ0M2QtOWJhMS0zMzk0MzgxMWQyMDgvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDo1Y2NlNjIyZC1lOWU1LTQ0OGQtYjVmMC02YjVjODI0ZDk4NTRyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggKHL4ATTv9rmr9WDIfXY2F/+6YfuuSsHOdIUpRTqaMguiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIFqD1F1rGM39OswfFVd5CwJaNI+tesZyB6riK8JS9ig5omN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYICigWfRUYCZ1qA0kV42UNu++cCswxn2QUfxqRzTFR9ktdGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2WEAwvMMuVp3Nz4gm+0Alvi6N0yjqg7ZxnaBJqi3D1lrLgaC/+9SoudoEJnbK69WrHCcj2+hvzUb4/NAfDIy4PhZinjtAngAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAC2klEQVRYR+2WX0hTYRjGn8acwyEaG4jzygYJBg7So7EsmReWN44uzmUXRV54EfSHUmQQXa2QCBMaOVJoo8BBdbyxJByWjtYwoigaNENwo8kZQaZ5dPp1/nyYme6cA1Fe+Ls533nej3Me3u9933P2EBHsQAz0uuPYNaaXHWtMd/HPx8JgA0lkYYanvR3eBguNKKRHB3F6KLNtXCv6MsY/R2fgCzydXeBazeCGJ5GmIYUUxsYysHvaEe/ch3jgPjiehvQiZUwrbwM9pO7qOOGlm1WeTKdXZH0jQnqW8KvSiidDV3yk7d4nWdeL9owtvkLwZQ7upnpYpXuDFZXlRjm0EVN5BazyU61oPmRFejyKyKIc0oVmY4nHMUQKHGCPmKmijvWoE27xeO+OpKiiHW3G1j6Ae7GA4toDYPRUZVE9WMaIxLMo4mtU04im12RHJxEWLGDd1VTRDtO8H3YhicHRLFW0oWFczMB/8QEGvgLFheK4EESp0AKGaYD3ZD3sBcqudVYyiASH4Y9n8Vnea4RJyGF5rxOhG62oUnapI7dAHviRflJ3ykfYvhiZXlI0IfOe3Pb6SN0FjnyUO5Cy8IZcP+sjLu9DMjHzQ9GWZslY3y35GR0jcj9rQiVjKYS6ghgoawF3/iCKqSqzloT/UhghQezMRTEjBiOs5hyyhdUI9bSh6rciWUDkph+XMzXgrrXATtV8qNRYBok54LBrkykJgwPHxam+bKtB+E4X4v1n0FEOVDbUbjIlYYHbVQHMicdLFTVUjJXAXkKX22ErU+rMUAqb2t4SC2x0qYaKMQeaGQsmo68xT5V1xKN8EhPANjqpIGa20QE+NoXEH6NBPMpoCnbG+feKn6zOkmD31sV/rHeKfFMkyncy0duzZfG7up+S6Y2NooK2v4tNI8BUVAoPewLnmspgolt+kRM/Q4/gDSfxTvoU5RstedD92/OvUKmx/8euMb3sGtMH8BM2F2Ibj9csqQAAAABJRU5ErkJggg==" width="38" height="26" class="img_ev3q"> in the access token. It will navigate to the Data Access Rules screen in the Workspace Hub (Workspace Hub should be assigned to the user).</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image37-1e3de80e84674b7147119cc4a7de7959.png" width="1443" height="412" class="img_ev3q"></p>
+<ul>
+<li class="">In the Data Access Rules screen, check the generated Data Access Keys. For each record where the access token property is not null, a token should be generated.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image17-1696924678e655c0ac61258d9b890b03.png" width="1919" height="398" class="img_ev3q"></p>
+<ul>
+<li class="">Now we have successfully generated the Data Access Keys. Now, we have to generate matching User Access Keys to provide access.</li>
+</ul>
+<p><strong>Step 8 :</strong> Now we have to add access tokens to users based on what data they should have access to. Go to the Workspace Hub and create some roles in the application.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image12-d97792bfb8565bf0d727d67a9f2626de.png" width="1920" height="663" class="img_ev3q"></p>
+<p><strong>Step 9 :</strong> Create <a href="http://entity.ts" target="_blank" rel="noopener noreferrer" class=""><u>entity.ts</u></a> file for the row wise authorized entity. And add a method as shown below and correct the logic to match your application requirement. Fire query to application entities, if access is dependent upon application data. Copy this code to a temporary file for clearer view.</p>
+<table><colgroup>
+<col style="width:100%">
+</colgroup><thead><tr class="header"><th>import { d_invoice as d_invoice_gen } from &quot;invoice_management/entity_gen/d_invoice&quot;;<br>
+import { KloTransaction } from &quot;kloBo/KloTransaction&quot;;<br>
+import { AccessTokenHelper, EntityAccessTokenCallbackReturnType } from &quot;kloBo/KloEntity&quot;;<br>
+<br>
+export class d_invoice extends d_invoice_gen {<br>
+static async getAccessTokensForUsers(txn: KloTransaction, flavor: string, version: string, userAppRoleMap: { [user_id: string]: string }, accessTokenHelper: AccessTokenHelper): Promise&lt;EntityAccessTokenCallbackReturnType&gt; {<br>
+let userIdList = Object.keys(userAppRoleMap);<br>
+<br>
+let accessTokensMap: EntityAccessTokenCallbackReturnType = {};<br>
+debugger;<br>
+for (let user_id of userIdList) {<br>
+/**<br>
+* Building the EntityAccessTokenCallbackReturnType map.<br>
+* {<br>
+* user_id1 : {<br>
+* access_token: [ token1, token2 ]<br>
+* },<br>
+* user_id2 : {<br>
+* access_token: [ token3, token4 ]<br>
+* }<br>
+* }<br>
+*/<br>
+if (!accessTokensMap[user_id]) accessTokensMap[user_id] = { access_tokens: [] };<br>
+<br>
+if (userAppRoleMap[user_id] == &quot;FINANCE_VIEWER&quot;) {<br>
+accessTokensMap[user_id].access_tokens.push(<br>
+await accessTokenHelper.getAccessToken(<br>
+&quot;status&quot; /** ID from access token screen - not the property*/,<br>
+{<br>
+status: &quot;approved&quot;,<br>
+} /** Object with property : value for properties used in access token.*/<br>
+)<br>
+);<br>
+} else if (userAppRoleMap[user_id] == &quot;CREATOR&quot;) {<br>
+accessTokensMap[user_id].access_tokens.push(await accessTokenHelper.getAccessToken(&quot;status&quot;, { status: &quot;draft&quot; }));<br>
+} else if (userAppRoleMap[user_id] == &quot;APPROVER&quot;) {<br>
+accessTokensMap[user_id].access_tokens.push(await accessTokenHelper.getAccessToken(&quot;status&quot;, { status: &quot;pending&quot; }));<br>
+} else if (userAppRoleMap[user_id] == &quot;AUDITOR&quot;) {<br>
+accessTokensMap[user_id].access_tokens.push(await accessTokenHelper.getAccessToken(&quot;status&quot;, { status: &quot;paid&quot; }), await accessTokenHelper.getAccessToken(&quot;status&quot;, { status: &quot;approved&quot; }));<br>
+}<br>
+}<br>
+<br>
+return accessTokensMap;<br>
+}<br>
+}</th></tr></thead><tbody></tbody></table>
+<p><strong>Note :</strong> This example considers a use where each role has access to a set of data, but cases where the User Access Keys should be generated based on application data are also possible.</p>
+<p><strong>Step 10 :</strong> Go to the User Data Access in the Security &amp; Permissions and click on re-calculate, select flavor, entity name and click recalculate.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image3-4b406bfc333c0aef19dd6fcb25454b0d.png" width="451" height="325" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image33-118dbcf45eff2c832f770af640a1e4c6.png" width="1920" height="920" class="img_ev3q"></p>
+<ul>
+<li class="">Once done, it should generate access tokens for all the users who the application is assigned, based on the logic. (No token will be generated if the application is not assigned with an Application Role). This method can be debugged by triggering re-calculate from private node registration.</li>
+</ul>
+<p><strong>Step 11 :</strong> Now assign the application to some user, and configure based on the logic written in the getAccessTokensForUsers callback. After assigning the flavor, a token should be generated for the user based on the callback logic.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image19-5366776c8b973a7c6e58b0c86f79a87a.png" width="1920" height="920" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image27-9c19d35513592a6fafcb6f5944bc165e.png" width="1919" height="332" class="img_ev3q"></p>
+<p><strong>Step 12 :</strong> Create a screen with the entity and add it to the menu, and build the flavor.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image14-c96722da05285cbb231c7b3020d99581.png" width="1920" height="909" class="img_ev3q"></p>
+<p><strong>Step 13 :</strong> Register with the assigned user. Only the data that has access to should be listed.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image35-dac6dcc241bb425bf491c017682e8ab3.png" width="1920" height="920" class="img_ev3q"></p>
+<p>Thus row wise authorization can be configured.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="412-where-to-next-">4.1.2. Where to next ?<a href="#412-where-to-next-" class="hash-link" aria-label="Direct link to 4.1.2. Where to next ?" title="Direct link to 4.1.2. Where to next ?" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><a href="#entity-token-callback-onaccesstokencalculate" class=""><u>Data Access Keys callback, onAccessTokenCalculate</u></a></p>
+</li>
+<li class="">
+<p><a href="#me-user-tokens" class=""><u>ME tokens - simpler implementation for providing access with properties like assigned_to, created_by</u></a></p>
+</li>
+<li class="">
+<p><a href="#all-data-access-tokens" class=""><u>All data access token</u></a></p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="42what-is-access-token-">4.2.What is Access Token ?<a href="#42what-is-access-token-" class="hash-link" aria-label="Direct link to 4.2.What is Access Token ?" title="Direct link to 4.2.What is Access Token ?" translate="no">​</a></h2>
+<p>Access token is a string, which acts as a link between the data and user to define which data set the user has access to. Consider the above example. There are access tokens for each record of data (Data Access Keys), and below that there is a set of access token(s) assigned to each user (User Access Keys).</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="43what-are-data-access-keys-">4.3.What are Data Access Keys ?<a href="#43what-are-data-access-keys-" class="hash-link" aria-label="Direct link to 4.3.What are Data Access Keys ?" title="Direct link to 4.3.What are Data Access Keys ?" translate="no">​</a></h2>
+<p>Tokens which are present for each record of data in a row wise authorized entity. Entity access for an BO can be checked in the <a href="https://docs.google.com/document/d/1iqK0kZG6YE7B-vXLHfuoqWQWV9SuAPk6cUzvPGCpq7c/edit?tab=t.0#heading=h.be4d0scr1x1a" target="_blank" rel="noopener noreferrer" class=""><u>Data Access Rules Screen.</u></a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-what-are-user-access-keys-">4.4. What are User Access Keys ?<a href="#44-what-are-user-access-keys-" class="hash-link" aria-label="Direct link to 4.4. What are User Access Keys ?" title="Direct link to 4.4. What are User Access Keys ?" translate="no">​</a></h2>
+<p>Tokens which are assigned to users, which provide them access to data from row wise authorized entities. User Access Keys are not common among entities or flavors, it will be maintained separated for each flavor and entity.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="45behaviour-of-root-entity--child-entities-">4.5.Behaviour of root entity &amp; child entities ?<a href="#45behaviour-of-root-entity--child-entities-" class="hash-link" aria-label="Direct link to 4.5.Behaviour of root entity &amp; child entities ?" title="Direct link to 4.5.Behaviour of root entity &amp; child entities ?" translate="no">​</a></h2>
+<p>Row wise authorization can be enabled only in root entities. Not on child entities. If BO is row wise authorized, all the child entities will also follow the same authorization.</p>
+<p>If a user has access to the root object, then the user can access all the child objects belonging to that root object.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="46how-data-access-keys-are-generated-">4.6.How Data Access Keys are generated ?<a href="#46how-data-access-keys-are-generated-" class="hash-link" aria-label="Direct link to 4.6.How Data Access Keys are generated ?" title="Direct link to 4.6.How Data Access Keys are generated ?" translate="no">​</a></h2>
+<p>Data Access Keys can be added in two ways.</p>
+<ol>
+<li class="">
+<p>By adding an access token template in the entity.</p>
+</li>
+<li class="">
+<p>Via callback.</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="461access-token-templates">4.6.1.Access token templates<a href="#461access-token-templates" class="hash-link" aria-label="Direct link to 4.6.1.Access token templates" title="Direct link to 4.6.1.Access token templates" translate="no">​</a></h3>
+<p>Access token template can be defined in the entity metadata via bol-editor, Look into <a href="#quick-start" class=""><u>quickstart</u></a> for step wise guidance*.* For each record of the entity all templates will be used to generate access tokens. A template can be defined with access key and access properties. The access key is a custom string and can contain alpha numeric characters. The access properties are a list of properties which should be added to build the token. The access token will be constructed as explained below.</p>
+<p>Structure : {access key}={property 1’s value}#{property 2’s value},...</p>
+<p>The generated access token will start with access key with an equal (“=”) symbol, followed by entity property(s) in the sequence mentioned in access properties separated by comma (“#”).</p>
+<p><strong>For example</strong> : Consider the above example of <strong>d_no_hdr</strong> where there are properties work_center, planner_group, is_flagged &amp; plant,</p>
+<p>We have created token templates as explained below,</p>
+<ol>
+<li class="">
+<p><strong>Access key :</strong> wc. <strong>Access properties :</strong> work_center.</p>
+</li>
+<li class="">
+<p><strong>Access key :</strong> pg_pl. <strong>Access properties :</strong> planner_group &amp; plant (<em>In same seq.</em>)</p>
+</li>
+<li class="">
+<p><strong>Access key :</strong> flagged. <strong>Access properties :</strong> is_flagged.</p>
+</li>
+</ol>
+<p>Access tokens will be generated as described below,</p>
+<table><colgroup>
+<col style="width:15%">
+<col style="width:17%">
+<col style="width:9%">
+<col style="width:15%">
+<col style="width:42%">
+</colgroup><thead><tr class="header"><th>work_center</th><th>planner_group</th><th>plant</th><th>is_flagged</th><th>access tokens</th></tr><tr class="odd"><th>ELEC</th><th>PG01</th><th>2000</th><th>true</th><th><p>wc=elec</p>
+<p>pg_pl=pg01#2000</p>
+<p>flagged=1</p></th></tr><tr class="header"><th>MECH</th><th>PG02</th><th>2000</th><th>false</th><th><p>wc=mech</p>
+<p>pg_pl=pg02#2000</p>
+<p>flagged=0</p></th></tr><tr class="odd"><th>CIVIL</th><th>PG01</th><th>2001</th><th>false</th><th><p>wc=elec</p>
+<p>pg_pl=pg01#2001</p>
+<p>flagged=0</p></th></tr></thead><tbody></tbody></table>
+<p>In case of null values, if all the access properties have null values, then access tokens will not be generated. If any one of the properties has value, access token will be generated with null in place of other properties’ values.</p>
+<p><strong>For eg:</strong> Consider same set of tokens as explained for above example with this new set of data</p>
+<table><colgroup>
+<col style="width:17%">
+<col style="width:8%">
+<col style="width:8%">
+<col style="width:12%">
+<col style="width:26%">
+<col style="width:25%">
+</colgroup><thead><tr class="header"><th><strong>work_center</strong></th><th><strong>planner_group</strong></th><th><strong>plant</strong></th><th><strong>is_flagged</strong></th><th><strong>access tokens</strong></th><th></th></tr><tr class="odd"><th>null</th><th>PG01</th><th>2000</th><th>true</th><th><p>pg_pl=pg01#2000</p>
+<p>flagged=1</p></th><th>wc token is not generated as work center is null</th></tr><tr class="header"><th>MECH</th><th>null</th><th>2000</th><th>false</th><th><p>wc=mech</p>
+<p>pg_pl=null#2000</p>
+<p>flagged=0</p></th><th>Since planner_group is null, access token is generated as pg_pl=<strong>null</strong>#2000</th></tr><tr class="odd"><th>CIVIL</th><th>null</th><th>null</th><th>false</th><th><p>wc=elec</p>
+<p>flagged=0</p></th><th>pg_pl access token is not generated as both planner_group and plant are null.</th></tr></thead><tbody></tbody></table>
+<p><strong>Note :</strong> Boolean properties will return <strong>false</strong> even if the field is not filled (is null). But, since the underlying data is null, access tokens generation will consider it as null and won’t generate tokens. So, if required, add the default value as false to generate a token.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="462-entity-token-callback-onaccesstokencalculate-">4.6.2. Entity token callback (onAccessTokenCalculate )<a href="#462-entity-token-callback-onaccesstokencalculate-" class="hash-link" aria-label="Direct link to 4.6.2. Entity token callback (onAccessTokenCalculate )" title="Direct link to 4.6.2. Entity token callback (onAccessTokenCalculate )" translate="no">​</a></h3>
+<p>In the Entity file the <strong><u>onAccessTokenCalculate</u></strong> method can be overridden and application logic for manipulating the Data Access Keys can be written. This method will be called whenever the access token is getting calculated / re-calculated.</p>
+
+
+
+
+
+
+<table><thead><tr><th>public async onAccessTokenCalculate(tokenHandler: TokenHandler): Promise&lt;void&gt;</th></tr></thead></table>
+<p>The method will be invoked with the <em>tokenHandler</em> instance as the first parameter. tokenHandler</p>
+<table><colgroup>
+<col style="width:100%">
+</colgroup><thead><tr class="header"><th>public async onAccessTokenCalculate(tokenHandler: TokenHandler): Promise&lt;void&gt; {<br>
+let existingTokens = await tokenHandler.getTokenArray();<br>
+let watchers = await this.txn.getExecutedQuery(&quot;d_watchers&quot;, { selectclause: [&quot;user_id&quot;] });<br>
+for(let watcher of watchers){<br>
+existingTokens.push(&quot;WATCHER:&quot; +watcher.user_id);<br>
+}<br>
+return null;<br>
+}</th></tr></thead><tbody></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4621-how-to-debug">4.6.2.1. How to debug?<a href="#4621-how-to-debug" class="hash-link" aria-label="Direct link to 4.6.2.1. How to debug?" title="Direct link to 4.6.2.1. How to debug?" translate="no">​</a></h4>
+<p>This method can be debugged in a private server similar to how rules are debugged. To trigger this, kindly check the following section on when tokens will be recalculated.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="47-when-data-access-keys-gets-calculated">4.7. When Data Access Keys gets calculated.<a href="#47-when-data-access-keys-gets-calculated" class="hash-link" aria-label="Direct link to 4.7. When Data Access Keys gets calculated." title="Direct link to 4.7. When Data Access Keys gets calculated." translate="no">​</a></h2>
+<p>Data Access Keys will get calculated when it has to be filled / corrected. It is triggered when,</p>
+<ol>
+<li class="">
+<p>A new record is getting created.</p>
+</li>
+<li class="">
+<p>In existing records, any of the access properties are getting modified.</p>
+</li>
+<li class="">
+<p><strong><u>recalculateAccessTokens</u></strong> is called by application logic to manually trigger access token recalculation on an existing record.</p>
+</li>
+<li class="">
+<p>Recalculate is triggered from the <a href="https://docs.google.com/document/d/1OHZh7CW4pmsm-AJHfWdEHsQm09UoZCSIb78NbFGfoJQ/edit?tab=t.0#heading=h.bvsj0bh80vku" target="_blank" rel="noopener noreferrer" class=""><u>Data Access Rules screen</u></a>. (Will not trigger debugging in private nodes.)</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="48-child-data-access-keys">4.8. Child Data Access Keys.<a href="#48-child-data-access-keys" class="hash-link" aria-label="Direct link to 4.8. Child Data Access Keys." title="Direct link to 4.8. Child Data Access Keys." translate="no">​</a></h2>
+<p>As explained in previous sections, row wise authorization on child entities will be applied based on the root entity, so that if a user has access to the root object, they will have access to all the child objects of those root objects.</p>
+<p>But, the access token templates can be added to child entities. The access tokens generated by the child objects will be added to the root object.</p>
+<p><strong>For example :</strong></p>
+<p>Consider example similar to before :</p>
+<table><colgroup>
+<col style="width:7%">
+<col style="width:32%">
+<col style="width:20%">
+<col style="width:20%">
+<col style="width:20%">
+</colgroup><thead><tr class="header"><th><strong>S.no</strong></th><th><strong>k_notif_id</strong></th><th><strong>work_center</strong></th><th><strong>plant</strong></th><th><strong>Access Tokens</strong></th></tr><tr class="odd"><th>1</th><th>10005154</th><th><mark>ELEC</mark></th><th>2000</th><th><p>wc=elec</p>
+<p>pl=2000</p>
+<p><strong>assign=user001</strong></p>
+<p><strong>assign=user002</strong></p></th></tr></thead><tbody></tbody></table>
+<p>For that notification, d_no_user is a child entity which says, which are users are this assigned to,</p>
+<p>And an access token template is added with <strong>access key</strong> as <em><u>&quot;assign”</u></em> and <strong>access property</strong> as <em><u>user_id</u></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>S.no</strong></th><th><strong>k_notif_id</strong></th><th><strong>user_id</strong></th></tr></thead><tbody><tr><td>1</td><td>10005154</td><td>user001</td></tr><tr><td>2</td><td>10005154</td><td>user002</td></tr></tbody></table>
+<p>Now, due to two d_no_user entries for that notification, access tokens of <strong>assign=user001</strong> and <strong>assign=user002</strong> are assigned to the notification. This can be used to provide notification access to the involved users.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="49-recalculate-data-access-keys-for-all-data-in-dev">4.9. Recalculate Data Access Keys for all data in dev:<a href="#49-recalculate-data-access-keys-for-all-data-in-dev" class="hash-link" aria-label="Direct link to 4.9. Recalculate Data Access Keys for all data in dev:" title="Direct link to 4.9. Recalculate Data Access Keys for all data in dev:" translate="no">​</a></h2>
+<p>On multiple occasions the Data Access Keys have to be completely re-calculated. Such as</p>
+<ol>
+<li class="">
+<p>The entity callback logic for generation of tokens <em>(onAccessTokenCalculate)</em> is changed.</p>
+</li>
+<li class="">
+<p>New access token templates are added / existing ones are modified.</p>
+</li>
+<li class="">
+<p>Primary keys of the entity are changed.</p>
+</li>
+</ol>
+<p>The changes (2) &amp; (3) are detected by FW and will be prompted to re-calculate from the Data Studio. So, the recalculate <a href="https://docs.google.com/document/d/1TZCiIbpOLvFzD4Qp6HrLiJafHC3OOKDvIcDAtmGRHbA/edit?tab=t.0#heading=h.waf0l81a3e30" target="_blank" rel="noopener noreferrer" class=""><u>access tokens button is provided in boleditor</u></a> to trigger when application developers want to recalculate the access tokens.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="410-how-is-a-user-access-keys-assigned-to-a-user-">4.10. How is a User Access Keys assigned to a user ?<a href="#410-how-is-a-user-access-keys-assigned-to-a-user-" class="hash-link" aria-label="Direct link to 4.10. How is a User Access Keys assigned to a user ?" title="Direct link to 4.10. How is a User Access Keys assigned to a user ?" translate="no">​</a></h2>
+<p>User Access Keys are stored in the user access table maintained by FW. An application callback in the entity file will be called for collecting the access tokens for that entity in that flavor. User Access Keys assignment has the following important fields.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>User ID</strong></th><th><strong>Flavor</strong></th><th><strong>Entityname</strong></th><th><strong>Type</strong></th><th><strong>Access token</strong></th></tr></thead><tbody><tr><td>USER001</td><td>o2c</td><td>d_o2c_employee</td><td>ROW_AUTH</td><td>emp=user001</td></tr></tbody></table>
+<p>This implies any access token assigned to a user is specific to entity and flavor. So, the application developer has to provide a list of access tokens for each user for each row wise enabled entity for each flavor. The parameters and expected return type is explained below.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4101-user-access-keys-callback-getaccesstokensforusers">4.10.1. User Access Keys callback (getAccessTokensForUsers):<a href="#4101-user-access-keys-callback-getaccesstokensforusers" class="hash-link" aria-label="Direct link to 4.10.1. User Access Keys callback (getAccessTokensForUsers):" title="Direct link to 4.10.1. User Access Keys callback (getAccessTokensForUsers):" translate="no">​</a></h3>
+<p>This callback has to be overridden in the entity file. It is a static method.</p>
+
+
+
+
+
+
+<table><thead><tr><th>public static getAccessTokensForUsers(ring, version: txn: KloTransaction, flavor: ststring, userAppRoleMap: {[user_id:string]: string}, accessTokenHelper: AccessTokenHelper): Promise&lt;EntityAccessTokenCallbackReturnType&gt;</th></tr></thead></table>
+<p>This method will be called,</p>
+<ol>
+<li class="">
+<p>When the application is transported to FW, User Access Keys will be recalculated for all the upgraded users.</p>
+</li>
+<li class="">
+<p>When an application is newly assigned to some users.</p>
+</li>
+<li class="">
+<p>When <em>recalculateUserAccessToken</em> is triggered by application logic.</p>
+</li>
+<li class="">
+<p>When <em>recalculateUserAccessToken</em> is triggered from the <a href="https://docs.google.com/document/d/1iqK0kZG6YE7B-vXLHfuoqWQWV9SuAPk6cUzvPGCpq7c/edit?tab=t.0#heading=h.cf757pmnt190" target="_blank" rel="noopener noreferrer" class=""><u>User Data Access screen</u></a>.</p>
+</li>
+</ol>
+<p><strong>Params :</strong></p>
+<p>txn - Application transaction.</p>
+<p>flavor - Application flavor</p>
+<p>version - Application version</p>
+<p>userAppRoleMap - Map of users, with key as users &amp; value as application role with which they were assigned.</p>
+<p><strong>Expected return type:</strong></p>
+<p>Map of users and their tokens. With Key as User ID and value as JSON Object with</p>
+<p>{ access_tokens?: string[]; org_accesses?: OrgConfig[] } as value.</p>
+<table><colgroup>
+<col style="width:100%">
+</colgroup><thead><tr class="header"><th>{<br>
+[user_id: string]: {<br>
+access_tokens?: string[];<br>
+org_accesses?: OrgConfig[]<br>
+}<br>
+};</th></tr></thead><tbody></tbody></table>
+<p>For example :</p>
+<table><colgroup>
+<col style="width:100%">
+</colgroup><thead><tr class="header"><th>{<br>
+&quot;USER001&quot;: {<br>
+access_tokens: [<br>
+&quot;wc=ELEC&quot;,<br>
+&quot;pl=2000&quot;<br>
+]<br>
+},<br>
+&quot;USER002&quot;: {<br>
+access_tokens: [<br>
+&quot;wc=MECH&quot;,<br>
+&quot;pl=2002&quot;<br>
+]<br>
+},<br>
+}</th></tr></thead><tbody></tbody></table>
+<p>Considering only USER001 &amp; USER002 came in the userAppRoleMap for access token recalculation.</p>
+<p>Note : Here in all the places user id refers to the FW stored user&#x27;s id. It is application responsibility to map between application user id and FW user id.</p>
+<p>Make sure you have written the implementation in the root entity and not in any child entities.</p>
+<p>If a user is not assigned with an application role i.e. only assigned as DEVELOPER / MANAGER, this callback will not be called for that user.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4102-how-to-debug">4.10.2. How to debug:<a href="#4102-how-to-debug" class="hash-link" aria-label="Direct link to 4.10.2. How to debug:" title="Direct link to 4.10.2. How to debug:" translate="no">​</a></h3>
+<p>For debugging <a href="#user-access-keys-callback-getaccesstokensforusers" class=""><u>User Access Keys callback</u></a> in the entity file, Workspace Hub flavor should be assigned to the user, and the application that Developer is working on should be assigned as Manager.</p>
+<p><strong>Step 1 :</strong> Set-up private nodes and check out the flavor in which the entity callback is written. Compile the application files.</p>
+<p><strong>Step 2 :</strong> Register in browser and navigate to Security &amp; Permissions menu, User Data Access Screen. If this menu is not visible, make sure the Workspace Hub flavor is assigned to your user.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image42-c1c557064eb23caeabf2db2cb3a59ac2.png" width="1919" height="446" class="img_ev3q"></p>
+<p><strong>Step 3 :</strong> Start the private node in debugger-mode and place debuggers inside the entity file, getAccessTokensForUsers method.</p>
+<p><strong>Step 4 :</strong> Go back to the browser, and click on the recalculate button, select the flavor, select the entity that you want to debug, and click Re-calculate.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image51-c1ed7d656f77156523cc7cd4b0e4bd5e.png" width="1920" height="791" class="img_ev3q"></p>
+<p>Now the debugger should reach the private node, you can debug the method. If the debugger is not getting attached / not getting triggered, try adding an inline debugger in code.</p>
+<p><strong>Note :</strong> After 1-2 mins the request will fail from the UI and the returned access tokens will not be added to the User Access Keys list. So, after debugging, re-trigger without debugging to generate correctly.</p>
+<p>Make sure users are assigned with an application role. If not assigned with the application role, the user will be sent for access token generation.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4103-special-access-tokens">4.10.3. Special access tokens:<a href="#4103-special-access-tokens" class="hash-link" aria-label="Direct link to 4.10.3. Special access tokens:" title="Direct link to 4.10.3. Special access tokens:" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="41031-me-user-tokens">4.10.3.1 “Me” ($USER) Tokens<a href="#41031-me-user-tokens" class="hash-link" aria-label="Direct link to 4.10.3.1 “Me” ($USER) Tokens" title="Direct link to 4.10.3.1 “Me” ($USER) Tokens" translate="no">​</a></h4>
+<p>By default, all the users are internally provided the access token me=${userid} for all queries they are firing on row wise authorized entities. Consider the below example.</p>
+<p>Entity d_so_hdr, where access to the sales order (entry) should be provided to the user ID filled in the responsible field. An access token template should be created with, access key as “me” and property as “responsible”.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>S.no</strong></th><th><strong>k_notif_id</strong></th><th><strong>responsible</strong></th><th><strong>description</strong></th><th><strong>Access Tokens</strong></th></tr></thead><tbody><tr><td>1</td><td>SO10001001</td><td>MM0672</td><td>Sales order 1</td><td>me=mm0672</td></tr><tr><td>2</td><td>SO10001002</td><td>MM0472</td><td>Sales order 2</td><td>me=mm0472</td></tr></tbody></table>
+<p>And the users MM0672 &amp; MM0472, don&#x27;t need explicit User Access Keys assigned to them via the callback. But, when the query is fired by MM0672, the first record will be returned, as that record has “me=mm0672” access token assigned to it and the user MM0672 by default is provided with the me=mm0672 token by Framework.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="41032-how-to-configure-a-me-token-for-an-entity-">4.10.3.2. How to configure a “me” token for an entity ?<a href="#41032-how-to-configure-a-me-token-for-an-entity-" class="hash-link" aria-label="Direct link to 4.10.3.2. How to configure a “me” token for an entity ?" title="Direct link to 4.10.3.2. How to configure a “me” token for an entity ?" translate="no">​</a></h4>
+<p><strong>Step 1</strong> : Go to the entity in Data Studio and navigate to Access Management, and click on Edit</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image10-f15b61263a7ad9386b4c6bb79b695b43.png" width="1920" height="920" class="img_ev3q"></p>
+<p><strong>Step 2 :</strong> Add an access token template by clicking the <img decoding="async" loading="lazy" alt="Screenshot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAkCAYAAAAU/hMoAAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjUwMmJjZjVlLTE4ZTEtNDI2Zi1iYjkzLTg0ODdlNzE3MDlkMwAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNozOiLq4qZ9Cncb5xvJs/WjgAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6NTZkMjE3ZjMtMDA4YS00ZGE0LTk4OGUtODY4NzhkNWE1YmJmbHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaFDGIO/OyiOzqFVmChgfftEAAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIES+Lz9csYucARoodTK7rqJgF9PyPQAVQ5Z45E8QfePxpGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2hMAa9Gfk0iBjwXLCAGRowoAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggNkzU0AJVgobgf9xkcDiIEJtAK9w9KNr5EISOj9hN0S5kbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTo1MDJiY2Y1ZS0xOGUxLTQyNmYtYmI5My04NDg3ZTcxNzA5ZDMvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDpkNDk5MGQxZS01OGMzLTQxY2ItYTYzMC1mOGExOTJlODY2MWJyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggRL4vP1yxi5wBGih1MruuomAX0/I9ABVDlnjkTxB94/GiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIDPP9HKj6BYa0umPhv4GLycwQRbHVmLcxf+eaa1iZyIkomN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYIM6KuPuMLKHE0fiyINsxPMBayYhktUZgxdsqJzcBAeK9dGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2WECnaLk362ZKX53XbrTjkyQvJYet9F1++quCOll1NQ09lQIHROLYdTLRy/qYhBVYhEBxuKIjLVJFhIfoww+ALeeAVIlpkwAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA2klEQVRYR+3YvQ7BYBjF8UMIUR9LJ12YjEwuwGo0uwODe7BYiUvoLi6iq0hMRqPEYmBAUOkza4fTpJLzW/q8nf5p8/ZNmnuHkHF5u2aaIlkUycLb3Zcjgv0Jd5TQ6nXRrtp9AlpksJpjuo3mznAMf+RFCwLe637ZNQXaOCyKZFEky19EJviYH7CYrOHfbMni9bGZDdC05S8JnuQVZ3bg1+NpQ7wEkQ7cio1MxYIN8Xhn9zI8u3fRnN2zO0WKZFEkiyJZaJH1RtkmwK05NnHoXxCLIlkUyaJIDuADuQQ0euMSvoQAAAAASUVORK5CYII=" width="41" height="36" class="img_ev3q"> button in the row wise authorization section. Provide any id of your desire, in the access key, provide the value - me. And select the property where the user_id of the user who access should be provided is filled.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image31-c2b91e4dec05c2a80f326950cbac1f6d.png" width="1920" height="920" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image44-f856e2ca7431ff83421e3bbb5b94e513.png" width="1338" height="442" class="img_ev3q"></p>
+<p>After saving, the editor will prompt to recalculate access tokens, click on OK.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image29-d993c168de58949e20a9186e59779b30.png" width="1920" height="922" class="img_ev3q"></p>
+<p>After recalculation is complete. Click on the navigate button <img decoding="async" loading="lazy" alt="Screenshot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAhCAYAAACr8emlAAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmFkM2UzMzA1LTU5OTMtNDIyYi04NGZmLWRmODRjMjgzMjEyMQAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNowDcXxbWk94N6T8g0357eOAAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6ZTAwNDY3ZWYtZjY1MS00MDZjLWExY2ItNTc2NDhmZTdhZDNjbHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaEuGn57NcZA+FPrL6IX4yBIAAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIIAWn2bhQ48pwqS6sKrIeU56hoqII8/0YWxj8uxEu6r4pGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2izGEF3CnteC/9OeWgET/+kAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggkomgKJWWeFVXGdPXSzql+KWvfMLJzK12VCbETcjZ4mNkbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTphZDNlMzMwNS01OTkzLTQyMmItODRmZi1kZjg0YzI4MzIxMjEvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDozMzMyNmVhMi1iODdmLTQzMDgtODU3ZS1hNGY4YzExNTc5MjZyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgggBafZuFDjynCpLqwqsh5TnqGiogjz/RhbGPy7ES7qviiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIMpCjs59rylVpCHDAbtF+ZVC7BlElLQ8t5dhDrel6o6HomN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYILcn0RpKhHwHky0TtYOr9z8TcPMiqvgj4/CdA0obcyftdGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2WEDJcrcOVbbXvspsQZ6WhR2nYDU0yiL3oxnH/qLVHqJtzo2h6kjlhko0Pm6pQL7wIlhsRyPMD6Ijv6f5EfVp3pxqfeyNdQAAAAFzUkdCAK7OHOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA7DAAAOwwHHb6hkAAADU0lEQVRYR+2XX0hTURzHvy2bshoaNxJyINXDwJDEtoosavpgEJgvjsAkyqJ8KFTKCgwfR/rQP2igbdE/qGZaQZlCjsAFbSwkMRJyNshIvcNqzpxuO53dewyrq97bXnzY52U739+5Z9/z5/c7d8sIBUsYFftcsiQNJkrSYKIkDSbKf9fB4BsHDtoH8WUGWL+zBLYjOdCymEgIHrsd1T0hTK9IQ9mRY6jbtpLF5PN/KzjchaqWryisOQ3P8WwM9bjQPc5is4x7cZOaK6g4CVdNNlwtd3B3mMWUEF9BZfwkPVeaiKHhJeHjzShP3rk/kR9CbC4TxOf+QPho/DtPHjZYiOmKl4SFmHyUryD/GrZeoKy0EFy8reKQa8z+a3vjrMR6ox6c8Asc9puyEOz14gkvBGWj2KDn0Vv0rd6E/XlMkIl61xaUaQKwPnrPFHkoMzjxGg5PBLl7tkLPJNmoclBZzCHocSlaRUUGB5564UQWKoqEzVUMV7QZJgRg7xhkyuLILzOTbtSd6qYGU6BdHkGQlhd1OgdzaQmqdmdCzbr9SQRfXrWj3jGIvknaXEGfjdJn6SQbr1bApBF7LYiQKjLwPbASw2ELOXyvn/BTohb295LL9U2k+JpXMovj2b6jvo30+H+K0hRP3PesZAcdp+T2R1FbBHkGx16RqkoLKW/9zIQ5RD8T21kLOdM9wQQRvqOZGM4+Jz6hzPyJr5VOtrKZPB5jwgLI2uLAixbsfZiGxht0WyRO7bTzJgruB2hJiSAQpkJqGrSxKRgOVKPRlCZ2mkvsLS4c7ULAfALX92YwURpZSRIORYG1mdDP01utoSZmVsF8nt4s9nNw1W7AGnpGU+O6FCo61lrgRyjEhPmRZXCdLh0YHcFAjAl/MT05RUdKh16XIrTVG3XCZMJxXYoYHWuU3uG6LCbMjyyDMG6mRXYYtnaJyzQ2jLudI+DycmCcHU2VD/P2FDg7nRiSmNRQuxsvNHqYjUxYCOEkysHfScppovybxRZiqG0j7qCo/SbYTy7WWqSzuNJK7vhFaTGUvW59H4DjlhPW/m9iHdRkoLDYhLp9emil9iL2DX3POnCp0/+7DuZuykfNoULk0lMjh+T/4kRJGkyUpMFESRpMlCVuEPgF8Scbl/bO0voAAAAASUVORK5CYII=" width="40" height="33" class="img_ev3q"> to check the recalculated access tokens.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image1-1c9c3110ef9aefef3a41c93f4a4488e4.png" width="1920" height="759" class="img_ev3q"></p>
+<p>Search again to get all the tokens present in the entity.</p>
+<p><strong>Step 3 :</strong> Login with one of the users, and navigate to the application screen which uses this entity, whose user_id is present in the access token field. Or create a record and check. The records where the current logged in user_id is filled should be visible to the user.</p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image22-6833b4a2ea9e2fa66e6a8033d1f26635.png" width="1920" height="692" class="img_ev3q"></p>
+<p>When an access token is generated with me=${user_id}, no changes in the User Access Keys callback (getAccessTokensForUsers) for providing access to users.</p>
+<p>Note : me token provides access without User Access Keys logic. Thus, it is generic and cannot be controlled on user level. So, if restriction is mandatory on user level, <strong>DON’T USE “ME” TOKEN,</strong> generate own tokens with that field and handle assigning only to require users in the User Access Keys callback (getAccessTokensForUsers).</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="41033----all-data-access-tokens"><strong>4.10.3.3.</strong> “ * ” (All data access) Tokens<a href="#41033----all-data-access-tokens" class="hash-link" aria-label="Direct link to 41033----all-data-access-tokens" title="Direct link to 41033----all-data-access-tokens" translate="no">​</a></h4>
+<p>When a user has <strong><u>*</u></strong> - ( asterisk with no space in the front / back ) access token assigned to them. All the data in the entity will be accessible to that user i.e. row wise authorization will not be applied when the user fires a query of that entity.</p>
+<p>So, to provide all data access for that entity return * in the access token array.</p>
+<p>Eg :</p>
+<table><colgroup>
+<col style="width:100%">
+</colgroup><thead><tr class="header"><th>{<br>
+&quot;USER001&quot;: {<br>
+access_tokens: [<br>
+&quot;*&quot; // This provides all data access to USER001<br>
+]<br>
+},<br>
+&quot;USER002&quot;: {<br>
+access_tokens: [<br>
+&quot;wc=MECH&quot;,<br>
+&quot;pl=2002&quot;<br>
+]<br>
+},<br>
+}</th></tr></thead><tbody></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="411-org-hierarchy-and-access-tokens">4.11. Org hierarchy and access tokens:<a href="#411-org-hierarchy-and-access-tokens" class="hash-link" aria-label="Direct link to 4.11. Org hierarchy and access tokens:" title="Direct link to 4.11. Org hierarchy and access tokens:" translate="no">​</a></h2>
+<p>Org hierarchy is a feature by which access to data can be provided based on the hierarchy of users in the organization.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4111-building-the-org-hierarchy-tree">4.11.1. Building the org hierarchy tree:<a href="#4111-building-the-org-hierarchy-tree" class="hash-link" aria-label="Direct link to 4.11.1. Building the org hierarchy tree:" title="Direct link to 4.11.1. Building the org hierarchy tree:" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>Users can be grouped based on management hierarchy and access can be provided relative to the user’s position in the hierarchy.</p>
+</li>
+<li class="">
+<p>Org structure can be defined with a tree structure (org tree), built of org units as elements of tree.</p>
+</li>
+<li class="">
+<p>An org unit can have only one parent, but multiple org units can have the same parent. (Strictly tree)</p>
+</li>
+<li class="">
+<p>Users can be assigned to org units. One user can be assigned to multiple org units.</p>
+</li>
+<li class="">
+<p>When assigning a user to an org unit, the user will be assigned with a designation (Will be used for access management, explained below).</p>
+</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4112-access-management-with-org-structure">4.11.2 Access management with org structure:<a href="#4112-access-management-with-org-structure" class="hash-link" aria-label="Direct link to 4.11.2 Access management with org structure:" title="Direct link to 4.11.2 Access management with org structure:" translate="no">​</a></h3>
+<ol>
+<li class="">
+<p>Placing the user in an organisational structure alone will not provide any extra access.</p>
+</li>
+<li class="">
+<p>Org auth config should be assigned to the user (in User Access), if he/she should get access to other users’ access in the same org unit or org unit relative to theirs. (Eg : Manager needs access to all data in the child org units).</p>
+</li>
+<li class="">
+<p>The scope of org authorization is defined using two flags:</p>
+<ol>
+<li class="">
+<p>includePeers. If true, provides access to all the users’ access tokens in the same org unit as the target user.</p>
+</li>
+<li class="">
+<p>includeChildren. If true, provides access to all the users’ access tokens in the org unit below the target users’ org units.</p>
+</li>
+<li class="">
+<p>Both can be used together.</p>
+</li>
+</ol>
+</li>
+<li class="">
+<p>In the org units that are collected based on the above mentioned flags, users can be included or excluded based on designation. As explained below.</p>
+<ol>
+<li class="">
+<p>considerDesignations : Token from users with the list of designation mentioned will be only taken.</p>
+</li>
+<li class="">
+<p>ignoreDesignations : Token from users whose designation is not in the list of designation mentioned will be only taken.</p>
+</li>
+<li class="">
+<p>Only one of the above can be used. Both are not supported.</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>Consider userA, he is present in org unit teamGlue with a designation Bottle, and there are other members in org unit teamGlue, whose data access you want to share with userA. Data can be maintained as follows,</p>
+<table><colgroup>
+<col style="width:10%">
+<col style="width:16%">
+<col style="width:15%">
+<col style="width:12%">
+<col style="width:44%">
+</colgroup><thead><tr class="header"><th><strong>User id</strong></th><th><strong>entityname</strong></th><th><strong>flavor</strong></th><th><strong>type</strong></th><th><strong>Access token</strong></th></tr><tr class="odd"><th>userA</th><th>targetEntity</th><th>targetFlavor</th><th>Org auth</th><th><p>{</p>
+<p>includePeers: true</p>
+<p>}</p></th></tr></thead><tbody></tbody></table>
+<p>Now we have a member in the org unit teamGlue, userR with designation : approver, whose data we don’t want to share with userA.</p>
+<table><colgroup>
+<col style="width:10%">
+<col style="width:14%">
+<col style="width:15%">
+<col style="width:12%">
+<col style="width:48%">
+</colgroup><thead><tr class="header"><th><strong>User id</strong></th><th><strong>entityname</strong></th><th><strong>flavor</strong></th><th><strong>type</strong></th><th><strong>Access token</strong></th></tr><tr class="odd"><th>userA</th><th>targetEntity</th><th>targetFlavor</th><th>Org auth</th><th><p>{</p>
+<p>includePeers: true,</p>
+<p>ignoreDesignations : approver</p>
+<p>}</p></th></tr></thead><tbody></tbody></table>
+<p>Now we have the org unit teamPaper and teamPhoto, who are child org units of teamGlue. And we want userA to be able to access data of all users of org unit teamPaper and teamPhoto also.</p>
+<table><colgroup>
+<col style="width:10%">
+<col style="width:14%">
+<col style="width:15%">
+<col style="width:12%">
+<col style="width:48%">
+</colgroup><thead><tr class="header"><th><strong>User id</strong></th><th><strong>entityname</strong></th><th><strong>flavor</strong></th><th><strong>type</strong></th><th><strong>Access token</strong></th></tr><tr class="odd"><th>userA</th><th>targetEntity</th><th>targetFlavor</th><th>Org auth</th><th><p>{</p>
+<p>includeColleagues: true,</p>
+<p>ignoreDesignation: approver,</p>
+<p>includeChildren: true</p>
+<p>}</p></th></tr></thead><tbody></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="41121-how-to-add-org-config-to-users-">4.11.2.1. How to add org config to users ?<a href="#41121-how-to-add-org-config-to-users-" class="hash-link" aria-label="Direct link to 4.11.2.1. How to add org config to users ?" title="Direct link to 4.11.2.1. How to add org config to users ?" translate="no">​</a></h4>
+<p>In the User Access Keys callback <a href="#user-access-keys-callback-getaccesstokensforusers" class=""><u>refer</u></a>, along with the access_token for each user, org_access can also be provided in the returned object.</p>
+<p><strong>Eg :</strong></p>
+<table><colgroup>
+<col style="width:100%">
+</colgroup><thead><tr class="header"><th>{<br>
+&quot;USER001&quot;: {<br>
+access_tokens: [<br>
+&quot;wc=ELEC&quot;,<br>
+&quot;pl=2000&quot;<br>
+],<br>
+org_accesses: [<br>
+{<br>
+include_children: true,<br>
+},<br>
+{<br>
+include_peers: true,<br>
+ignore_designations: [&quot;SUPERVISOR&quot;]<br>
+}<br>
+]<br>
+},<br>
+&quot;USER002&quot;: {<br>
+access_tokens: [<br>
+&quot;wc=MECH&quot;,<br>
+&quot;pl=2002&quot;<br>
+],<br>
+org_accesses: [<br>
+{<br>
+include_children: true,<br>
+consider_designations: [&quot;TECHNICIAN&quot;]<br>
+}<br>
+]<br>
+},<br>
+}</th></tr></thead><tbody></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="412-data-access-keys-recalculation-after-transport">4.12. Data Access Keys Recalculation after transport<a href="#412-data-access-keys-recalculation-after-transport" class="hash-link" aria-label="Direct link to 4.12. Data Access Keys Recalculation after transport" title="Direct link to 4.12. Data Access Keys Recalculation after transport" translate="no">​</a></h2>
+<p>Data Access Keys will not be recalculated automatically after transport as it is a heavy process. This has to be triggered by the deployment team. So, any changes in the Data Access Keys logic should be notified to the deployment team and deployment team should trigger the recalculation of Data Access Keys using screen <a href="https://docs.google.com/document/d/1iqK0kZG6YE7B-vXLHfuoqWQWV9SuAPk6cUzvPGCpq7c/edit?tab=t.0#heading=h.jy75kjq9hi8u" target="_blank" rel="noopener noreferrer" class=""><u>(link)</u></a> once after deployment of the app.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="413-value-help-behavior-with-row-wise-authentication">4.13. Value help behavior with ROW wise authentication<a href="#413-value-help-behavior-with-row-wise-authentication" class="hash-link" aria-label="Direct link to 4.13. Value help behavior with ROW wise authentication" title="Direct link to 4.13. Value help behavior with ROW wise authentication" translate="no">​</a></h2>
+<p>An entity is secured with <strong>row-wise authorization</strong>, meaning users can only see rows assigned or accessible to them. However, there are cases where users may need to see <strong>all rows</strong> in the value help suggestion items. This requirement is addressed with the <strong>&quot;Ignore Row-wise Auth&quot;</strong> toggle.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-highlights"><strong>Key Highlights:</strong><a href="#key-highlights" class="hash-link" aria-label="Direct link to key-highlights" title="Direct link to key-highlights" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong>Ignore Row-wise Auth toggle</strong> allows users to <strong>view all rows</strong> in the value help suggestions.</p>
+</li>
+<li class="">
+<p>This <strong>does not completely bypass authorization</strong>; only properties used in the value help are visible.</p>
+</li>
+<li class="">
+<p>Other properties will be <strong>undefined or null</strong>, ensuring sensitive data remains protected.</p>
+</li>
+<li class="">
+<p><strong>Sensitive properties involved in row-wise authorization should NOT be included</strong> in the value help when this toggle is enabled.</p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="how-it-works"><strong>How It Works:</strong><a href="#how-it-works" class="hash-link" aria-label="Direct link to how-it-works" title="Direct link to how-it-works" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p>Enabling <strong>row-wise authorization</strong> automatically assigns a <strong>query to the value help (VH)</strong>.</p>
+</li>
+<li class="">
+<p>This query is applied across <strong>all value helps in the entity</strong> that have the &quot;Ignore Row-wise Auth&quot; toggle enabled.</p>
+</li>
+<li class="">
+<p>When the <strong>toggle is disabled</strong>, the query is removed.</p>
+<ul>
+<li class="">
+<p>Users must then <strong>assign their own query or entity</strong> to the value help.</p>
+</li>
+<li class="">
+<p>In this mode, <strong>only authorized rows are visible</strong> in the suggestion items.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image43-76ef81d04bbd9dd76e3e6a33410c37e0.png" width="1438" height="730" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image26-922495b53551105684b148bed76cf58f.png" width="1153" height="159" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/row-wise-authorization-image50-e6824c7999f9665fa583641b5338f7b6.png" width="1284" height="162" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="414-server-side-behaviour-of-queries-to-row-wise-authorized-entities">4.14. Server side behaviour of queries to row wise authorized entities<a href="#414-server-side-behaviour-of-queries-to-row-wise-authorized-entities" class="hash-link" aria-label="Direct link to 4.14. Server side behaviour of queries to row wise authorized entities" title="Direct link to 4.14. Server side behaviour of queries to row wise authorized entities" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4141-applying-row-wise-authorization-in-server-side-queries">4.14.1. Applying Row-wise Authorization in Server-side Queries<a href="#4141-applying-row-wise-authorization-in-server-side-queries" class="hash-link" aria-label="Direct link to 4.14.1. Applying Row-wise Authorization in Server-side Queries" title="Direct link to 4.14.1. Applying Row-wise Authorization in Server-side Queries" translate="no">​</a></h3>
+<p>By default, when a query is executed from server-side logic—such as Create/Update/Delete rules, schedulers, app service logic, or beforeQuery / afterQuery callbacks—it does not apply row-wise authorization automatically.</p>
+<p>To enable row-wise filters in such cases, use the following API available on the <strong>KloQuery</strong> or <strong>KloQueryForRule</strong> instance:</p>
+
+
+
+
+
+
+<table><thead><tr><th>applyRowWiseAuthorization(userIdToImpersonate?: string): Promise&lt;void&gt;</th></tr></thead></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4142-usage-details">4.14.2. Usage Details:<a href="#4142-usage-details" class="hash-link" aria-label="Direct link to 4.14.2. Usage Details:" title="Direct link to 4.14.2. Usage Details:" translate="no">​</a></h3>
+<ul>
+<li class="">
+<p><strong>userIdToImpersonate (optional)</strong>:</p>
+<blockquote>
+<p>Pass the user ID whose row-level access you want to apply.</p>
+</blockquote>
+<ul>
+<li class="">
+<p>If not provided, it will default to <strong>$SYSTEM.userID</strong>.</p>
+</li>
+<li class="">
+<p>For system-level operations (like schedulers or unauthorized app services), <strong>you must explicitly provide a user ID</strong>. Calling this API without a user ID in these cases will throw an error.</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p><strong>Client-side Restriction</strong>:</p>
+<blockquote>
+<p>This API <strong>cannot</strong> be used for queries executed on the client side.<br>
+This restriction ensures that unauthorized data is not exposed to the client, maintaining security.</p>
+</blockquote>
+</li>
+</ul></div></div><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Row%20wise%20authorization%20%E2%80%94%20How%20to%20use%20the%20feature%3F">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Row%20wise%20authorization%20%E2%80%94%20How%20to%20use%20the%20feature%3F">Report an issue</a></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/How to enable the feature"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">How to enable the feature?</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/User Data Access"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">User Data Access</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#41quick-start" class="table-of-contents__link toc-highlight">4.1.Quick start:</a></li><li><a href="#42what-is-access-token-" class="table-of-contents__link toc-highlight">4.2.What is Access Token ?</a></li><li><a href="#43what-are-data-access-keys-" class="table-of-contents__link toc-highlight">4.3.What are Data Access Keys ?</a></li><li><a href="#44-what-are-user-access-keys-" class="table-of-contents__link toc-highlight">4.4. What are User Access Keys ?</a></li><li><a href="#45behaviour-of-root-entity--child-entities-" class="table-of-contents__link toc-highlight">4.5.Behaviour of root entity &amp; child entities ?</a></li><li><a href="#46how-data-access-keys-are-generated-" class="table-of-contents__link toc-highlight">4.6.How Data Access Keys are generated ?</a></li><li><a href="#47-when-data-access-keys-gets-calculated" class="table-of-contents__link toc-highlight">4.7. When Data Access Keys gets calculated.</a></li><li><a href="#48-child-data-access-keys" class="table-of-contents__link toc-highlight">4.8. Child Data Access Keys.</a></li><li><a href="#49-recalculate-data-access-keys-for-all-data-in-dev" class="table-of-contents__link toc-highlight">4.9. Recalculate Data Access Keys for all data in dev:</a></li><li><a href="#410-how-is-a-user-access-keys-assigned-to-a-user-" class="table-of-contents__link toc-highlight">4.10. How is a User Access Keys assigned to a user ?</a></li><li><a href="#411-org-hierarchy-and-access-tokens" class="table-of-contents__link toc-highlight">4.11. Org hierarchy and access tokens:</a></li><li><a href="#412-data-access-keys-recalculation-after-transport" class="table-of-contents__link toc-highlight">4.12. Data Access Keys Recalculation after transport</a></li><li><a href="#413-value-help-behavior-with-row-wise-authentication" class="table-of-contents__link toc-highlight">4.13. Value help behavior with ROW wise authentication</a></li><li><a href="#414-server-side-behaviour-of-queries-to-row-wise-authorized-entities" class="table-of-contents__link toc-highlight">4.14. Server side behaviour of queries to row wise authorized entities</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advanced Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer></div>
+</body>
+</html>
