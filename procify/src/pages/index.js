@@ -14,7 +14,7 @@ const BASE_LINKS = {
 };
  
 /* Links and version, built from the latest release detected in docusaurus.config.js */
-function useReleaseInfo() {
+export function useReleaseInfo() {
   const { siteConfig } = useDocusaurusContext();
   const latest = siteConfig.customFields?.latestRelease || null;
  
@@ -23,6 +23,7 @@ function useReleaseInfo() {
     latest,
     links: {
       ...BASE_LINKS,
+      userGuide: siteConfig.customFields?.userGuidePath || BASE_LINKS.userGuide,
       releaseNotes: latest ? latest.path : '/docs/Docs/Release%20Notes',
     },
   };
@@ -217,7 +218,7 @@ function Hero({ links, latest }) {
   );
 }
  
-function DocCards({ links }) {
+export function DocCards({ links }) {
   const { siteConfig } = useDocusaurusContext();
   const extraGuides = siteConfig.customFields?.extraGuides || [];
  

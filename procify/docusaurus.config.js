@@ -124,7 +124,7 @@ function readDocs(folder, exclude = null, byVersion = false) {
 // Menus not listed here open their first item
 // (for Release Notes that is always the newest version).
 const MENU_LANDING = {
-  'User Guide': 'Developer AI - 1. Introduction',
+  'User Guide': 'Developer AI/Introduction',
   'Training Guide': 'Training Guide Beginner',
 };
  
@@ -209,10 +209,19 @@ const searchContexts = [
  
 // Folders shown inside the "More" menu instead of as their own top menu,
 // so the top bar stays on one line.
-const MORE_FOLDERS = ['API Document Link'];
+const MORE_FOLDERS = ['API Document Link']; // also listed in the Documentation menu
+
+// Folders grouped under one "Documentation" menu
+const DOC_GROUP = [
+  'User Guide',
+  'Installation Guide',
+  'Training Guide',
+  'Release Notes',
+  'API Document Link',
+];
 
 const guideDropdowns = guideFolders
-  .filter((name) => !MORE_FOLDERS.includes(name))
+  .filter((name) => !MORE_FOLDERS.includes(name) && !DOC_GROUP.includes(name))
   .map((name) =>
     docsDropdown(
       name,
@@ -222,7 +231,60 @@ const guideDropdowns = guideFolders
     ),
   );
 
-// "More" menu: the MORE_FOLDERS pages (with a heading per folder) + Legal pages
+// "Documentation" menu: User Guide, Installation Guide, Training Guide,
+// Release Notes and API Document Link.
+// Each entry opens that guide's landing page (its sidebar lists the topics).
+const docGroupItems = DOC_GROUP.filter((name) => guideFolders.includes(name)).map(
+  (name) => {
+    const docs = readDocs(name, FOLDER_OPTIONS[name]?.exclude ?? null, !!FOLDER_OPTIONS[name]?.byVersion);
+    const landing = docs.find((d) => d.id === MENU_LANDING[name]) ?? docs[0];
+    // type "doc": Docusaurus resolves the real page address itself
+    return {type: 'doc', docId: landing.docId, label: name};
+  },
+);
+
+const documentationDropdown = {
+  type: 'dropdown',
+  label: 'Documentation',
+  position: 'left',
+  className: 'nav-ico nav-ico--documentation',
+  to: '/documentation', // landing page with the guide cards (src/pages/documentation.js)
+  items: docGroupItems,
+};
+
+// What the Documentation page (src/pages/documentation.js) shows: for every
+// menu in the Documentation dropdown, the guides it contains (one link per guide).
+const GUIDE_INFO = {
+  'User Guide': 'Learn how to configure and use Procify features and functionality.',
+  'Installation Guide': 'Step-by-step instructions to set up and install Procify components.',
+  'Training Guide': 'Structured training material for Procify development and configuration.',
+  'Release Notes': 'New features, enhancements and fixes introduced in each Procify release.',
+  'API Document Link': 'Links to the Procify API reference documentation.',
+};
+
+const docCatalog = DOC_GROUP.filter((name) => guideFolders.includes(name)).map((name) => {
+  const opts = FOLDER_OPTIONS[name] || {};
+  const docs = readDocs(name, opts.exclude ?? null, !!opts.byVersion);
+  const seen = new Set();
+  const items = [];
+  for (const d of docs) {
+    // split guides appear once (their first page)
+    if (d.group) {
+      if (seen.has(d.group)) continue;
+      seen.add(d.group);
+    }
+    items.push({label: d.group || d.label, path: docPath(d.docId)});
+  }
+  const landing = docs.find((d) => d.id === MENU_LANDING[name]) ?? docs[0];
+  return {
+    label: name,
+    description: GUIDE_INFO[name] || `Browse the ${name}.`,
+    path: landing ? docPath(landing.docId) : '/docs',
+    items,
+  };
+});
+
+// "More" menu: the MORE_FOLDERS pages (with a heading per folder)
 const moreItems = [
   ...guideFolders
     .filter((name) => MORE_FOLDERS.includes(name))
@@ -230,10 +292,19 @@ const moreItems = [
       {type: 'html', value: `<span class="nav-more-heading">${name}</span>`},
       ...docsDropdown(name, name).items,
     ]),
-  {type: 'html', value: '<span class="nav-more-heading">Legal</span>'},
-  {label: 'Copyright', to: '/docs/Legal/Copyright'},
-  {label: 'Disclaimer', to: '/docs/Legal/Disclaimer'},
 ];
+
+// "Legal" menu (own menu in the top bar, right after Home)
+const legalDropdown = {
+  type: 'dropdown',
+  label: 'Legal',
+  position: 'left',
+  className: 'nav-ico nav-ico--legal',
+  items: [
+    {label: 'Copyright', to: '/docs/Legal/Copyright'},
+    {label: 'Disclaimer', to: '/docs/Legal/Disclaimer'},
+  ],
+};
  
 // Folders beyond the three main guides: shown as extra cards on the home page
 // and extra links in the footer (label + link to the first page)
@@ -248,6 +319,11 @@ const extraGuides = guideFolders
     };
   });
  
+// Page the "User Guide" card on the Documentation / home page opens
+const userGuideDocs = readDocs('User Guide', null);
+const userGuideLanding =
+  userGuideDocs.find((d) => d.id === MENU_LANDING['User Guide']) ?? userGuideDocs[0];
+
 // Newest release note, used for the footer link (highest version number)
 const latestRelease = readDocs('Release Notes', null, true)[0];
  
@@ -301,6 +377,10 @@ const config = {
  
   // Read by src/pages/index.js (home page): always the highest release version
   customFields: {
+    docCatalog,
+    userGuidePath: userGuideLanding
+      ? docPath(userGuideLanding.docId)
+      : '/docs/Docs/User%20Guide',
     latestRelease: latestRelease
       ? {
           version: latestRelease.version.join('.'),
@@ -515,8 +595,13 @@ const config = {
           className: 'nav-ico nav-ico--home',
         },
  
-        // One dropdown per folder in docs/Docs (built automatically, see above).
+        // Legal pages (Copyright, Disclaimer)
+        legalDropdown,
+
+        // Documentation menu (User Guide, Installation Guide, ...) and any
+        // other folder in docs/Docs (built automatically, see above).
         // Clicking a menu label opens its landing page (see MENU_LANDING).
+        documentationDropdown,
         ...guideDropdowns,
  
         // App team blog posts (see /blog folder)
@@ -527,7 +612,7 @@ const config = {
           className: 'nav-ico nav-ico--app-teams',
         },
 
-        // API documents + Legal pages (see MORE_FOLDERS above)
+        // More: API documents (see MORE_FOLDERS above)
         {
           type: 'dropdown',
           label: 'More',

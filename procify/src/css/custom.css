@@ -643,8 +643,9 @@ div[class*='announcementBar'] button svg {
   }
 }
 
-/* Narrow desktop: drop the menu icons, keep the labels */
-@media (min-width: 997px) and (max-width: 1250px) {
+/* Very narrow desktop only: drop the menu icons, keep the labels
+   (the top bar has few menus now, so icons fit on normal screens) */
+@media (min-width: 997px) and (max-width: 1100px) {
   .navbar .nav-ico.navbar__link::before,
   .navbar .nav-ico > .navbar__link::before {
     display: none;
@@ -695,6 +696,7 @@ div[class*='announcementBar'] button svg {
 .navbar .nav-ico { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9zM14 3v6h6M8 13h8M8 17h8'/%3E%3C/svg%3E"); }
 .navbar .nav-ico--home { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10'/%3E%3C/svg%3E"); }
 .navbar .nav-ico--user-guide { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 4h7a3 3 0 013 3v13a2 2 0 00-2-2H2zM22 4h-7a3 3 0 00-3 3v13a2 2 0 012-2h8z'/%3E%3C/svg%3E"); }
+.navbar .nav-ico--documentation { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 4h7a3 3 0 013 3v13a2 2 0 00-2-2H2zM22 4h-7a3 3 0 00-3 3v13a2 2 0 012-2h8z'/%3E%3C/svg%3E"); }
 .navbar .nav-ico--installation-guide { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z'/%3E%3C/svg%3E"); }
 .navbar .nav-ico--training-guide { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5'/%3E%3C/svg%3E"); }
 .navbar .nav-ico--api-document-link { --nav-ico: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H7a2 2 0 00-2 2v5a2 2 0 01-2 2 2 2 0 012 2v5a2 2 0 002 2h1M16 3h1a2 2 0 012 2v5a2 2 0 002 2 2 2 0 00-2 2v5a2 2 0 01-2 2h-1'/%3E%3C/svg%3E"); }
@@ -746,5 +748,42 @@ div[class*='announcementBar'] button svg {
   .navbar__items:not(.navbar__items--right) > a.navbar__item {
     align-items: center;
     border-radius: 0;
+  }
+}
+
+/* The right side (More, search, GitHub) never shrinks, so "More" - which holds
+   API Document Link and Legal - cannot be pushed out of view. The left menus
+   give way instead. */
+@media (min-width: 997px) {
+  .navbar__items--right {
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+  }
+
+  .navbar__items:not(.navbar__items--right) {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  /* "More" sits in the right group: same look as the other menus */
+  .navbar__items--right > .navbar__item.dropdown > .navbar__link {
+    height: var(--ifm-navbar-height);
+    padding: 0 10px;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  /* open the More menu towards the left so it never runs off the screen */
+  .navbar__items--right .dropdown > .dropdown__menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1700px) {
+  .navbar__items:not(.navbar__items--right) .navbar__link {
+    font-size: 12.5px;
+    padding: 0 6px;
   }
 }
