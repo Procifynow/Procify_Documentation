@@ -22,10 +22,6 @@
 
 # **Table of Contents**
 
-[**Copyright	2**](#copyright)
-
-[**Disclaimer	2**](#disclaimer)
-
 [**1.0. Message Monitor	4**](#1.0.-message-monitor)
 
 [Purpose of Message Monitoring	4](#purpose-of-message-monitoring)

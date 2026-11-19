@@ -507,6 +507,18 @@ const config = {
           position: 'left',
           className: 'nav-ico nav-ico--app-teams',
         },
+
+        // Legal pages (docs/Legal)
+        {
+          type: 'dropdown',
+          label: 'Legal',
+          position: 'left',
+          className: 'nav-ico nav-ico--legal',
+          items: [
+            {label: 'Copyright', to: '/docs/Legal/Copyright'},
+            {label: 'Disclaimer', to: '/docs/Legal/Disclaimer'},
+          ],
+        },
  
         {
           type: 'search',

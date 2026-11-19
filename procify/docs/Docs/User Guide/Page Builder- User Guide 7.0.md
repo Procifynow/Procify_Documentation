@@ -22,10 +22,6 @@
 
 # **Table of Contents\`**
 
-[**Copyright	2**](#copyright)
-
-[**Disclaimer	2**](#disclaimer)
-
 [**1.0. Toolbar	13**](#1.0.-toolbar)
 
 [1.1. App Selection	13](#1.1.-app-selection)

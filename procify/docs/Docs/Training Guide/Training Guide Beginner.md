@@ -14,16 +14,6 @@ title: "Training Guide - Beginner"
 
 *A Training Manual for application creation, knowledge and work reference.*
 
-# **Copyright**
-
-Copyright © 2025 Procify Innovations Pvt. Ltd. All rights reserved.
-
-No part of this publication may be reproduced or transmitted in any form or purpose without the permission of **Procify Innovations Pvt. Ltd.** The information contained in this document might change based on new developments without prior notice.
-
-# **Disclaimer**
-
-THESE MATERIALS ARE PROVIDED BY PROCIFY INNOVATIONS PVT LTD, ON AN "AS IS" BASIS, AND EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR APPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, CONCERNING THESE MATERIALS AND THE SERVICE, INFORMATION, TEXT, GRAPHICS, LINKS, OR ANY OTHER MATERIALS AND PRODUCTS CONTAINED HEREIN. IN NO EVENT SHALL PROCIFY INNOVATIONS PVT LTD BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES OF ANY KIND WHATSOEVER, INCLUDING WITHOUT LIMITATION LOST REVENUES OR LOST PROFITS, WHICH MAY RESULT FROM THE USE OF THESE MATERIALS OR INCLUDED SOFTWARE COMPONENTS.
-
 **Training Procedure**
 
 Welcome to the Procify Developer Training. This section explains the overall structure of the course, how sessions are designed, and what is expected of you as a trainee. Read this before starting Session 1\.
@@ -1093,10 +1083,6 @@ By the end of this session, you will be able to:
 | After Session 3, the complaint\_id will auto-generate, the status dropdown will show the correct lifecycle values, and complaint\_type will be classified. |
 |  |
 
-[Copyright](?tab=t.0#heading=)
-
-[Disclaimer](?tab=t.0#heading=)
-
 [Course Structure — 8 Sessions](?tab=t.0#heading=)
 
 [The Learn-by-Building Approach](?tab=t.0#heading=)
@@ -1636,10 +1622,6 @@ By the end of this session, you will be able to:
 [Documentation Sources Used in This Session](#documentation-sources-used-in-this-session)
 
 ### 
-
-[Copyright](?tab=t.0#heading=)
-
-[Disclaimer](?tab=t.0#heading=)
 
 [Course Structure — 8 Sessions](?tab=t.0#heading=)
 
