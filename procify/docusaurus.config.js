@@ -207,14 +207,33 @@ const searchContexts = [
   {label: 'App Teams – Blogs', path: 'blogs'},
 ];
  
-const guideDropdowns = guideFolders.map((name) =>
-  docsDropdown(
-    name,
-    name,
-    FOLDER_OPTIONS[name]?.exclude ?? null,
-    !!FOLDER_OPTIONS[name]?.byVersion,
-  ),
-);
+// Folders shown inside the "More" menu instead of as their own top menu,
+// so the top bar stays on one line.
+const MORE_FOLDERS = ['API Document Link'];
+
+const guideDropdowns = guideFolders
+  .filter((name) => !MORE_FOLDERS.includes(name))
+  .map((name) =>
+    docsDropdown(
+      name,
+      name,
+      FOLDER_OPTIONS[name]?.exclude ?? null,
+      !!FOLDER_OPTIONS[name]?.byVersion,
+    ),
+  );
+
+// "More" menu: the MORE_FOLDERS pages (with a heading per folder) + Legal pages
+const moreItems = [
+  ...guideFolders
+    .filter((name) => MORE_FOLDERS.includes(name))
+    .flatMap((name) => [
+      {type: 'html', value: `<span class="nav-more-heading">${name}</span>`},
+      ...docsDropdown(name, name).items,
+    ]),
+  {type: 'html', value: '<span class="nav-more-heading">Legal</span>'},
+  {label: 'Copyright', to: '/docs/Legal/Copyright'},
+  {label: 'Disclaimer', to: '/docs/Legal/Disclaimer'},
+];
  
 // Folders beyond the three main guides: shown as extra cards on the home page
 // and extra links in the footer (label + link to the first page)
@@ -508,26 +527,25 @@ const config = {
           className: 'nav-ico nav-ico--app-teams',
         },
 
-        // Legal pages (docs/Legal)
+        // API documents + Legal pages (see MORE_FOLDERS above)
         {
           type: 'dropdown',
-          label: 'Legal',
+          label: 'More',
           position: 'left',
-          className: 'nav-ico nav-ico--legal',
-          items: [
-            {label: 'Copyright', to: '/docs/Legal/Copyright'},
-            {label: 'Disclaimer', to: '/docs/Legal/Disclaimer'},
-          ],
+          className: 'nav-ico nav-ico--more',
+          items: moreItems,
         },
  
         {
           type: 'search',
           position: 'right',
         },
+        // GitHub as an icon only (saves space in the top bar)
         {
           href: 'https://github.com/Procifynow/Procify_Documentation',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
