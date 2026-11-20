@@ -5,21 +5,21 @@ sidebar_label: BOL API
 
 # PROCIFY API Reference
 
-Full interactive reference: [apihelp.procifynow.com/bol](https://apihelp.procifynow.com/bol/index.html)
+Full interactive reference: <a href="/Procify_Documentation/api/bol/index.html">PROCIFY API reference</a>
 
 ## Modules
 
-- [EndpointBean](https://apihelp.procifynow.com/bol/modules/EndpointBean.html)
-- [EnvVariables](https://apihelp.procifynow.com/bol/modules/EnvVariables.html)
-- [EventContext](https://apihelp.procifynow.com/bol/modules/EventContext.html)
-- [KloAppService](https://apihelp.procifynow.com/bol/modules/KloAppService.html)
-- [KloEntity](https://apihelp.procifynow.com/bol/modules/KloEntity.html)
-- [KloEntitySet](https://apihelp.procifynow.com/bol/modules/KloEntitySet.html)
-- [KloEnums](https://apihelp.procifynow.com/bol/modules/KloEnums.html)
-- [KloObject](https://apihelp.procifynow.com/bol/modules/KloObject.html)
-- [KloQuery](https://apihelp.procifynow.com/bol/modules/KloQuery.html)
-- [KloQueryForRule](https://apihelp.procifynow.com/bol/modules/KloQueryForRule.html)
-- [KloTransaction](https://apihelp.procifynow.com/bol/modules/KloTransaction.html)
-- [KloValueHelp](https://apihelp.procifynow.com/bol/modules/KloValueHelp.html)
-- [LocalArchive](https://apihelp.procifynow.com/bol/modules/LocalArchive.html)
-- [NotificationBean](https://apihelp.procifynow.com/bol/modules/NotificationBean.html)
+- <a href="/Procify_Documentation/api/bol/modules/EndpointBean.html">EndpointBean</a>
+- <a href="/Procify_Documentation/api/bol/modules/EnvVariables.html">EnvVariables</a>
+- <a href="/Procify_Documentation/api/bol/modules/EventContext.html">EventContext</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloAppService.html">KloAppService</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloEntity.html">KloEntity</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloEntitySet.html">KloEntitySet</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloEnums.html">KloEnums</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloObject.html">KloObject</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloQuery.html">KloQuery</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloQueryForRule.html">KloQueryForRule</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloTransaction.html">KloTransaction</a>
+- <a href="/Procify_Documentation/api/bol/modules/KloValueHelp.html">KloValueHelp</a>
+- <a href="/Procify_Documentation/api/bol/modules/LocalArchive.html">LocalArchive</a>
+- <a href="/Procify_Documentation/api/bol/modules/NotificationBean.html">NotificationBean</a>

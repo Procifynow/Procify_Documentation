@@ -259,8 +259,36 @@ const GUIDE_INFO = {
   'Installation Guide': 'Step-by-step instructions to set up and install Procify components.',
   'Training Guide': 'Structured training material for Procify development and configuration.',
   'Release Notes': 'New features, enhancements and fixes introduced in each Procify release.',
-  'API Document Link': 'Links to the Procify API reference documentation.',
+  'API Document Link': 'Browse the Procify BOL API reference: one page per module.',
 };
+
+// API Document Link: the TypeDoc API reference, hosted by this site.
+// Copy the generated "bol" folder to static/api/bol (so that
+// static/api/bol/index.html and static/api/bol/modules/*.html exist).
+// Links are plain files, so the navbar items use prependBaseUrlToHref
+// (adds the site's baseUrl) instead of Docusaurus page routes.
+const API_BASE = '/api/bol';
+const API_MODULES = [
+  'EndpointBean',
+  'EnvVariables',
+  'EventContext',
+  'KloAppService',
+  'KloEntity',
+  'KloEntitySet',
+  'KloEnums',
+  'KloObject',
+  'KloQuery',
+  'KloQueryForRule',
+  'KloTransaction',
+  'KloValueHelp',
+  'LocalArchive',
+  'NotificationBean',
+];
+const apiModuleLinks = API_MODULES.map((name) => ({
+  label: name,
+  href: `${API_BASE}/modules/${name}.html`,
+  prependBaseUrlToHref: true,
+}));
 
 const docCatalog = DOC_GROUP.filter((name) => guideFolders.includes(name)).map((name) => {
   const opts = FOLDER_OPTIONS[name] || {};
@@ -276,6 +304,16 @@ const docCatalog = DOC_GROUP.filter((name) => guideFolders.includes(name)).map((
     items.push({label: d.group || d.label, path: docPath(d.docId)});
   }
   const landing = docs.find((d) => d.id === MENU_LANDING[name]) ?? docs[0];
+  if (name === 'API Document Link') {
+    return {
+      label: name,
+      description: GUIDE_INFO[name],
+      path: `${API_BASE}/index.html`,
+      plain: true,
+      unit: 'modules',
+      items: apiModuleLinks.map((m) => ({label: m.label, path: m.href, plain: true})),
+    };
+  }
   return {
     label: name,
     description: GUIDE_INFO[name] || `Browse the ${name}.`,
@@ -286,12 +324,9 @@ const docCatalog = DOC_GROUP.filter((name) => guideFolders.includes(name)).map((
 
 // "More" menu: the MORE_FOLDERS pages (with a heading per folder)
 const moreItems = [
-  ...guideFolders
-    .filter((name) => MORE_FOLDERS.includes(name))
-    .flatMap((name) => [
-      {type: 'html', value: `<span class="nav-more-heading">${name}</span>`},
-      ...docsDropdown(name, name).items,
-    ]),
+  {type: 'html', value: '<span class="nav-more-heading">API Document Link</span>'},
+  {label: 'PROCIFY (index)', href: `${API_BASE}/index.html`, prependBaseUrlToHref: true},
+  ...apiModuleLinks,
 ];
 
 // "Legal" menu (own menu in the top bar, right after Home)

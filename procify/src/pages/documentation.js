@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './documentation.module.css';
 
@@ -60,6 +61,31 @@ function Icon({ name }) {
   );
 }
 
+// Internal pages use <Link>. "plain" = a static file of this site (the API
+// reference in static/api/bol), opened with a normal link.
+function SmartLink({ to, external, plain, children, ...props }) {
+  const staticUrl = useBaseUrl(to || '/');
+  if (plain) {
+    return (
+      <a href={staticUrl} {...props}>
+        {children}
+      </a>
+    );
+  }
+  if (external) {
+    return (
+      <a href={to} target="_blank" rel="noopener noreferrer" {...props}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link to={to} {...props}>
+      {children}
+    </Link>
+  );
+}
+
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 function GuideSection({ guide, query }) {
@@ -75,15 +101,16 @@ function GuideSection({ guide, query }) {
   return (
     <section className={styles.guide} id={slug(guide.label)}>
       {/* coloured header: icon + menu name */}
-      <Link className={styles.guideHead} to={guide.path}>
+      <SmartLink className={styles.guideHead} to={guide.path} external={guide.external} plain={guide.plain}>
         <span className={styles.iconCircle}>
           <Icon name={guide.label} />
         </span>
         <span className={styles.guideTitle}>{guide.label}</span>
         <span className={styles.count}>
-          {guide.items.length} {guide.items.length === 1 ? 'guide' : 'guides'}
+          {guide.items.length}{' '}
+          {guide.unit || (guide.items.length === 1 ? 'guide' : 'guides')}
         </span>
-      </Link>
+      </SmartLink>
 
       {/* body: every guide available in this menu */}
       <div className={styles.guideBody}>
@@ -92,16 +119,16 @@ function GuideSection({ guide, query }) {
         <ul className={styles.topics}>
           {filtered.map((item) => (
             <li key={item.path} className={styles.topic}>
-              <Link to={item.path} title={item.label}>
+              <SmartLink to={item.path} external={item.external} plain={item.plain} title={item.label}>
                 {item.label}
-              </Link>
+              </SmartLink>
             </li>
           ))}
         </ul>
 
-        <Link className={styles.cta} to={guide.path}>
+        <SmartLink className={styles.cta} to={guide.path} external={guide.external} plain={guide.plain}>
           Open {guide.label} →
-        </Link>
+        </SmartLink>
       </div>
     </section>
   );

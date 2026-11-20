@@ -5,7 +5,7 @@ sidebar_label: EndPointBean
 
 # Class EndPointBean
 
-**Module:** [EndpointBean](https://apihelp.procifynow.com/bol/modules/EndpointBean.html)
+**Module:** <a href="/Procify_Documentation/api/bol/modules/EndpointBean.html">EndpointBean</a>
 
 ## Constructors
 
@@ -19,10 +19,10 @@ new EndPointBean(rootEntity, endpointID, epType, s_channel, onlydirtyobject, onl
 
 | Name | Type | Attributes | Description |
 | --- | --- | --- | --- |
-| rootEntity | [KloEntity](https://apihelp.procifynow.com/bol/classes/KloEntity.KloEntity.html) |  | @@@ |
+| rootEntity | <a href="/Procify_Documentation/api/bol/classes/KloEntity.KloEntity.html">KloEntity</a> |  | @@@ |
 | endpointID | any |  | @@@ |
-| epType | [EndpointType](https://apihelp.procifynow.com/bol/enums/KloEnums.EndpointType.html) |  | @@@ |
-| s_channel | [ChannelType](https://apihelp.procifynow.com/bol/enums/KloEnums.ChannelType.html) |  | @@@ |
+| epType | <a href="/Procify_Documentation/api/bol/enums/KloEnums.EndpointType.html">EndpointType</a> |  | @@@ |
+| s_channel | <a href="/Procify_Documentation/api/bol/enums/KloEnums.ChannelType.html">ChannelType</a> |  | @@@ |
 | onlydirtyobject | boolean |  | @@@ |
 | onlyRootEntity | boolean | Optional | @@@ |
 
@@ -54,7 +54,7 @@ addDependantEntities(entity): KloEntity[]
 
 | Name | Type | Description |
 | --- | --- | --- |
-| entity | [KloEntity](https://apihelp.procifynow.com/bol/classes/KloEntity.KloEntity.html) | The KloEntity instance to add as a dependent entity |
+| entity | <a href="/Procify_Documentation/api/bol/classes/KloEntity.KloEntity.html">KloEntity</a> | The KloEntity instance to add as a dependent entity |
 
 #### Returns
 
