@@ -1,5 +1,1 @@
-{
-  "label": "App Settings",
-  "position": 12,
-  "collapsed": true
-}
+{"label": "App Settings", "position": 12, "collapsed": true, "link": {"type": "doc", "id": "Docs/User Guide/App Settings/Introduction"}}

@@ -1,5 +1,1 @@
-{
-  "label": "API Services",
-  "position": 20,
-  "collapsed": true
-}
+{"label": "API Services", "position": 20, "collapsed": true, "link": {"type": "doc", "id": "Docs/User Guide/API Services/Introduction"}}
