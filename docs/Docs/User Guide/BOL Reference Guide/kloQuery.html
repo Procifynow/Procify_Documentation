@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/User Guide/BOL Reference Guide/kloQuery" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">BOL Reference Guide — kloQuery | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloQuery"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="BOL Reference Guide — kloQuery | Procify Technical Documentation"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloQuery"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloQuery" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloQuery" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BOL Reference Guide","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Introduction"},{"@type":"ListItem","position":2,"name":"kloQuery","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloQuery"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.1fcba79d.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.617cc3d2.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.c31874c3.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--legal">Legal</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Copyright">Copyright</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Disclaimer">Disclaimer</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--documentation" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/documentation">Documentation</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction">User Guide</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Advanced Migration - Installation Screen/Introduction">Installation Guide</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">API Document Link</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--faqs" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs on Private Node</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Runtime/Introduction">FAQs on Runtime</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--more">More</a><ul class="dropdown__menu"><li class=""><span class="nav-more-heading">API Document Link</span></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/index.html">PROCIFY (index)</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EndpointBean.html">EndpointBean</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EnvVariables.html">EnvVariables</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EventContext.html">EventContext</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloAppService.html">KloAppService</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntity.html">KloEntity</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntitySet.html">KloEntitySet</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEnums.html">KloEnums</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloObject.html">KloObject</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQuery.html">KloQuery</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQueryForRule.html">KloQueryForRule</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloTransaction.html">KloTransaction</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloValueHelp.html">KloValueHelp</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/LocalArchive.html">LocalArchive</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/NotificationBean.html">NotificationBean</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">User Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/ADM Client Global Object/Introduction"><span class="categoryLinkLabel_W154">ADM Client Global Object</span></a><button aria-label="Expand sidebar category &#x27;ADM Client Global Object&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/AWS Automation/Introduction"><span class="categoryLinkLabel_W154">AWS Automation</span></a><button aria-label="Expand sidebar category &#x27;AWS Automation&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Advanced Migration - Installation Screen/Introduction"><span class="categoryLinkLabel_W154">Advanced Migration - Installation Screen</span></a><button aria-label="Expand sidebar category &#x27;Advanced Migration - Installation Screen&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Branching and Merging/Introduction"><span class="categoryLinkLabel_W154">App Branching and Merging</span></a><button aria-label="Expand sidebar category &#x27;App Branching and Merging&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Cache Settings/Introduction"><span class="categoryLinkLabel_W154">App Cache Settings</span></a><button aria-label="Expand sidebar category &#x27;App Cache Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Compare and Merge/Introduction"><span class="categoryLinkLabel_W154">App Compare and Merge</span></a><button aria-label="Expand sidebar category &#x27;App Compare and Merge&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Publish Services/Introduction"><span class="categoryLinkLabel_W154">App Publish Services</span></a><button aria-label="Expand sidebar category &#x27;App Publish Services&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Applications FW Version Update/Introduction"><span class="categoryLinkLabel_W154">Applications FW Version Update</span></a><button aria-label="Expand sidebar category &#x27;Applications FW Version Update&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Custom Icon Pool/Introduction"><span class="categoryLinkLabel_W154">Custom Icon Pool</span></a><button aria-label="Expand sidebar category &#x27;Custom Icon Pool&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Customer Branding for iOS/Introduction"><span class="categoryLinkLabel_W154">Customer Branding for iOS</span></a><button aria-label="Expand sidebar category &#x27;Customer Branding for iOS&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Enhance and Upgrade Your Application/Introduction"><span class="categoryLinkLabel_W154">Enhance and Upgrade Your Application</span></a><button aria-label="Expand sidebar category &#x27;Enhance and Upgrade Your Application&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Flavor Alias/Introduction"><span class="categoryLinkLabel_W154">Flavor Alias</span></a><button aria-label="Expand sidebar category &#x27;Flavor Alias&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Introduction"><span class="categoryLinkLabel_W154">Klarion 5.0 - BOL APIs</span></a><button aria-label="Expand sidebar category &#x27;Klarion 5.0 - BOL APIs&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloSystem/Introduction"><span class="categoryLinkLabel_W154">KloSystem</span></a><button aria-label="Expand sidebar category &#x27;KloSystem&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Merging index.html in GitHub/Introduction"><span class="categoryLinkLabel_W154">Merging index.html in GitHub</span></a><button aria-label="Expand sidebar category &#x27;Merging index.html in GitHub&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/MySQL Database Backup &amp; Restore/Introduction"><span class="categoryLinkLabel_W154">MySQL Database Backup &amp; Restore</span></a><button aria-label="Expand sidebar category &#x27;MySQL Database Backup &amp; Restore&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Node Matrix/Introduction"><span class="categoryLinkLabel_W154">Node Matrix</span></a><button aria-label="Expand sidebar category &#x27;Node Matrix&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Notification Developer Guide/Introduction"><span class="categoryLinkLabel_W154">Notification Developer Guide</span></a><button aria-label="Expand sidebar category &#x27;Notification Developer Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Slow Query Log/Introduction"><span class="categoryLinkLabel_W154">Slow Query Log</span></a><button aria-label="Expand sidebar category &#x27;Slow Query Log&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/System Dialer/Introduction"><span class="categoryLinkLabel_W154">System Dialer</span></a><button aria-label="Expand sidebar category &#x27;System Dialer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/UWL Notification Guide/Introduction"><span class="categoryLinkLabel_W154">UWL Notification Guide</span></a><button aria-label="Expand sidebar category &#x27;UWL Notification Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workflow Modeler Guide/Introduction"><span class="categoryLinkLabel_W154">Workflow Modeler Guide</span></a><button aria-label="Expand sidebar category &#x27;Workflow Modeler Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Introduction"><span class="categoryLinkLabel_W154">BOL Reference Guide</span></a><button aria-label="Collapse sidebar category &#x27;BOL Reference Guide&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Overview"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/General Terms"><span class="linkLabel_WmDU">General Terms</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Transaction (txn)"><span class="linkLabel_WmDU">Transaction (txn)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloQuery"><span class="linkLabel_WmDU">kloQuery</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/KloEntitySet"><span class="linkLabel_WmDU">KloEntitySet</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Object Type"><span class="linkLabel_WmDU">Object Type</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Config"><span class="linkLabel_WmDU">Config</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/$VARIABLES"><span class="linkLabel_WmDU">$VARIABLES</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/kloIDSeries"><span class="linkLabel_WmDU">kloIDSeries</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Value Help"><span class="linkLabel_WmDU">Value Help</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Attachment"><span class="linkLabel_WmDU">Attachment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Key mapping"><span class="linkLabel_WmDU">Key mapping</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Update schema"><span class="linkLabel_WmDU">Update schema</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/MIDDLEWARE"><span class="linkLabel_WmDU">MIDDLEWARE</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/KloLocalStorage"><span class="linkLabel_WmDU">KloLocalStorage</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Scheduler"><span class="linkLabel_WmDU">Scheduler</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Notification"><span class="linkLabel_WmDU">Notification</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/StackTrace"><span class="linkLabel_WmDU">StackTrace</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Query Statistics"><span class="linkLabel_WmDU">Query Statistics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Glossary"><span class="linkLabel_WmDU">Glossary</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Banner/Introduction"><span class="categoryLinkLabel_W154">Banner</span></a><button aria-label="Expand sidebar category &#x27;Banner&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Custom Domains/Introduction"><span class="categoryLinkLabel_W154">Custom Domains</span></a><button aria-label="Expand sidebar category &#x27;Custom Domains&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloChart/Introduction"><span class="categoryLinkLabel_W154">KloChart</span></a><button aria-label="Expand sidebar category &#x27;KloChart&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Local Archive/Introduction"><span class="categoryLinkLabel_W154">Local Archive</span></a><button aria-label="Expand sidebar category &#x27;Local Archive&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Record Lock Manager/Introduction"><span class="categoryLinkLabel_W154">Record Lock Manager</span></a><button aria-label="Expand sidebar category &#x27;Record Lock Manager&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Debugging/Introduction"><span class="categoryLinkLabel_W154">Server Side Debugging</span></a><button aria-label="Expand sidebar category &#x27;Server Side Debugging&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/iOS and Android Build/Introduction"><span class="categoryLinkLabel_W154">iOS and Android Build</span></a><button aria-label="Expand sidebar category &#x27;iOS and Android Build&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/kloControls/Introduction"><span class="categoryLinkLabel_W154">kloControls</span></a><button aria-label="Expand sidebar category &#x27;kloControls&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Common Login/Introduction"><span class="categoryLinkLabel_W154">Common Login</span></a><button aria-label="Expand sidebar category &#x27;Common Login&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Customer Branding/Introduction"><span class="categoryLinkLabel_W154">Customer Branding</span></a><button aria-label="Expand sidebar category &#x27;Customer Branding&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Data Sync Settings/Introduction"><span class="categoryLinkLabel_W154">Data Sync Settings</span></a><button aria-label="Expand sidebar category &#x27;Data Sync Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Endpoint Redirection to Private Node/Introduction"><span class="categoryLinkLabel_W154">Endpoint Redirection to Private Node</span></a><button aria-label="Expand sidebar category &#x27;Endpoint Redirection to Private Node&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Msg Enquire/Introduction"><span class="categoryLinkLabel_W154">Msg Enquire</span></a><button aria-label="Expand sidebar category &#x27;Msg Enquire&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Screen Lifecycle Events/Introduction"><span class="categoryLinkLabel_W154">Screen Lifecycle Events</span></a><button aria-label="Expand sidebar category &#x27;Screen Lifecycle Events&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Update Schema API/Introduction"><span class="categoryLinkLabel_W154">Update Schema API</span></a><button aria-label="Expand sidebar category &#x27;Update Schema API&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Upgrade and Transport/Introduction"><span class="categoryLinkLabel_W154">Upgrade and Transport</span></a><button aria-label="Expand sidebar category &#x27;Upgrade and Transport&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Migration/Introduction"><span class="categoryLinkLabel_W154">App Migration</span></a><button aria-label="Expand sidebar category &#x27;App Migration&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Dos and Donts for PA PL Section/Introduction"><span class="categoryLinkLabel_W154">Dos and Donts for PA PL Section</span></a><button aria-label="Expand sidebar category &#x27;Dos and Donts for PA PL Section&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloSectionXlsx/Introduction"><span class="categoryLinkLabel_W154">KloSectionXlsx</span></a><button aria-label="Expand sidebar category &#x27;KloSectionXlsx&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/OData Services/Introduction"><span class="categoryLinkLabel_W154">OData Services</span></a><button aria-label="Expand sidebar category &#x27;OData Services&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Picture in Picture/Introduction"><span class="categoryLinkLabel_W154">Picture in Picture</span></a><button aria-label="Expand sidebar category &#x27;Picture in Picture&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Job Scheduler/Introduction"><span class="categoryLinkLabel_W154">Job Scheduler</span></a><button aria-label="Expand sidebar category &#x27;Job Scheduler&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/OData Network Mode/Introduction"><span class="categoryLinkLabel_W154">OData Network Mode</span></a><button aria-label="Expand sidebar category &#x27;OData Network Mode&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Publish or Validate Screen/Introduction"><span class="categoryLinkLabel_W154">Publish or Validate Screen</span></a><button aria-label="Expand sidebar category &#x27;Publish or Validate Screen&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Battery Network and Location API/Introduction"><span class="categoryLinkLabel_W154">Battery Network and Location API</span></a><button aria-label="Expand sidebar category &#x27;Battery Network and Location API&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction"><span class="categoryLinkLabel_W154">Server Side Attachment Upload</span></a><button aria-label="Expand sidebar category &#x27;Server Side Attachment Upload&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction"><span class="categoryLinkLabel_W154">Workspace Hub</span></a><button aria-label="Expand sidebar category &#x27;Workspace Hub&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction"><span class="categoryLinkLabel_W154">App Settings</span></a><button aria-label="Expand sidebar category &#x27;App Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction"><span class="categoryLinkLabel_W154">Workspace Settings</span></a><button aria-label="Expand sidebar category &#x27;Workspace Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction"><span class="categoryLinkLabel_W154">Menu Builder</span></a><button aria-label="Expand sidebar category &#x27;Menu Builder&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction"><span class="categoryLinkLabel_W154">Notification Modeler</span></a><button aria-label="Expand sidebar category &#x27;Notification Modeler&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction"><span class="categoryLinkLabel_W154">App Dependencies</span></a><button aria-label="Expand sidebar category &#x27;App Dependencies&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction"><span class="categoryLinkLabel_W154">FAQs Editor</span></a><button aria-label="Expand sidebar category &#x27;FAQs Editor&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction"><span class="categoryLinkLabel_W154">KloController closeDialog</span></a><button aria-label="Expand sidebar category &#x27;KloController closeDialog&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction"><span class="categoryLinkLabel_W154">API Services</span></a><button aria-label="Expand sidebar category &#x27;API Services&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction"><span class="categoryLinkLabel_W154">Query Console</span></a><button aria-label="Expand sidebar category &#x27;Query Console&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction"><span class="categoryLinkLabel_W154">Page Builder</span></a><button aria-label="Expand sidebar category &#x27;Page Builder&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction"><span class="categoryLinkLabel_W154">Developer AI</span></a><button aria-label="Expand sidebar category &#x27;Developer AI&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction"><span class="categoryLinkLabel_W154">Permission Designer</span></a><button aria-label="Expand sidebar category &#x27;Permission Designer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction"><span class="categoryLinkLabel_W154">Row wise authorization</span></a><button aria-label="Expand sidebar category &#x27;Row wise authorization&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction"><span class="categoryLinkLabel_W154">Automation</span></a><button aria-label="Expand sidebar category &#x27;Automation&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction"><span class="categoryLinkLabel_W154">Auto-Number Settings</span></a><button aria-label="Expand sidebar category &#x27;Auto-Number Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction"><span class="categoryLinkLabel_W154">Dialog Events</span></a><button aria-label="Expand sidebar category &#x27;Dialog Events&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction"><span class="categoryLinkLabel_W154">KloTriState</span></a><button aria-label="Expand sidebar category &#x27;KloTriState&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction"><span class="categoryLinkLabel_W154">Best Practice Guidelines</span></a><button aria-label="Expand sidebar category &#x27;Best Practice Guidelines&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction"><span class="categoryLinkLabel_W154">KloAvatar</span></a><button aria-label="Expand sidebar category &#x27;KloAvatar&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction"><span class="categoryLinkLabel_W154">Pivot Modeller</span></a><button aria-label="Expand sidebar category &#x27;Pivot Modeller&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction"><span class="categoryLinkLabel_W154">App Lifecycle Events</span></a><button aria-label="Expand sidebar category &#x27;App Lifecycle Events&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction"><span class="categoryLinkLabel_W154">Git Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction"><span class="categoryLinkLabel_W154">Landing Page Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction"><span class="categoryLinkLabel_W154">Message Monitoring</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction"><span class="categoryLinkLabel_W154">Middleware Message Forwarding</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction"><span class="categoryLinkLabel_W154">Query Analysis</span></a></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">User Guide</span></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Introduction"><span>BOL Reference Guide</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">kloQuery</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>kloQuery</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>kloQuery is a metamodel for fetching data from the data store, like SQL in RDBMS. kloQuery gives the ability to fetch the data seamlessly for offline and online applications. It abstracts out multiple syntax of Odata, SQL, Json etc. so that programmers can concentrate on the business logic. It gives a few short-hand optimizations like <em>pagination</em>, column selection and security features like authorization etc.</p>
+<p>kloQuery is made with Query, QueryProperty, PropertyType, Select, orderby etc. It returns kloEntityset which is an array of kloEntities.
+E.g. consider the following SQL:</p>
+<p><strong>SELECT</strong> ord_id, qty AS ord_qty, ord_date <strong>FROM</strong> d_order <strong>WHERE</strong> <em>d_order.status = ‘open’</em> <strong>Orderby</strong> ord_date “ASC”:</p>
+<p>Let q = await oController.getQueryP(“d_order”);</p>
+<p>q.setProperty(“d_order.status”, ‘open’);</p>
+<p>q.setOrderBy([{fieldname:”d_order.ord_date” , sort_type:”ASC”}]);</p>
+<p>Let result: kloEntitySet = await q.ExecuteP();</p>
+<p>The above SQL needs to be represented by kloQuery. WHERE clause of SQL <strong>d_order.status</strong> is the input search criteria modelled as <strong>query property</strong> and its <strong>property type</strong>, will describe the type(string) caption and value help. Similarly, kloQuery also has <strong>OrderBy</strong> and <strong>Select</strong>, together with other constructs to hold the SQL constraints. Query objects are directly bindable in UI for user input and capable of providing label and value help. kloQuery can be represented in pre-modelled query by name and at runtime enhancing with constraints.</p>
+<p><em><strong>Types of kloQuery:</strong></em></p>
+<p>kloQuery supports multiple types of query modelling which are easy to define and use in the application. Based on the application scenario and use case, the query type has to be decided.</p>
+<ul>
+<li class="">
+<p>Runtime Query (single and multiple entities)</p>
+</li>
+<li class="">
+<p>Meta Query (former Dynamic Query)</p>
+</li>
+<li class="">
+<p>Native Query (former Advanced Query)</p>
+</li>
+</ul>
+<p>Queries are also used in <strong>Saved Query, User Saved Query, Initial Sync Query, and Advanced Query.</strong></p>
+<p><strong>Note:</strong> Runtime Query does not need modelling. It inherits behaviour from the entity and BO definition and operates with API. Later, we will consider more control on query by modelling the kloQuery.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="query-api">Query API<a href="#query-api" class="hash-link" aria-label="Direct link to Query API" title="Direct link to Query API" translate="no">​</a></h2>
+<p>For Query APIs refer to <a href="https://docs.google.com/document/d/1vRerluDqwBKu2mGbU1UORjZW5Uv8D5bFic6l8xsLRWA/edit" target="_blank" rel="noopener noreferrer" class=""><em>BOL Query APIs- 5.7</em></a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="operators-in-query">Operators in Query<a href="#operators-in-query" class="hash-link" aria-label="Direct link to Operators in Query" title="Direct link to Operators in Query" translate="no">​</a></h2>
+<p>Adding operators to query properties while setting through API (on Query instance ) or with bindings.</p>
+<p><strong>Supported operators are:</strong></p>
+<p><strong>Where Operators:</strong> AND, OR, NOT.</p>
+<p><strong>Query Operators:</strong> EQUAL, NOT EQUAL, GREATER, LESSER, GREATER_EQUAL, LESSER_EQL, LIKE, IS NULL, IS NOT NULL, IN, NOT IN.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="query-without-modelling">Query without Modelling<a href="#query-without-modelling" class="hash-link" aria-label="Direct link to Query without Modelling" title="Direct link to Query without Modelling" translate="no">​</a></h2>
+<p><strong>Runtime Query</strong></p>
+<p>Runtime Query does not need modelling. It inherits behaviour from the entity and BO definition and operates with API.</p>
+<p>Get the Query instance by specifying the entity name as the <strong>returned entity</strong>. The result of executeP contains the qualified entities from the specified return entity. Using API to fill up the values you need in addition to API below information may help to use runtime query effectively.</p>
+<p>Setting <strong>Where</strong> clause</p>
+<p>Syntax: &lt;query instance&gt;[&lt;EntityName&gt;@&lt;EntityProperty&gt;_&lt;operator&gt;] = value</p>
+<p><em>Example:</em></p>
+<p>Q[‘item_number’ + QUERY_OPRATOR.GT] = 20</p>
+<p>q[‘item_number_LT’] = 50</p>
+<p>This will filter the results having item numbers between 20 and 50.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="runtime-query-on-multiple-entity-within-bo">Runtime Query on multiple Entity within BO<a href="#runtime-query-on-multiple-entity-within-bo" class="hash-link" aria-label="Direct link to Runtime Query on multiple Entity within BO" title="Direct link to Runtime Query on multiple Entity within BO" translate="no">​</a></h5>
+<p>This is part of a Runtime query with a special case where you want to fetch the data from one entity extending the <strong>where</strong> clause to other entities within the BO boundary. Use the return entity name as the Query name. Based on the <strong>setProperties</strong> parameters, it decides either to query on a single entity or multiple entities. All parameters in <strong>setProperty</strong> should have a table name also if the property belongs to other than the return entity. If the table name is not mentioned, it will consider the return entity name.</p>
+<p>All entities should be part of one BO. If all entities are not part of the same BO, it will throw an error at runtime.</p>
+<p>getQueryP(entityName: &quot;d_order&quot;)</p>
+<p>@parameter: <strong>entityName</strong>: entity name(case sensitive)</p>
+<p>@Returns: Query Instance (KloQuery)</p>
+<p>It is not necessary to use the root entity only as a query ID. Any entity(within BO) can be used and joins could be on parent or child entities.</p>
+<p><em>Example:</em></p>
+<ul>
+<li class="">
+<p>d_order</p>
+<ul>
+<li class="">
+<p>d_order_item</p>
+<ul>
+<li class="">d_order_conditions</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>One can use d_order_item as the return entity and user d_order entity’s property in the setProperty function. Here, JOIN will be added for d_order in the constructed query.</p>
+<p>Features supported:</p>
+<ul>
+<li class="">
+<p>Fetch data from multiple tables in a single BO.</p>
+</li>
+<li class="">
+<p>Joins are decided as the entity properties used in setProperty.</p>
+</li>
+</ul>
+<p>All parameters are optional. If the participating/join table parameter is not passed, JOIN will not be applied.</p>
+<p><strong>Features not supported:</strong></p>
+<ul>
+<li class="">
+<p>Filter expression</p>
+</li>
+<li class="">
+<p>Group By</p>
+</li>
+<li class="">
+<p>Distinct</p>
+</li>
+<li class="">
+<p>SUM/COUNT/AVG</p>
+</li>
+<li class="">
+<p>OR</p>
+</li>
+<li class="">
+<p>SELECT( function, alias)</p>
+</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<p>Let’s take an example of Online Order placement to understand the kloQuery functions. Table(Entity): d_order &gt;&gt; d_order_item.</p>
+<p>Here d_order is the main header table and d_order_item is a child table with a foreign key relation as order_id.</p>
+<p>Table Name : <strong>d_order</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Field Name</strong></th><th><strong>Data Type</strong></th></tr></thead><tbody><tr><td>order_id</td><td>varchar(32)</td></tr><tr><td>order_date</td><td>datetime</td></tr><tr><td>customer_id</td><td>varchar(32)</td></tr><tr><td>status</td><td>varchar(32)</td></tr><tr><td>order_type</td><td>int(11)</td></tr><tr><td>vendor_id</td><td>varchar(32)</td></tr><tr><td>net_amount</td><td>decimal(19,6)</td></tr><tr><td>isdeleted</td><td>boolean</td></tr><tr><td>city</td><td>varchar(32)</td></tr><tr><td>pincode</td><td>int</td></tr></tbody></table>
+<p>Table Name: <strong>d_order_item</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Field Name</strong></th><th><strong>Data Type</strong></th></tr></thead><tbody><tr><td>order_id</td><td>varchar(32)</td></tr><tr><td>item_id</td><td>varchar(32)</td></tr><tr><td>material_id</td><td>varchar(32)</td></tr><tr><td>quantity</td><td>decimal(19,6)</td></tr><tr><td>net_amount</td><td>decimal(19,6)</td></tr><tr><td>discount_amount</td><td>decimal(19,6)</td></tr><tr><td>status</td><td>varchar(32)</td></tr><tr><td>delivery_date</td><td>datetime</td></tr></tbody></table>
+<p>Table: <strong>d_customer</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Field Name</strong></th><th><strong>Data Type</strong></th></tr></thead><tbody><tr><td>customer_id</td><td>varchar(32)</td></tr><tr><td>name</td><td>varchar(80)</td></tr><tr><td>doj</td><td>date</td></tr><tr><td>age</td><td>int</td></tr></tbody></table>
+<ol>
+<li class="">Get open orders</li>
+</ol>
+<p>oController.getQuery(&#x27;d_logistics&#x27;).then(function (orderQI) {</p>
+<p>orderQI.setProperty(‘d_order.s_status, ‘open’);</p>
+<p>orderQI.setNetWorkMode(&#x27;ONLINE&#x27;);</p>
+<p>orderQI.executeP(function (logisticsES) {... }}</p>
+<ol start="2">
+<li class="">Get open orders of a particular customer</li>
+</ol>
+<p>oController.getQuery(&#x27;d_logistics&#x27;).then(function (orderQI) {</p>
+<p>orderQI.setProperty(‘d_order.s_status, ‘open’);</p>
+<p>orderQI.setProperty(‘d_order_item.order_id’, orderID);</p>
+<p>orderQI.setNetWorkMode(&#x27;ONLINE&#x27;);</p>
+<p>orderQI.executeP(function (logisticsES) {... }}</p>
+<ol start="3">
+<li class="">
+<p>Get all orders in the last month</p>
+</li>
+<li class="">
+<p>Get all orders with the status Open and In-process</p>
+</li>
+<li class="">
+<p>Get all prime orders - order type</p>
+</li>
+<li class="">
+<p>Get the total sales month-wise (in terms of amount) for the last 6 month</p>
+</li>
+</ol>
+<p><strong>SQL statement:</strong> Select sum(amount), month(order_date) from d_order where order_date &gt;= DATE(NOW() - INTERVAL 6 MONTH) Group By month(order_date)</p>
+<ol start="7">
+<li class="">
+<p>Track particular order</p>
+</li>
+<li class="">
+<p>Get the number of orders date-wise</p>
+</li>
+<li class="">
+<p>Get material-wise total quantity orders in the last month</p>
+</li>
+<li class="">
+<p>Get the highest value order for last month</p>
+</li>
+<li class="">
+<p>Get all deleted orders for last month</p>
+</li>
+<li class="">
+<p>Get top 5 fast-moving products in the last 3 months</p>
+</li>
+<li class="">
+<p>Get the customers list who ordered in the last week</p>
+</li>
+<li class="">
+<p>Get all orders from new customers this month</p>
+</li>
+</ol>
+<p><strong>SQL statement:</strong> Select</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="authorization-on-query">Authorization on Query<a href="#authorization-on-query" class="hash-link" aria-label="Direct link to Authorization on Query" title="Direct link to Authorization on Query" translate="no">​</a></h2>
+<p>Authorizations allow you to control the extent to which a user can create or change a query based on the data passed. Authorization can be defined on Property Type only. Authorization can’t be defined on object type or some other parameter. In case if you want to add/remove/change authorization on the base property type, extend the property type in a separate flavor.</p>
+<p>Authorization is applied on the whole BO irrespective of return Entity. If authorization is defined on any child/root entity it will be applied on all the entities which are part of that BO.</p>
+<p>When used as a string literal in a meta-model in authorization it is replaced with real value. E.g. $USER.login_id will be replaced with the currently logged-in user id. Similarly, authorization can be applied on other $VARIABLES also. For more details refer to the $VARIABLE section.</p>
+<p>$Variable is available in Rule and Endpoint resolver but not available while processing middleware messages.</p>
+<p>Syntax: $&lt;Variable name&gt;.&lt;property id&gt;}</p>
+<p><strong>Rule Execution:</strong> Authorization is applied when the query runs inside the BO Rule on the server side. In the case of client-side Rule execution authorization is not applied as client DB should have only filtered data. If any client(endpoint) is not authorised to see the data it should not get synced to the client. This means authorization is applied at the time of <strong>initial sync and data(message) push to the client</strong>.</p>
+<p><strong>Inherit Authorization:</strong> Authorization of parent object added automatically to the child. This means if authorization is applied based on the customer_id property type on the order Entity, the same will be applied on the child entities(up to n level) also.</p>
+<p>Authorization is applied in Read and Create operations. As it is applied to the Read operation, the Delete operation is covered under this. Users can’t delete the data which is not allowed to be read.</p>
+<p>Authorization is not applied while querying data in middleware message processing as the system does not know the User.</p>
+<p>Authorization is not applied to scheduled jobs as the user configured in the job is common.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-archiving">Data Archiving<a href="#data-archiving" class="hash-link" aria-label="Direct link to Data Archiving" title="Direct link to Data Archiving" translate="no">​</a></h2>
+<p>Data archiving is the process of moving data that is no longer actively used to a separate storage device for long-term retention. Archive data consists of older data that remains important to the organisation or must be retained for future reference or regulatory compliance reasons.</p>
+<ul>
+<li class="">
+<p>Enable Archiving: Separate tables will get created if archiving is enabled on a particular entity/BO. The table name starts with ‘v’ instead of ‘d’.</p>
+</li>
+<li class="">
+<p>Archive Data: The frequency of data archiving is decided based on the business requirement. The developer has to write a background report to push the data from the main transaction table to the archive table.</p>
+</li>
+<li class="">
+<p>Fetch Archived Data: take input from the user to show the archived data.</p>
+</li>
+</ul>
+<p><strong>Acquiring the Entity by Entity Unique ID:</strong> Entity Unique ID is a concatenated value of the Entity name and primary key set in an alphabetic sorted Order.</p>
+<p>&lt;entity_name&gt;##&lt;pk1&gt;##&lt;pk2&gt;.........</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="modelling-of-a-query">Modelling of a query<a href="#modelling-of-a-query" class="hash-link" aria-label="Direct link to Modelling of a query" title="Direct link to Modelling of a query" translate="no">​</a></h2>
+<p>Till now you have gone through the Runtime query where modelling is not required.</p>
+<p>Let’s model a Query using the Data Studio. To create a query go to the entity which will be returned as a result. Provide a unique Query name. Query names should start with q as best practice. It must not start with “d, c, a or m”. Query name and entity name must not be the same hence name used as entity id or query id can not be used for others. Select Query Type as “D” or “Modelled Query”</p>
+<ul>
+<li class="">
+<p>Define Query property</p>
+</li>
+<li class="">
+<p>Define Query Relation</p>
+</li>
+<li class="">
+<p>Test Query</p>
+</li>
+</ul>
+<p>Query definition is broadly categorised into two sections one as “SQL Section” relevant input as definition to prepare SQL statement and the other defines the behavioural expectations. The section to define SQL needs to know participating database tables join rules, where clause, return columns, groupby etc. second section concentrates on business aspects like before query rule, after query rule, network mode, property mapping, part return, authorization, etc.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sql-section">SQL Section<a href="#sql-section" class="hash-link" aria-label="Direct link to SQL Section" title="Direct link to SQL Section" translate="no">​</a></h4>
+<p><strong>Select:</strong></p>
+<p>SQL function (tablename.fieldname) AS alias</p>
+<p>Can be blank, the default value is taken as returnEntityName if the table/entity name is not specified with any field.*</p>
+<p>If the column name in the return result set does not match the return entity property name value will not be populated hence use Alias to rename it as the return entity property name. In case of multiple tables, specify the select list with the table name and alias so results can be mapped with the return entity property name. Return entity or entity property can be transient or persistent. Supported DB function can also be applied on the field</p>
+<p>[{Function:”,Entity:”d_ord”,Property:”r_qty”,Alias:”” },{Function:””,Entity:”d_ord”,Property:”gross”,Alias:”” }..].</p>
+<p>Alias is to match the property name with the transient entity property.</p>
+<p><strong>PartEntityLoad:</strong> Read selective fields of the returned entity. By default, the full return entity is returned as a result set. Add one or multiple fields here for selective return. If the entity changes, the framework will load the full entity internally with a primary key set.</p>
+<p>Primary key fields are added by default with selective fields.</p>
+<p><strong>Distinct:</strong> True / False/ IF child JOIN as value. If true, distinct all (select clause parameters) is considered for the return row. The default value is false.</p>
+<p><strong>FROM:</strong> Can be blank, default value is taken as returnEntityName. In the case of a transient entity or even in the case of a persistent entity specifically in the case of aggregate calculation we may need to specify a different entity than the return entity.</p>
+<p>Use Native query if you want to use multiple table names in the FROM section like in the case of parent-child relation in the same table.</p>
+<p><strong>JOIN:</strong> Provide a unique Query Relation ID and define the relation using Entity relation with Join type. Entity relation has the full details of both side fields to define the Join.</p>
+<ul>
+<li class="">
+<p>JOIN Type</p>
+</li>
+<li class="">
+<p>Entity Alias Name</p>
+</li>
+<li class="">
+<p>Entity Property Name</p>
+</li>
+</ul>
+<p>Supported Join Types:</p>
+<ul>
+<li class="">
+<p>Inner Join</p>
+</li>
+<li class="">
+<p>Full Outer Join</p>
+</li>
+<li class="">
+<p>Left Join</p>
+</li>
+<li class="">
+<p>Right Join</p>
+</li>
+</ul>
+<p>The default value for the Join Type is “Inner Join”.</p>
+<p>Join will be avoided if the parameter is not passed or not part of the select or Authorization or travelling path for other table fields.</p>
+<p><strong>Where:</strong> supported filter expression.</p>
+<p>Add the Query property with the Entity you want to put a where condition. Following parameters as input:</p>
+<ul>
+<li class="">
+<p>Query Property ID</p>
+</li>
+<li class="">
+<p>Entity Name</p>
+</li>
+<li class="">
+<p>Entity Property ID</p>
+</li>
+<li class="">
+<p>Operator: excluding formula all other operators are supported.</p>
+</li>
+</ul>
+<p><strong>GroupBy / Having:</strong> Having support filter expression</p>
+<p><strong>OrderBy:</strong></p>
+<p>[{fieldname: string, sort_type?: string}]</p>
+<p>setOrderBy([{fieldname: string, sort_type?: string}]): IKloQuery</p>
+<p>@parameter : <strong>fieldname</strong> - return entity field(property name)</p>
+<p>@parameter: <strong>sort_type</strong> - possible values are ‘<strong>ASC</strong>’ or ‘<strong>DESC</strong>’</p>
+<p><strong>Supported Operator</strong></p>
+<p>AND, OR, EQUAL, NOT EQUAL, GREATER, LESSER, GREATER_EQUAL, LESSER_EQL, LIKE, NOT, IS NULL, IS NOT NULL, IN, NOT IN</p>
+<p><strong>Supported Functions:</strong></p>
+<p>COUNT, SUM, MIN, MAX, AVG.</p>
+<p>Syntax:</p>
+<p><strong>Supported Variables:</strong></p>
+<ul>
+<li class="">
+<p>Query property name</p>
+<ul>
+<li class="">Syntax- :&lt;query_property_name&gt;</li>
+</ul>
+</li>
+<li class="">
+<p>Constant:</p>
+<ul>
+<li class="">Syntax - “”. Provide constant value in double quotes.</li>
+</ul>
+</li>
+<li class="">
+<p>$ variable if not a kloBroker message.</p>
+<ul>
+<li class="">Syntax - ${$USER.owning_bp}</li>
+</ul>
+</li>
+<li class="">
+<p>Parent/participating/Join Tables Property.</p>
+<ul>
+<li class="">Syntax- :&lt;tableName.fieldName&gt;</li>
+</ul>
+</li>
+</ul>
+<p><em>Example:</em></p>
+<p>SELECT * from d_order where customer_id = :cust_id and order_type = :”prime” order by order_date desc;</p>
+<p>SELECT * from d_order</p>
+<p>Inner join d_order_item on (d_order.order_id = d_order_item.order_id)</p>
+<p>where customer_id = :cust_id and order_type = :”prime” order by order_date desc;</p>
+<p><strong>Filter Expression</strong></p>
+<p>A filter expression is a binary tree of the operator, table.fields, function, variable, entity property and const. Trees can be evaluated only as one way to construct the filter expression. Tree nodes can have an operator with left and/or right values. Value can be another node itself.</p>
+<p><strong>Soql Query:</strong> Holds the SQL-like string for a better understanding of what will go to DB.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="not-supported">Not Supported<a href="#not-supported" class="hash-link" aria-label="Direct link to Not Supported" title="Direct link to Not Supported" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p>Nested queries are not supported.</p>
+</li>
+<li class="">
+<p>Formula not supported (like a*b)</p>
+</li>
+<li class="">
+<p>Limit not supported</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="behaviour-section">Behaviour Section<a href="#behaviour-section" class="hash-link" aria-label="Direct link to Behaviour Section" title="Direct link to Behaviour Section" translate="no">​</a></h3>
+<p><strong>Return Entity Name:</strong> The result set will be kloEntitySet containing the instances of the named return Entity. Return entities could be Persistent or Transient.</p>
+<p>In case if Persistent entity does not fit in as a return data set, you can create a Transient entity which has all the required entity properties as per business requirements and use this entity as a return entity. Visit the Entity section for more details on the definition of a Transient entity. This is the use case you need:</p>
+<ul>
+<li class="">
+<p>Return the data from different entities.</p>
+</li>
+<li class="">
+<p>Additional fields to store some calculated value at runtime.</p>
+</li>
+</ul>
+<p><strong>Is_across_tenant:</strong> If the query needs to be extended across tenant data. Be careful with security. By default queries are tenant-specific. This will return the data of all the tenants within a landscape.</p>
+<p><strong>Network mode:</strong> Normally left <em>null</em> or “or “Default” so it is picked as per precedence. Specify only in specific flavor as per override rules.</p>
+<p>Return entity mapping</p>
+<p><strong>Pagination behaviour:</strong> Pagination is applied only if a query is executed from the UI. In case if a query is executed from any rule(Entity or Query) it will load all qualified data.</p>
+<p><strong>Calculated Property:</strong></p>
+<blockquote>
+<p>Providing <em>getter</em>/<em>setter</em> function for the calculated field:</p>
+</blockquote>
+<ul>
+<li class="">
+<p>Mostly used for dynamic calculations.</p>
+</li>
+<li class="">
+<p>Define a query property in metadata.</p>
+</li>
+<li class="">
+<p>For each query, the framework provides a &lt;queryname&gt;.ts class which can be used to define the getter/setter function of any property.</p>
+</li>
+<li class="">
+<p>Through <em><strong>KloIDE</strong></em>, the app developer has to write a getter/setter function for the query property.</p>
+</li>
+<li class="">
+<p>These functions are accessible using entity objects. <em>&lt;queryobject&gt;.&lt;propertyID&gt;()</em> and <em>this.&lt;propertyID&gt;()</em>.</p>
+</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Getter:</p>
+<p>Syntax of property getter: get&lt;space&gt;&lt;property name with the first letter capitalised&gt;</p>
+<blockquote>
+<p>public Qty1 : number;</p>
+<p>public get Qty():number{</p>
+<p>return this.Qty1;</p>
+<p>}</p>
+<p>OR</p>
+<p>public get Qty():number{</p>
+<p>return 20;</p>
+<p>}</p>
+</blockquote>
+<p>Setter:</p>
+<p>Syntax of property getter: set&lt;space&gt;&lt;property name with the first letter capitalised&gt;</p>
+<blockquote>
+<p>public set Qty(newVal:number){</p>
+<p>this.Qty1 = newVal;</p>
+<p>}</p>
+</blockquote>
+<p>**Note: **‘this’ is an instance of the current query here.</p>
+<p>Features supported:</p>
+<ul>
+<li class="">
+<p>Fetch data from multiple entities(tables) across BO.</p>
+</li>
+<li class="">
+<p>Join with another entity(table) supported with relation.</p>
+</li>
+<li class="">
+<p>All query properties are optional.</p>
+</li>
+<li class="">
+<p>Most used SQL functions and operators are supported.</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="native-query">Native Query<a href="#native-query" class="hash-link" aria-label="Direct link to Native Query" title="Direct link to Native Query" translate="no">​</a></h2>
+<p>Native query is a raw SQL query which supports all operators and functions of SQL as part of the query statement(not part of metadata). This should be used only as a last option if nothing else fits. This type of query must not be used in a product or reusable module. The native query is highly flexible but non-migratable.</p>
+<p>Let’s write an SQL Query using the Data Studio. To create a query go to the entity which will be returned as a result. Provide a unique Query name. Query names should start with q as best practice. It must not start with “d, c, a or m”. Query name and entity name must not be the same hence name used as entity id or query id can not be used for others. Select Query Type as “Z” or “Native Query”.</p>
+<ul>
+<li class="">
+<p>Write SQL statement</p>
+</li>
+<li class="">
+<p>Define Query property</p>
+</li>
+<li class="">
+<p>Test Query</p>
+</li>
+</ul>
+<p>Native query working in an online case may not work in offline network mode if the query is incompatible with webSQL. It is comparatively slow because to db it is submitted as a nested query. Use only if the requirement is not fulfilled with Runtime or Modelled queries.</p>
+<p>Authorization will be applied the same as other query types.</p>
+<p>Example:</p>
+<p>SELECT * from d_order where customer_id = :cust_id and order_type = :”prime” order by order_date desc;</p>
+<p>Here cust_id is the query property you have to define. All query property values are mandatory to pass at the time of execution.</p>
+<p>Not supported:</p>
+<ul>
+<li class="">
+<p>Query Relation: use Join in SQL statement.</p>
+</li>
+<li class="">
+<p>Archiving</p>
+</li>
+<li class="">
+<p>Date dependent features</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="query-actions">Query Actions<a href="#query-actions" class="hash-link" aria-label="Direct link to Query Actions" title="Direct link to Query Actions" translate="no">​</a></h2>
+<p>Actions are the reusable functions defined inside the TypeScript class where application developers write the business logic.</p>
+<p><strong>Type of Actions:</strong></p>
+<ul>
+<li class="">
+<p>Regular Actions</p>
+</li>
+<li class="">
+<p>Private Actions</p>
+</li>
+<li class="">
+<p>Rule subscription action</p>
+</li>
+<li class="">
+<p>Override Actions</p>
+</li>
+<li class="">
+<p>Member Variable</p>
+</li>
+</ul>
+<p><strong>Regular Query:</strong> On creation of a query, Framework provides a &lt;queryname&gt;_gen.ts file which contains pre delivered setters and getters of all query properties. Framework also provides a class &lt;queryname&gt;.ts which inherits the generated class(&lt;queryname&gt;_gen) and developers can write their own functions here. These are reusable functions and accessible with QueryInstance in any Controller or Rules or Middleware and returns the desired result.</p>
+<p>Naming conventions:</p>
+<ul>
+<li class="">
+<p>Generated Class: &lt;queryname&gt;_gen.ts</p>
+</li>
+<li class="">
+<p>Query Class: &lt;queryname&gt;.ts</p>
+</li>
+<li class="">
+<p>Regular Action: public &lt;actionName&gt;(parameters) : &lt;return type&gt;{ }</p>
+</li>
+<li class="">
+<p>Follow the camel casing in Action names.</p>
+</li>
+</ul>
+<p>File Path: <em>flavor version &gt;&gt; BO &gt;&gt; Class.ts</em></p>
+<p>Syntax to call Actions defined in Query class : <em>&lt;<em>query</em>Instance&gt;.&lt;actionName(parameters)&gt;</em></p>
+<ul>
+<li class="">
+<p>On update of Query/Query Properties the generated file will get adjusted by Framework.</p>
+</li>
+<li class="">
+<p>Can add the Import in &lt;queryname&gt;.ts class in metadata.</p>
+</li>
+<li class="">
+<p>Can not add additional imports in &lt;queryname&gt;_gen.ts class.</p>
+</li>
+<li class="">
+<p>Define any number of Regular Actions in a class.</p>
+</li>
+<li class="">
+<p>Regular Actions are always public.</p>
+</li>
+<li class="">
+<p>&lt;QueryName&gt;.ts class extends the generated class(&lt;QueryName&gt;_gen). The <em><strong>Extends</strong></em> statement is generated by the framework.</p>
+</li>
+<li class="">
+<p>Setting any value using ‘<em>this’</em>(current instance of query class) will not reflect the query properties outside the Rule/Query Class. It is locally available in the query class instance. Modified values are only valid for the current execution cycle.</p>
+</li>
+<li class="">
+<p>Can call Entity/BO Util class or other Query class actions inside Query action (current and shared flavor).</p>
+</li>
+<li class="">
+<p>Regular Actions of Query class are available as a help on Query instances while writing code.</p>
+</li>
+</ul>
+<p>*<em>KloQuery Class:</em> *</p>
+<p>This is a class which exposes the limited set of actions to application. Generated class extends the kloQuery class. All actions defined in KloQuery Class are inherited to the Query class and accessible with the query instance.</p>
+<p>export class KloQuery</p>
+<p>// actions which are exposed to application</p>
+<p>}</p>
+<p><strong>Generated Class:</strong></p>
+<p>export class GetOrderList_gen extends KloQuery{</p>
+<p>//getter/setter of query properties</p>
+<p>public get OrderID() : String{</p>
+<p>return “10”;</p>
+<p>}</p>
+<p>public set OrderID(OrderID: String){</p>
+<p>this.OrderID = OrderID;</p>
+<p>}</p>
+<p>public get s_status() : String{</p>
+<p>return “DRAFT”;</p>
+<p>}</p>
+<p>public set s_status(OrderID: String){</p>
+<p>this.s_status = s_status;</p>
+<p>}</p>
+<p>}</p>
+<p><strong>Query Class:</strong></p>
+<p>import { GetOrderList_gen } from &quot;SalesBase/Order/GetOrderList_gen &quot;</p>
+<p>export class GetOrderList extends GetOrderList_gen {</p>
+<p>//define actions here</p>
+<p>public populateStatus(status:String){</p>
+<p>//TODO</p>
+<p>}</p>
+<p>};</p>
+<p><strong>Private Action:</strong></p>
+<p>Use ‘protected’ keyword for Private actions. Private actions are visible only within the class or child class, rest all are the same as Regular actions.</p>
+<ul>
+<li class="">
+<p>Can be called in all types of actions (Regular, Rule, Private).</p>
+</li>
+<li class="">
+<p>Can not call outside the defined class and child class.</p>
+</li>
+<li class="">
+<p>Super class private actions are available in the child class.</p>
+</li>
+</ul>
+<p><strong>Query Class:</strong></p>
+<p>import { GetOrderList_gen } from &quot;SalesBase/Order/GetOrderList_gen &quot;</p>
+<p>export class GetOrderList extends GetOrderList_gen {</p>
+<p>public populateStatus(status: String){</p>
+<p>//TODO</p>
+<p>this.customerID()</p>
+<p>}</p>
+<p>protected customerID() : String{</p>
+<p>return “c1234”;</p>
+<p>}</p>
+<p>};</p>
+<p><strong>Override Actions:</strong></p>
+<p>You can not make any change in the generated class but can override the generated class actions in the Query class.</p>
+<ul>
+<li class="">
+<p>Getter/setter action: override the framework provided Query Property’s getter/setter actions in the Query class.</p>
+</li>
+<li class="">
+<p>Override used flavor class actions.</p>
+</li>
+</ul>
+<p>Override Getter/Setter:</p>
+<p><strong>Generated Class:</strong></p>
+<p>export class GetOrderList_gen extends KloQueryForRule{</p>
+<p>public get SalesPerson() : String{</p>
+<p>return “First”;</p>
+<p>}</p>
+<p>public set SalesPerson(SalesPerson: String){</p>
+<p>this.em…...;</p>
+<p>}</p>
+<p>}</p>
+<p><strong>Query Class:</strong></p>
+<p>import { Order_gen } from &quot;SalesBase/Order/GetOrderList_gen &quot;</p>
+<p>export class GetOrderList extends GetOrderList_gen {</p>
+<p>//override the parent(generated) class Action</p>
+<p>public get SalesPerson() : String{</p>
+<p>return “First”+”Second”;</p>
+<p>}</p>
+<p>//overriding property setter</p>
+<p>public set s_status(value){</p>
+<p>//your custom code here</p>
+<p>super.s_status = value;</p>
+<p>}</p>
+<p>};</p>
+<p><strong>Inherit Used flavor class:</strong></p>
+<p>Query class inherits the used flavor class and can override or add new actions. All methods and variables of the flavor query class are accessible using the child class instance.</p>
+<p>In case if any generated action is overridden in base flavor QueryClass and you are using the same query in customer account flavor, the actions overridden by application Developer will be available in the customer account Query class as is. Framework will generate the getter/setter in customer flavor for only modified/added/deleted properties. Deleted properties getter/setter actions also get generated and return an exception.</p>
+<p>Base flavor:</p>
+<p><strong>Generated Class:</strong></p>
+<p>export class GetOrderList_gen extends KloQuery{</p>
+<p>public get SalesPerson() : String{</p>
+<p>return “First”;</p>
+<p>}</p>
+<p>public set SalesPerson(SalesPerson: String){</p>
+<p>this.em…...;</p>
+<p>}</p>
+<p>}</p>
+<p><strong>Query Class:</strong></p>
+<p>import { GetOrderList_gen } from &quot;SalesBase/Order/GetOrderList_gen&quot;</p>
+<p>export class GetOrderList extends GetOrderList_gen {</p>
+<p>//override the parent(generated) class Action</p>
+<p>public get SalesPerson() : String{</p>
+<p>return “First”+”Second”;</p>
+<p>}</p>
+<p>};</p>
+<p>Customer Account flavor:</p>
+<p><strong>Generated Class:</strong></p>
+<p>import { GetOrderList } from &quot;SalesUsha/SalesBase/Order/GetOrderList&quot;</p>
+<p>export class GetOrderList_gen extends GetOrderList {</p>
+<p>//generate only the modified/added/deleted properties getter/setter</p>
+<p>public set customerID(CustomerID: String){</p>
+<p>this.em…...;</p>
+<p>}</p>
+<p>}</p>
+<p><strong>QueryClass:</strong></p>
+<p>import { GetOrderList_gen } from &quot;./GetOrderList_gen&quot;</p>
+<p>export class GetOrderList extends GetOrderList_gen {</p>
+<p>public printSalesPerson(): String{</p>
+<p>print(this.SalesPerson());</p>
+<p>//This will print “First Second” here.</p>
+<p>}</p>
+<p>};</p>
+<p><strong>Rule Subscription Actions:</strong></p>
+<p>Rule subscription actions are defined in the QueryClass and it receives <em>EventContext</em> as a parameter. The defined actions can be subscribed only against that particular Query.</p>
+<p>Syntax: <em>public [async] &lt;actionName&gt;(event: EventContext)</em></p>
+<ul>
+<li class="">
+<p>Any additional filter applied or changed or removed in the Before query rule, will not change the query properties outside the Rule.</p>
+</li>
+<li class="">
+<p>To access the data in After Query Rule use <em>‘getResult()’</em></p>
+<ul>
+<li class="">
+<p><em>getResult()</em> returns a JSON array.</p>
+</li>
+<li class="">
+<p><em>this.getResult()[0…]</em></p>
+</li>
+<li class="">
+<p><em>var rs = this.getResult();</em></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Can add/delete/update the result set in Rule action. After manipulation, it expects a valid JSON array. The updated result set is returned as a JSON array. <em>var rs = this.getResult();</em></p>
+<ul>
+<li class="">
+<p>Add: <em>rs.push({orderID:’123’, type: ‘100’, status: ‘DRAFT’},..)</em></p>
+</li>
+<li class="">
+<p><em>Additional property: can add additional property in the result set in JSON format.</em></p>
+</li>
+<li class="">
+<p><em>Delete: rs.splice(0,1,...)</em></p>
+</li>
+<li class="">
+<p>Edit: <em>rs[0].status = ‘OPEN’</em></p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Any modification in the result set will not trigger any Rule.</p>
+</li>
+<li class="">
+<p>Can create a new state of a query in the After Query Rule and execute the new query instead of the current/original query. The final result of the query is what the JSON array holds as a result.</p>
+</li>
+<li class="">
+<p>Commit: In case you want to save anything to DB, commit has to be called explicitly.</p>
+</li>
+<li class="">
+<p>Define Rule action in Metadata.</p>
+</li>
+<li class="">
+<p>Multiple ‘Rule Actions’ can be defined in one Query class.</p>
+</li>
+<li class="">
+<p>Rule action should be public.</p>
+</li>
+<li class="">
+<p>This may return Promise&lt;Any&gt;. The promise should be resolved with Success or Error. If resolved with Error, the error code returns to the caller and this error results in rollback and the whole transaction will get rolled back.</p>
+</li>
+<li class="">
+<p>In case any exception is thrown, behaviour is the same as promise rejection. - change in Entity action also.</p>
+</li>
+<li class="">
+<p>Inside an Action if Promise is not returned then it is assumed to be a synchronous action.</p>
+</li>
+<li class="">
+<p>At a time only one rule is getting executed and other Rule actions are in a waiting state.</p>
+</li>
+<li class="">
+<p>Promise has to be resolved ‘Success’ before executing the next Rule. If it is a synchronous action and does not return the Promise, immediately after finishing one rule execution it moves to the next action for execution.</p>
+</li>
+<li class="">
+<p>Can not change Rule action signature. Otherwise, it will be considered as ‘Regular Action’.</p>
+</li>
+<li class="">
+<p>Can not subscribe to other Entity Class’s Rule subscription Action.</p>
+</li>
+<li class="">
+<p>Call Regular Action in Rule- Regular actions defined in Query class <em>&lt;queryname&gt;.ts</em> can be accessed in the Query Rules class.</p>
+<ul>
+<li class="">Syntax: <em>this.&lt;actionName&gt;(parameters)</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>Query Class:</strong></p>
+<p>import { GetOrderList_gen } from &quot;SalesBase/Order/GetOrderList_gen&quot;</p>
+<p>export class GetOrderList extends GetOrderList_gen {</p>
+<p>public async expectedDelDate(event: EventContext){</p>
+<p>this.Customer()</p>
+<p>//TODO</p>
+<p>}</p>
+<p>private Customer() : String{</p>
+<p>return “c1234”;</p>
+<p>}</p>
+<p>};</p>
+<p><strong>Member Variable</strong>: Not supported. Use the query property as a member variable.</p>
+<p><strong>Remote Action:</strong> Not supported.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="subscribe-query-rules">Subscribe Query Rules<a href="#subscribe-query-rules" class="hash-link" aria-label="Direct link to Subscribe Query Rules" title="Direct link to Subscribe Query Rules" translate="no">​</a></h2>
+<p>Rule definition steps are the same as Entity. Rules can be subscribed to a query to write the business logic. Query Rules are mainly used where add/change query filter/sorting or change query resultset to show the manipulated data on UI. Rule subscription is part of kloIDE. To subscribe to the Rules you need to provide the details below:</p>
+<ul>
+<li class="">
+<p>Rule ID: Select the already defined Rule ID.</p>
+</li>
+<li class="">
+<p>BO Event Subscription ID: This is an auto-generated ID.</p>
+</li>
+<li class="">
+<p>Event Type: You can subscribe the Rule to a query which is executed before or after query execution.</p>
+<ul>
+<li class="">
+<p>Before Query (BEFORE_QUERY)</p>
+<ul>
+<li class="">Filter, Sorting, etc</li>
+</ul>
+</li>
+<li class="">
+<p>After Query(AFTER_QUERY): resultsets can be modified, add or remove records in AFTER_QUERY rule.</p>
+<ul>
+<li class="">Manipulate data based on business logic.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Channel Type: channel type decides when to trigger the Rule.</p>
+<ul>
+<li class="">
+<p>All</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Klarion Server</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Klarion Server---ALWAYS ON CLIENT</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Klarion Server---ALWAYS ON SERVER</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Server/Client---NETWORK CONTEXT SWITCH</p>
+</li>
+<li class="">
+<p>Klarion Server to Klarion Offline Server</p>
+</li>
+<li class="">
+<p>Klarion Server to Klarion Server</p>
+</li>
+<li class="">
+<p>Legacy to Klarion Server</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Sequence No(Mandatory): Decides in what sequence Rule to be executed. In case multiple Rules are subscribed, a sequence of rule execution is followed. All positive numbers(1-n) excepted. It is recommended to maintain the sequence like 10, 20, 30 and so on. So that any new Rule can be maintained in between without disturbing the other sequence.</p>
+</li>
+</ul>
+<p>Rules can not be executed on Runtime Queries. For more details on Rule execution refer to the Rule section.</p>
+<p><strong>Rule Execution:</strong> Please note that before_query rules are called only once in case of Pagination, Selective select or expand all cases also. Subsequent internal calls do not call before_execute. After_query execution may not get the correct count of records or all records or all fields. Please ensure you have considered selective select cases, pagination cases and expand all cases. After_Query will be executed after every internal call, all the data manipulation will be accepted as is to form the return entity.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="query-type-to-be-used-in-an-application">Query Type to be used in an application<a href="#query-type-to-be-used-in-an-application" class="hash-link" aria-label="Direct link to Query Type to be used in an application" title="Direct link to Query Type to be used in an application" translate="no">​</a></h2>
+<p>As you have gone through all query types explained above all features are supported in different types of queries. Based on the feature supported programmer can decide which type will fit in what scenario.</p>
+<p>While the selection of the type of query, you give priority in below sequence(1 is the highest priority):</p>
+<ol>
+<li class="">
+<p>Runtime Query</p>
+</li>
+<li class="">
+<p>Modelled Query</p>
+</li>
+<li class="">
+<p>Native Query</p>
+</li>
+</ol>
+<p>Below are a few frequent use cases and query type usage:</p>
+<ul>
+<li class="">
+<p>Advanced Search screen: use Modelled query.</p>
+</li>
+<li class="">
+<p>F4: use Runtime query</p>
+</li>
+<li class="">
+<p>Initial Sync: use Modelled query.</p>
+</li>
+<li class="">
+<p>Report: use dynamic query normally as input parameters are dynamic in most of the reports.</p>
+</li>
+<li class="">
+<p>List Screen:</p>
+</li>
+<li class="">
+<p>Details screen: Normally, Runtime Query with Entity by ID to measure performance.</p>
+</li>
+</ul>
+<p><em>Example:</em></p>
+<p>loadLogisticsOnline: function (oController, order_id, TXN) {</p>
+<p>return new Promise(function (resolve, reject) {</p>
+<p>var logistics = oController.getModel().getProperty(&#x27;/detail&#x27;);</p>
+<p>oController.getQuery(&#x27;d_logistics&#x27;).then(function (orderQI) {</p>
+<p>orderQI.d_order#order_id = order_id;</p>
+<p>orderQI.setNetWorkMode(&#x27;ONLINE&#x27;);</p>
+<p>TXN.add(orderQI);</p>
+<p>orderQI.execute(function (orderES) {</p>
+<p>orderES[0].s_action = &#x27;DEL_RELEASE&#x27;;</p>
+<p>orderES[0].s_status = &#x27;RELEASED&#x27;;</p>
+<p>resolve(orderES);</p>
+<p>});</p>
+<p>});</p>
+<p>});</p>
+<p>}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Operators</strong></th><th><strong>Runtime</strong></th><th><strong>Modelled</strong></th><th><strong>Native</strong></th></tr></thead><tbody><tr><td>WHERE</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>AND</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>OR</td><td></td><td>Y</td><td>Y</td></tr><tr><td>NOT</td><td></td><td></td><td>Y</td></tr><tr><td>DISTINCT</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>JOINS(inner, left, right, full, self)</td><td></td><td>Y</td><td>Y</td></tr><tr><td>ORDER BY</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>GROUP BY</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>LIKE</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>IN</td><td>Y</td><td>Y</td><td>Y</td></tr><tr><td>BETWEEN</td><td></td><td>Y</td><td>Y</td></tr><tr><td>HAVING</td><td></td><td>Y</td><td>Y</td></tr><tr><td>TOP</td><td></td><td>Y</td><td>Y</td></tr><tr><td>COUNT</td><td></td><td>Y</td><td>Y</td></tr><tr><td>MIN/MAX</td><td></td><td>Y</td><td>Y</td></tr><tr><td>AVG/SUM</td><td></td><td>Y</td><td>Y</td></tr><tr><td>IS NULL</td><td></td><td>Y</td><td>Y</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="saved-query">Saved Query<a href="#saved-query" class="hash-link" aria-label="Direct link to Saved Query" title="Direct link to Saved Query" translate="no">​</a></h2>
+<p>Saved Query is a query container that holds the predefined properties’ value for a given query. It is identified by ID, hence, it is also used in the Initial Sync.</p>
+<p>Saved query can use dollar variables and date literals as property values. Saved query can hold all the variable values which can be set at runtime by API.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="delta-query">Delta Query<a href="#delta-query" class="hash-link" aria-label="Direct link to Delta Query" title="Direct link to Delta Query" translate="no">​</a></h2>
+<p>Delta Query is used to update the local db periodically from the server. It asks the server to provide the data modified from the last execution till now. Results are handed over to the executor. Delta queries are internally used by cached online and by value help.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-measurement-and-tracing-query">Performance measurement and tracing query<a href="#performance-measurement-and-tracing-query" class="hash-link" aria-label="Direct link to Performance measurement and tracing query" title="Direct link to Performance measurement and tracing query" translate="no">​</a></h2>
+<ul>
+<li class="">
+<p>Enabling Query trace</p>
+</li>
+<li class="">
+<p>Enabling Query count</p>
+</li>
+<li class="">
+<p>Analysing Query count</p>
+</li>
+<li class="">
+<p>QueryEvents</p>
+</li>
+<li class="">
+<p>BeforeQuery //todo</p>
+</li>
+<li class="">
+<p>After Query //todo</p>
+</li>
+<li class="">
+<p>Before Load //todo</p>
+</li>
+<li class="">
+<p>After Load //todo</p>
+</li>
+</ul></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Transaction (txn)"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Transaction (txn)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/KloEntitySet"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">KloEntitySet</div></a></nav><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20BOL%20Reference%20Guide%20%E2%80%94%20kloQuery">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20BOL%20Reference%20Guide%20%E2%80%94%20kloQuery">Report an issue</a></div></div></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#query-api" class="table-of-contents__link toc-highlight">Query API</a></li><li><a href="#operators-in-query" class="table-of-contents__link toc-highlight">Operators in Query</a></li><li><a href="#query-without-modelling" class="table-of-contents__link toc-highlight">Query without Modelling</a></li><li><a href="#authorization-on-query" class="table-of-contents__link toc-highlight">Authorization on Query</a></li><li><a href="#data-archiving" class="table-of-contents__link toc-highlight">Data Archiving</a></li><li><a href="#modelling-of-a-query" class="table-of-contents__link toc-highlight">Modelling of a query</a></li><li><a href="#native-query" class="table-of-contents__link toc-highlight">Native Query</a></li><li><a href="#query-actions" class="table-of-contents__link toc-highlight">Query Actions</a></li><li><a href="#subscribe-query-rules" class="table-of-contents__link toc-highlight">Subscribe Query Rules</a></li><li><a href="#query-type-to-be-used-in-an-application" class="table-of-contents__link toc-highlight">Query Type to be used in an application</a></li><li><a href="#saved-query" class="table-of-contents__link toc-highlight">Saved Query</a></li><li><a href="#delta-query" class="table-of-contents__link toc-highlight">Delta Query</a></li><li><a href="#performance-measurement-and-tracing-query" class="table-of-contents__link toc-highlight">Performance measurement and tracing query</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advanced Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,1728 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/User Guide/Klarion 5.0 - BOL APIs/Entity" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Klarion 5.0 - BOL APIs — Entity | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Klarion 5.0 - BOL APIs — Entity | Procify Technical Documentation"><meta data-rh="true" name="description" content="Data object in KloBase Datastore is known as entity. An entity has one or more named properties, each of which can have one or more values. Each entity in KloBase Datastore has a key that uniquely identifies it."><meta data-rh="true" property="og:description" content="Data object in KloBase Datastore is known as entity. An entity has one or more named properties, each of which can have one or more values. Each entity in KloBase Datastore has a key that uniquely identifies it."><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Klarion 5.0 - BOL APIs","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Introduction"},{"@type":"ListItem","position":2,"name":"Entity","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.1fcba79d.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.617cc3d2.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.c31874c3.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--legal">Legal</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Copyright">Copyright</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Legal/Disclaimer">Disclaimer</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--documentation" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/documentation">Documentation</a><ul class="dropdown__menu"><li><a aria-current="page" class="dropdown__link dropdown__link--active" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction">User Guide</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Installation Guide/Advanced Migration - Installation Screen/Introduction">Installation Guide</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Training Guide</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/API Document Link/BOL API">API Document Link</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--faqs" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs on Private Node</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Runtime/Introduction">FAQs on Runtime</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--more">More</a><ul class="dropdown__menu"><li class=""><span class="nav-more-heading">API Document Link</span></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/index.html">PROCIFY (index)</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EndpointBean.html">EndpointBean</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EnvVariables.html">EnvVariables</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EventContext.html">EventContext</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloAppService.html">KloAppService</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntity.html">KloEntity</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntitySet.html">KloEntitySet</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEnums.html">KloEnums</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloObject.html">KloObject</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQuery.html">KloQuery</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQueryForRule.html">KloQueryForRule</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloTransaction.html">KloTransaction</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloValueHelp.html">KloValueHelp</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/LocalArchive.html">LocalArchive</a></li><li><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/NotificationBean.html">NotificationBean</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">User Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/ADM Client Global Object/Introduction"><span class="categoryLinkLabel_W154">ADM Client Global Object</span></a><button aria-label="Expand sidebar category &#x27;ADM Client Global Object&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/AWS Automation/Introduction"><span class="categoryLinkLabel_W154">AWS Automation</span></a><button aria-label="Expand sidebar category &#x27;AWS Automation&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Advanced Migration - Installation Screen/Introduction"><span class="categoryLinkLabel_W154">Advanced Migration - Installation Screen</span></a><button aria-label="Expand sidebar category &#x27;Advanced Migration - Installation Screen&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Branching and Merging/Introduction"><span class="categoryLinkLabel_W154">App Branching and Merging</span></a><button aria-label="Expand sidebar category &#x27;App Branching and Merging&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Cache Settings/Introduction"><span class="categoryLinkLabel_W154">App Cache Settings</span></a><button aria-label="Expand sidebar category &#x27;App Cache Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Compare and Merge/Introduction"><span class="categoryLinkLabel_W154">App Compare and Merge</span></a><button aria-label="Expand sidebar category &#x27;App Compare and Merge&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Publish Services/Introduction"><span class="categoryLinkLabel_W154">App Publish Services</span></a><button aria-label="Expand sidebar category &#x27;App Publish Services&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Applications FW Version Update/Introduction"><span class="categoryLinkLabel_W154">Applications FW Version Update</span></a><button aria-label="Expand sidebar category &#x27;Applications FW Version Update&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Custom Icon Pool/Introduction"><span class="categoryLinkLabel_W154">Custom Icon Pool</span></a><button aria-label="Expand sidebar category &#x27;Custom Icon Pool&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Customer Branding for iOS/Introduction"><span class="categoryLinkLabel_W154">Customer Branding for iOS</span></a><button aria-label="Expand sidebar category &#x27;Customer Branding for iOS&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Enhance and Upgrade Your Application/Introduction"><span class="categoryLinkLabel_W154">Enhance and Upgrade Your Application</span></a><button aria-label="Expand sidebar category &#x27;Enhance and Upgrade Your Application&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Flavor Alias/Introduction"><span class="categoryLinkLabel_W154">Flavor Alias</span></a><button aria-label="Expand sidebar category &#x27;Flavor Alias&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Introduction"><span class="categoryLinkLabel_W154">Klarion 5.0 - BOL APIs</span></a><button aria-label="Collapse sidebar category &#x27;Klarion 5.0 - BOL APIs&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Overview"><span class="linkLabel_WmDU">Overview</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Domain"><span class="linkLabel_WmDU">Domain</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/NetworkMode"><span class="linkLabel_WmDU">NetworkMode</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Client"><span class="linkLabel_WmDU">Client</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Tenant"><span class="linkLabel_WmDU">Tenant</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/End Point"><span class="linkLabel_WmDU">End Point</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Channel"><span class="linkLabel_WmDU">Channel</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Business Object"><span class="linkLabel_WmDU">Business Object</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity"><span class="linkLabel_WmDU">Entity</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/kloQuery"><span class="linkLabel_WmDU">kloQuery</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/kloQuery Types"><span class="linkLabel_WmDU">kloQuery Types</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/KloEntitySet"><span class="linkLabel_WmDU">KloEntitySet</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Transaction"><span class="linkLabel_WmDU">Transaction</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Controller"><span class="linkLabel_WmDU">Controller</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Object Type"><span class="linkLabel_WmDU">Object Type</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Object Group"><span class="linkLabel_WmDU">Object Group</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Status"><span class="linkLabel_WmDU">Status</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Entity configuration"><span class="linkLabel_WmDU">Entity configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/kloIDSeries"><span class="linkLabel_WmDU">kloIDSeries</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/$VARIABLES ( 7th Jan 2020 discussion for reference)"><span class="linkLabel_WmDU">$VARIABLES ( 7th Jan 2020 discussion for reference)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/VALUE HELP"><span class="linkLabel_WmDU">VALUE HELP</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Attachment"><span class="linkLabel_WmDU">Attachment</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Key mapping"><span class="linkLabel_WmDU">Key mapping</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Update schema"><span class="linkLabel_WmDU">Update schema</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/MIDDLEWARE"><span class="linkLabel_WmDU">MIDDLEWARE</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/KloLocalStorage"><span class="linkLabel_WmDU">KloLocalStorage</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloSystem/Introduction"><span class="categoryLinkLabel_W154">KloSystem</span></a><button aria-label="Expand sidebar category &#x27;KloSystem&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Merging index.html in GitHub/Introduction"><span class="categoryLinkLabel_W154">Merging index.html in GitHub</span></a><button aria-label="Expand sidebar category &#x27;Merging index.html in GitHub&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/MySQL Database Backup &amp; Restore/Introduction"><span class="categoryLinkLabel_W154">MySQL Database Backup &amp; Restore</span></a><button aria-label="Expand sidebar category &#x27;MySQL Database Backup &amp; Restore&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Node Matrix/Introduction"><span class="categoryLinkLabel_W154">Node Matrix</span></a><button aria-label="Expand sidebar category &#x27;Node Matrix&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Notification Developer Guide/Introduction"><span class="categoryLinkLabel_W154">Notification Developer Guide</span></a><button aria-label="Expand sidebar category &#x27;Notification Developer Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Slow Query Log/Introduction"><span class="categoryLinkLabel_W154">Slow Query Log</span></a><button aria-label="Expand sidebar category &#x27;Slow Query Log&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/System Dialer/Introduction"><span class="categoryLinkLabel_W154">System Dialer</span></a><button aria-label="Expand sidebar category &#x27;System Dialer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/UWL Notification Guide/Introduction"><span class="categoryLinkLabel_W154">UWL Notification Guide</span></a><button aria-label="Expand sidebar category &#x27;UWL Notification Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workflow Modeler Guide/Introduction"><span class="categoryLinkLabel_W154">Workflow Modeler Guide</span></a><button aria-label="Expand sidebar category &#x27;Workflow Modeler Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/BOL Reference Guide/Introduction"><span class="categoryLinkLabel_W154">BOL Reference Guide</span></a><button aria-label="Expand sidebar category &#x27;BOL Reference Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Banner/Introduction"><span class="categoryLinkLabel_W154">Banner</span></a><button aria-label="Expand sidebar category &#x27;Banner&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Custom Domains/Introduction"><span class="categoryLinkLabel_W154">Custom Domains</span></a><button aria-label="Expand sidebar category &#x27;Custom Domains&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloChart/Introduction"><span class="categoryLinkLabel_W154">KloChart</span></a><button aria-label="Expand sidebar category &#x27;KloChart&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Local Archive/Introduction"><span class="categoryLinkLabel_W154">Local Archive</span></a><button aria-label="Expand sidebar category &#x27;Local Archive&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Record Lock Manager/Introduction"><span class="categoryLinkLabel_W154">Record Lock Manager</span></a><button aria-label="Expand sidebar category &#x27;Record Lock Manager&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Debugging/Introduction"><span class="categoryLinkLabel_W154">Server Side Debugging</span></a><button aria-label="Expand sidebar category &#x27;Server Side Debugging&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/iOS and Android Build/Introduction"><span class="categoryLinkLabel_W154">iOS and Android Build</span></a><button aria-label="Expand sidebar category &#x27;iOS and Android Build&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/kloControls/Introduction"><span class="categoryLinkLabel_W154">kloControls</span></a><button aria-label="Expand sidebar category &#x27;kloControls&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Common Login/Introduction"><span class="categoryLinkLabel_W154">Common Login</span></a><button aria-label="Expand sidebar category &#x27;Common Login&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Customer Branding/Introduction"><span class="categoryLinkLabel_W154">Customer Branding</span></a><button aria-label="Expand sidebar category &#x27;Customer Branding&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Data Sync Settings/Introduction"><span class="categoryLinkLabel_W154">Data Sync Settings</span></a><button aria-label="Expand sidebar category &#x27;Data Sync Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Endpoint Redirection to Private Node/Introduction"><span class="categoryLinkLabel_W154">Endpoint Redirection to Private Node</span></a><button aria-label="Expand sidebar category &#x27;Endpoint Redirection to Private Node&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Msg Enquire/Introduction"><span class="categoryLinkLabel_W154">Msg Enquire</span></a><button aria-label="Expand sidebar category &#x27;Msg Enquire&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Screen Lifecycle Events/Introduction"><span class="categoryLinkLabel_W154">Screen Lifecycle Events</span></a><button aria-label="Expand sidebar category &#x27;Screen Lifecycle Events&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Update Schema API/Introduction"><span class="categoryLinkLabel_W154">Update Schema API</span></a><button aria-label="Expand sidebar category &#x27;Update Schema API&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Upgrade and Transport/Introduction"><span class="categoryLinkLabel_W154">Upgrade and Transport</span></a><button aria-label="Expand sidebar category &#x27;Upgrade and Transport&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Migration/Introduction"><span class="categoryLinkLabel_W154">App Migration</span></a><button aria-label="Expand sidebar category &#x27;App Migration&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Dos and Donts for PA PL Section/Introduction"><span class="categoryLinkLabel_W154">Dos and Donts for PA PL Section</span></a><button aria-label="Expand sidebar category &#x27;Dos and Donts for PA PL Section&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloSectionXlsx/Introduction"><span class="categoryLinkLabel_W154">KloSectionXlsx</span></a><button aria-label="Expand sidebar category &#x27;KloSectionXlsx&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/OData Services/Introduction"><span class="categoryLinkLabel_W154">OData Services</span></a><button aria-label="Expand sidebar category &#x27;OData Services&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Picture in Picture/Introduction"><span class="categoryLinkLabel_W154">Picture in Picture</span></a><button aria-label="Expand sidebar category &#x27;Picture in Picture&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Job Scheduler/Introduction"><span class="categoryLinkLabel_W154">Job Scheduler</span></a><button aria-label="Expand sidebar category &#x27;Job Scheduler&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/OData Network Mode/Introduction"><span class="categoryLinkLabel_W154">OData Network Mode</span></a><button aria-label="Expand sidebar category &#x27;OData Network Mode&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Publish or Validate Screen/Introduction"><span class="categoryLinkLabel_W154">Publish or Validate Screen</span></a><button aria-label="Expand sidebar category &#x27;Publish or Validate Screen&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Battery Network and Location API/Introduction"><span class="categoryLinkLabel_W154">Battery Network and Location API</span></a><button aria-label="Expand sidebar category &#x27;Battery Network and Location API&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Server Side Attachment Upload/Introduction"><span class="categoryLinkLabel_W154">Server Side Attachment Upload</span></a><button aria-label="Expand sidebar category &#x27;Server Side Attachment Upload&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Hub/Introduction"><span class="categoryLinkLabel_W154">Workspace Hub</span></a><button aria-label="Expand sidebar category &#x27;Workspace Hub&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Settings/Introduction"><span class="categoryLinkLabel_W154">App Settings</span></a><button aria-label="Expand sidebar category &#x27;App Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Workspace Settings/Introduction"><span class="categoryLinkLabel_W154">Workspace Settings</span></a><button aria-label="Expand sidebar category &#x27;Workspace Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Menu Builder/Introduction"><span class="categoryLinkLabel_W154">Menu Builder</span></a><button aria-label="Expand sidebar category &#x27;Menu Builder&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Notification Modeler/Introduction"><span class="categoryLinkLabel_W154">Notification Modeler</span></a><button aria-label="Expand sidebar category &#x27;Notification Modeler&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Dependencies/Introduction"><span class="categoryLinkLabel_W154">App Dependencies</span></a><button aria-label="Expand sidebar category &#x27;App Dependencies&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/FAQs Editor/Introduction"><span class="categoryLinkLabel_W154">FAQs Editor</span></a><button aria-label="Expand sidebar category &#x27;FAQs Editor&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloController closeDialog/Introduction"><span class="categoryLinkLabel_W154">KloController closeDialog</span></a><button aria-label="Expand sidebar category &#x27;KloController closeDialog&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/API Services/Introduction"><span class="categoryLinkLabel_W154">API Services</span></a><button aria-label="Expand sidebar category &#x27;API Services&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Console/Introduction"><span class="categoryLinkLabel_W154">Query Console</span></a><button aria-label="Expand sidebar category &#x27;Query Console&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Page Builder/Introduction"><span class="categoryLinkLabel_W154">Page Builder</span></a><button aria-label="Expand sidebar category &#x27;Page Builder&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI/Introduction"><span class="categoryLinkLabel_W154">Developer AI</span></a><button aria-label="Expand sidebar category &#x27;Developer AI&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Permission Designer/Introduction"><span class="categoryLinkLabel_W154">Permission Designer</span></a><button aria-label="Expand sidebar category &#x27;Permission Designer&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Row wise authorization/Introduction"><span class="categoryLinkLabel_W154">Row wise authorization</span></a><button aria-label="Expand sidebar category &#x27;Row wise authorization&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Automation/Introduction"><span class="categoryLinkLabel_W154">Automation</span></a><button aria-label="Expand sidebar category &#x27;Automation&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Auto-Number Settings/Introduction"><span class="categoryLinkLabel_W154">Auto-Number Settings</span></a><button aria-label="Expand sidebar category &#x27;Auto-Number Settings&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Dialog Events/Introduction"><span class="categoryLinkLabel_W154">Dialog Events</span></a><button aria-label="Expand sidebar category &#x27;Dialog Events&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloTriState/Introduction"><span class="categoryLinkLabel_W154">KloTriState</span></a><button aria-label="Expand sidebar category &#x27;KloTriState&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Best Practice Guidelines/Introduction"><span class="categoryLinkLabel_W154">Best Practice Guidelines</span></a><button aria-label="Expand sidebar category &#x27;Best Practice Guidelines&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/KloAvatar/Introduction"><span class="categoryLinkLabel_W154">KloAvatar</span></a><button aria-label="Expand sidebar category &#x27;KloAvatar&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Pivot Modeller/Introduction"><span class="categoryLinkLabel_W154">Pivot Modeller</span></a><button aria-label="Expand sidebar category &#x27;Pivot Modeller&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/App Lifecycle Events/Introduction"><span class="categoryLinkLabel_W154">App Lifecycle Events</span></a><button aria-label="Expand sidebar category &#x27;App Lifecycle Events&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Git Integration - 1. Introduction"><span class="categoryLinkLabel_W154">Git Integration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Landing Page Settings - 1. Introduction"><span class="categoryLinkLabel_W154">Landing Page Settings</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Message Monitoring - 1. Introduction"><span class="categoryLinkLabel_W154">Message Monitoring</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Middleware Message Forwarding - 1. Introduction"><span class="categoryLinkLabel_W154">Middleware Message Forwarding</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/User Guide/Query Analysis - 1. Introduction"><span class="categoryLinkLabel_W154">Query Analysis</span></a></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">User Guide</span></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Introduction"><span>Klarion 5.0 - BOL APIs</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Entity</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>Entity</h1></header>
+<p>Data object in KloBase Datastore is known as entity. An entity has one or more named properties, each of which can have one or more values. Each entity in KloBase Datastore has a key that uniquely identifies it.</p>
+<p>In simple words we can say Entity is a database table. In dbms we store data in the form of a table containing information about entity type like order, address etc. In an order database, a table containing information about all the orders. For example, orders have properties like customer, Amount, products, etc they are attributes which combined make table.</p>
+<p>One entity must be part of one and only one BO.</p>
+<p>Types of Entity:</p>
+<ul>
+<li class="">
+<p>Persistent Entity: Entity which physically exists/stored in database as a table. Fields in Persistent Entity could be either Persistent or Transient.</p>
+<ul>
+<li class="">
+<p>Persistent Entity by default Tenant Dependent can be made Tenant Independent</p>
+</li>
+<li class="">
+<p>Persistent Entity by default or User Dependent can be made User Independent</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Transient Entity: It is an in memory entity that doesn’t exist in a database. All fields in Transient Entity are Transient only. It can be constructed out of query result or by code to hold the value at runtime. Messages can’t be communicated through Middleware using Transient entity.</p>
+</li>
+<li class="">
+<p>Config</p>
+</li>
+<li class="">
+<p>FW only Types</p>
+<ul>
+<li class="">
+<p>Metadata</p>
+</li>
+<li class="">
+<p>Archive</p>
+</li>
+<li class="">
+<p>History</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Entity Naming convention and length.</p>
+<ul>
+<li class="">
+<p>Entity names should use only english lower case alphabets (a-z), digits (0-9) and underscore (_) and upto 31 chars max length.</p>
+</li>
+<li class="">
+<p>First char must be d/t/c based on type. Transactional (‘d’) , Transient (‘t’), Config (‘c’)</p>
+</li>
+<li class="">
+<p>Following are auto generated</p>
+<ul>
+<li class="">
+<p>Archive entity starts with ‘a’</p>
+</li>
+<li class="">
+<p>Union or archive and transactional entity starts with ‘v’</p>
+</li>
+<li class="">
+<p>Status config starts with ‘s’</p>
+</li>
+<li class="">
+<p>Custom Status starts with ‘u’</p>
+</li>
+<li class="">
+<p>History entity starts with ‘h’</p>
+</li>
+<li class="">
+<p>Framework entity starts with ‘m’</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Each entity has one or more properties. Each entity property has one property type. Each property type has a domain assigned.</p>
+<ul>
+<li class="">
+<p>Entity</p>
+<ul>
+<li class="">
+<p>Entity Property (1-n)</p>
+<ul>
+<li class="">
+<p>Property Type (1)</p>
+<ul>
+<li class="">Domain (1)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Provide a unique entity name and mark if it is a Root entity. Root entity is considered as a BO. To define an entity you need at least one entity property, It could be either transient or regular(persisted in DB).</p>
+<p>Entity attributes:</p>
+<ul>
+<li class="">
+<p><strong>Entity Name :</strong> Unique ID across all flavors.</p>
+</li>
+<li class="">
+<p><strong>Is Root :</strong> This defines the Root entity of a BO. BO Name is the same as Entity Name if this is marked TRUE.</p>
+</li>
+<li class="">
+<p><strong>Entity Type:</strong> Persistent/Transient.</p>
+</li>
+<li class="">
+<p><strong>Network mode</strong> : This is optional here and inherited from flavor this entity belongs to. You can overwrite if required.</p>
+</li>
+<li class="">
+<p><strong>BO Name :</strong> Root entity name. Entities in the same BO should have a primary relation.</p>
+</li>
+<li class="">
+<p><strong>Is metadata</strong> : This decides whether it is a meta model entity or transactional. If marked TRUE, framework creates table in metadata DB. Otherwise in transactional DB.</p>
+</li>
+<li class="">
+<p><strong>Has appvariant :</strong> Starts following the flavor behaviour. If is_metadata FALSE, by default has_appvariant is FALSE and not allowed to change.</p>
+</li>
+<li class="">
+<p><strong>Has Tenant</strong> : Entity starts following the Tenant behaviour. if TRUE, s_tenant_id field will be added in DB table at the time of the update schema.</p>
+</li>
+<li class="">
+<p><strong>Is Config</strong> : if TRUE, this is considered as config entity.</p>
+</li>
+<li class="">
+<p><strong>Has Config</strong> : Framework will provide a config entity which can further customized with configuration fields. If object type is not applicable this is an object type independent config. Config is accessible in application by using *entityInstance.config *</p>
+</li>
+<li class="">
+<p><strong>Has created fields :</strong> To know what time facts are recorded to database and by whom. if TRUE, s_created_on and s_created_by fields will be added by FW at the time of update schema. These two fields are filled by a system of entity creation.</p>
+</li>
+</ul>
+<blockquote>
+<p>UI: s_created_on is server time in UTC format when record created and s_created_by is the logged in user.</p>
+<p>Message processing: Created On gets updated with server time(UTC format) if blank otherwise accept from message and Created By will be taken from message.</p>
+<p>Background Job/Upload: Created On gets updated with server time( UTC format) when record got created. Created By is the user by which Background job scheduled.</p>
+<p>Archive Data: accept created on/By field’s values from transaction entity as is.</p>
+</blockquote>
+<ul>
+<li class=""><strong>Has modified fields :</strong> This is to record the last changed time and user. if TRUE, Modified On and Modified By fields will be added by FW at the time of update schema. System updates these fields on every create/change of entity.</li>
+</ul>
+<blockquote>
+<p>Change in a BO:</p>
+</blockquote>
+<ul>
+<li class="">
+<p>In case if any change on root/header level only, this updates only header table modified fields.</p>
+</li>
+<li class="">
+<p>In case any change is made to the child entity, this updates the parent entity also upto root.</p>
+</li>
+</ul>
+<blockquote>
+<p>UI: same as created fields.</p>
+<p>Message processing:</p>
+<p>Background Job: same as created fields.</p>
+<p>Archive Data: accept all values from transaction entity. If an object is modified during the archiving process, then modify fields get changed accordingly.</p>
+</blockquote>
+<ul>
+<li class="">
+<p><strong>Check Dirty:</strong> re-evaluate all entities for dirty before calling on update. Default value: ?</p>
+</li>
+<li class="">
+<p><strong>Has Brand :</strong> Entity is brand dependent or independent. if TRUE, s_brand field will get added by FW at the time of update schema.</p>
+</li>
+<li class="">
+<p><strong>Has Object Type :</strong> Entity follows Object Type behaviour. if TRUE, s_object_type field of type int(11) gets added by FW at the time of update schema.</p>
+</li>
+<li class="">
+<p><strong>Has Status :</strong> if TRUE, s_status and s_status_custom fields will get added by kloBase at the time of update schema. See more details in the Status section.</p>
+</li>
+<li class="">
+<p><strong>Can create/read/update/Delete:</strong> if TRUE, insert/read/update/delete is allowed in the table otherwise not allowed. Applied only on Server side. Server side Exit and MW still allows even if false.</p>
+</li>
+<li class="">
+<p><strong>Can read all</strong> : if TRUE, read all values allowed from the table otherwise not allowed. Applied only Server side. Exit and MW still allows even if false. Runtime query will not work if it is FALSE.</p>
+</li>
+<li class="">
+<p><strong>Has History:</strong> This is to maintain the changing history of an BO. If TRUE, it creates a separate blob or transactional table to maintain the history of all changes. Every change on an entity gets captured in the history table and the main transactional table holds only the latest record. Table name starts with ‘h’.</p>
+</li>
+</ul>
+<blockquote>
+<p>Only on root entity or full BO?</p>
+<p>Maintain change history only for specific status?</p>
+<p>Object type based configuration?</p>
+<p>Is this supported offline?</p>
+</blockquote>
+<ul>
+<li class=""><strong>Has Archive:</strong> This is to facilitate the data archiving. This can be enabled only on the root entity/ BO. Always complete BO gets archived.</li>
+</ul>
+<blockquote>
+<p>Table name starts with ‘a’. One more table created as a view which starts with ‘v’ to fetch transaction and archive table data as union.</p>
+<p>If the ID series is exhausted?</p>
+</blockquote>
+<ul>
+<li class="">
+<p>Server Side: Push data from transaction table to Archive table. Which means data will get deleted from the main table once moved to the archive table.</p>
+<ul>
+<li class="">
+<p>Maintain configuration based on which data to be archived.</p>
+</li>
+<li class="">
+<p>Background job scheduler to push data from transactional table to Archive table. While archiving no dirty objects are allowed.</p>
+</li>
+<li class="">
+<p>APIs: <em>archive().</em> This API will work only on server side.</p>
+</li>
+<li class="">
+<p>clearArchive() : this deletes all records from the archive table.</p>
+</li>
+<li class="">
+<p>Update to offline endpoints. This deletes the entity in local DB.</p>
+</li>
+<li class="">
+<p>ON_ARCHIVE event.</p>
+</li>
+<li class="">
+<p>Query: by default query fetch data from transactional table(d table) but if archiving is enabled, users can explicitly mark to fetch archived data. This is a union of both transactional and archived tables.</p>
+</li>
+<li class="">
+<p>IsArchived flag is returned TRUE by framework if data is from the archive table. This flag can be used by application to highlight archived data or disable edit option.</p>
+</li>
+<li class="">
+<p>Do not allow the archived records to be updated. Framework throws an error if any dirty object found for archived records.</p>
+</li>
+<li class="">
+<p>Value help/ Association relation for archived masters. Example:</p>
+</li>
+<li class="">
+<p>Update transaction entity: this should adjust the archive and view.</p>
+<ul>
+<li class="">
+<p>Add/Delete new property</p>
+</li>
+<li class="">
+<p>New relation/ Delete relation</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Client Side: delete data in client DB(local) and do not send any updates to the server.</p>
+<ul>
+<li class="">API: <em>deleteLocal()</em></li>
+</ul>
+</li>
+<li class="">
+<p><em>kloQuery has deleteLocal();</em></p>
+</li>
+</ul>
+<blockquote>
+<p>Dependency: Does not allow you to archive until the related(supplied by application. Do not follow entity relation) object gets archived. Dependency is decided based on aggregate relations. Helper function to be written by Application to check if any dependent object exists.</p>
+</blockquote>
+<ul>
+<li class=""><strong>Has Time Dependent :</strong> At any given point in time, an entity has a value for each of its attributes. If the values of any attribute for an entity may change over time and you are interested to know the value of an attribute at a particular point in time, it is meaningful for entities to have properties exactly when they exist and mark the entity as time dependent. In case if you are interested only in the current value of the attribute, do not mark as time dependent.</li>
+</ul>
+<blockquote>
+<p>This is to maintain the periodic(time dependent) data with valid time. If any entity is marked as time dependent, framework creates below three fields in the table. In a BO any entity can be time dependent.</p>
+</blockquote>
+<ul>
+<li class="">
+<p>s_valid_from(Timestamp) - Validity start date and time. Part of the primary key. Default is the current date.</p>
+</li>
+<li class="">
+<p>s_valid_to(Timestamp) - Validity end date and time. Default value is 31-12-9999.</p>
+</li>
+<li class="">
+<p>s_active(boolean) - the latest record will be marked as TRUE.</p>
+</li>
+</ul>
+<blockquote>
+<p>At a time only one entry should be active and the validity period should not overlap for two records. By default Valid from is current date but can be changed.</p>
+<p>Past date: Config to be maintained for past date is allowed or not. Message processing(from SAP, device or to device) follows the config for the past date. If allowed it accepts the date from message or UI otherwise it changes the FROM date to current.</p>
+<p>If first entry, except the values provided from UI or Message and mark active flag TRUE.</p>
+<p>In case of update, modify the current existing active record’s s_valid_to accordingly(based on s_valid_from the new record). Also mark current entry active flag FALSE and new entry as TRUE. Both update and create should be in the same transaction.</p>
+<p>Mainly this will be used for master data tables where periodic data is required. For example, pricing, user address, etc. MRP/Pricing of a product can be changed periodically.</p>
+<p>Can not be changed based on object type or flavor. This can be defined only in owning flavor of an account.</p>
+</blockquote>
+<ul>
+<li class="">
+<p><strong>Approval :</strong> In case if approval is required for a BO, at the time of creation of the BO it should not change the current record. Once it is approved, then only it gets activated. To consider this scenario, a separate blob table is maintained for ‘To Be Approved’ objects. Once final approval is done it will get moved to the main transaction table and activate. If enabled, approval flag will be provided from the framework.</p>
+<ul>
+<li class="">
+<p>This is applicable for time dependent and time independent both entities.</p>
+</li>
+<li class="">
+<p>Configurable on object type based.</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Workflow will be discussed separately later.</p>
+</blockquote>
+<ul>
+<li class="">
+<p>Has Attachment : If enabled, Framework allows to store the attachment against this entity object and attachment link entity becomes part of the BO.</p>
+</li>
+<li class="">
+<p>Has Doc Flow :</p>
+</li>
+<li class="">
+<p>Owens Doc ID:</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Is Metadata</th><th>Has Tenant</th><th>Is Config</th><th>AppVariant</th><th>Is History</th><th>Is Archive</th></tr></thead><tbody><tr><td>Tenant Dependent</td><td></td><td>TRUE</td><td></td><td></td><td></td><td></td></tr><tr><td>Tenant Independent</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Configuration</td><td>TRUE</td><td></td><td>TRUE</td><td>TRUE</td><td></td><td></td></tr><tr><td>App Metadata</td><td>TRUE</td><td></td><td></td><td>TRUE</td><td></td><td></td></tr><tr><td>Transient</td><td></td><td>TRUE</td><td></td><td></td><td></td><td></td></tr><tr><td>Archive</td><td></td><td></td><td></td><td></td><td></td><td>TRUE</td></tr><tr><td>History</td><td></td><td></td><td></td><td></td><td>TRUE</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<p>Metadata table but app_variant is false? m_bo_entity_map</p>
+<p>Example:</p>
+<p>Take an example of order BO. Order BO has three entities: d_order, d_order_item, d_order_item. Out of this one entity has to be marked as root entity to define a BO.</p>
+<ul>
+<li class="">
+<p>d_order (root entity)</p>
+<ul>
+<li class="">
+<p>d_order_item (child entity)</p>
+<ul>
+<li class="">d_order_conditions (child entity)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="entity-property">Entity Property<a href="#entity-property" class="hash-link" aria-label="Direct link to Entity Property" title="Direct link to Entity Property" translate="no">​</a></h2>
+<p>Entity Property describes the attribute/member variable in an Entity(field in the database table) and holds the value in runtime. It has a Property ID(name) and Property type. The Property Type defines the data type and behaviour of the property.</p>
+<p>Entity Property’s attributes define the behaviour of the property. Entity properties can be added or archived only in the owning flavor of an account. Below are the parameters:</p>
+<ul>
+<li class="">
+<p>Entity Property ID: unique within an entity across all flavors. Can’t be changed later.</p>
+</li>
+<li class="">
+<p>Property Type/Element ID: select the existing Property type or create new. This defines data type, field length, precision, etc. It can be changed only in the owning flavor of an Entity. Selection of a domain, size and property type:</p>
+<ul>
+<li class="">
+<p>Choose existing</p>
+</li>
+<li class="">
+<p>Extend from</p>
+</li>
+<li class="">
+<p>Copy and override: copy any existing property type and change the parameters. This makes a copy of all attributes except Property Type ID.</p>
+</li>
+<li class="">
+<p>Create New</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Type: Regular / Primary Key / Transient Field / Calculated Field /System Fields. / Secondory Key</p>
+</li>
+<li class="">
+<p>Value Help: select already defined Value help ID. Wherever this property ID is binded in UI, VH is automatically applied. Can be overwritten in the screen field.</p>
+</li>
+<li class="">
+<p>Is restricted Value: Restrict the input value within the associated VH. Tri value: None, Strict(UI and BOL), Suggestions(Only UI side). (Note: Moved this to Entity property from Property type).</p>
+</li>
+<li class="">
+<p>Is Mandatory: Empty or Null values are not permitted during entity creation/update. Does not force in UI as mandatory. Non Key mandatory fields are not necessary for select.</p>
+</li>
+<li class="">
+<p>Default Value: Default value will be populated immediately after creating new Entity. $ Variables can also be used.</p>
+</li>
+<li class="">
+<p>ID Series: mention the ID series here if applicable for this field.</p>
+</li>
+</ul>
+<p>Naming convention:</p>
+<ul>
+<li class="">
+<p>Max length allowed for property ID is 31 char.</p>
+</li>
+<li class="">
+<p>Only english lower case alphabets (a-z), digits (0-9) and underscore (_) are supported.</p>
+</li>
+</ul>
+<p>Entity property ID starting with ‘s_’ is reserved for systems fields by framework.</p>
+<p>Types of Entity Property:</p>
+<ul>
+<li class="">
+<p>Persisted : Property which physically exists/stored in the database as a table column. Persisted Property owning Entity also has to be Persistent Entity only.</p>
+</li>
+<li class="">
+<p>Transient: transient property is a runtime attribute only. Use this to hold some value at runtime. Example: query result alias value, value filled or determined in rule, from UI set and get attribute.</p>
+</li>
+<li class="">
+<p>Primary key: primary key of a table. Values of set of primary key fields must be unique. If field is primary key, isNull/Nulable property will be marked as false automatically.</p>
+</li>
+<li class="">
+<p>System Defined Properties: based on the relevant flags in entity definition, framework provides standard columns in a table. Field name, Data Type, Label, etc are already defined and no changes allowed here. Developers can’t add a system field.</p>
+<ul>
+<li class="">
+<p>Object Type</p>
+</li>
+<li class="">
+<p>Status</p>
+</li>
+<li class="">
+<p>Brand</p>
+</li>
+<li class="">
+<p>Tenant ID</p>
+</li>
+<li class="">
+<p>Created On</p>
+</li>
+<li class="">
+<p>Modified On</p>
+</li>
+<li class="">
+<p>Created By $46</p>
+</li>
+<li class="">
+<p>Modified By</p>
+</li>
+<li class="">
+<p>Valid From</p>
+</li>
+<li class="">
+<p>Valid To</p>
+</li>
+<li class="">
+<p>Active</p>
+</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Source</strong></th><th><strong>Field name</strong></th><th><strong>Field DataType</strong></th></tr></thead><tbody><tr><td>Has Object Type</td><td>s_object_type</td><td>int(11)</td></tr><tr><td>Has Status</td><td>s_status,<br>s_status_custom</td><td>varchar(32),<br>varchar(32)</td></tr><tr><td>Has Brand</td><td>s_brand</td><td>int(11)</td></tr><tr><td>Tenant ID</td><td>s_tenant_id</td><td>int(11)<strong>(pk)</strong></td></tr><tr><td>Created Fields</td><td>s_created_on,<br>s_created_by</td><td>Timestamp,<br>varchar(255)</td></tr><tr><td>Modified Fields</td><td>s_modified_on,<br>s_modified_by</td><td>Timestamp,<br>varchar(255)</td></tr><tr><td>Date dependent</td><td>s_valid_from,<br>s_valid_to,<br>s_active</td><td>Timestamp**(pk)**,<br>Timestamp,<br>boolean</td></tr></tbody></table>
+<ul>
+<li class="">
+<p>Calculated Property:</p>
+<ul>
+<li class="">
+<p>When the property is read, application defined get&lt;Property_id&gt; is executed .</p>
+</li>
+<li class="">
+<p>When the property is written, the application defined set&lt;Property_id&gt; is executed .</p>
+</li>
+<li class="">
+<p>Mostly used to return some aggregated value based on other conditions.</p>
+</li>
+<li class="">
+<p>Works when <strong>iscalculatedproperty</strong> is selected in the entity property definition.</p>
+</li>
+<li class="">
+<p>These fields are not persisted and cannot hold any value at runtime. It can only return some value.</p>
+</li>
+<li class="">
+<p>The getter/setter function will be provided by the application developer. BOL will invoke this method when the property is accessed.</p>
+</li>
+<li class="">
+<p>This <strong>property is also bindable in UI.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Property with Variable, Method and persisted combination?</p>
+<blockquote>
+<p>Providing getter/setter function for the calculated field:</p>
+</blockquote>
+<ul>
+<li class="">
+<p>Through <strong>KloIDE</strong>, the app developer should write &lt;entityname&gt;.js file in js folder of the required folder.</p>
+</li>
+<li class="">
+<p>Provide a getter function for the entity property.</p>
+</li>
+<li class="">
+<p>Use a modularised way of writing js files and use <a href="https://requirejs.org/" target="_blank" rel="noopener noreferrer" class=""><strong><u>require</u></strong></a> on the file before it is used.</p>
+</li>
+<li class="">
+<p>Example:</p>
+</li>
+</ul>
+<blockquote>
+<p>File: asn_hdr.js</p>
+<p>define([&quot;require&quot;,&quot;exports&quot;], function(require,exports) {<br>
+getR_invoice_id = function(parent) {<br>
+return ‘calculated value’;<br>
+};<br>
+exports.getR_invoice_id = getR_invoice_id<br>
+});</p>
+<p>Syntax of property getter : get&lt;property name with first letter capitalized&gt;</p>
+</blockquote>
+<ul>
+<li class="">
+<p>Example: <strong>r_invoice_id</strong> → <strong>getR_invoice_id</strong>.</p>
+</li>
+<li class="">
+<p>When the getter is invoked, this will be the entity object and you are free to access any property/relation of entity.</p>
+</li>
+<li class="">
+<p>Mostly used for dynamic calculations (example: state management);</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="property-type">Property Type<a href="#property-type" class="hash-link" aria-label="Direct link to Property Type" title="Direct link to Property Type" translate="no">​</a></h2>
+<p>Property Type is to define the behaviour of Entity Property(Database Table field) and Screen field. It is a reusable unit. Property Type has below attributes:</p>
+<ul>
+<li class="">
+<p>ID : Unique ID of Property Type within Landscape.</p>
+</li>
+<li class="">
+<p>Domain: select Domain ID from predefined list to define the data type.</p>
+</li>
+<li class="">
+<p>Length and precision of the field. Precision is applicable only for decimal data type. Specify length for decimal and ‘chr’ types.</p>
+</li>
+<li class="">
+<p>Value Help: Define value help and assign it to property type. Value help will be applied to all the places wherever this Property type is used in UI or Rules. You can define restrictions(allow values only from VH list or accept manual inputs) on Entity Property.</p>
+</li>
+<li class="">
+<p>Authorization</p>
+</li>
+<li class="">
+<p>Text ID: maintain the Text ID here which points to the actual text(Translatable). This text is available in the screen field as tooltip/caption/placeholder/validation(error) text wherever this property type is used. It helps in maintaining the unified text across all screens. Create Text ID in editor.</p>
+</li>
+<li class="">
+<p>Default UI Format:</p>
+<ul>
+<li class="">
+<p>Date ( Example: DDMMYYYY or DDMMMYY, ...)</p>
+</li>
+<li class="">
+<p>Numeric(currency, etc)</p>
+</li>
+<li class="">
+<p>Decimal</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Min Max Value: define min and max values allowed for a numeric and string(chr) fields. This ends with an error if value is not in given range. This validation is applied in UI. In case of string min/max value is the number of chars.</p>
+</li>
+<li class="">
+<p>Extends From: extend from other property types and modify one or more attribute/s.</p>
+</li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<ul>
+<li class="">
+<p>Entity property</p>
+</li>
+<li class="">
+<p>Query Property</p>
+</li>
+<li class="">
+<p>Screen</p>
+</li>
+</ul>
+<p><strong>Extends:</strong> extend the existing property type to access the parent attributes and overwrite if needed. You can only extend one propertytype in your child propertytype. In the extended property type fill only the attributes which you want to overwrite, all other attribute values are inherited from the parent. Domain type, length, precision can not be changed in extended property type.</p>
+<p>Extend property type if:</p>
+<ul>
+<li class="">
+<p>Data type, length, precision are same as these are not allowed to change in extended property type.</p>
+</li>
+<li class="">
+<p>One or more properties are different from the list below:</p>
+<ul>
+<li class="">
+<p>Authorization</p>
+</li>
+<li class="">
+<p>Value help</p>
+</li>
+<li class="">
+<p>Text ID</p>
+</li>
+<li class="">
+<p>UI Formatting</p>
+</li>
+<li class="">
+<p>Min/Max value</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>How to remove an attribute value in extended property type? Set null or empty string</p>
+<p>For example, you have created one property type called ‘customer’ and Text is provided ‘Customer Name’. But in some scenarios you want to show the text as ‘Sold To Party’, in this case extend the ‘customer’ property type and create new property type as ‘sold_to_party’ and change the text.</p>
+<p>A extends B. B extends C. All attributes of C are extended to A if not overwritten in B.</p>
+<p><strong>Reuse</strong>: To define the common behaviour of multiple Entity/Query Properties, Property type can be reused across entities.</p>
+<p>It should be reused if entity properties are logically the same.</p>
+<ul>
+<li class="">
+<p>Ordered Qty and Del Qty - not to use the same property type. But Ordered qty in two diff tables should share the property type.</p>
+</li>
+<li class="">
+<p>Property type should be different for Vendor and Customer fields in the same or diff entity. Both should be extended from BP ID because data type should be same for all.</p>
+</li>
+<li class="">
+<p>It is recommended to use the same property type for a field which is used in multiple tables as foreign key. To understand this better let’s take an example of the Material Code field which is part of Material master as a primary field but also part of other tables like Order and Logistics items.</p>
+</li>
+</ul>
+<p><strong>Authorization:</strong></p>
+<p>Authorization is to restrict the access of data, for logged in user. Authorization on any entity of a BO is applied on the whole BO. Authorization is defined on Property Type and applied for all queries the Entities wherever that Property Type is used.</p>
+<p>Do not apply Authorization on Query Property.</p>
+<p>For example, logged in users should be able to see only the Orders that belong to them. Below is the Entity definition:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Entity</th><th>Entity Property</th><th>Property Type</th></tr></thead><tbody><tr><td>d_order</td><td>order_id</td><td>order_id</td></tr><tr><td>d_order</td><td>order_date</td><td>order_date</td></tr><tr><td>d_order</td><td>customer_id</td><td>cust_id</td></tr><tr><td>d_order</td><td>net_amount</td><td>amount</td></tr></tbody></table>
+<p>Here apply the authorization on “cust_id” Property Type to filter the orders of particular customers. If the same Property Type is used at other places, authorization will be applied on those entities also.</p>
+<p>In case you do not want to apply the authorization at all entities or apply the authorization at only one place, then extend the base property type and create a new Property Type.</p>
+<p>Variables Supported:</p>
+<ul>
+<li class="">
+<p>$Variable</p>
+</li>
+<li class="">
+<p>Constants</p>
+<ul>
+<li class="">Syntax: const1, const2</li>
+</ul>
+</li>
+</ul>
+<p>In case if authorization is applied on more than one property or multiple value in one property. Below is the behaviour:</p>
+<ol>
+<li class="">
+<p>AND Operator: If authorization is applied on multiple properties in the same BO with different property types, all parameters will be ANDed.</p>
+<ol>
+<li class="">Example1: There are two properties in d_order entity customer and sales_person both have different property types. If authorization is applied on both, this will be ANDed.</li>
+</ol>
+</li>
+<li class="">
+<p>OR Operator: Used a property type with multiple entity properties in the same entity, all parameters will be ORed. (Reuse property type within entity). At the same time it will be ANDed with other parameters.</p>
+<ol>
+<li class="">Example2: There are two properties in d_order entity customer and vendor both have the same property type, in this case both parameters will be ORed.</li>
+</ol>
+</li>
+<li class="">
+<p>IN Operator: If Multi values qualified for one property, all values will be considered with IN operator.</p>
+<ol>
+<li class="">Example3: Authorization is set on state field in d_order entity and multiple values passed at runtime, in this case all values will be passed with IN operator.</li>
+</ol>
+</li>
+</ol>
+<p>If authorization to be applied on field A for one Order Type and field B for other order type?</p>
+<p><strong>Translation:</strong> multilocal? This is to facilitate multilingual options for label text.</p>
+<p>Length suggestion on translatable text.</p>
+<p><strong>Formation:</strong> Multi language setting. This is a global setting and not part of Property Type.</p>
+<p>Available options:</p>
+<ul>
+<li class="">
+<p>Second language</p>
+</li>
+<li class="">
+<p>Only a second language.</p>
+</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="klorelation">kloRelation<a href="#klorelation" class="hash-link" aria-label="Direct link to kloRelation" title="Direct link to kloRelation" translate="no">​</a></h2>
+<p>Entity relation is to allow one entity to relate with another entity qualified by entity property. Relation has a unique name within the Entity.</p>
+<ul>
+<li class="">Association: An association is a structural relationship which connects one entity with another. Given an association between two entities, can navigate from one entity to the other entity and vice versa. Association relations can be across BOs. By default each relation is of type Association if it is not marked as Aggregated or Primary.</li>
+</ul>
+<blockquote>
+<p>Example1:</p>
+</blockquote>
+<ul>
+<li class="">
+<p>d_order_item(source)</p>
+</li>
+<li class="">
+<p>d_material_master(Related)</p>
+</li>
+</ul>
+<blockquote>
+<p>Create a relation to show the material description, LOB, or other property of material.</p>
+<p>Example2:</p>
+</blockquote>
+<ul>
+<li class="">
+<p>d_order_item(source)</p>
+</li>
+<li class="">
+<p>d_order(Related)</p>
+</li>
+</ul>
+<blockquote>
+<p>If you want to navigate from order Item to order header. Define a relation between Item as Source and Header as Related entity.</p>
+</blockquote>
+<ul>
+<li class="">
+<p>Aggregated Relation: Aggregation is a type of association where two entities(tables) are tightly bound. In some cases we might come across “whole-part” relationships between two Entities, in which one entity is a part of another entity. Such a relationship is known as an aggregation. An aggregation relationship can be described in simple words as &quot;an object of one class can own or access the objects of another class.&quot; If a parent is deleted/archive, all other parts associated with it are deleted. Aggregate relations can be across BOs.</p>
+</li>
+<li class="">
+<p>Primary Relation: This is a special kind of aggregate relation within BO boundary. All entities in a BO are navigable from root entity once unidirectional and only once. Below are the use cases of primary relation:</p>
+<ul>
+<li class="">
+<p>Message processing</p>
+</li>
+<li class="">
+<p>Key mapping</p>
+</li>
+<li class="">
+<p>Find Parent</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li class="">
+<p>d_order ( root entity)</p>
+<ul>
+<li class="">
+<p>d_order_item</p>
+<ul>
+<li class="">d_order_conditions</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here d_order is the root entity and the other two are child entities in Order BO. Hence relation has to be defined between these entities.</p>
+<p>Create a relation on d_order entity with d_order_item of type “Primary” and query property is “order_id”.</p>
+<p>Create a relation on d_order_item entity with d_order_conditions of type “Primary” and query property are “order_id” and “order_item”.</p>
+<p><strong>Define Relationship:</strong></p>
+<p>Let’s create a relation between two entities using Procify Data Studio. To create a relation go to the source entity where you want a relation with another entity. Provide a unique Relation name. JOIN is constructed based on the defined relation.</p>
+<ul>
+<li class="">
+<p>Relation Name: unique within an Entity. Relation names and Property names can’t be the same. “Parent” and “Attachments” are reserved keywords.</p>
+</li>
+<li class="">
+<p>Related Entity: name of Entity with relation to be defined.</p>
+</li>
+<li class="">
+<p>Type of relation: Aggregate/Primary. If not selected any, by default it is association type.</p>
+</li>
+<li class="">
+<p>Query Type: - To be removed from Editor UI</p>
+</li>
+<li class="">
+<p>Relation Query : Select relation query ID from list.</p>
+<ul>
+<li class=""></li>
+</ul>
+</li>
+<li class="">
+<p>Cardinality: - (0:n, 0:1, 1:1, 1:n). User has to select the correct cardinality for the relation. No defaulting in Editor. Add 0:1 cardinality. In case if 0:1 include in Join and if 0:n provide separate query in VH. No validation on 1:1 and 1:n cardinalities from BOL side.</p>
+</li>
+<li class="">
+<p>Description: describe the relation here in short.</p>
+</li>
+</ul>
+<p>Relation Property:</p>
+<ul>
+<li class="">
+<p>Relation Property ID: unique within Entity.</p>
+</li>
+<li class="">
+<p>Source Property ID: Variables supported- Entity property ID and constants(number, single/double quote) comma separated. Source Property ID can be used multiple times.</p>
+</li>
+<li class="">
+<p>Related Property ID: it is entity property ID if query type is Runtime and query property ID if query type is Modeled. Entity Name +Property ID in case of Runtime query. Can’t repeat within one relation.</p>
+</li>
+<li class="">
+<p>Related Entity property ID: new readonly column. Fetch from the selected query.</p>
+</li>
+</ul>
+<p>Relation can be defined between two entities:</p>
+<ul>
+<li class="">
+<p>Both Persistent</p>
+</li>
+<li class="">
+<p>Both Transient</p>
+</li>
+<li class="">
+<p>One Persistent and one Transient</p>
+</li>
+</ul>
+<p>Variables supported:</p>
+<ul>
+<li class="">
+<p>Source Property ID</p>
+<ul>
+<li class="">
+<p>Entity property ID</p>
+</li>
+<li class="">
+<p>Constant: multi value</p>
+</li>
+<li class="">
+<p>$VARIABLE</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Target Property ID</p>
+<ul>
+<li class="">Entity/Query property ID</li>
+</ul>
+</li>
+</ul>
+<p>Call fetch on relation for business logic in UI and Rules. Syntax: &lt;relation_name&gt;.fetch().</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="entity-apis">Entity APIs<a href="#entity-apis" class="hash-link" aria-label="Direct link to Entity APIs" title="Direct link to Entity APIs" translate="no">​</a></h2>
+<p>Class: EntityProxyBase.ts</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getEntityName() either</th></tr></thead><tbody><tr><td>Returns Entity Name.</td></tr><tr><td>Example:<br>entityProxy.getEntityName();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getParent():Promise&lt;EntityProxyBase&gt;- to be removed. This will come as a relation.<br>Parent and Attachments both will be supported as relations.</th></tr></thead><tbody><tr><td>Returns Promise and resolve with Entity Proxy representing parent if parent exists for the entity.</td></tr><tr><td>Example:<br>entityProxy.getParent();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getRoot():Promise&lt;EntityProxyBase&gt;- to be removed. This will come as a relation.<br>Parent and Attachments both will be supported as relations.</th></tr></thead><tbody><tr><td>Returns Promise and resolve with Entity Proxy representing parent if parent exists for the entity.</td></tr><tr><td>Example:<br>entityProxy.getParent();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>delete() :Promise&lt;void&gt;</th></tr></thead><tbody><tr><td>This deletes the entity, all the primary children also will be deleted recursively till the leaf node, removes from the entity set it belongs to.<br>If a new entity this will be simply discarded, else and delete action is performed on DB/batch and the registered rules will be executed for ON_DELETE.<br>All cascade deletions will go as one message per BO.<br>This will mark is_deleted flag TRUE on message exchange so that it is deleted from server and other devices.<br>Is_delete flag from all entities to be removed?</td></tr><tr><td>Var entityProxy = event.getObject();<br>entityProxy.delete();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>archive() :Promise&lt;void&gt;</th></tr></thead><tbody><tr><td><mark>Archiving can be done only on root entities and it will include all its primary children recursively.</mark><br>Send a message to hard delete in all endpoints.<br>Event for archive to be provided. Application to write logic if any reference for that object in other BO. For example if material is archived then it should check this material in all open orders and deliveries.<br>Not supported in offline mode.</td></tr><tr><td>Example:<br>entityInstance.archive();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>syncService() - To be discussed</th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Controlling the data flow to endpoints.</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>refresh(deepRefresh: boolean): Promise</th></tr></thead><tbody><tr><td>Reset the entity back to the DB state. This is applicable only on the current query object.<br>Remove the entity from writeset and reset all the dirty state.<br>Behaviour will be as per the network mode.<br>Refresh on a new entity will behave like revert and mark is_deleted.<br><strong>deepRefresh:</strong><br>Possible values: TRUE/FALSE<br>Deep refresh is applicable on Aggregate relation. By default deepRefresh is FALSE.<br>What is the behaviour in preferred online?</td></tr><tr><td>Syntax: &lt;proxyInstance&gt;.refresh()<br>UI:<br>entityProxy.refresh();<br>Rule:<br>Var entityProxy = event.getObject();<br>entityProxy.refresh();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>from(): Promise&lt;FromEntity&gt;</th></tr></thead><tbody><tr><td>‘from’ state of an entity is captured during the entity load. It returns the current loaded state of that object.<br>FromObject will have only the properties of current entity, that means to get the from state of a child relation entity you have to navigate till that entity object and call <em>from</em>.<br>It returns FromEntity object. Transient properties, Relations and APIs are not accessible.</td></tr><tr><td>Syntax: &lt;entityInstance&gt;.from<br>Example: order.from().then(function(returnObj){<br>Var orderID = returnObj.order_id;<br>...........<br>});<br>order.ites[0].from().then(function(returnObj){...........})<br>order.items[0].pricing_condition[0].from().then(function(returnObj){ …… })</td></tr></tbody></table>
+<p>executeCreateNewRule() is deprecated and use <strong>executeCreateFromTemplate()</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>executeCreateFromTemplate():Promise&lt;any&gt;</th></tr></thead><tbody><tr><td>Executes the rules registered for creating New Entity.<br>Internally it is called by Framework on create in case passing true to second param in EntitySet#<mark>newEntity()</mark> will result in calling Create Template Rules, but also it can be called explicitly by application in case additional information is passed to the entity.<br>Method available only on newly created objects. Calling this method on other EntityProxy will end up with error.<br>Create New Event: [&#x27;ON_CREATE_FROM_TEMPLATE&#x27;]<br>manual usage : entity.executeCreateFromTemplate() will trigger execution of ON_CREATE_FROM_TEMPLATE event subscriptions.<br>This can be used in Rule and Controller both.</td></tr><tr><td>Syntax: &lt;entityInstance&gt;.executeCreateFromTemplate();<br>entity.executeCreateFromTemplate().then(function () {<br>entity.s_status = &#x27;NEW_FROM_SO&#x27;;<br>resolve(entity);<br>}).catch(reject);</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>toString(): String</th><th></th><th></th><th></th></tr></thead><tbody><tr><td>This returns a valid Stringified JSON object of an entity.</td><td></td><td></td><td></td></tr><tr><td>entityInstance.toString();</td><td></td><td></td><td></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><mark>convertTo(objectType, es, executeCPM, insertTo): Promise</mark><br><strong>objectType</strong>: object type to which entity needs to be converted<br><strong>es</strong> : the es to which the entity belongs to;<br><strong>executeCPM</strong> : execute the CPM rules for the newly created object. TRUE/FALSE<br><strong>insertTo</strong>: the position to which the proxy to be inserted.</th></tr></thead><tbody><tr><td>Converts the Entity to given object type. Interconversion is supported for the same or different entity.<br>If the entity does not have object type the instance will be converted to default and the parameter value for object type passed will be ignored.<br>This removes the primary keys.<br>Can overwrite any property value. • Object Type: Convert in same entity with diff object type. <br> Entity to Entity • Single <br> Deep To be discussed again and finalize.<br>Field mapping</td></tr><tr><td>eg: &lt;entityInstance&gt;.convertTo(objectType, es, executeCPM, insertTo);<br>target_object_type = objES[0].target_object_type;<br>logistics.convertTo(target_object_type, newGRQI.getEntitySet(), true).then(function (entity) {<br>entity.ref_id = logistics.logistics_id;<br>entity.s_action = &#x27;DRAFT&#x27;;<br>entity.assign_employee = null;<br>entity.legacy_id = logistics.ref_id;<br>msg = logistics.logistics_id + &#x27;(&#x27; + logistics.s_status + &#x27;) Saved successfully&#x27;;<br>resolve(msg);<br>}).catch(function (error) {<br>reject(new Error(&#x27;Error in GR creation...!&#x27;));<br>});</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>dirtyState : DirtyState<br>Only for internal use.</th></tr></thead><tbody><tr><td>Returns the dirty state of the entity. • NEW : Entity is new and no set has happened <br> NOT_MODIFIED: Entity is not dirty <br> NOT_MODIFIED_IN_WRITESET : in writeset but not modified, but one one of the children is modified or created <br> MODIFIED_IN_WRITESET : modified and in writeset <br> NEW_IN_WRITESET : New entity present in writeset <br> DELETE : Deleted and in writeset</td></tr><tr><td></td></tr></tbody></table>
+<p>hasModified(): boolean is deprecated use isDirty instead</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>isDirty: boolean<br>isNew: boolean<br>isDeleted: boolean<br>isLoaded: boolean</th></tr></thead><tbody><tr><td>isDirty:<br>Returns true if the entity is in a dirty state(New, Modified, Deleted), otherwise false.<br>isNew:<br>This will returns true if record is new in the entity and not yet saved to DB, else false;<br>isDeleted:<br>Returns true if the object is deleted, otherwise false.<br>isLoaded:</td></tr><tr><td>Example:<br>entityInstance.isDirty;<br>entityInstance.isNew;<br>After creating an order if one new line item is added in the order.<br>entityInstance.isDeleted;<br>entityInstance.isLoaded;</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>setLocalChange(value:boolean = false)</th></tr></thead><tbody><tr><td>To be used in exceptional cases when we want to modify the entity locally offline and save but do not want the message to be sent to the server for processing. Need to be called on the root entity of BO. this is an instance specific other instances are unaffected. For online calls or on server it is ignored.</td></tr><tr><td>Example:<br>entityInstance.setLocalChange(true);</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getErr() : StatusMessage<br>To be discussed.</th></tr></thead><tbody><tr><td>If you set the code, FW will try to get the corresponding error information maintained in metadata and auto fill the message and type, if you set the message or type, this will take priority.</td></tr><tr><td>Returns back you the StatusMessage object.<br>StatusMessage: {<br>code:<br>message:<br>Type:<br>}</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>config</th></tr></thead><tbody><tr><td>Returns the config object for the current object, based on object type and brand. This property is only present if has config is marked in the entity.</td></tr><tr><td>Example:<br>entity.config.fetch();<br>Is fetch() required here?</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>statusConfig</th></tr></thead><tbody><tr><td>Returns the status config object for the current object, based on status. This property is present only if status is marked.</td></tr><tr><td>Example:<br>entity.statusConfig.fetch();<br>Is fetch() required here?</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>moveToArchive() : Promise</th></tr></thead><tbody><tr><td>This is to move the BO data from transaction table to archive table. • Allowed only on root entity. <br> Check if any dependent entity data is present. First archive dependent entity and then this.</td></tr><tr><td>Example:<br>entityInstance.moveToArchive();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>archiveLocal()</th></tr></thead><tbody><tr><td>Remove the BO from local DB.<br>No update to the server.</td></tr><tr><td>Example:<br>entityInstance.archiveLocal();</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="actions">Actions<a href="#actions" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rules">Rules<a href="#rules" class="hash-link" aria-label="Direct link to Rules" title="Direct link to Rules" translate="no">​</a></h2>
+<p>A Rule is a function that is to be executed after another function has finished executing. Rules are written by Developer as per the application business logic. Rules can be subscribed with either Entity or Query.</p>
+<p><strong>Define the Rule:</strong></p>
+<ul>
+<li class="">
+<p>Define a rule with below inputs</p>
+<ul>
+<li class="">
+<p>Rule ID - unique ID across all entities.</p>
+</li>
+<li class="">
+<p>Class - file name</p>
+</li>
+<li class="">
+<p>Mime Type: Java or JS</p>
+</li>
+<li class="">
+<p>Description</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Recommended to Define the rules on the root entity of BO.</p>
+</li>
+<li class="">
+<p>Each Rule returns a promise. Promise should be resolved or rejected based on the application scenario.</p>
+</li>
+</ul>
+<blockquote>
+<p>Example: resolve the promise if updated successfully and reject in case of any error.</p>
+<p>var handleEvent = function (event) {</p>
+<p>return new Promise(function (resolve, reject) {</p>
+<p>var order = event.getObject();</p>
+<p>if (order.s_action === &#x27;SO_APPROVE&#x27;) {</p>
+<p>try {</p>
+<p>//do something</p>
+<p>resolve();</p>
+<p>} catch (Error) {</p>
+<p>reject(Error);</p>
+<p>}</p>
+<p>});</p>
+<p>};</p>
+</blockquote>
+<p><strong>Subscribe Rule:</strong></p>
+<p>You can subscribe to the Rule for any Entity which can be executed based on the Event type assigned. Rule subscription is part of kloIDE. To subscribe a Rule you need to provide below details.</p>
+<ul>
+<li class="">
+<p>Exit(Rule) ID: Select existing rule on BO, General, All or create a new rule.</p>
+</li>
+<li class="">
+<p>Exit Class: file name. Defaulted from rule definition for existing rule.</p>
+</li>
+<li class="">
+<p>Mime Type: Java or JS. Defaulted from rule definition for existing rule.</p>
+</li>
+<li class="">
+<p>BO Event Subscription ID: auto generated?</p>
+</li>
+<li class="">
+<p>Event Type:</p>
+<ul>
+<li class="">
+<p>Entity</p>
+<ul>
+<li class="">
+<p>ON_CREATE</p>
+</li>
+<li class="">
+<p>CREATE_NEW_FROM_TEMPLATE : execute only if executeCreateFromTemplate() method called from application.</p>
+</li>
+<li class="">
+<p>ON_UPDATE : execute only on update entity.</p>
+</li>
+<li class="">
+<p>ON_DELETE : execute only on delete entity.</p>
+</li>
+<li class="">
+<p>BEFORE_MAPPING</p>
+</li>
+<li class="">
+<p>AFTER_MAPPING</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Some additional Event types on Root Entity(BO)</p>
+<ul>
+<li class="">
+<p>ON_SUCCESS : execute only after the successful transaction of a BO.</p>
+</li>
+<li class="">
+<p>ON_ERROR : execute only if the transaction failed for a BO.</p>
+</li>
+<li class="">
+<p>ENDPOINT_RESOLVER : this is to get all the endpoints to push the MW message. This gets called on every create/update/delete of a BO.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Object Group: Thi is optional and If Object Group is not specified, it will get called for all objects of that entity.</p>
+</li>
+<li class="">
+<p>Channel Type: there are different input channels to perform a transaction on an entity, channel type selection decides when to trigger the Rule.</p>
+<ul>
+<li class="">
+<p>All</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Klarion Server</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Klarion Server---ALWAYS ON CLIENT</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Klarion Server---ALWAYS ON SERVER</p>
+</li>
+<li class="">
+<p>Endpoint/Device to Server/Client---NETWORK CONTEXT SWITCH</p>
+</li>
+<li class="">
+<p>Klarion Server to Klarion Offline Server</p>
+</li>
+<li class="">
+<p>Klarion Server to Klarion Server</p>
+</li>
+<li class="">
+<p>Legacy to Klarion Server</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>Sequence No: Decides in what sequence Rule to be executed. In case multiple Rules subscribed, sequence of rule execution is followed. All positive numbers(1-n) excepted.</p>
+<ul>
+<li class="">If sequence no. is the same for 2 rules : should not allow from IDE.</li>
+</ul>
+</li>
+</ul>
+<p>Same rule can be subscribed multiple times with different Channel types.</p>
+<p><strong>Execution sequence of rule:</strong></p>
+<p>If any change in DataSet of an Entity at any level of BO. All Entities which are on top as per BO definition(sequence of entities) are set to WriteSet till Root entity which we call dirty object.</p>
+<ul>
+<li class="">
+<p>Rule will be executed for all dirty objects one by one. Each record in an entity invokes the Rule.</p>
+</li>
+<li class="">
+<p>Execution is from Leaf Entity(of BO) Rule to Root Entity Rule for all WriteSet.</p>
+<ul>
+<li class="">
+<p>First call all rules of Lowest level( Leaf Entity in a BO) Entity.</p>
+</li>
+<li class="">
+<p>If multiple BO changes are there in one WriteSet, first execute the rules of lowest level entity in all BOs then next up… then next up</p>
+</li>
+</ul>
+</li>
+<li class="">
+<p>At the same level rule execution is as per sequence number( 1 is top priority).</p>
+</li>
+<li class="">
+<p>Execute rule based on Channel Type</p>
+</li>
+<li class="">
+<p>Again jump to Child entity Rule if any modification in parent entity Rule.</p>
+</li>
+</ul>
+<p>Same rule subscribed multiple times?</p>
+<p>Control Transaction in rule:</p>
+<ul>
+<li class="">
+<p>Cancel Transaction Refresh Changeset : This cancels the full transaction and refreshes the Changeset/Writeset.</p>
+</li>
+<li class="">
+<p>Stop Exit chain only for current entity Instance</p>
+</li>
+<li class="">
+<p>Stop Exit chain only for current BO instance</p>
+</li>
+<li class="">
+<p>Eliminate the object from writeset (refresh entity/BO using refresh(deepRefresh)) : if new entity?</p>
+</li>
+<li class="">
+<p>Eliminate the BO from writeset (refresh BO)</p>
+</li>
+<li class="">
+<p>Flush Changeset (commit) : intermediate commit</p>
+</li>
+</ul>
+<p><strong>How to write a Rule:</strong></p>
+<p>define([&quot;require&quot;, &quot;exports&quot;], function (require, exports) {</p>
+<p>Load other file in Rule definition:</p>
+<p>define([&quot;require&quot;, &quot;exports&quot;, &quot;./H_Order&quot;], function (require, exports, orderUtility) {</p>
+<p>Event Context:</p>
+<p>Get current entity or query info using Event context.</p>
+<p>var handleEvent = function (event)</p>
+<p>var order = event.getObject();</p>
+<p><strong>Require in Rule:</strong></p>
+<p><em>require</em> is used to load the Rule file.</p>
+<p>All the files used in this flavor come from this flavor or from the inheritance hierarchy, so any file you need to load can be required in the context of this flavor. That basically means all the required paths are relative to the current flavor and does not go out or over the flavor. So flavor or version will never be a part of the required paths.</p>
+<p>In order to load any file which is written in compatible with require/define (amd), you can use</p>
+<blockquote>
+<p><strong>require([&lt;relative path to file without extension&gt;],function(dependency1, dependecy2...){</strong></p>
+<p><strong>//code goes here.</strong></p>
+<p><strong>});</strong></p>
+</blockquote>
+<p>The folder structure is as follows:</p>
+<p><strong>Flavor / Version / Js / Css / Controller / View /</strong> …</p>
+<p>Any file u need from the same folder will have <strong>“./&lt;filename&gt;”</strong> and any files from another folder will have filename <strong>“../&lt;foldername&gt;/&lt;filename&gt;”</strong></p>
+<p><strong>Require can take array of dependencies and the call back will have those many object loaded and resolved as part of dependencies</strong></p>
+<p><strong>Writing a file to be in compatible with require/define</strong></p>
+<blockquote>
+<p><strong>define([“require”,”exports”,&lt;relative path to file without extension&gt;],function(require,exports,dependency1, dependecy2...){</strong></p>
+<p><strong>//code goes here.</strong></p>
+<p><strong>exports.&lt;export name&gt; = reference;</strong></p>
+<p><strong>});</strong></p>
+</blockquote>
+<p><strong>Export:</strong> exports the handleEvent function which is used by kloBase.</p>
+<p>exports.handleEvent = handleEvent;</p>
+<p>Promise has to be either Resolved or Reject based on business logic.</p>
+<p>Multiple functions in a Rule:</p>
+<p><strong>Rule API’s:</strong></p>
+<p>EventContext</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>event.getObject(): EntityProxyBase | KloQuery</th></tr></thead><tbody><tr><td>Return the current object/instance of either Query or Entity based on the context in which rules are invoked. Using this object you can access the properties of Entity or Query.<br>To get the current state of the object, call <strong>orderObj.from</strong> which returns the current state of this entity in DB. This can be used to compare the saved value with the changed one.</td></tr><tr><td>var handleEvent = function (event) {<br>var orderObj= event.getObject();<br>var order_status = orderObj.s_status;<br>//do something<br>}</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getEventType(): EventType</th></tr></thead><tbody><tr><td>Returns the event type for which the rule is invoked for. If the same Rule is used in multiple subscriptions, you can decide based on event type if business logic differs like Create or Update or Delete. Event types are: • ON_CREATE <br> CREATE_NEW_FROM_TEMPLATE <br> ON_UPDATE <br> ON_DELETE <br> <mark>BEFORE_MAPPING</mark> <br> <mark>AFTER_MAPPING</mark> <br> ON_SUCCESS <br> ON_ERROR <br> ENDPOINT_RESOLVER</td></tr><tr><td>event.getEventType();</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getValuebag(): any</th></tr></thead><tbody><tr><td>Return the valuebag instance available that is valid over all rule chain for current Transaction or request. Can be accessed in other rules also.<br>It&#x27;s a JS object with a key as string and value can be any.</td></tr><tr><td>Example:<br>Get: event.getValuebag();<br>Set: event.valuebag[‘key’] = value;</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getObjectInfo(): any<br>Is this required at the application side?</th></tr></thead><tbody><tr><td>Returns the metadata of current object(Entity or Query) for which the rule has been invoked</td></tr><tr><td>event.getObjectInfo()</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>flush(): Promise&lt;any&gt;</th></tr></thead><tbody><tr><td>Flush current transaction with immediate commit.<br>This method should be only used in case of a requirement that needs an explicit db persistence. The objects which have already completed the rule execution, will be persisted to the db.</td></tr><tr><td>event.flush()</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>cancelTransaction(): Promise&lt;any&gt;</th><th></th><th></th><th></th></tr></thead><tbody><tr><td>This method will mark the transaction to be cancelled and resolves immediately after the current rule execution is completed skipping the database persistence and refresh the Changeset.</td><td></td><td></td><td></td></tr><tr><td>event.cancelTransaction()</td><td></td><td></td><td></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>stopRuleChainForCurrentEntity()</th></tr></thead><tbody><tr><td>This skips rule chain(subsequent rules) execution for the current entity and will immediately go for the next object in the dirty set.<br>Data will be committed to the database for the entity rules skipped.</td></tr><tr><td>event.stopRuleChainForCurrentEntity()</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>stopRuleChainForBO()</th></tr></thead><tbody><tr><td>This skips rule chain execution for the current BO and will immediately go for the next object in a dirty set.<br>This can be called only on <mark>root entity or any entity</mark>.</td></tr><tr><td>event.stopRuleChainForCurrentEntity()</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>config.fetch()</th></tr></thead><tbody><tr><td>Returns config values of an object.<br>This returns only one record for a given object type.</td></tr><tr><td>order.config.fetch()</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>getLocalStorage<br>getEventInfo<br>addToCurrentTransaction</th></tr></thead><tbody><tr><td>getLocalStorage [CLIENT ONLY API]<br>getLocalStorage() returns an instance of <a href="#klolocalstorage" class=""><u>KloLocalStorage</u></a>.<br>getEventInfo getEventInfo(): returns the current subscription metadata for which the rule has been invoked for. addToCurrentTransaction<br>addToCurrentTransaction(IPersist) : add a new Query object to the current transaction.</td></tr><tr><td></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><mark>addEndpoint(endpointid, endpointType)</mark></th></tr></thead><tbody><tr><td>To add an endpoint through the rules, use this API<br>endpointType: BP, USER or ENDPOINT<br>Returns: instance of EndPointBean [Java Class]</td></tr><tr><td></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><mark>ADM APIs</mark></th></tr></thead><tbody><tr><td>initADM(): initializes the java class com.maventic.klarion.user.AdmUser and sets the required objects in context.<br>getAdminBp:<br>returns and instance of com.maventic.klarion.tenant.AdminBp<br>Or null,<br>Example: event.getAdminBp();<br>getUserModel<br>getUserModel(): return the instance of java class CockpitUserModel. <strong>initADM() has to be called before using this API.</strong> getUserSetup<br>getUserSetup(): return the instance of java class AdmUser. <strong>initADM() has to be called before using this API.</strong></td></tr><tr><td></td></tr></tbody></table>
+<p>Rule Sample Code:</p>
+<p>define([&quot;require&quot;, &quot;exports&quot;, &quot;./H_Order&quot;], function (require, exports, orderUtility) {</p>
+<p>// - &lt;ACTION&gt; ON ORDER CANCEL</p>
+<p>var handleEvent = function (event) {</p>
+<p>// Updating Items once the header status is changed to cancelled.</p>
+<p>// making cancel qty to order qty ,pending and approved to zero.</p>
+<p>return new Promise(function (resolve, reject) {</p>
+<p>debugger;</p>
+<p>event.log(&quot;*****************ON UPDATE U_SO_cancel*****************&quot;);</p>
+<p>var order = event.getObject();</p>
+<p>if (order.s_action === &#x27;SO_CANCEL&#x27;) {</p>
+<p>try {</p>
+<p>order.s_status = orderUtility.STATUS.CANCELLED;</p>
+<p>updateItem(order).then(function () {</p>
+<p>resolve();</p>
+<p>});</p>
+<p>} catch (Error) {</p>
+<p>reject(Error);</p>
+<p>}</p>
+<p>} else {</p>
+<p>resolve();</p>
+<p>}</p>
+<p>});</p>
+<p>};</p>
+<p>var updateItem = function (oOrder) {</p>
+<p>return new Promise(function (resolve, reject) {</p>
+<p>oOrder.order_item.fetch().then(function () {</p>
+<p>var oItem = oOrder.order_item;</p>
+<p>for (var i = 0; i &lt; oItem.length; i++) {</p>
+<p>oItem[i].cancel_qty = oItem[i].order_qty;</p>
+<p>oItem[i].pending_qty = 0;</p>
+<p>oItem[i].approved_qty = 0;</p>
+<p>}</p>
+<p>resolve();</p>
+<p>});</p>
+<p>});</p>
+<p>};</p>
+<p>exports.handleEvent = handleEvent;</p>
+<p>});</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="indices">Indices<a href="#indices" class="hash-link" aria-label="Direct link to Indices" title="Direct link to Indices" translate="no">​</a></h2></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/Business Object"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Business Object</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/User Guide/Klarion 5.0 - BOL APIs/kloQuery"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">kloQuery</div></a></nav><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Klarion%205.0%20-%20BOL%20APIs%20%E2%80%94%20Entity">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Klarion%205.0%20-%20BOL%20APIs%20%E2%80%94%20Entity">Report an issue</a></div></div></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#entity-property" class="table-of-contents__link toc-highlight">Entity Property</a></li><li><a href="#property-type" class="table-of-contents__link toc-highlight">Property Type</a></li><li><a href="#klorelation" class="table-of-contents__link toc-highlight">kloRelation</a></li><li><a href="#entity-apis" class="table-of-contents__link toc-highlight">Entity APIs</a></li><li><a href="#actions" class="table-of-contents__link toc-highlight">Actions</a></li><li><a href="#rules" class="table-of-contents__link toc-highlight">Rules</a></li><li><a href="#indices" class="table-of-contents__link toc-highlight">Indices</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Training Guide Beginner">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Advance Training Guide">Advanced Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer></div>
+</body>
+</html>
