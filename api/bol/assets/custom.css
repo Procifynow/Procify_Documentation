@@ -1,0 +1,104 @@
+.params,
+.props,
+table {
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    margin: 0;
+    width: 100%;
+}
+
+table td:first-child,
+.params td:first-child,
+table thead th:first-child,
+.params thead th:first-child,
+.props thead th:first-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+table td:last-child,
+.params td:last-child,
+table thead th:last-child,
+.params thead th:last-child,
+.props thead th:last-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+table th,
+.params th {
+    position: sticky;
+    top: 0;
+}
+
+.params .name,
+.props .name,
+.name code {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1rem;
+}
+
+.params td,
+.params th,
+.props td,
+.props th,
+th,
+td {
+    display: table-cell;
+    margin: 0;
+    padding: 1rem 2rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.params thead tr,
+.props thead tr {
+    font-weight: bold;
+}
+
+/* stylelint-disable */
+.params .params thead tr,
+.props .props thead tr {
+    font-weight: bold;
+}
+
+.params td.description > p:first-child,
+.props td.description > p:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.params td.description > p:last-child,
+.props td.description > p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.name .type .default .description{
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1rem;
+}
+.page-menu{
+    margin-left:50px;
+}
+ table thead th, .params thead th,  .props thead th {
+    background-color: #eee;
+    color: #111;
+} 
+
+table .name, table .type, table .description, table .default{
+    color: #4d4e53;
+    font-weight: 500;
+    font-family: "Segoe UI", sans-serif;
+
+}
+table .name {
+    font-family: unset;
+    font-weight: 600;
+}
+#methodMembers{
+    color: #293a80;
+}
+
+ 
