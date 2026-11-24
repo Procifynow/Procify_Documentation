@@ -243,13 +243,13 @@ const docGroupItems = DOC_GROUP.filter((name) => guideFolders.includes(name)).ma
   },
 );
 
+// Plain link (no dropdown): opens the landing page with the guide cards
+// (src/pages/documentation.js).
 const documentationDropdown = {
-  type: 'dropdown',
   label: 'Documentation',
   position: 'left',
   className: 'nav-ico nav-ico--documentation',
-  to: '/documentation', // landing page with the guide cards (src/pages/documentation.js)
-  items: docGroupItems,
+  to: '/documentation',
 };
 
 // What the Documentation page (src/pages/documentation.js) shows: for every
@@ -288,6 +288,9 @@ const apiModuleLinks = API_MODULES.map((name) => ({
   prependBaseUrlToHref: true,
 }));
 
+const apiMenuLink = (label, file) =>
+  `<a class="dropdown__link" href="/Procify_Documentation${API_BASE}/${file}">${label}</a>`;
+
 const docCatalog = DOC_GROUP.filter((name) => guideFolders.includes(name)).map((name) => {
   const opts = FOLDER_OPTIONS[name] || {};
   const docs = readDocs(name, opts.exclude ?? null, !!opts.byVersion);
@@ -323,20 +326,20 @@ const docCatalog = DOC_GROUP.filter((name) => guideFolders.includes(name)).map((
 // "More" menu: the MORE_FOLDERS pages (with a heading per folder)
 const moreItems = [
   {type: 'html', value: '<span class="nav-more-heading">API Document Link</span>'},
-  {label: 'PROCIFY (index)', href: `${API_BASE}/index.html`, prependBaseUrlToHref: true},
-  ...apiModuleLinks,
+  // Plain <a> tags (full page load): the API reference is a static file, and a
+  // normal navbar link would be routed inside the app and show "Page Not Found".
+  {type: 'html', value: apiMenuLink('PROCIFY (index)', 'index.html')},
+  ...apiModuleLinks.map((m) => ({type: 'html', value: apiMenuLink(m.label, `modules/${m.label}.html`)})),
 ];
 
 // "Legal" menu (own menu in the top bar, right after Home)
+// Plain link (no dropdown): opens the Legal landing page (src/pages/legal.js),
+// which links to Copyright and Disclaimer.
 const legalDropdown = {
-  type: 'dropdown',
   label: 'Legal',
+  to: '/legal',
   position: 'left',
   className: 'nav-ico nav-ico--legal',
-  items: [
-    {label: 'Copyright', to: '/docs/Legal/Copyright'},
-    {label: 'Disclaimer', to: '/docs/Legal/Disclaimer'},
-  ],
 };
  
 // Folders beyond the three main guides: shown as extra cards on the home page
@@ -427,7 +430,10 @@ const config = {
   },
  
   // Floating "Back to top" button (see src/clientModules/backToTop.js)
-  clientModules: [require.resolve('./src/clientModules/backToTop.js')],
+  clientModules: [
+    require.resolve('./src/clientModules/backToTop.js'),
+    require.resolve('./src/clientModules/apiLinks.js'),
+  ],
  
   onBrokenLinks: 'warn',
   onBrokenAnchors: 'warn',

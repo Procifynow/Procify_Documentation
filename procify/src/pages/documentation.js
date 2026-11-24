@@ -46,8 +46,8 @@ const ICONS = {
 function Icon({ name }) {
   return (
     <svg
-      width="26"
-      height="26"
+      width="22"
+      height="22"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -86,51 +86,40 @@ function SmartLink({ to, external, plain, children, ...props }) {
   );
 }
 
-const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+const matches = (label, q) => label.toLowerCase().includes(q);
 
-function GuideSection({ guide, query }) {
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return q
-      ? guide.items.filter((i) => i.label.toLowerCase().includes(q))
-      : guide.items;
-  }, [guide.items, query]);
-
-  if (query.trim() && filtered.length === 0) return null;
-
+function GuideCard({ guide }) {
+  const n = guide.items.length;
   return (
-    <section className={styles.guide} id={slug(guide.label)}>
-      {/* coloured header: icon + menu name */}
-      <SmartLink className={styles.guideHead} to={guide.path} external={guide.external} plain={guide.plain}>
-        <span className={styles.iconCircle}>
+    <SmartLink className={styles.card} to={guide.path} external={guide.external} plain={guide.plain}>
+      <span className={styles.cardHead}>
+        <span className={styles.cardIcon}>
           <Icon name={guide.label} />
         </span>
-        <span className={styles.guideTitle}>{guide.label}</span>
-        <span className={styles.count}>
-          {guide.items.length}{' '}
-          {guide.unit || (guide.items.length === 1 ? 'guide' : 'guides')}
-        </span>
-      </SmartLink>
+        <span className={styles.cardTitle}>{guide.label}</span>
+      </span>
+      <span className={styles.cardDesc}>{guide.description}</span>
+      <span className={styles.cardCount}>
+        {n} {guide.unit || (n === 1 ? 'guide' : 'guides')}
+      </span>
+    </SmartLink>
+  );
+}
 
-      {/* body: every guide available in this menu */}
-      <div className={styles.guideBody}>
-        <p className={styles.desc}>{guide.description}</p>
-
-        <ul className={styles.topics}>
-          {filtered.map((item) => (
-            <li key={item.path} className={styles.topic}>
-              <SmartLink to={item.path} external={item.external} plain={item.plain} title={item.label}>
-                {item.label}
-              </SmartLink>
-            </li>
-          ))}
-        </ul>
-
-        <SmartLink className={styles.cta} to={guide.path} external={guide.external} plain={guide.plain}>
-          Open {guide.label} →
-        </SmartLink>
-      </div>
-    </section>
+function FeatureTile({ guide, title, text, variant }) {
+  return (
+    <SmartLink
+      className={`${styles.tile} ${styles[variant]}`}
+      to={guide.path}
+      external={guide.external}
+      plain={guide.plain}
+    >
+      <span className={styles.tileIcon}>
+        <Icon name={guide.label} />
+      </span>
+      <span className={styles.tileTitle}>{title}</span>
+      <span className={styles.tileText}>{text}</span>
+    </SmartLink>
   );
 }
 
@@ -138,14 +127,22 @@ export default function Documentation() {
   const { siteConfig } = useDocusaurusContext();
   const catalog = siteConfig.customFields?.docCatalog || [];
   const [query, setQuery] = useState('');
+  const q = query.trim().toLowerCase();
 
-  const total = catalog.reduce((n, g) => n + g.items.length, 0);
+  // search across every guide of every menu
+  const results = useMemo(() => {
+    if (!q) return [];
+    const out = [];
+    for (const g of catalog) {
+      for (const item of g.items) {
+        if (matches(item.label, q)) out.push({ ...item, group: g.label });
+      }
+    }
+    return out;
+  }, [catalog, q]);
 
-  const anyMatch =
-    !query.trim() ||
-    catalog.some((g) =>
-      g.items.some((i) => i.label.toLowerCase().includes(query.trim().toLowerCase())),
-    );
+  const releaseNotes = catalog.find((g) => g.label === 'Release Notes');
+  const api = catalog.find((g) => g.label === 'API Document Link');
 
   return (
     <Layout
@@ -154,18 +151,14 @@ export default function Documentation() {
     >
       <div className={styles.page}>
         <header className={styles.hero}>
-          <div className={styles.container}>
-            <p className={styles.eyebrow}>Documentation</p>
-            <h1 className={styles.title}>Procify Technical Documentation</h1>
-            <p className={styles.lead}>
-              Everything available in one place: {catalog.length} menus and{' '}
-              {total} guides. Every guide is listed under its menu below, or search for one.
-            </p>
+          <div className={styles.heroInner}>
+            <h1 className={styles.title}>Procify Documentation</h1>
+            <p className={styles.lead}>How can we help you today?</p>
 
             <label className={styles.search}>
               <svg
-                width="20"
-                height="20"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -180,36 +173,64 @@ export default function Documentation() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search guides…"
-                aria-label="Search guides"
+                placeholder="Search for guides…"
+                aria-label="Search for guides"
               />
             </label>
-
-            {!query.trim() && (
-              <nav className={styles.jump} aria-label="Sections">
-                {catalog.map((g) => (
-                  <a key={g.label} href={`#${slug(g.label)}`}>
-                    {g.label}
-                    <span>{g.items.length}</span>
-                  </a>
-                ))}
-              </nav>
-            )}
           </div>
         </header>
 
         <main className={styles.container}>
-          <div className={styles.grid}>
-            {catalog.map((guide) => (
-              <GuideSection key={guide.label} guide={guide} query={query} />
-            ))}
-
-            {!anyMatch && (
-              <p className={styles.empty}>
-                No guides match “{query}”. Try a different word.
+          {q ? (
+            <section aria-live="polite">
+              <p className={styles.resultsHead}>
+                {results.length} result{results.length === 1 ? '' : 's'} for “{query.trim()}”
               </p>
-            )}
-          </div>
+              {results.length > 0 ? (
+                <ul className={styles.results}>
+                  {results.map((r) => (
+                    <li key={`${r.group}-${r.path}`}>
+                      <SmartLink to={r.path} external={r.external} plain={r.plain}>
+                        <span className={styles.resultTitle}>{r.label}</span>
+                        <span className={styles.resultGroup}>{r.group}</span>
+                      </SmartLink>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className={styles.empty}>No guides match. Try a different word.</p>
+              )}
+            </section>
+          ) : (
+            <>
+              <div className={styles.grid}>
+                {catalog.map((guide) => (
+                  <GuideCard key={guide.label} guide={guide} />
+                ))}
+              </div>
+
+              {(releaseNotes || api) && (
+                <div className={styles.tiles}>
+                  {releaseNotes && (
+                    <FeatureTile
+                      guide={releaseNotes}
+                      variant="tileGreen"
+                      title="What's new"
+                      text="Read the latest Procify release notes."
+                    />
+                  )}
+                  {api && (
+                    <FeatureTile
+                      guide={api}
+                      variant="tileRose"
+                      title="API reference"
+                      text="Browse the BOL API modules, classes and enums."
+                    />
+                  )}
+                </div>
+              )}
+            </>
+          )}
         </main>
       </div>
     </Layout>

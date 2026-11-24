@@ -177,6 +177,33 @@ function Icon({ name }) {
   );
 }
  
+function Stats({ latest }) {
+  const { siteConfig } = useDocusaurusContext();
+  const catalog = siteConfig.customFields?.docCatalog || [];
+  const guides = catalog.reduce((n, g) => n + g.items.length, 0);
+  const stats = [
+    guides ? { value: `${guides}+`, label: 'Guides and references' } : null,
+    catalog.length ? { value: String(catalog.length), label: 'Documentation menus' } : null,
+    latest ? { value: latest.version, label: 'Latest release' } : null,
+    { value: 'Web + Mobile', label: 'One design, every device' },
+  ].filter(Boolean);
+ 
+  return (
+    <section className={styles.statsWrap}>
+      <div className={styles.container}>
+        <ul className={styles.stats}>
+          {stats.map((s) => (
+            <li key={s.label} className={styles.stat}>
+              <span className={styles.statValue}>{s.value}</span>
+              <span className={styles.statLabel}>{s.label}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+ 
 function Hero({ links, latest }) {
   const heroImage = useBaseUrl('/img/procify-docs-hero-light_2x.png');
  
@@ -184,9 +211,14 @@ function Hero({ links, latest }) {
     <header className={styles.hero}>
       <div className={styles.heroInner}>
         <div className={styles.heroText}>
-          <p className={styles.eyebrow}>Documentation</p>
+          <p className={styles.pill}>
+            <span className={styles.pillDot} />
+            Documentation
+          </p>
  
-          <h1 className={styles.heroTitle}>Procify Technical Documentation</h1>
+          <h1 className={styles.heroTitle}>
+            Procify Technical <span className={styles.accent}>Documentation</span>
+          </h1>
  
           <p className={styles.heroLead}>
             An enterprise-class low-code platform for transforming business
@@ -194,7 +226,16 @@ function Hero({ links, latest }) {
             place.
           </p>
  
-          {/* Search now lives in the top-right of the navbar (see docusaurus.config.js) */}
+          <div className={styles.heroActions}>
+            <Link className={styles.btnPrimary} to={links.userGuide}>
+              Start with the User Guide →
+            </Link>
+            <Link className={styles.btnGhost} to="/documentation">
+              Browse all guides
+            </Link>
+          </div>
+ 
+          {/* Search lives in the top-right of the navbar (see docusaurus.config.js) */}
  
           <p className={styles.popular}>
             <span>Popular</span>
@@ -265,7 +306,9 @@ function Features() {
         <ul className={styles.features}>
           {FEATURES.map((feature) => (
             <li key={feature.title} className={styles.feature}>
-              <Icon name={feature.icon} />
+              <span className={styles.featureBadge}>
+                <Icon name={feature.icon} />
+              </span>
  
               <div>
                 <h3 className={styles.featureTitle}>
@@ -289,20 +332,24 @@ function QuickAccess({ links }) {
   ];
  
   return (
-    <section className={styles.section}>
+    <section className={styles.ctaSection}>
       <div className={styles.container}>
-        <h2 className={styles.h2}>Quick access</h2>
+        <div className={styles.cta}>
+          <div>
+            <h2 className={styles.ctaTitle}>Ready to build with Procify?</h2>
+            <p className={styles.ctaText}>
+              Jump straight in, or use the search box and the &ldquo;Ask the docs&rdquo;
+              button to find an answer fast.
+            </p>
+          </div>
  
-        <div className={styles.quick}>
-          {quickLinks.map((link) => (
-            <Link
-              key={link.label}
-              className={styles.pill}
-              to={link.to}
-            >
-              {link.label}
-            </Link>
-          ))}
+          <div className={styles.quick}>
+            {quickLinks.map((link) => (
+              <Link key={link.label} className={styles.ctaLink} to={link.to}>
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -369,6 +416,7 @@ export default function Home() {
       </Head>
  
       <Hero links={links} latest={latest} />
+      <Stats latest={latest} />
  
       <main>
         <Features />
