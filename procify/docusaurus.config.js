@@ -216,6 +216,7 @@ const DOC_GROUP = [
   'User Guide',
   'Installation Guide',
   'Training Guide',
+  'Procify Certificates',
   'Release Notes',
   'API Document Link',
 ];
@@ -259,6 +260,7 @@ const GUIDE_INFO = {
   'Installation Guide': 'Step-by-step instructions to set up and install Procify components.',
   'Training Guide': 'Structured training material for Procify development and configuration.',
   'Release Notes': 'New features, enhancements and fixes introduced in each Procify release.',
+  'Procify Certificates': 'Procify certificates issued to employees.',
   'API Document Link': 'Browse the Procify BOL API reference: one page per module.',
 };
 

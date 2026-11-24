@@ -27,6 +27,12 @@ const ICONS = {
       <path d="M6 12v5c3 2 9 2 12 0v-5" />
     </>
   ),
+  'Procify Certificates': (
+    <>
+      <circle cx="12" cy="9" r="6" />
+      <path d="m8.5 14-1.5 8 5-3 5 3-1.5-8" />
+    </>
+  ),
   'Release Notes': (
     <>
       <rect x="8" y="2" width="8" height="4" rx="1" />
