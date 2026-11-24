@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation & Styling/Part E — Style Classes for Controls, Sections, Page Areas & Layouts" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Beginner Training Guide — Session 6 — Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Beginner Training Guide — Session 6 — Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts | Procify Technical Documentation"><meta data-rh="true" name="description" content="The Style Classes tab in the Page Builder is the single place to control all visual formatting. It has two modes a Section, a PageArea/PageLayout, or a Control."><meta data-rh="true" property="og:description" content="The Style Classes tab in the Page Builder is the single place to control all visual formatting. It has two modes a Section, a PageArea/PageLayout, or a Control."><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beginner Training Guide","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction"},{"@type":"ListItem","position":2,"name":"Part E — Style Classes for Controls, Sections, Page Areas & Layouts","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation & Styling/Part E — Style Classes for Controls, Sections, Page Areas & Layouts"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.ee21433a.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.3d249067.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.c21de6f0.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><a class="navbar__item navbar__link nav-ico nav-ico--legal" href="/Procify_Documentation/legal">Legal</a><a class="navbar__item navbar__link nav-ico nav-ico--documentation" href="/Procify_Documentation/documentation">Documentation</a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--faqs" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs on Private Node</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Runtime/Introduction">FAQs on Runtime</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--forms" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Forms/Introduction">Forms</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Forms/Introduction">Introduction</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--more">More</a><ul class="dropdown__menu"><li class=""><span class="nav-more-heading">API Document Link</span></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/index.html">PROCIFY (index)</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EndpointBean.html">EndpointBean</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EnvVariables.html">EnvVariables</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EventContext.html">EventContext</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloAppService.html">KloAppService</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntity.html">KloEntity</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntitySet.html">KloEntitySet</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEnums.html">KloEnums</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloObject.html">KloObject</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQuery.html">KloQuery</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQueryForRule.html">KloQueryForRule</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloTransaction.html">KloTransaction</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloValueHelp.html">KloValueHelp</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/LocalArchive.html">LocalArchive</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/NotificationBean.html">NotificationBean</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">Training Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction"><span class="categoryLinkLabel_W154">Beginner Training Guide</span></a><button aria-label="Collapse sidebar category &#x27;Beginner Training Guide&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Training Procedure"><span class="linkLabel_WmDU">Training Procedure</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 1 — Platform Setup &amp; Account Management/Session Objectives"><span class="categoryLinkLabel_W154">Session 1 — Platform Setup &amp; Account Management</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Session Objectives"><span class="categoryLinkLabel_W154">Session 2 — BOL Entity Fundamentals &amp; Initial Pages</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 3 — Entity Configuration/Session Objectives"><span class="categoryLinkLabel_W154">Session 3 — Entity Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 4 — Value Helps &amp; Queries/Session Objectives"><span class="categoryLinkLabel_W154">Session 4 — Value Helps &amp; Queries</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 5 — BOL Logic &amp; Validations/Session Objectives"><span class="categoryLinkLabel_W154">Session 5 — BOL Logic &amp; Validations</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Session Objectives"><span class="categoryLinkLabel_W154">Session 6 — Bindings, Navigation &amp; Styling</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Session Objectives"><span class="linkLabel_WmDU">Session Objectives</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part A — Data Bindings In Depth"><span class="linkLabel_WmDU">Part A — Data Bindings In Depth</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part B — Expression Bindings"><span class="linkLabel_WmDU">Part B — Expression Bindings</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part C — Formatter Functions"><span class="linkLabel_WmDU">Part C — Formatter Functions</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part D — Navigation In Depth"><span class="linkLabel_WmDU">Part D — Navigation In Depth</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts"><span class="linkLabel_WmDU">Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/F — Implement binding in application"><span class="linkLabel_WmDU">F — Implement binding in application</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/G — Implement styling"><span class="linkLabel_WmDU">G — Implement styling</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Concepts Recap — What You Learned in Session 6"><span class="linkLabel_WmDU">Concepts Recap — What You Learned in Session 6</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Session 6 Assignment"><span class="linkLabel_WmDU">Session 6 Assignment</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 7 — Controllers &amp; Client-Side Behaviour/Session Objectives"><span class="categoryLinkLabel_W154">Session 7 — Controllers &amp; Client-Side Behaviour</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 8 — App Management, Versioning &amp; Publishing/Session Objectives"><span class="categoryLinkLabel_W154">Session 8 — App Management, Versioning &amp; Publishing</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Developer Level 2 Training Guide/Introduction"><span class="categoryLinkLabel_W154">Developer Level 2 Training Guide</span></a><button aria-label="Expand sidebar category &#x27;Developer Level 2 Training Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Training Guide</span></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction"><span>Beginner Training Guide</span></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Session 6 — Bindings, Navigation &amp; Styling</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>Part E — Style Classes for Controls, Sections, Page Areas &amp; Layouts</h1></header>
+<p>The Style Classes tab in the Page Builder is the single place to control all visual formatting. It has two modes: QuickAdd (pre-built bundles) and Manual (full control). Different QuickAdd bundles are available depending on what is selected in the tree: a Section, a PageArea/PageLayout, or a Control.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e1--quickadd-for-sections">E.1 — QuickAdd for Sections<a href="#e1--quickadd-for-sections" class="hash-link" aria-label="Direct link to E.1 — QuickAdd for Sections" title="Direct link to E.1 — QuickAdd for Sections" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image26-32f8650f58bafd6dd0667757305322ab.png" width="1067" height="155" class="img_ev3q"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>QuickAdd Style</strong></th><th><strong>Applied On</strong></th><th><strong>What It Does</strong></th><th><strong>When to Use</strong></th></tr></thead><tbody><tr><td>Card</td><td>Sections (form/detail type)</td><td>Adds a white background, rounded corners, drop shadow, and inner padding. Renders the section as a card floating above the page.</td><td>Detail form sections (s_detail_header, s_complaint_details). Makes key information stand out.</td></tr><tr><td>Grid</td><td>Sections (grid type)</td><td>Adds alternating row colors, column borders, header background, and hover highlight. Improves readability for dense tabular data.</td><td>List sections (s_complaints). Always apply Grid QuickAdd to any grid-type section.</td></tr><tr><td>Transparent</td><td>Sections</td><td>Removes background and border. Content sits directly on the page background.</td><td>Dashboard tile sections where background should show through.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e2--quickadd-for-controls">E.2 — QuickAdd for Controls<a href="#e2--quickadd-for-controls" class="hash-link" aria-label="Direct link to E.2 — QuickAdd for Controls" title="Direct link to E.2 — QuickAdd for Controls" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image8-66f1c1d8fc971cb9790a223a31163b0f.png" width="1061" height="159" class="img_ev3q"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>QuickAdd Style</strong></th><th><strong>Applied On</strong></th><th><strong>What It Does</strong></th></tr></thead><tbody><tr><td>Font Size (S/M/L/XL)</td><td>m.Text, m.Label, m.Input</td><td>Applies a pre-defined font size class. Use L for emphasis, S for secondary information in grid cells.</td></tr><tr><td>Text Colour</td><td>Any text control</td><td>Applies a branded color from the platform color palette. Includes: primary (blue), success (green), warning (orange), danger (red).</td></tr><tr><td>Bold</td><td>m.Text, m.Label</td><td>Applies font-weight: bold. Use for headers, primary identifiers (complaint_id), and totals.</td></tr><tr><td>Italic</td><td>m.Text</td><td>Applies font-style: italic. Use for secondary metadata (timestamps, remarks).</td></tr><tr><td>Background Color</td><td>Any control</td><td>Applies a background highlight. Useful for dashboard tiles and key metrics.</td></tr><tr><td>Color Combination</td><td>Any control</td><td>Pre-defined foreground + background pairs ensuring WCAG contrast compliance. Safer than picking colors individually.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e3--format-rules-conditional-styling">E.3 — Format Rules (Conditional Styling)<a href="#e3--format-rules-conditional-styling" class="hash-link" aria-label="Direct link to E.3 — Format Rules (Conditional Styling)" title="Direct link to E.3 — Format Rules (Conditional Styling)" translate="no">​</a></h3>
+<p>Format Rules apply a style class conditionally based on the control&#x27;s current value. This is how status badge colors work. Configure via Style Classes tab → Category + Style Class + Format Rule + Format Value.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Field</strong></th><th><strong>What It Does</strong></th><th><strong>Example</strong></th></tr></thead><tbody><tr><td>Category</td><td>What CSS property the rule affects: Background, Text, or Icon.</td><td>Background</td></tr><tr><td>Style Class</td><td>The CSS class name to apply when the condition is true.</td><td>status-open</td></tr><tr><td>Format Rule</td><td>The condition type: Text Contains, Text Equals, Text Starts With, etc.</td><td>Text Contains</td></tr><tr><td>Format Value</td><td>The value of the control&#x27;s text must match for the class to apply.</td><td>OPEN</td></tr><tr><td>Full Row</td><td>When checked, the style applies to the entire grid row instead of just the cell.</td><td>Checked for critical priority rows that need full-row coloring.</td></tr></tbody></table>
+<p>Status badge rules for the complaints app — apply to s_status control in both s_complaints grid and s_detail_header:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Status Value</strong></th><th><strong>Category</strong></th><th><strong>Style Class</strong></th><th><strong>Format Rule</strong></th><th><strong>Format Value</strong></th></tr></thead><tbody><tr><td>OPEN</td><td>Background</td><td>status-open</td><td>Text Contains</td><td>OPEN</td></tr><tr><td>REOPEN</td><td>Background</td><td>status-reopen</td><td>Text Contains</td><td>REOPEN</td></tr><tr><td>INPROCESS</td><td>Background</td><td>status-inprocess</td><td>Text Contains</td><td>INPROCESS</td></tr><tr><td>ON_HOLD</td><td>Background</td><td>status-onhold</td><td>Text Contains</td><td>ON_HOLD</td></tr><tr><td>RESOLVED</td><td>Background</td><td>status-resolved</td><td>Text Contains</td><td>RESOLVED</td></tr><tr><td>CLOSED</td><td>Background</td><td>status-completed</td><td>Text Contains</td><td>CLOSED</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="e4--user-defined-css-classes">E.4 — User-Defined CSS Classes<a href="#e4--user-defined-css-classes" class="hash-link" aria-label="Direct link to E.4 — User-Defined CSS Classes" title="Direct link to E.4 — User-Defined CSS Classes" translate="no">​</a></h3>
+<p>When QuickAdd and Format Rules are not sufficient, create custom CSS classes in the System Settings.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>#</strong></th><th><strong>Action</strong></th><th><strong>Detail</strong></th></tr></thead><tbody><tr><td>1</td><td>category</td><td>Select category as user defined</td></tr><tr><td>2</td><td>Style class</td><td>Provide your own style class</td></tr><tr><td>3</td><td>Add css file</td><td>Maintain css file in css folder</td></tr><tr><td>4</td><td>Load file in controller</td><td>FileLoaderUtils.loadCSSFile(this.getFlavor(), this.getFlavorVersion(), &quot;myStyleSheet&quot;);<br>&quot;myStyleSheet&quot; this is the style sheet has been created</td></tr></tbody></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="css-usage--dos--donts">CSS Usage — Do&#x27;s &amp; Don&#x27;ts<a href="#css-usage--dos--donts" class="hash-link" aria-label="Direct link to CSS Usage — Do&#x27;s &amp; Don&#x27;ts" title="Direct link to CSS Usage — Do&#x27;s &amp; Don&#x27;ts" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-do">✓ Do<a href="#-do" class="hash-link" aria-label="Direct link to ✓ Do" title="Direct link to ✓ Do" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th><strong>Recommendation</strong></th></tr></thead><tbody><tr><td><strong>✓</strong></td><td>✓ <strong>Use Style Classes first.</strong> Use <strong>Category + Style Class + Format Rule</strong> (Quick Add ) before creating a custom CSS file(user defined).</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Scope custom CSS to the flavor.</strong> Wrap CSS rules in .procify__&lt;app_id&gt; { ... }, using the flavor name without the version.</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Load CSS in onpageInit().</strong> Use FileLoaderUtils.loadCSSFile(this.getFlavor(), this.getFlavorVersion(), &quot;myStyleSheet&quot;);.</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Use SAPUI5/OpenUI5 classes.</strong> Target classes such as .sapMIBar, .sapUiTableRow, .sapMTB, and .KloTabContainerHeaderToolbar.</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Test across supported platforms.</strong> Verify custom CSS on <strong>APK, IPA, Safari, and Chrome</strong> before releasing it.</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Use :has() for whole-grid-cell styling.</strong> Add a User Defined class to the control and use td:has(.yourClassName) { ... } when the entire cell must be styled.</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Check layout configuration first.</strong> For height, spacing, or positioning issues, check screenType options such as fit_to_area, hsplitter, vsplitter, and grid_layout before overriding CSS.</td></tr><tr><td><strong>✓</strong></td><td>✓ <strong>Order Format Rules carefully.</strong> Place general rules first and more-specific rules later when values can overlap.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-dont">✗ Don’t<a href="#-dont" class="hash-link" aria-label="Direct link to ✗ Don’t" title="Direct link to ✗ Don’t" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th><strong>Avoid</strong></th></tr></thead><tbody><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t use unsupported Format Rule types.</strong> Only <strong>Always, Text Contains, and Formula</strong> are supported.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t use overlapping Text Contains values without checking the order.</strong> For example, OPEN also matches REOPEN.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t expect CSS to inherit between flavors.</strong> A child flavor must load its own stylesheet.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t assume embedded screens inherit CSS.</strong> Each screen must load the CSS it requires.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t modify Shared flavor CSS without checking the current access policy.</strong> Confirm with the platform team before making changes.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t use Style Class alone to color an entire grid cell.</strong> It styles the control inside the cell, not the &lt;td&gt;.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t leave the Style Class field empty.</strong> An empty Style Class prevents the style from being applied.</td></tr><tr><td><strong>✗</strong></td><td>✗ <strong>Don’t hardcode custom class names in multiple places.</strong> Once loaded, the class is available under <strong>Category: User Defined</strong> in the Style Class UI. Reuse that class instead.</td></tr></tbody></table></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Part D — Navigation In Depth"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Part D — Navigation In Depth</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/F — Implement binding in application"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">F — Implement binding in application</div></a></nav><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Beginner%20Training%20Guide%20%E2%80%94%20Session%206%20%E2%80%94%20Part%20E%20%E2%80%94%20Style%20Classes%20for%20Controls%2C%20Sections%2C%20Page%20Areas%20%26%20Layouts">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Beginner%20Training%20Guide%20%E2%80%94%20Session%206%20%E2%80%94%20Part%20E%20%E2%80%94%20Style%20Classes%20for%20Controls%2C%20Sections%2C%20Page%20Areas%20%26%20Layouts">Report an issue</a></div></div></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#css-usage--dos--donts" class="table-of-contents__link toc-highlight">CSS Usage — Do&#39;s &amp; Don&#39;ts</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Developer Level 2 Training Guide/Introduction">Developer Level 2 Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer><button class="launcher_vEYT" aria-label="Open documentation assistant">💬 Ask the docs</button></div>
+</body>
+</html>

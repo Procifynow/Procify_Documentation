@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals & Initial Pages/Part B — Understanding Data Studio and Page Builder" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.2">
+<title data-rh="true">Beginner Training Guide — Session 2 — Part B — Understanding Data Studio and Page Builder | Procify Technical Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part B — Understanding Data Studio and Page Builder"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Beginner Training Guide — Session 2 — Part B — Understanding Data Studio and Page Builder | Procify Technical Documentation"><meta data-rh="true" name="description" content="Before building screens, every developer must be familiar with the two core design tools in Klobase: the Data Studio (Procify Data Studio) and the Page Builder (Procify Page Builder). This part gives you an orientation of both tools and their layouts, then walks through building the Customer Complaints screen step by step — showing the expected output at each stage."><meta data-rh="true" property="og:description" content="Before building screens, every developer must be familiar with the two core design tools in Klobase: the Data Studio (Procify Data Studio) and the Page Builder (Procify Page Builder). This part gives you an orientation of both tools and their layouts, then walks through building the Customer Complaints screen step by step — showing the expected output at each stage."><link data-rh="true" rel="icon" href="/Procify_Documentation/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part B — Understanding Data Studio and Page Builder"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part B — Understanding Data Studio and Page Builder" hreflang="en"><link data-rh="true" rel="alternate" href="https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part B — Understanding Data Studio and Page Builder" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beginner Training Guide","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction"},{"@type":"ListItem","position":2,"name":"Part B — Understanding Data Studio and Page Builder","item":"https://procifynow.github.io/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals & Initial Pages/Part B — Understanding Data Studio and Page Builder"}]}</script><link rel="alternate" type="application/rss+xml" href="/Procify_Documentation/blogs/rss.xml" title="Procify Technical Documentation RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Procify_Documentation/blogs/atom.xml" title="Procify Technical Documentation Atom Feed">
+
+
+
+
+
+
+<meta name="keywords" content="Procify, documentation, user guide, training guide, release notes"><link rel="stylesheet" href="/Procify_Documentation/assets/css/styles.ee21433a.css">
+<script src="/Procify_Documentation/assets/js/runtime~main.3d249067.js" defer="defer"></script>
+<script src="/Procify_Documentation/assets/js/main.c21de6f0.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>document.documentElement.setAttribute("data-theme","light"),document.documentElement.setAttribute("data-theme-choice","light"),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}(),document.documentElement.setAttribute("data-announcement-bar-initially-dismissed",function(){try{return"true"===localStorage.getItem("docusaurus.announcement.dismiss")}catch(t){}return!1}())</script><div id="__docusaurus"><link rel="preload" as="image" href="/Procify_Documentation/img/procify-logo.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><div class="theme-announcement-bar announcementBar_mb4j" style="background-color:#211E1D;color:rgba(255,255,255,0.78)" role="banner"><div class="announcementBarPlaceholder_vyr4"></div><div class="content_knG7 announcementBarContent_xLdY"><span class="ann-tag">New release</span> 7.2.375 is live. <a href="/Procify_Documentation/docs/Docs/Release%20Notes/7.2.375%20Klobase%20Release%20Note">Read the release notes</a></div><button type="button" aria-label="Close" class="clean-btn close closeButton_CVFx announcementBarClose_gvF7"><svg viewBox="0 0 15 15" width="14" height="14"><g stroke="currentColor" stroke-width="3.1"><path d="M.75.75l13.5 13.5M14.25.75L.75 14.25"></path></g></svg></button></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Procify_Documentation/"><div class="navbar__logo"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Procify_Documentation/img/procify-logo.png" alt="Procify Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link nav-ico nav-ico--home" href="/Procify_Documentation/">Home</a><a class="navbar__item navbar__link nav-ico nav-ico--legal" href="/Procify_Documentation/legal">Legal</a><a class="navbar__item navbar__link nav-ico nav-ico--documentation" href="/Procify_Documentation/documentation">Documentation</a><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--faqs" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Private Node/Introduction">FAQs on Private Node</a></li><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/FAQs/FAQs on Runtime/Introduction">FAQs on Runtime</a></li></ul></div><div class="navbar__item dropdown dropdown--hoverable"><a class="navbar__link nav-ico nav-ico--forms" aria-haspopup="true" aria-expanded="false" role="button" href="/Procify_Documentation/docs/Docs/Forms/Introduction">Forms</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/Procify_Documentation/docs/Docs/Forms/Introduction">Introduction</a></li></ul></div><a class="navbar__item navbar__link nav-ico nav-ico--app-teams" href="/Procify_Documentation/blogs">App Teams – Blogs</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link nav-ico nav-ico--more">More</a><ul class="dropdown__menu"><li class=""><span class="nav-more-heading">API Document Link</span></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/index.html">PROCIFY (index)</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EndpointBean.html">EndpointBean</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EnvVariables.html">EnvVariables</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/EventContext.html">EventContext</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloAppService.html">KloAppService</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntity.html">KloEntity</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEntitySet.html">KloEntitySet</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloEnums.html">KloEnums</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloObject.html">KloObject</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQuery.html">KloQuery</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloQueryForRule.html">KloQueryForRule</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloTransaction.html">KloTransaction</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/KloValueHelp.html">KloValueHelp</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/LocalArchive.html">LocalArchive</a></li><li class=""><a class="dropdown__link" href="/Procify_Documentation/api/bol/modules/NotificationBean.html">NotificationBean</a></li></ul></div></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><svg aria-hidden="true" class="searchIcon_T3tP" focusable="false" viewBox="0 0 16 16"><path fill="currentColor" d="M6.02945 10.20327a4.17382 4.17382 0 1 1 4.17382-4.17382 4.15609 4.15609 0 0 1-4.17382 4.17382Zm9.69195 4.2199-4.8225-4.82338A5.88021 5.88021 0 0 0 12.058 6.02856 6.00467 6.00467 0 1 0 9.59979 10.8989l4.82338 4.82338a.89729.89729 0 0 0 1.29912 0 .89749.89749 0 0 0-.00087-1.29909Z"></path></svg><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG menuWithAnnouncementBar_GW3s"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Procify_Documentation/docs/Legal/Copyright"><span class="categoryLinkLabel_W154">Training Guide</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Copyright"><span class="linkLabel_WmDU">Copyright</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Legal/Disclaimer"><span class="linkLabel_WmDU">Disclaimer</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction"><span class="categoryLinkLabel_W154">Beginner Training Guide</span></a><button aria-label="Collapse sidebar category &#x27;Beginner Training Guide&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Training Procedure"><span class="linkLabel_WmDU">Training Procedure</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 1 — Platform Setup &amp; Account Management/Session Objectives"><span class="categoryLinkLabel_W154">Session 1 — Platform Setup &amp; Account Management</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Session Objectives"><span class="categoryLinkLabel_W154">Session 2 — BOL Entity Fundamentals &amp; Initial Pages</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Session Objectives"><span class="linkLabel_WmDU">Session Objectives</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part A — BOL Entity Fundamentals Creating the Remaining Entities"><span class="linkLabel_WmDU">Part A — BOL Entity Fundamentals: Creating the Remaining Entities</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part B — Understanding Data Studio and Page Builder"><span class="linkLabel_WmDU">Part B — Understanding Data Studio and Page Builder</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 3 — Entity Configuration/Session Objectives"><span class="categoryLinkLabel_W154">Session 3 — Entity Configuration</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 4 — Value Helps &amp; Queries/Session Objectives"><span class="categoryLinkLabel_W154">Session 4 — Value Helps &amp; Queries</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 5 — BOL Logic &amp; Validations/Session Objectives"><span class="categoryLinkLabel_W154">Session 5 — BOL Logic &amp; Validations</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 6 — Bindings, Navigation &amp; Styling/Session Objectives"><span class="categoryLinkLabel_W154">Session 6 — Bindings, Navigation &amp; Styling</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 7 — Controllers &amp; Client-Side Behaviour/Session Objectives"><span class="categoryLinkLabel_W154">Session 7 — Controllers &amp; Client-Side Behaviour</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 8 — App Management, Versioning &amp; Publishing/Session Objectives"><span class="categoryLinkLabel_W154">Session 8 — App Management, Versioning &amp; Publishing</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/Procify_Documentation/docs/Docs/Training Guide/Developer Level 2 Training Guide/Introduction"><span class="categoryLinkLabel_W154">Developer Level 2 Training Guide</span></a><button aria-label="Expand sidebar category &#x27;Developer Level 2 Training Guide&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Procify_Documentation/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Training Guide</span></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction"><span>Beginner Training Guide</span></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Session 2 — BOL Entity Fundamentals &amp; Initial Pages</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Part B — Understanding Data Studio and Page Builder</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div><div class="theme-doc-markdown markdown"><header><h1>Part B — Understanding Data Studio and Page Builder</h1></header>
+<p>Before building screens, every developer must be familiar with the two core design tools in Klobase: the Data Studio (Procify Data Studio) and the Page Builder (Procify Page Builder). This part gives you an orientation of both tools and their layouts, then walks through building the Customer Complaints screen step by step — showing the expected output at each stage.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b1--data-studio-procify-data-studio--tool-layout">B.1 — Data Studio (Procify Data Studio) — Tool Layout<a href="#b1--data-studio-procify-data-studio--tool-layout" class="hash-link" aria-label="Direct link to B.1 — Data Studio (Procify Data Studio) — Tool Layout" title="Direct link to B.1 — Data Studio (Procify Data Studio) — Tool Layout" translate="no">​</a></h3>
+<p>Navigate to Design Studio → Data Studio. The editor is divided into two major sections: the Tree on the left and the Detail on the right.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Section</strong></th><th><strong>What It Does</strong></th></tr></thead><tbody><tr><td><strong>Tree (Left)</strong></td><td>Lists all entities, queries, and value helps in the selected app. Click any item to load it in the Detail panel. Use Expand All / Collapse All to navigate. Use the search bar to find entities quickly.</td></tr><tr><td><strong>Detail (Right)</strong></td><td>Shows all configuration tabs for the selected object: Properties, Relations, Object Type, Status, Queries, Rules, Entity Index. Only visible when an item is selected from the tree.</td></tr><tr><td><strong>Toolbar (Top)</strong></td><td>Context-sensitive: Save, Edit, Update Schema, Validate, Delete, Test, Metadata File. Actions change depending on what is selected in the tree.</td></tr><tr><td><strong>App Selector</strong></td><td>Dropdown at the top-left to switch between your assigned apps. Always verify the correct app is selected before making any changes.</td></tr><tr><td><strong>Normal / Expert Mode</strong></td><td>Toggle in the toolbar. Normal Mode: Entity, Query, Value Help creation. Expert Mode: adds Status Config, Object Group Config, Entity Index. Expert Mode needed from Session 3 onwards.<br>Note: Currently there is no difference between expert mode and normal mode</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 Data Studio Reference</strong><br>Source: Procify Data Studio 7.0 User Guide — Sections 2.0 Editor Sections, 1.4 Modes<br>Tree: expand, collapse, filter — same panel used for all entity operations.<br>Detail panel tabs depend on context: entity selected shows Properties/Relations/Status; query shows query config.<br>Update Schema: converts entity metadata into actual DB table. Required after every property change.<br>Test button: opens the Data Browser for CRUD operations on the entity directly from the editor.</th></tr></thead></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b2--page-builder-procify-page-builder--tool-layout">B.2 — Page Builder (Procify Page Builder) — Tool Layout<a href="#b2--page-builder-procify-page-builder--tool-layout" class="hash-link" aria-label="Direct link to B.2 — Page Builder (Procify Page Builder) — Tool Layout" title="Direct link to B.2 — Page Builder (Procify Page Builder) — Tool Layout" translate="no">​</a></h3>
+<p>Navigate to Design Studio → Page Builder. According to the Procify Page Builder 7.0 User Guide, the editor is divided into four major sections:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Section</strong></th><th><strong>What It Does</strong></th></tr></thead><tbody><tr><td><strong>Tree (Left)</strong></td><td>Hierarchical view of the entire page structure: Page → Page Layout → Page Area → Section → Controls. All creation, renaming, and assignment is done via right-click context menu in this tree.</td></tr><tr><td><strong>Preview (Centre)</strong></td><td>Live render of the screen. Refreshes on Save. Use the Auto Refresh toggle for real-time updates. Full Preview loads actual data from the database for testing.</td></tr><tr><td><strong>Detail (Down)</strong></td><td>Configuration panel for the selected tree element. Shows different properties depending on whether you have selected a Page, Page Layout, Page Area, Section, or Control.</td></tr><tr><td><strong>Page Data Model (Right — Tab)</strong></td><td>TransNode configuration. Defines what data is available to the page. Use the + button to add Model Paths. Each TransNode has: an ID, an Entity/Query binding, a Node Type (EntitySet / Entity / Query), and an optional Fold From parent.</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 Page Builder Toolbar Reference (Procify Page Builder 7.0 User Guide — Section 1.0)</strong><br>Edit icon — enables edit mode on the tree. You MUST click this before creating or renaming anything.<br>+ icon — create a new page (blank or from wizard).<br>Save icon — commits all pending changes. Required before preview refreshes.<br>Show Full Preview — loads real database records into the preview for testing.<br>Detail icon — toggles visibility of the detail properties panel.<br>Page Data Model icon — toggles visibility of the TransNode / data model panel.<br>Reset Perspective — restores all panels to their default size and position.<br>Preview In — switch preview between desktop, tablet, and mobile device views.</th></tr></thead></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b3--the-page-hierarchy-procify-page-builder-70-user-guide--sections-3070">B.3 — The Page Hierarchy (Procify Page Builder 7.0 User Guide — Sections 3.0–7.0)<a href="#b3--the-page-hierarchy-procify-page-builder-70-user-guide--sections-3070" class="hash-link" aria-label="Direct link to B.3 — The Page Hierarchy (Procify Page Builder 7.0 User Guide — Sections 3.0–7.0)" title="Direct link to B.3 — The Page Hierarchy (Procify Page Builder 7.0 User Guide — Sections 3.0–7.0)" translate="no">​</a></h3>
+<p>Every screen in Klobase follows a strict 5-level hierarchy. This is the most important structural concept in UI development. Each level has a mandatory naming convention prefix:</p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 Five-Level Page Hierarchy</strong><br>Level 1 — PAGE (prefix: p_)<br>The root container. Holds all layouts. Created first. One page can have multiple layouts (one per device type).<br>At runtime, the platform picks the layout based on device: screencontainerdesktop, screencontainermobile, screencontainertab, screencontainerdefault.<br>Level 2 — PAGE LAYOUT (prefix: pl_)<br>Sits directly under the Page. Defines HOW the page areas are arranged.<br>screenType options: stack, tab, two_column, object_page, grid_layout, hsplitter, vsplitter.<br>Example: pl_complaints_desk (two column layout for desktop).<br>Level 3 — PAGE AREA (prefix: pa_)<br>A logical sub-container inside the layout. Can itself have a screenType (tab, stack, splitter).<br>Sections are assigned to page areas to determine WHERE they render.<br>Example: pa_complaints (list area), pa_complaint_details (detail area).<br>Level 4 — SECTION (prefix: s_)<br>The rendering unit. screenType determines HOW it displays data.<br>Types: search, cardlist, card, form, grid, tree, timeline, map, calendar.<br>Must be assigned to a Page Area to appear in the UI.<br>Example: s_search (search), s_complaints (grid), s_detail_header (form).<br>Level 5 — CONTROLS<br>Individual fields, buttons, labels, icons bound to entity properties.<br>Added via: right-click section → New → Controls, OR drag from unused TransNode properties.</th></tr></thead></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Section screenType</strong></th><th><strong>Renders As</strong></th></tr></thead><tbody><tr><td><strong>search</strong></td><td>Filter bar with Close / Reset / Search buttons. Auto-generates the search toolbar.</td></tr><tr><td><strong>cardlist</strong></td><td>List of records as card rows — one card per record. Good for mobile and compact lists.</td></tr><tr><td><strong>grid</strong></td><td>Tabular list with column headers and rows. Supports sort, filter, group-by per column.</td></tr><tr><td><strong>form</strong></td><td>Detail form layout. Each control renders as a labelled input field.</td></tr><tr><td><strong>card</strong></td><td>Single entity rendered as a CSS grid card. One record only.</td></tr><tr><td><strong>tab</strong></td><td>Used on Page Areas to group child sections as tabs. showTitle must be true for tab labels.</td></tr><tr><td><strong>tree</strong></td><td>Hierarchical tree display for nested data.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b4--page-data-model-transnodes--concept">B.4 — Page Data Model (TransNodes) — Concept<a href="#b4--page-data-model-transnodes--concept" class="hash-link" aria-label="Direct link to B.4 — Page Data Model (TransNodes) — Concept" title="Direct link to B.4 — Page Data Model (TransNodes) — Concept" translate="no">​</a></h3>
+<p>The Page Data Model defines the data available to a screen. Every section and control that displays data must be bound to a TransNode. A TransNode is a “data pipe” — it fetches entity records from the database and makes them available to sections and controls on the page.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Node Type</strong></th><th><strong>Fetches</strong></th></tr></thead><tbody><tr><td><strong>EntitySet</strong></td><td>A LIST of records. Use for search sections, grids, card lists. Suffix convention: _list. Example: d_complaints_list</td></tr><tr><td><strong>Entity</strong></td><td>ONE record (the currently selected record). Use for detail forms. Suffix convention: _detail. Example: d_complaints_detail</td></tr><tr><td><strong>Query</strong></td><td>Records from a kloQuery with WHERE conditions, joins, sorting. Suffix convention: _query.</td></tr><tr><td><strong>Other</strong></td><td>Non-standard / custom use cases.</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 Fold From — The Critical Link Between List and Detail</strong><br>When you create d_complaints_detail (Entity type) and set its “Fold From” = d_complaints_list,<br>the platform automatically loads the selected record’s data into d_complaints_detail whenever<br>the user clicks a row in the list. This is the mechanism that connects list → detail.<br>Without Fold From: the detail section will always be empty.<br>With Fold From: clicking any complaint row in the list instantly populates the detail form.<br>TransNode naming convention (from Procify Page Builder 7.0 Guide):<br>EntitySet → _list suffix Entity → _detail suffix Query → _query suffix</th></tr></thead></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b5--target-screen-design-for-p_complaints">B.5 — Target Screen Design for p_complaints<a href="#b5--target-screen-design-for-p_complaints" class="hash-link" aria-label="Direct link to B.5 — Target Screen Design for p_complaints" title="Direct link to B.5 — Target Screen Design for p_complaints" translate="no">​</a></h3>
+<p>Based on the Customer Complaints Application design, the p_complaints page has two page areas. The complete target structure is:</p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 p_complaints — Full Page Structure</strong><br>PAGE: p_complaints<br>└─ pl_complaints_desk (PageLayout — screenType: two column)<br>├─ pa_complaints (PageArea 1 — List Panel)<br>| ├─ s_search (Section — screenType: search)<br>| | Controls: ticket_id, desc, customer_id, responsible_tea, priority,<br>| | s_status, is_escalated, cust_category, cust_type,<br>| | complaint_type, raised_by, state, nature_of_compl, actual_tat, standard_tat<br>| └─ s_complaints (Section — screenType: grid)<br>| Controls: ticket_id (link), customer_id, priority, s_status,<br>| planned_res_dat, closed_on, sales_manager<br>└─ pa_complaint_details (PageArea 2 — Tab)<br>├─ section_toolbar (Action toolbar: Edit/Save/Add buttons)<br>├─ s_detail_header (Section — screenType: card— key fields)<br>| Controls: desc, i_ageing, t_ageing, s_status, i_t_priority, i_res_team, responsible_tea<br>└─ pa_comp_details (PageArea — screenType: default)<br>├─ s_complaint_details ├─ s_complaint_details3 → form<br>├─ s_complaint_details5 ├─ s_reporter_details —&gt; form<br>├─ s_complaint_details2 ├─ s_complaint_details4 → form</th></tr></thead></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b6--step-1-create-the-page-p_complaints">B.6 — Step 1: Create the Page (p_complaints)<a href="#b6--step-1-create-the-page-p_complaints" class="hash-link" aria-label="Direct link to B.6 — Step 1: Create the Page (p_complaints)" title="Direct link to B.6 — Step 1: Create the Page (p_complaints)" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Open Page Builder from Design Studio → Page Builder. Select your application from the app dropdown.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Click the Edit icon in the toolbar to enable edit mode.</td></tr><tr><td><strong>3</strong></td><td>Click the + icon → Create Blank Page.</td></tr><tr><td><strong>4</strong></td><td>Page ID: p_complaints | Title: Employee Complaints | Lead Entity: d_complaints(use vh). Click Create.</td></tr><tr><td><strong>5</strong></td><td>The page appears in the tree. No layouts yet — proceed to Step 2.</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image19-64efb93c86207420464967bb75e421c5.png" width="401" height="236" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b7--step-2-create-the-page-layout-pl_complaints_desk">B.7 — Step 2: Create the Page Layout (pl_complaints_desk)<a href="#b7--step-2-create-the-page-layout-pl_complaints_desk" class="hash-link" aria-label="Direct link to B.7 — Step 2: Create the Page Layout (pl_complaints_desk)" title="Direct link to B.7 — Step 2: Create the Page Layout (pl_complaints_desk)" translate="no">​</a></h3>
+<p>The Page Layout sits directly under the Page and defines the arrangement type for all page areas. According to Procify Page Builder 7.0 Guide (Section 4.0): at runtime only one pageLayout is picked based on the device type — determined by the page’s screencontainerdefault, screencontainerdesktop, etc. properties.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>In the tree, right-click on p_complaints → New → Page Layout. A new layout is added to the tree.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Right-click the new layout → Rename → enter: pl_complaints_desk. Press Enter.</td></tr><tr><td><strong>3</strong></td><td>Click pl_complaints_desk in the tree to open its Detail panel on the right.</td></tr><tr><td><strong>4</strong></td><td>In the Detail panel, set screenType = two column. This renders all assigned page areas one after another — the standard layout for list+detail screens.</td></tr><tr><td><strong>5</strong></td><td>Now click on p_complaints in the tree. In its Detail panel, set screencontainerdefault = pl_complaints_desk. This tells the platform: use this layout on all devices unless a device-specific layout is set.</td></tr><tr><td><strong>6</strong></td><td>Save.</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image27-58efb75d8655c13e017812ac73c19f6c.png" width="390" height="362" class="img_ev3q"></p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 Layout Type Quick Reference (Procify Page Builder 7.0 Guide — Section 12.0)</strong><br>stack — Sections / areas render one after another vertically. One subscreen shown at a time.<br>two_column — Master-detail split: left panel (list) + right panel (detail). Max 2 columns.<br>tab — Renders children as tabbed panels. Used at Page Area level for detail tabs.<br>object_page — SAP-style object page: sticky header + tab body sections.<br>hsplitter — Horizontal split with resizable rows.<br>vsplitter — Vertical split with resizable columns.<br>grid_layout / css_grid — CSS Grid-based placement. Requires modeller configuration.</th></tr></thead></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b8--step-3-configure-the-page-data-model-transnodes">B.8 — Step 3: Configure the Page Data Model (TransNodes)<a href="#b8--step-3-configure-the-page-data-model-transnodes" class="hash-link" aria-label="Direct link to B.8 — Step 3: Configure the Page Data Model (TransNodes)" title="Direct link to B.8 — Step 3: Configure the Page Data Model (TransNodes)" translate="no">​</a></h3>
+<p>Select p_complaints in the tree. Click the Page Data Model icon (right panel tab). Click + to add Model Paths. Create the two root TransNodes:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Click + in the Page Data Model panel. Dialog opens.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Node Path : search | Entity/Query: d_complaints | Node Type: Query. Click OK.</td></tr><tr><td><strong>3</strong></td><td>Click Transfer&amp;Link of search. Node Path: list</td></tr><tr><td><strong>4</strong></td><td>Click Transfer&amp;Link of list Node Path: detail</td></tr><tr><td><strong>5</strong></td><td>Save. These two TransNodes are the data backbone for all sections on this page.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b9--step-4-create-the-list-page-area-pa_complaints">B.9 — Step 4: Create the List Page Area (pa_complaints)<a href="#b9--step-4-create-the-list-page-area-pa_complaints" class="hash-link" aria-label="Direct link to B.9 — Step 4: Create the List Page Area (pa_complaints)" title="Direct link to B.9 — Step 4: Create the List Page Area (pa_complaints)" translate="no">​</a></h3>
+<p>Per Procify Page Builder 7.0 Guide (Section 5.0): The Page Area is the next level after Page Layout. Page Areas are embedded with the Page Layout via the Layout Data assignment.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click on pl_complaints_desk → New → Page Area. A new page area is added.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Right-click the new page area → Rename → pa_complaints.</td></tr><tr><td><strong>4</strong></td><td>Save.</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b91--creating-the-search-section-s_search">B.9.1 — Creating the Search Section (s_search)<a href="#b91--creating-the-search-section-s_search" class="hash-link" aria-label="Direct link to B.9.1 — Creating the Search Section (s_search)" title="Direct link to B.9.1 — Creating the Search Section (s_search)" translate="no">​</a></h3>
+<p>Per Procify Page Builder 7.0 Guide (Section 6.1): To add a new section, right-click on the page area and select New → Section. The search screenType auto-generates the filter bar with Close / Reset / Search buttons.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click on pa_complaints → New → Section. Rename it: s_search.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>In the Detail panel, set screenType = search.</td></tr><tr><td><strong>4</strong></td><td>Select s_search in the tree. In the Detail panel, set the TransNode (path) = search.</td></tr><tr><td><strong>5</strong></td><td>Add controls: right-click s_search →click New in poup → Controls . OR go to the Page Data Model panel → select search→ Unused Properties tab → drag properties directly to s_search in the tree.</td></tr><tr><td><strong>6</strong></td><td>Add all controls as listed in the note below. Save after each set.</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📘 s_search Controls — Match the Search Bar in the Screenshot</strong><br>Row 1: complaint_id (Ticket Id text input), s_status, complaint_type<br>Row 2: desc (Description text input), is_escalated (Escalated checkbox), nature_of_compl<br>Row 3: customer_id (Employee ID — with Value Help picker icon), cust_category (Employee, actual_tat (Actual TAT number input)<br>Row 4: priority, cust_type , standard_tat (Standard TAT number input)<br>Tree also shows: raised_by, state, cust_category_lbl, cust_type_lbl (label controls for display)<br>How to add controls via drag-and-drop (Procify Page Builder 7.0 Guide — Section 2.2.6 DnD on Preview):<br>1. In the Page Data Model panel, select search→ click Unused Properties tab.<br>2. Drag any property from the unused list and drop it onto s_search in the tree.<br>3. The control is created automatically with the property binding pre-set.<br> 4. You can drag and drop controls within the section to align the controls.</th></tr></thead></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Final Output — After Creating s_search</strong><br>Once s_search is created with all controls and you click Show Full Preview,<br>you will see the search filter bar rendered at the top of the screen exactly as shown below.</th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image16-9a05220b0cbbed7e082525e954b98afe.png" width="1877" height="312" class="img_ev3q"></p>
+<p><em>Expected output: s_search renders the Employee Complaints filter bar with all fields — Ticket Id, Status, Complaint Type, Escalated checkbox, Employee Category, Priority, Nature of Complaint, Actual TAT, and Standard TAT. Close / Reset / Search buttons are auto-generated by the search scr</em> <em>eenType.</em></p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Tree View — How s_search Looks in the Page Builder Tree</strong><br>After adding all controls, s_search in the tree should look like the screenshot below.<br>Each control is listed under the section with its entity property binding.</th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image2-1270a274fb99737460a9376edead47c3.png" width="386" height="770" class="img_ev3q"></p>
+<p><em>Page Builder tree showing pa_complaints → s_search with all controls: ticket_id, desc, customer_id, responsible_tea, priority, s_status, is_escalated, cust_category_lbl, cust_category, cust_type_lbl, cust_type, complaint_type, raised_by, state, nature_of_compl, actual_tat, standard_tat</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b92--creating-the-complaints-list-section-s_complaints">B.9.2 — Creating the Complaints List Section (s_complaints)<a href="#b92--creating-the-complaints-list-section-s_complaints" class="hash-link" aria-label="Direct link to B.9.2 — Creating the Complaints List Section (s_complaints)" title="Direct link to B.9.2 — Creating the Complaints List Section (s_complaints)" translate="no">​</a></h3>
+<p>The grid section renders complaint records as rows with sortable, filterable columns. Per Procify Page Builder 7.0 Guide (Section 6.2 — Grid): For desktop view, section screenType should be “grid”. Add a conf_grid000 config node for grid behaviour settings.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click pa_complaints → New → Section. Rename: s_complaints.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>In the Detail panel, set screenType = grid.</td></tr><tr><td><strong>3</strong></td><td>Set TransNode path = list.</td></tr><tr><td><strong>4</strong></td><td>Right-click pa_complaints → New → Assign → select s_complaints (below s_search). Save.</td></tr><tr><td><strong>5</strong></td><td>Add controls from d_complaints_list TransNode unused properties: ticket_id (set the control type as m.link and add press event with function as ‘navTo’(Fill the sunscreen id as detail page area) ), customer_id, priority, s_status, planned_res_dat, closed_on, sales_manager.</td></tr><tr><td><strong>6</strong></td><td>Right-click s_complaints → New → Config → rename: conf_grid000. This config node stores grid behaviour properties.</td></tr><tr><td><strong>7</strong></td><td>Right-click s_complaints → New → Toolbar. Add Add and Delete buttons in the toolbar detail.</td></tr><tr><td><strong>8</strong></td><td>Arrange the controls in s_complaints by using drag and drop feature inside section</td></tr><tr><td><strong>9</strong></td><td>Save.</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Final Output — After Creating s_complaint</strong><br>Once s_complaints is created with all controls and you click Show Full Preview,<br>you will see the complaints list rendered below search section</th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image28-85887e06767c845864fa8efda00c4c4e.png" width="1878" height="393" class="img_ev3q"></p>
+<p>You can notice that the screen we created is not the same in the provided screenshot.</p>
+<ol>
+<li class="">
+<p>Complaint_id contains id-desc</p>
+</li>
+<li class="">
+<p>Status has color</p>
+</li>
+<li class="">
+<p>Grid is occupying full screen</p>
+</li>
+</ol>
+<p>Pont 1 &amp; 2 will be achieved in the upcoming sessions. For point 3 we can achieve this by setting screentype of pa_complaints as <strong>fit_to_area</strong> and mark <strong>auto_height</strong> as true for s_complaints layout.</p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Tree View — How s_complaints Looks in the Page Builder Tree</strong><br>After building s_complaints, it should appear in the tree as shown below —<br>with ticket_id as a navigation link, all property controls, conf_grid000, and section_toolbar.</th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image15-1c2d2c66202c62b573c5574a97b25417.png" width="389" height="349" class="img_ev3q"></p>
+<p><em>Page Builder tree showing s_complaints with controls: ticket_id (link icon), customer_id, priority, s_status, planned_res_dat, closed_on, sales_manager, plus conf_grid000 config and section_toolbar</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b10--step-5-create-the-detail-page-area-pa_complaint_details">B.10 — Step 5: Create the Detail Page Area (pa_complaint_details)<a href="#b10--step-5-create-the-detail-page-area-pa_complaint_details" class="hash-link" aria-label="Direct link to B.10 — Step 5: Create the Detail Page Area (pa_complaint_details)" title="Direct link to B.10 — Step 5: Create the Detail Page Area (pa_complaint_details)" translate="no">​</a></h3>
+<p>The detail area loads when a complaint row is selected from the list. It contains a toolbar for actions, a header section showing critical fields, and a tabbed area for all complaint details.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click pl_complaints_desk → New → Page Area. Rename: pa_complaint_details.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Update screentype as tab</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b102--creating-the-detail-header-section-s_detail_header">B.10.2 — Creating the Detail Header Section (s_detail_header)<a href="#b102--creating-the-detail-header-section-s_detail_header" class="hash-link" aria-label="Direct link to B.10.2 — Creating the Detail Header Section (s_detail_header)" title="Direct link to B.10.2 — Creating the Detail Header Section (s_detail_header)" translate="no">​</a></h3>
+<p>The header section displays the most critical complaint fields prominently. screenType: card. Bound to d_complaints_detail TransNode.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click pa_complaint_details → New → Section. Rename: s_detail_header.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Set screenType = card. Set TransNode path = detail.</td></tr><tr><td><strong>3</strong></td><td>Add controls from d_complaints_detail unused properties: desc, s_status, priority, res_team, responsible_tea. ⇒ change the control to m.Text for making it readable only</td></tr><tr><td><strong>4</strong></td><td>Save.</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Final Output — After Creating s_detail_header</strong><br>Once s_detail_header is created with all controls and you click Show Full Preview,<br>you will see the result as mentioned below after modeling which will be covered in upcoming sessions</th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image4-dee0f0668f42acc1fc0d2ffe0e239681.png" width="1304" height="137" class="img_ev3q"></p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Tree View — How s_detail_header Looks in the Page Builder Tree</strong><br>After creating s_detail_header with all header controls, it should appear as shown below.</th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image33-47d709dc3a4258ce834c04cfd490e99c.png" width="380" height="289" class="img_ev3q"></p>
+<p><em>Page Builder tree showing s_detail_header with controls: desc, i_ageing (icon), t_ageing (text), s_status, i_t_priority (priority icon), i_res_team (team icon), responsible_tea</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b103--creating-the-detail-area-pa_comp_details">B.10.3 — Creating the Detail Area (pa_comp_details)<a href="#b103--creating-the-detail-area-pa_comp_details" class="hash-link" aria-label="Direct link to B.10.3 — Creating the Detail Area (pa_comp_details)" title="Direct link to B.10.3 — Creating the Detail Area (pa_comp_details)" translate="no">​</a></h3>
+<p>pa_comp_details is a nested Page Area inside pa_complaint_details.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click page area→ New → Page Area. Rename: pa_comp_details.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>In the Detail panel, set screenType = default. Set showTitle = true &amp; title = detail so tab labels are visible.</td></tr><tr><td><strong>3</strong></td><td>Assign the page area to pa_complaints_detail.</td></tr><tr><td><strong>4</strong></td><td>Now create all 4 sections inside pa_comp_details. Right-click pa_comp_details → New → Section for each. Set each to screenType = form Set TransNode = detail for form sections.</td></tr><tr><td><strong>5</strong></td><td>Set each section’s title property — this becomes the tab label visible at runtime.</td></tr><tr><td><strong>5</strong></td><td>Assign all 4 sections to pa_comp_details in the correct sequence. Save.</td></tr><tr><td><strong>6</strong></td><td>Set type = header for s_detail_header layout &amp; type = section for pa_comp_details.</td></tr><tr><td><strong>7</strong></td><td>Set press event for complaint_id link with function as navTo =&gt; pageArea : pa_complaint_details.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>Section ID</strong></th><th><strong>Screen Type</strong></th><th><strong>Tab Title / Contents</strong></th></tr></thead><tbody><tr><td><strong>s_complaint_details</strong></td><td>form</td><td>Complaint Details — complaint_id, complaint_type, description, priority, status, customer_id</td></tr><tr><td><strong>s_assigment_details</strong></td><td>form</td><td>Assignment — responsible_team, manager, first response date, planned resolution date</td></tr><tr><td><strong>s_timeline_details</strong></td><td>form</td><td>TAT &amp; Timeline — actual_tat, standard_tat, closed_on, created_on, modified_on</td></tr><tr><td><strong>s_admin_info</strong></td><td>form</td><td>Contains s_created_by, s_modified_by, s_created_on and s_modified_on</td></tr></tbody></table>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b103--add-action-buttons-for-pa_comp_details">B.10.3 — Add Action buttons for pa_comp_details<a href="#b103--add-action-buttons-for-pa_comp_details" class="hash-link" aria-label="Direct link to B.10.3 — Add Action buttons for pa_comp_details" title="Direct link to B.10.3 — Add Action buttons for pa_comp_details" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Right-click pa_comp_details→ New → Toolbar.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Set showAdd and ShowDelete = false</td></tr><tr><td><strong>3</strong></td><td>Right-click section-Toolbar → New → Action/Button.</td></tr><tr><td><strong>4</strong></td><td>Right-click button01 → rename → edit</td></tr><tr><td><strong>5</strong></td><td>Set text = Edit | icon = sap-icon://edit | add press event and fill this.setMode(&#x27;EDIT&#x27;)</td></tr><tr><td><strong>6</strong></td><td>Repeat steps 3,4 and 5 for <strong>save</strong> with this.saveTransaction(&quot;Data saved successfully.&quot;, &quot;Save Failed.&quot;, true, true)</td></tr><tr><td><strong>7</strong></td><td>Repeat steps 3,4 and 5 for <strong>cancel</strong> with this.refreshTransnode(&quot;complaints_detail&quot;,&quot;DISPLAY&quot;,true)</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Final Output — After Creating pa_comp_details</strong></th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image5-3092b27244a894108f837fb97d305483.png" width="1321" height="732" class="img_ev3q"></p>
+
+
+
+
+
+
+<table><thead><tr><th><strong>📸 Tree View — How pa_complaint_details Looks After Full Setup</strong></th></tr></thead></table>
+<p><img decoding="async" loading="lazy" alt="Screenshot" src="/Procify_Documentation/assets/images/beginner-training-guide-image17-d86f6a559e402c07f43113d43dd9aea6.png" width="374" height="420" class="img_ev3q"></p>
+<p><em>Page Builder tree showing pa_complaint_details with: section_toolbar, s_detail_header, and nested pa_comp_details containing all 7 tab sections — s_complaint_details, s_complaint_details3, s_complaint_details5, s_reporter_details, s_complaint_details2, s_complaint_details4, s_complaint_item</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="b11--step-6-preview-and-verify-the-complete-screen">B.11 — Step 6: Preview and Verify the Complete Screen<a href="#b11--step-6-preview-and-verify-the-complete-screen" class="hash-link" aria-label="Direct link to B.11 — Step 6: Preview and Verify the Complete Screen" title="Direct link to B.11 — Step 6: Preview and Verify the Complete Screen" translate="no">​</a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>1</strong></th><th>Save all changes in the Page Builder.</th></tr></thead><tbody><tr><td><strong>2</strong></td><td>Click Show Full Preview. The screen loads with live complaint data from the database.</td></tr><tr><td><strong>3</strong></td><td>Verify the search bar appears at the top: Ticket Id, Status, Complaint Type, Escalated, Employee Category, Priority fields visible. Close / Reset / Search buttons present.</td></tr><tr><td><strong>4</strong></td><td>Verify the complaint list appears below the search bar with columns: ticket_id (clickable link), customer_id, priority, status, planned resolution date, closed date.</td></tr><tr><td><strong>5</strong></td><td>Click a complaint row. Verify the detail area loads with the header section (description, status, priority) and the tab area below.</td></tr><tr><td><strong>6</strong></td><td>Navigate through each tab — Complaint Details, Assignment, Reporter Info, TAT &amp; Timeline, Complaint Items. Verify correct fields in each.</td></tr><tr><td><strong>7</strong></td><td>If a section appears blank: select it in the tree and check that its TransNode path is correctly set in the Detail panel. Ensure Fold From is set on d_complaints_detail.</td></tr></tbody></table>
+
+
+
+
+
+
+<table><thead><tr><th><strong>✔ UI Build Checkpoint — Verify Before Session 3</strong><br>p_complaints page created with pl_complaints_desk as default layout.<br>Page Data Model has d_complaints_list (EntitySet) and d_complaints_detail (Entity, Fold From: list).<br>pa_complaints: s_search (search, all filter fields) + s_complaints (grid, 7 columns incl. navigation link).<br>pa_complaint_details: section_toolbar + s_detail_header (form, header fields) + pa_comp_details (tab).<br>pa_comp_details: 7 tab sections including s_complaint_item (grid) for complaint line items.<br>Full Preview shows the search bar — exact match with the reference screenshots from the trainer.<br>Clicking a complaint row loads the detail area with all tabs populated.</th></tr></thead></table>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="session-2-assignment">Session 2 Assignment<a href="#session-2-assignment" class="hash-link" aria-label="Direct link to Session 2 Assignment" title="Direct link to Session 2 Assignment" translate="no">​</a></h2>
+<p>Complete all mandatory tasks before Session 3. The trainer will verify each item at the start of Session 3.</p>
+<ul>
+<li class="">
+<p>Create all 5 remaining entities with correct properties and schema updated for each.</p>
+</li>
+<li class="">
+<p>Insert 3 test records in d_customers and d_resp_team via Data Browser.</p>
+</li>
+<li class="">
+<p>Build p_complaints_manual manually (Parts B.2 – B.8). Full Preview must show complaint cards and detail form loading on card selection.</p>
+</li>
+<li class="">
+<p>Compare p_complaints (wizard) with p_complaints_manual (manual) in preview — both must render the same data.</p>
+</li>
+<li class="">
+<p>Document any questions or issues encountered — bring to Session 3 Q&amp;A.</p>
+</li>
+</ul>
+
+
+
+
+
+
+<table><thead><tr><th><strong>Session 3 — Entity Configuration</strong><br>Duration: Full day | Pre-requisite: Session 2 assignment verified</th></tr></thead></table></div></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 2 — BOL Entity Fundamentals &amp; Initial Pages/Part A — BOL Entity Fundamentals Creating the Remaining Entities"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Part A — BOL Entity Fundamentals: Creating the Remaining Entities</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Session 3 — Entity Configuration/Session Objectives"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Session Objectives</div></a></nav><div class="feedback_Abhk"><strong>Was this page helpful?</strong><div class="actions_wZJ4"><button type="button" class="btn_vnCt">Yes</button><a class="btn_vnCt" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Beginner%20Training%20Guide%20%E2%80%94%20Session%202%20%E2%80%94%20Part%20B%20%E2%80%94%20Understanding%20Data%20Studio%20and%20Page%20Builder">No</a><a class="report_t8F6" href="https://github.com/Procifynow/Procify_Documentation/issues/new?title=Docs%20feedback%3A%20Beginner%20Training%20Guide%20%E2%80%94%20Session%202%20%E2%80%94%20Part%20B%20%E2%80%94%20Understanding%20Data%20Studio%20and%20Page%20Builder">Report an issue</a></div></div></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#session-2-assignment" class="table-of-contents__link toc-highlight">Session 2 Assignment</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/User Guide/Developer AI - 1. Introduction">User Guide</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Beginner Training Guide/Introduction">Beginner Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Training Guide/Developer Level 2 Training Guide/Introduction">Developer Level 2 Training</a></li><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/docs/Docs/Release Notes/7.2.375 Klobase Release Note">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Procify_Documentation/blogs">App Teams – Blogs</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Procify</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Website<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:experts@procifynow.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">experts@procifynow.com<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Developer Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Procifynow/Procify_Documentation" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2026 Procify Innovations Pvt Ltd.</div></div></div></footer><button class="launcher_vEYT" aria-label="Open documentation assistant">💬 Ask the docs</button></div>
+</body>
+</html>
