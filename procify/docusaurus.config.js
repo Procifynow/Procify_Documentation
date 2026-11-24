@@ -262,11 +262,9 @@ const GUIDE_INFO = {
   'API Document Link': 'Browse the Procify BOL API reference: one page per module.',
 };
 
-// API Document Link: the TypeDoc API reference, hosted by this site.
-// Copy the generated "bol" folder to static/api/bol (so that
-// static/api/bol/index.html and static/api/bol/modules/*.html exist).
-// Links are plain files, so the navbar items use prependBaseUrlToHref
-// (adds the site's baseUrl) instead of Docusaurus page routes.
+// API Document Link: the TypeDoc API reference is a static copy of the BOL docs
+// in static/api/bol (created by `node scripts/mirror-api-docs.mjs`), served
+// by this site, so it needs no external host.
 const API_BASE = '/api/bol';
 const API_MODULES = [
   'EndpointBean',
