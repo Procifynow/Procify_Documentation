@@ -10,7 +10,7 @@ import styles from './index.module.css';
 /* Static links */
 const BASE_LINKS = {
   userGuide: '/docs/Docs/User%20Guide/Developer%20AI%20-%20User%20guide',
-  trainingGuide: '/docs/Docs/Training%20Guide/Advance%20Training%20Guide',
+  trainingGuide: '/docs/Docs/Training%20Guide/Beginner%20Training%20Guide/Introduction',
 };
  
 /* Links and version, built from the latest release detected in docusaurus.config.js */

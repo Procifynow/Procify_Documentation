@@ -125,7 +125,7 @@ function readDocs(folder, exclude = null, byVersion = false) {
 // (for Release Notes that is always the newest version).
 const MENU_LANDING = {
   'User Guide': 'Developer AI/Introduction',
-  'Training Guide': 'Training Guide Beginner',
+  'Training Guide': 'Beginner Training Guide/Introduction',
 };
  
 /** "Docs/User Guide/My Page" -> "/docs/Docs/User%20Guide/My%20Page" */
@@ -696,11 +696,11 @@ const config = {
             },
             {
               label: 'Beginner Training',
-              to: '/docs/Docs/Training Guide/Training Guide Beginner',
+              to: '/docs/Docs/Training Guide/Beginner Training Guide/Introduction',
             },
             {
-              label: 'Advanced Training',
-              to: '/docs/Docs/Training Guide/Advance Training Guide',
+              label: 'Developer Level 2 Training',
+              to: '/docs/Docs/Training Guide/Developer Level 2 Training Guide/Introduction',
             },
             {
               // Always points to the highest-numbered release note
