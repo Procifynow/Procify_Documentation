@@ -1,0 +1,34 @@
+.fab {
+  position: fixed;
+  left: 20px;
+  bottom: 24px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #b3121a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(179, 18, 26, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.fab:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(179, 18, 26, 0.45);
+}
+
+@media (max-width: 600px) {
+  .fab span {
+    display: none;
+  }
+  .fab {
+    padding: 12px;
+  }
+}

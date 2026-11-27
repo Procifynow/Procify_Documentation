@@ -8,6 +8,7 @@
     "start": "docusaurus start",
     "prebuild": "node scripts/build-chat-index.mjs",
     "build": "docusaurus build",
+    "build:cloudflare": "npm run build && node scripts/cloudflare-build.mjs",
     "swizzle": "docusaurus swizzle",
     "predeploy": "node scripts/build-chat-index.mjs",
     "deploy": "docusaurus deploy",

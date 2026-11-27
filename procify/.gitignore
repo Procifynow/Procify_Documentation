@@ -21,3 +21,6 @@ yarn-error.log*
 
 # Generated docs index for the chatbot
 /static/chat-index.json
+
+# Cloudflare Pages output
+/dist

@@ -645,14 +645,6 @@ const config = {
         documentationDropdown,
         ...guideDropdowns,
  
-        // App team blog posts (see /blog folder)
-        {
-          to: '/blogs',
-          label: 'App Teams – Blogs',
-          position: 'left',
-          className: 'nav-ico nav-ico--app-teams',
-        },
-
         // More: API documents (see MORE_FOLDERS above)
         {
           type: 'dropdown',
@@ -662,6 +654,8 @@ const config = {
           items: moreItems,
         },
  
+        // Logout (shown only behind Cloudflare Access, see src/components/AccessNavItem.js)
+        {type: 'custom-accessLogout', position: 'right'},
         {
           type: 'search',
           position: 'right',
@@ -712,10 +706,6 @@ const config = {
                 : '/docs/Docs/Release Notes',
             },
           ],
-        },
-        {
-          title: 'Community',
-          items: [{label: 'App Teams – Blogs', to: '/blogs'}],
         },
         {
           title: 'Procify',

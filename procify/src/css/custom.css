@@ -721,9 +721,22 @@ div[class*='announcementBar'] button svg {
 }
 
 .navbar__items:not(.navbar__items--right) .navbar__link {
-  display: inline-flex;
   align-items: center;
   font-weight: 700;
+}
+
+/* desktop only: on phones/tablets the menu items live in the hamburger drawer,
+   so the plain links (Home, Legal, Documentation, Blogs) must stay hidden */
+@media (min-width: 997px) {
+  .navbar__items:not(.navbar__items--right) .navbar__link {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 996px) {
+  .navbar__items:not(.navbar__items--right) > .navbar__item {
+    display: none;
+  }
 }
 
 @media (min-width: 997px) {
